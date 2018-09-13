@@ -39,7 +39,8 @@ ggsave(here("figures/ww_temp_trends.jpg"), temp_gg, width = 5, height = 3.75,
 lagos_data <- read_csv(here("data/lagos_lake_trend_data.csv"))
 
 lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_scale", 
-                             y = "Average Yearly Scaled Chlorophyll", x = "Year")
+                             y = "Average Yearly Scaled Chlorophyll", x = "Year",
+                             write = "temporary.csv")
 ggsave(here("figures/lagos_chla_trends.jpg"), lagos_chla_gg, width = 5, height = 3.75, 
        units = "in", dpi = 600)
 
@@ -53,13 +54,3 @@ lagos_tp_gg <- wq_trend_gg(lagos_data, "total_p", yvar = "measurement_scale",
 ggsave(here("figures/lagos_tp_trends.jpg"), lagos_tp_gg, width = 5, height = 3.75, 
        units = "in", dpi = 600)
 
-chla_temp_gg <- ww_data %>%
-  filter(state == "RI",
-         param == "chla" | param == "temp" & mn_measurement < 500) %>%
-  select(year, month, day, station_name, location, param, measurement_scale) %>%
-  group_by(year, param) %>%
-  summarize(yrly_scale = mean(measurement_scale, na.rm = TRUE)) %>%
-  spread(param, yrly_scale) %>% cor(x = chla, y = temp)
-  ggplot(aes(chla, temp, group = year)) +
-  geom_point()
-plotly::ggplotly(chla_temp_gg)

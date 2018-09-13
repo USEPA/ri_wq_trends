@@ -33,7 +33,7 @@ wq_trend_gg <- function(df, wqparam,
                         yvar = c("measurement_anmly","measurement_scale"), 
                         num_yrs = 10, write = NULL, ...){
   yvar <- rlang::sym(match.arg(yvar))
-
+  
   df2 <- df %>%
     filter(param == wqparam) %>%
     filter(station_name %in% filter_year(., num_yrs)) %>%
@@ -42,6 +42,8 @@ wq_trend_gg <- function(df, wqparam,
     ungroup() %>%
     mutate(col_group = case_when(mn_value <= 0 ~ "Less than long-term site average",
                                  mn_value > 0 ~ "Greater than long-term site average"))
+  
+  
   if(!is.null(write)){
     write_csv(df2, write, append = FALSE)
   }
