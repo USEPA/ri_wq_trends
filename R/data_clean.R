@@ -20,6 +20,40 @@ params <- c("Temperature - 00011",
             "pH - 00400",
             "Chloride - 00940")
 
+# read in missing nutrient data
+
+missing_nutrients_1 <- read_csv(here("data/WW_96_nutrients_nds.csv")) %>%
+  rbind(read_csv(here("data/WW_97_nutrients.csv"))) %>%
+  rbind(read_csv(here("data/WW_98_nutrients.csv"))) %>%
+  rbind(read_csv(here("data/WW_99_nutrients.csv"))) %>%
+  mutate(Day = 15)
+
+missing_nutrients <- missing_nutrients_1 %>%
+  transmute(`Station Name` = `Station Name`,
+            Date = ymd(paste(Year, Month, Day, sep="-")),
+            Time = NA,
+            `Sample Type` = NA,
+            `Sample Media` = NA,
+            Depth = Depth,
+            Parameter = Parameter,
+            Concentration = Concentration,
+            Unit = NA,
+            `Qualifier Code` = NA,
+            `Detection Limit` = 0, #In as zero becuase NA results in getting filtered out
+            `Detection Limit Unit` = NA,
+            `Quantitation Level` = NA,
+            `Quantitation Level Unit` = NA,
+            `Lab Name` = NA,
+            `Analytical Method Number` = NA,
+            Comments = "Day assumed to be 15th, missing for original data",
+            Location = Location) #%>%
+  #filter(Concentration != "ND") %>%
+  #mutate(Concentration = as.numeric(Concentration))
+
+missing_nutrients <- missing_nutrients %>%
+  mutate(Concentration = as.numeric(Concentration))
+
+ww_all <- rbind(missing_nutrients, ww_all)
 
 # strip down to data for paper
 ww_lake_trend_data <- ww_all %>%
