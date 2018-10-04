@@ -1,0 +1,1182 @@
+Station Name,Day,Month,Year,Depth,Parameter,Concentration,Location
+WW01,NA,5,2001,1,"Phosphorus, Total - 00665",19,Alton Pond
+WW02,NA,5,2001,1,"Phosphorus, Total - 00665",19,Barber Pond
+WW03,NA,5,2001,1,"Phosphorus, Total - 00665",27,Belleville Pond - Lower
+WW04,NA,5,2001,1,"Phosphorus, Total - 00665",28,Belleville Pond - Upper
+WW05,NA,5,2001,1,"Phosphorus, Total - 00665",25,Blackamore Pond
+WW06,NA,5,2001,1,"Phosphorus, Total - 00665",13,Boone Lake
+WW07,NA,5,2001,1,"Phosphorus, Total - 00665",40,Brickyard Pond
+WW08,NA,5,2001,1,"Phosphorus, Total - 00665",18,Carr Pond (NK)
+WW09,NA,5,2001,1,"Phosphorus, Total - 00665",16,Carr Pond (WG)
+WW11,NA,5,2001,1,"Phosphorus, Total - 00665",13,Coomber's Reservoir
+WW12,NA,5,2001,1,"Phosphorus, Total - 00665",15,Deep Pond
+WW13,NA,5,2001,1,"Phosphorus, Total - 00665",15,Echo Lake (Pascoag south)
+WW15,NA,5,2001,1,"Phosphorus, Total - 00665",12,Flat River Reservoir
+WW16,NA,5,2001,1,"Phosphorus, Total - 00665",16,Georgiaville Pond
+WW17,NA,5,2001,1,"Phosphorus, Total - 00665",21,Hundred Acre Pond
+WW18,NA,5,2001,1,"Phosphorus, Total - 00665",30,Indian Lake
+WW19,NA,5,2001,1,"Phosphorus, Total - 00665",19,Keech Pond
+WW20,NA,5,2001,1,"Phosphorus, Total - 00665",19,Little Pond
+WW21,NA,5,2001,1,"Phosphorus, Total - 00665",14,Locustville Pond
+WW22,NA,5,2001,1,"Phosphorus, Total - 00665",26,Long Pond (Hopkinton)
+WW23,NA,5,2001,1,"Phosphorus, Total - 00665",13,Long Pond (SK)
+WW24,NA,5,2001,1,"Phosphorus, Total - 00665",25,Lower Sprague Reservoir
+WW25,NA,5,2001,1,"Phosphorus, Total - 00665",40,Mashapaug Pond
+WW26,NA,5,2001,1,"Phosphorus, Total - 00665",23,Meadowbrook Pond
+WW183,NA,5,2001,1,"Phosphorus, Total - 00665",29,Melville Pond - Upper
+WW27,NA,5,2001,1,"Phosphorus, Total - 00665",11,Mishnock Lake
+WW28,NA,5,2001,1,"Phosphorus, Total - 00665",13,Oak Swamp Reservoir
+WW29,NA,5,2001,1,"Phosphorus, Total - 00665",10,Pascoag Reservoir
+WW30,NA,5,2001,1,"Phosphorus, Total - 00665",15,Pasquisett Pond
+WW33,NA,5,2001,1,"Phosphorus, Total - 00665",88,Prince's Pond
+WW34,NA,5,2001,1,"Phosphorus, Total - 00665",13,Queen @ Usq. (Glen Rock)
+WW35,NA,5,2001,1,"Phosphorus, Total - 00665",11,Quidnick Reservoir
+WW36,NA,5,2001,1,"Phosphorus, Total - 00665",20,Randall Pond
+WW38,NA,5,2001,1,"Phosphorus, Total - 00665",19,Sand Pond
+WW39,NA,5,2001,1,"Phosphorus, Total - 00665",16,Saugatucket Pond
+WW40,NA,5,2001,1,"Phosphorus, Total - 00665",10,Schoolhouse Pond - Lower
+WW41,NA,5,2001,1,"Phosphorus, Total - 00665",13,Schoolhouse Pond - Upper
+WW42,NA,5,2001,1,"Phosphorus, Total - 00665",10,Secret Lake
+WW43,NA,5,2001,1,"Phosphorus, Total - 00665",19,Shippee Mill Pond
+WW44,NA,5,2001,1,"Phosphorus, Total - 00665",13,Silver Lake
+WW45,NA,5,2001,1,"Phosphorus, Total - 00665",20,Silver Spring Lake
+WW46,NA,5,2001,1,"Phosphorus, Total - 00665",22,Slack's Reservoir
+WW47,NA,5,2001,1,"Phosphorus, Total - 00665",30,Slater Pond
+WW48,NA,5,2001,1,"Phosphorus, Total - 00665",12,Smith and Sayles Reservoir
+WW215,NA,5,2001,1,"Phosphorus, Total - 00665",22,Spalding Pond
+WW49,NA,5,2001,1,"Phosphorus, Total - 00665",37,Spectacle Pond
+WW50,NA,5,2001,1,"Phosphorus, Total - 00665",13,Spring Grove Pond
+WW51,NA,5,2001,1,"Phosphorus, Total - 00665",10,Spring Lake
+WW145,NA,5,2001,1,"Phosphorus, Total - 00665",28,Stafford Pond
+WW52,NA,5,2001,1,"Phosphorus, Total - 00665",11,Stillwater Pond
+WW54,NA,5,2001,1,"Phosphorus, Total - 00665",23,Tarbox Pond
+WW55,NA,5,2001,1,"Phosphorus, Total - 00665",16,Tiogue Lake
+WW56,NA,5,2001,1,"Phosphorus, Total - 00665",27,Tucker Pond
+WW58,NA,5,2001,1,"Phosphorus, Total - 00665",286,Valley Falls Pond
+WW59,NA,5,2001,1,"Phosphorus, Total - 00665",31,Warwick Pond
+WW60,NA,5,2001,1,"Phosphorus, Total - 00665",18,Watchaug Pond
+WW61,NA,5,2001,1,"Phosphorus, Total - 00665",16,Waterman Lake
+WW62,NA,5,2001,1,"Phosphorus, Total - 00665",10,Wenscott Reservior
+WW63,NA,5,2001,1,"Phosphorus, Total - 00665",21,Wilson Reservoir
+WW64,NA,5,2001,1,"Phosphorus, Total - 00665",5,White Pond
+WW65,NA,5,2001,1,"Phosphorus, Total - 00665",13,Woonasquatucket Reservoir
+WW66,NA,5,2001,1,"Phosphorus, Total - 00665",15,Worden Pond
+WW216,NA,5,2001,1,"Phosphorus, Total - 00665",12,Wyassup Lake
+WW67,NA,5,2001,1,"Phosphorus, Total - 00665",12,Wyoming Pond
+WW68,NA,5,2001,1,"Phosphorus, Total - 00665",22,Yawgoo Pond
+WW02,NA,5,2001,5,"Phosphorus, Total - 00665",30,Barber Pond
+WW06,NA,5,2001,5,"Phosphorus, Total - 00665",18,Boone Lake
+WW07,NA,5,2001,5,"Phosphorus, Total - 00665",44,Brickyard Pond
+WW08,NA,5,2001,5,"Phosphorus, Total - 00665",28,Carr Pond (NK)
+WW09,NA,5,2001,10,"Phosphorus, Total - 00665",34,Carr Pond (WG)
+WW12,NA,5,2001,5,"Phosphorus, Total - 00665",17,Deep Pond
+WW15,NA,5,2001,8,"Phosphorus, Total - 00665",13,Flat River Reservoir
+WW16,NA,5,2001,5,"Phosphorus, Total - 00665",69,Georgiaville Pond
+WW17,NA,5,2001,7,"Phosphorus, Total - 00665",22,Hundred Acre Pond
+WW20,NA,5,2001,5,"Phosphorus, Total - 00665",18,Little Pond
+WW23,NA,5,2001,6,"Phosphorus, Total - 00665",13,Long  Pond (SK)
+WW25,NA,5,2001,3,"Phosphorus, Total - 00665",46,Mashapaug Pond
+WW27,NA,5,2001,5,"Phosphorus, Total - 00665",15,Mishnock Lake
+WW29,NA,5,2001,5,"Phosphorus, Total - 00665",11,Pascoag Reservoir
+WW33,NA,5,2001,2.5,"Phosphorus, Total - 00665",48,Princes Pond
+WW35,NA,5,2001,7,"Phosphorus, Total - 00665",14,Quidnick Reservoir
+WW36,NA,5,2001,4,"Phosphorus, Total - 00665",11,Randall Pond
+WW38,NA,5,2001,5,"Phosphorus, Total - 00665",21,Sand Pond
+WW40,NA,5,2001,5,"Phosphorus, Total - 00665",12,Schoolhouse Pond - Lower
+WW41,NA,5,2001,5,"Phosphorus, Total - 00665",13,Schoolhouse Pond - Upper
+WW44,NA,5,2001,7,"Phosphorus, Total - 00665",15,Silver Lake
+WW51,NA,5,2001,5,"Phosphorus, Total - 00665",9,Spring Lake
+WW145,NA,5,2001,7,"Phosphorus, Total - 00665",26,Stafford Pond
+WW56,NA,5,2001,3,"Phosphorus, Total - 00665",27,Tucker Pond
+WW59,NA,5,2001,6,"Phosphorus, Total - 00665",24,Warwick Pond
+WW60,NA,5,2001,10,"Phosphorus, Total - 00665",16,Watchaug Pond
+WW64,NA,5,2001,10,"Phosphorus, Total - 00665",14,White Pond
+WW68,NA,5,2001,7,"Phosphorus, Total - 00665",53,Yawgoo Pond
+WW69,NA,5,2001,0.2,"Phosphorus, Total - 00665",15,Beaver River #1 (Old Mt)
+WW70,NA,5,2001,0.2,"Phosphorus, Total - 00665",10,Beaver River #3 (Rte 138)
+WW71,NA,5,2001,0.2,"Phosphorus, Total - 00665",10,Beaver River #4 (Shannock)
+WW72,NA,5,2001,0.2,"Phosphorus, Total - 00665",22,Falls River A
+WW73,NA,5,2001,0.2,"Phosphorus, Total - 00665",31,Falls River B
+WW74,NA,5,2001,0.2,"Phosphorus, Total - 00665",29,Falls River C
+WW75,NA,5,2001,0.2,"Phosphorus, Total - 00665",52,Falls River D
+WW79,NA,5,2001,0.2,"Phosphorus, Total - 00665",11,Locstv.- Moscow @ Sawmill
+WW77,NA,5,2001,0.2,"Phosphorus, Total - 00665",9,Locstv.- Brushy @ Woody Hill
+WW78,NA,5,2001,0.2,"Phosphorus, Total - 00665",19,Locstv.- Brushy @ Sawmill
+WW76,NA,5,2001,0.2,"Phosphorus, Total - 00665",12,Locstv.- Loghse @ Sandy
+WW83,NA,5,2001,0.2,"Phosphorus, Total - 00665",34,Moosup Upstream
+WW84,NA,5,2001,0.2,"Phosphorus, Total - 00665",27,Moosup A
+WW85,NA,5,2001,0.2,"Phosphorus, Total - 00665",25,Moosup B
+WW86,NA,5,2001,0.2,"Phosphorus, Total - 00665",20,NR-01
+WW87,NA,5,2001,0.5,"Phosphorus, Total - 00665",12,NR-02   0.5M
+WW87,NA,5,2001,3,"Phosphorus, Total - 00665",23,NR-02   3.0M
+WW89,NA,5,2001,0.5,"Phosphorus, Total - 00665",17,NR-03   0.5M
+WW89,NA,5,2001,3,"Phosphorus, Total - 00665",21,NR-03   3.0M
+WW91,NA,5,2001,0.5,"Phosphorus, Total - 00665",27,NR-04   0.5M
+WW91,NA,5,2001,3,"Phosphorus, Total - 00665",17,NR-04   3.0M
+WW93,NA,5,2001,0.2,"Phosphorus, Total - 00665",16,NR-05
+WW94,NA,5,2001,0.2,"Phosphorus, Total - 00665",16,NR-06
+WW95,NA,5,2001,0.2,"Phosphorus, Total - 00665",11,NR-07
+WW96,NA,5,2001,0.2,"Phosphorus, Total - 00665",17,NR-08
+WW97,NA,5,2001,0.2,"Phosphorus, Total - 00665",30,NR-09
+WW98,NA,5,2001,0.2,"Phosphorus, Total - 00665",19,NR-10
+WW99,NA,5,2001,0.2,"Phosphorus, Total - 00665",19,NR-11
+WW88,NA,5,2001,0.2,"Phosphorus, Total - 00665",12,NR-12
+WW31,NA,5,2001,0.2,"Phosphorus, Total - 00665",42,Pawcatuck River at Bradford
+WW189,NA,5,2001,0.2,"Phosphorus, Total - 00665",33,Pawcatuck River at Avondale
+WW100,NA,5,2001,0.2,"Phosphorus, Total - 00665",1.5,Queen River (Sherman Brk)
+WW101,NA,5,2001,0.2,"Phosphorus, Total - 00665",18,Queen River (Brownell's)
+WW102,NA,5,2001,0.2,"Phosphorus, Total - 00665",12,Queen River (Sand Bridge)
+WW103,NA,5,2001,0.2,"Phosphorus, Total - 00665",12,Queen River (Mail Rd.)
+WW228,NA,5,2001,0.2,"Phosphorus, Total - 00665",51,Shunock @ Asseconk Swamp
+WW236,NA,5,2001,0.2,"Phosphorus, Total - 00665",109,Shunock @ Babcock
+WW237,NA,5,2001,0.2,"Phosphorus, Total - 00665",19,Shunock @ Hewitt
+WW104,NA,5,2001,0.2,"Phosphorus, Total - 00665",10,Barber - Mud Brook
+WW105,NA,5,2001,0.2,"Phosphorus, Total - 00665",294,Belleville @ RR Xing
+WW106,NA,5,2001,0.2,"Phosphorus, Total - 00665",15,Belleville @ Sluiceway
+WW109,NA,5,2001,0.2,"Phosphorus, Total - 00665",9,Carr Inlet (NK)
+WW113,NA,5,2001,0.2,"Phosphorus, Total - 00665",14,Georgiaville @ Capron Pond
+WW114,NA,5,2001,0.2,"Phosphorus, Total - 00665",8,Georgiaville @ Harris
+WW115,NA,5,2001,0.2,"Phosphorus, Total - 00665",39,Pasquisett Tributary
+WW116,NA,5,2001,0.2,"Phosphorus, Total - 00665",43,Secret - Oak Hill East
+WW117,NA,5,2001,0.2,"Phosphorus, Total - 00665",9,Secret - Oak Hill West
+WW118,NA,5,2001,0.2,"Phosphorus, Total - 00665",1.5,Secret - Shore Dr.
+WW119,NA,5,2001,0.2,"Phosphorus, Total - 00665",29,Shickasheen - a @ Rte 2
+WW120,NA,5,2001,0.2,"Phosphorus, Total - 00665",99,Shickasheen - b @ Miskiania
+WW121,NA,5,2001,0.2,"Phosphorus, Total - 00665",15,Shickasheen - c @ Barber Outlet
+WW122,NA,5,2001,0.2,"Phosphorus, Total - 00665",21,Shickasheen - d @ Rte 138
+WW123,NA,5,2001,0.2,"Phosphorus, Total - 00665",135,Slack's Tributary #1
+WW124,NA,5,2001,0.2,"Phosphorus, Total - 00665",88,Slack's Tributary #2
+WW125,NA,5,2001,0.2,"Phosphorus, Total - 00665",22,Slack's Tributary #3
+WW126,NA,5,2001,0.2,"Phosphorus, Total - 00665",70,Slack's Tributary #4
+WW127,NA,5,2001,0.2,"Phosphorus, Total - 00665",10,Smith & Sayles @ Keech
+WW128,NA,5,2001,0.2,"Phosphorus, Total - 00665",25,Smith & Sayles @ Balcom
+WW129,NA,5,2001,0.2,"Phosphorus, Total - 00665",1.5,Smith & Sayles @ O'Donnel
+WW131,NA,5,2001,0.2,"Phosphorus, Total - 00665",292,Stafford Inlet - Downstream
+WW10,NA,6,2001,1,"Phosphorus, Total - 00665",25,Clark Pond
+WW14,NA,6,2001,1,"Phosphorus, Total - 00665",27,Fenner Pond
+WW140,NA,6,2001,1,"Phosphorus, Total - 00665",70,Pleasure Pond
+WW46,NA,6,2001,1,"Phosphorus, Total - 00665",17,Slack's Reservoir
+WW57,NA,6,2001,1,"Phosphorus, Total - 00665",191,Turner Reservior
+WW192,NA,6,2001,1,"Phosphorus, Total - 00665",90,Wesquage Pond
+WW69,NA,6,2001,0.2,"Phosphorus, Total - 00665",20,Beaver River #1 (Old Mt)
+WW70,NA,6,2001,0.2,"Phosphorus, Total - 00665",16,Beaver River #3 (Rte 138)
+WW71,NA,6,2001,0.2,"Phosphorus, Total - 00665",22,Beaver River #4 (Shannock)
+WW72,NA,6,2001,0.2,"Phosphorus, Total - 00665",66,Falls River A
+WW73,NA,6,2001,0.2,"Phosphorus, Total - 00665",68,Falls River B
+WW74,NA,6,2001,0.2,"Phosphorus, Total - 00665",74,Falls River C
+WW75,NA,6,2001,0.2,"Phosphorus, Total - 00665",110,Falls River D
+WW77,NA,6,2001,0.2,"Phosphorus, Total - 00665",12,Locstv.- Brushy @ Woody Hill
+WW78,NA,6,2001,0.2,"Phosphorus, Total - 00665",14,Locstv.- Brushy @ Sawmill
+WW76,NA,6,2001,0.2,"Phosphorus, Total - 00665",19,Locstv.- Loghse @ Sandy
+WW80,NA,6,2001,0.2,"Phosphorus, Total - 00665",28,Meadow Brook #1
+WW81,NA,6,2001,0.2,"Phosphorus, Total - 00665",32,Meadow Brook #2
+WW82,NA,6,2001,0.2,"Phosphorus, Total - 00665",30,Meadow Brook #3
+WW83,NA,6,2001,0.2,"Phosphorus, Total - 00665",43,Moosup Upstream
+WW84,NA,6,2001,0.2,"Phosphorus, Total - 00665",46,Moosup A
+WW85,NA,6,2001,0.2,"Phosphorus, Total - 00665",34,Moosup B
+WW86,NA,6,2001,0.2,"Phosphorus, Total - 00665",22,NR-01
+WW87,NA,6,2001,0.5,"Phosphorus, Total - 00665",24,NR-02   0.5M
+WW87,NA,6,2001,3,"Phosphorus, Total - 00665",21,NR-02   3.0M
+WW89,NA,6,2001,0.5,"Phosphorus, Total - 00665",37,NR-03   0.5M
+WW89,NA,6,2001,3,"Phosphorus, Total - 00665",20,NR-03   3.0M
+WW91,NA,6,2001,0.5,"Phosphorus, Total - 00665",32,NR-04   0.5M
+WW91,NA,6,2001,3,"Phosphorus, Total - 00665",23,NR-04   3.0M
+WW93,NA,6,2001,0.2,"Phosphorus, Total - 00665",21,NR-05
+WW95,NA,6,2001,0.2,"Phosphorus, Total - 00665",49,NR-07
+WW96,NA,6,2001,0.2,"Phosphorus, Total - 00665",39,NR-08
+WW97,NA,6,2001,0.2,"Phosphorus, Total - 00665",21,NR-09
+WW98,NA,6,2001,0.2,"Phosphorus, Total - 00665",29,NR-10
+WW99,NA,6,2001,0.2,"Phosphorus, Total - 00665",23,NR-11
+WW88,NA,6,2001,0.2,"Phosphorus, Total - 00665",24,NR-12
+WW100,NA,6,2001,0.2,"Phosphorus, Total - 00665",13,Queen River (Sherman Brk)
+WW101,NA,6,2001,0.2,"Phosphorus, Total - 00665",19,Queen River (Brownell's)
+WW102,NA,6,2001,0.2,"Phosphorus, Total - 00665",33,Queen River (Sand Bridge)
+WW103,NA,6,2001,0.2,"Phosphorus, Total - 00665",42,Queen River (Mail Rd.)
+WW123,NA,6,2001,0.2,"Phosphorus, Total - 00665",71,Slack's Tributary #1
+WW124,NA,6,2001,0.2,"Phosphorus, Total - 00665",41,Slack's Tributary #2
+WW125,NA,6,2001,0.2,"Phosphorus, Total - 00665",25,Slack's Tributary #3
+WW126,NA,6,2001,0.2,"Phosphorus, Total - 00665",20,Slack's Tributary #4
+WW01,NA,7,2001,1,"Phosphorus, Total - 00665",22,Alton Pond
+WW02,NA,7,2001,1,"Phosphorus, Total - 00665",33,Barber Pond
+WW03,NA,7,2001,1,"Phosphorus, Total - 00665",26,Belleville Pond - Lower
+WW04,NA,7,2001,1,"Phosphorus, Total - 00665",53,Belleville Pond - Upper
+WW06,NA,7,2001,1,"Phosphorus, Total - 00665",19,Boone Lake
+WW07,NA,7,2001,1,"Phosphorus, Total - 00665",27,Brickyard Pond
+WW08,NA,7,2001,1,"Phosphorus, Total - 00665",31,Carr Pond (NK)
+WW09,NA,7,2001,1,"Phosphorus, Total - 00665",18,Carr Pond (WG)
+WW10,NA,7,2001,1,"Phosphorus, Total - 00665",63,Clark Pond
+WW11,NA,7,2001,1,"Phosphorus, Total - 00665",15,Coomber's Reservoir
+WW12,NA,7,2001,1,"Phosphorus, Total - 00665",9,Deep Pond
+WW13,NA,7,2001,1,"Phosphorus, Total - 00665",12,Echo Lake (Pascoag south)
+WW14,NA,7,2001,1,"Phosphorus, Total - 00665",66,Fenner Pond
+WW15,NA,7,2001,1,"Phosphorus, Total - 00665",12,Flat River Reservoir
+WW16,NA,7,2001,1,"Phosphorus, Total - 00665",20,Georgiaville Pond
+WW17,NA,7,2001,1,"Phosphorus, Total - 00665",24,Hundred Acre Pond
+WW18,NA,7,2001,1,"Phosphorus, Total - 00665",21,Indian Lake
+WW19,NA,7,2001,1,"Phosphorus, Total - 00665",13,Keech Pond
+WW20,NA,7,2001,1,"Phosphorus, Total - 00665",24,Little Pond
+WW21,NA,7,2001,1,"Phosphorus, Total - 00665",20,Locustville Pond
+WW22,NA,7,2001,1,"Phosphorus, Total - 00665",16,Long Pond (Hopkinton)
+WW23,NA,7,2001,1,"Phosphorus, Total - 00665",6,Long Pond (SK)
+WW24,NA,7,2001,1,"Phosphorus, Total - 00665",31,Lower Sprague Reservoir
+WW25,NA,7,2001,1,"Phosphorus, Total - 00665",37,Mashapaug Pond
+WW26,NA,7,2001,1,"Phosphorus, Total - 00665",33,Meadowbrook Pond
+WW183,NA,7,2001,1,"Phosphorus, Total - 00665",42,Melville Pond - Upper
+WW27,NA,7,2001,1,"Phosphorus, Total - 00665",11,Mishnock Lake
+WW28,NA,7,2001,1,"Phosphorus, Total - 00665",28,Oak Swamp Reservoir
+WW29,NA,7,2001,1,"Phosphorus, Total - 00665",11,Pascoag Reservoir
+WW30,NA,7,2001,1,"Phosphorus, Total - 00665",17,Pasquisett Pond
+WW33,NA,7,2001,1,"Phosphorus, Total - 00665",63,Prince's Pond
+WW34,NA,7,2001,1,"Phosphorus, Total - 00665",12,Queen @ Usq. (Glen Rock)
+WW35,NA,7,2001,1,"Phosphorus, Total - 00665",15,Quidnick Reservoir
+WW36,NA,7,2001,1,"Phosphorus, Total - 00665",19,Randall Pond
+WW140,NA,7,2001,1,"Phosphorus, Total - 00665",78,Pleasure Pond
+WW38,NA,7,2001,1,"Phosphorus, Total - 00665",17,Sand Pond
+WW39,NA,7,2001,1,"Phosphorus, Total - 00665",20,Saugatucket Pond
+WW40,NA,7,2001,1,"Phosphorus, Total - 00665",13,Schoolhouse Pond - Lower
+WW41,NA,7,2001,1,"Phosphorus, Total - 00665",14,Schoolhouse Pond - Upper
+WW42,NA,7,2001,1,"Phosphorus, Total - 00665",16,Secret Lake
+WW43,NA,7,2001,1,"Phosphorus, Total - 00665",27,Shippee Mill Pond
+WW44,NA,7,2001,1,"Phosphorus, Total - 00665",13,Silver Lake
+WW45,NA,7,2001,1,"Phosphorus, Total - 00665",21,Silver Spring Lake
+WW46,NA,7,2001,1,"Phosphorus, Total - 00665",16,Slack's Reservoir
+WW47,NA,7,2001,1,"Phosphorus, Total - 00665",44,Slater Pond
+WW48,NA,7,2001,1,"Phosphorus, Total - 00665",14,Smith and Sayles Reservoir
+WW215,NA,7,2001,1,"Phosphorus, Total - 00665",28,Spalding Pond
+WW49,NA,7,2001,1,"Phosphorus, Total - 00665",61,Spectacle Pond
+WW50,NA,7,2001,1,"Phosphorus, Total - 00665",31,Spring Grove Pond
+WW51,NA,7,2001,1,"Phosphorus, Total - 00665",26,Spring Lake
+WW145,NA,7,2001,1,"Phosphorus, Total - 00665",24,Stafford Pond
+WW52,NA,7,2001,1,"Phosphorus, Total - 00665",19,Stillwater Pond
+WW54,NA,7,2001,1,"Phosphorus, Total - 00665",17,Tarbox Pond
+WW55,NA,7,2001,1,"Phosphorus, Total - 00665",23,Tiogue Lake
+WW56,NA,7,2001,1,"Phosphorus, Total - 00665",36,Tucker Pond
+WW57,NA,7,2001,1,"Phosphorus, Total - 00665",51,Turner Reservior
+WW58,NA,7,2001,1,"Phosphorus, Total - 00665",184,Valley Falls Pond
+WW59,NA,7,2001,1,"Phosphorus, Total - 00665",36,Warwick Pond
+WW60,NA,7,2001,1,"Phosphorus, Total - 00665",29,Watchaug Pond
+WW61,NA,7,2001,1,"Phosphorus, Total - 00665",13,Waterman Lake
+WW62,NA,7,2001,1,"Phosphorus, Total - 00665",24,Wenscott Reservior
+WW192,NA,7,2001,1,"Phosphorus, Total - 00665",54,Wesquage Pond
+WW63,NA,7,2001,1,"Phosphorus, Total - 00665",25,Wilson Reservoir
+WW64,NA,7,2001,1,"Phosphorus, Total - 00665",9,White Pond
+WW65,NA,7,2001,1,"Phosphorus, Total - 00665",18,Woonasquatucket Reservoir
+WW66,NA,7,2001,1,"Phosphorus, Total - 00665",22,Worden Pond
+WW216,NA,7,2001,1,"Phosphorus, Total - 00665",13,Wyassup Lake
+WW67,NA,7,2001,1,"Phosphorus, Total - 00665",40,Wyoming Pond
+WW68,NA,7,2001,1,"Phosphorus, Total - 00665",40,Yawgoo Pond
+WW06,NA,7,2001,5,"Phosphorus, Total - 00665",17,Boone Lake
+WW07,NA,7,2001,5,"Phosphorus, Total - 00665",27,Brickyard Pond
+WW08,NA,7,2001,5,"Phosphorus, Total - 00665",26,Carr Pond (NK)
+WW09,NA,7,2001,10,"Phosphorus, Total - 00665",9,Carr Pond (WG)
+WW12,NA,7,2001,5,"Phosphorus, Total - 00665",3,Deep Pond
+WW15,NA,7,2001,8,"Phosphorus, Total - 00665",11,Flat River Reservoir
+WW16,NA,7,2001,5,"Phosphorus, Total - 00665",17,Georgiaville Pond
+WW17,NA,7,2001,7,"Phosphorus, Total - 00665",13,Hundred Acre Pond
+WW20,NA,7,2001,5,"Phosphorus, Total - 00665",21,Little Pond
+WW22,NA,7,2001,5,"Phosphorus, Total - 00665",17,Long  Pond (Hopkinton)
+WW23,NA,7,2001,6,"Phosphorus, Total - 00665",9,Long  Pond (SK)
+WW25,NA,7,2001,3,"Phosphorus, Total - 00665",128,Mashapaug Pond
+WW27,NA,7,2001,5,"Phosphorus, Total - 00665",14,Mishnock Lake
+WW29,NA,7,2001,5,"Phosphorus, Total - 00665",7,Pascoag Reservoir
+WW33,NA,7,2001,2.5,"Phosphorus, Total - 00665",83,Princes Pond
+WW35,NA,7,2001,7,"Phosphorus, Total - 00665",11,Quidnick Reservoir
+WW38,NA,7,2001,5,"Phosphorus, Total - 00665",73,Sand Pond
+WW40,NA,7,2001,5,"Phosphorus, Total - 00665",11,Schoolhouse Pond - Lower
+WW41,NA,7,2001,5,"Phosphorus, Total - 00665",14,Schoolhouse Pond - Upper
+WW44,NA,7,2001,7,"Phosphorus, Total - 00665",12,Silver Lake
+WW51,NA,7,2001,5,"Phosphorus, Total - 00665",7,Spring Lake
+WW145,NA,7,2001,7,"Phosphorus, Total - 00665",35,Stafford Pond
+WW56,NA,7,2001,3,"Phosphorus, Total - 00665",29,Tucker Pond
+WW59,NA,7,2001,6,"Phosphorus, Total - 00665",16,Warwick Pond
+WW60,NA,7,2001,10,"Phosphorus, Total - 00665",19,Watchaug Pond
+WW64,NA,7,2001,10,"Phosphorus, Total - 00665",12,White Pond
+WW216,NA,7,2001,7,"Phosphorus, Total - 00665",12,Wyassup Lake
+WW69,NA,7,2001,0.2,"Phosphorus, Total - 00665",30,Beaver River #1 (Old Mt)
+WW70,NA,7,2001,0.2,"Phosphorus, Total - 00665",15,Beaver River #3 (Rte 138)
+WW71,NA,7,2001,0.2,"Phosphorus, Total - 00665",29,Beaver River #4 (Shannock)
+WW72,NA,7,2001,0.2,"Phosphorus, Total - 00665",41,Falls River A
+WW73,NA,7,2001,0.2,"Phosphorus, Total - 00665",50,Falls River B
+WW74,NA,7,2001,0.2,"Phosphorus, Total - 00665",51,Falls River C
+WW75,NA,7,2001,0.2,"Phosphorus, Total - 00665",88,Falls River D
+WW302,NA,7,2001,0.2,"Phosphorus, Total - 00665",11,Green Falls River #1
+WW303,NA,7,2001,0.2,"Phosphorus, Total - 00665",20,Green Falls River #2
+WW498,NA,7,2001,0.2,"Phosphorus, Total - 00665",19,Green Falls River #3
+WW79,NA,7,2001,0.2,"Phosphorus, Total - 00665",19,Locstv.- Moscow @ Sawmill
+WW77,NA,7,2001,0.2,"Phosphorus, Total - 00665",25,Locstv.- Brushy @ Woody Hill
+WW78,NA,7,2001,0.2,"Phosphorus, Total - 00665",14,Locstv.- Brushy @ Sawmill
+WW76,NA,7,2001,0.2,"Phosphorus, Total - 00665",17,Locstv.- Loghse @ Sandy
+WW80,NA,7,2001,0.2,"Phosphorus, Total - 00665",31,Meadow Brook #1
+WW81,NA,7,2001,0.2,"Phosphorus, Total - 00665",31,Meadow Brook #2
+WW82,NA,7,2001,0.2,"Phosphorus, Total - 00665",32,Meadow Brook #3
+WW83,NA,7,2001,0.2,"Phosphorus, Total - 00665",40,Moosup Upstream
+WW84,NA,7,2001,0.2,"Phosphorus, Total - 00665",41,Moosup A
+WW85,NA,7,2001,0.2,"Phosphorus, Total - 00665",44,Moosup B
+WW86,NA,7,2001,0.2,"Phosphorus, Total - 00665",27,NR-01
+WW87,NA,7,2001,0.5,"Phosphorus, Total - 00665",27,NR-02   0.5M
+WW87,NA,7,2001,3,"Phosphorus, Total - 00665",22,NR-02   3.0M
+WW89,NA,7,2001,0.5,"Phosphorus, Total - 00665",33,NR-03   0.5M
+WW89,NA,7,2001,3,"Phosphorus, Total - 00665",49,NR-03   3.0M
+WW91,NA,7,2001,0.5,"Phosphorus, Total - 00665",37,NR-04   0.5M
+WW91,NA,7,2001,3,"Phosphorus, Total - 00665",22,NR-04   3.0M
+WW93,NA,7,2001,0.2,"Phosphorus, Total - 00665",30,NR-05
+WW94,NA,7,2001,0.2,"Phosphorus, Total - 00665",23,NR-06
+WW95,NA,7,2001,0.2,"Phosphorus, Total - 00665",30,NR-07
+WW96,NA,7,2001,0.2,"Phosphorus, Total - 00665",32,NR-08
+WW97,NA,7,2001,0.2,"Phosphorus, Total - 00665",66,NR-09
+WW98,NA,7,2001,0.2,"Phosphorus, Total - 00665",38,NR-10
+WW99,NA,7,2001,0.2,"Phosphorus, Total - 00665",22,NR-11
+WW88,NA,7,2001,0.2,"Phosphorus, Total - 00665",21,NR-12
+WW31,NA,7,2001,0.2,"Phosphorus, Total - 00665",108,Pawcatuck River at Bradford
+WW100,NA,7,2001,0.2,"Phosphorus, Total - 00665",13,Queen River (Sherman Brk)
+WW102,NA,7,2001,0.2,"Phosphorus, Total - 00665",22,Queen River (Sand Bridge)
+WW103,NA,7,2001,0.2,"Phosphorus, Total - 00665",43,Queen River (Mail Rd.)
+WW228,NA,7,2001,0.2,"Phosphorus, Total - 00665",93,Shunock @ Asseconk Swamp
+WW236,NA,7,2001,0.2,"Phosphorus, Total - 00665",38,Shunock @ Babcock
+WW237,NA,7,2001,0.2,"Phosphorus, Total - 00665",27,Shunock @ Hewitt
+WW104,NA,7,2001,0.2,"Phosphorus, Total - 00665",35,Barber - Mud Brook
+WW105,NA,7,2001,0.2,"Phosphorus, Total - 00665",43,Belleville @ RR Xing
+WW106,NA,7,2001,0.2,"Phosphorus, Total - 00665",10,Belleville @ Sluiceway
+WW107,NA,7,2001,0.2,"Phosphorus, Total - 00665",13,Boone Tributary #1
+WW109,NA,7,2001,0.2,"Phosphorus, Total - 00665",9,Carr Inlet (NK)
+WW110,NA,7,2001,0.2,"Phosphorus, Total - 00665",43,Flat River Res. @ Zeke's Bridge
+WW111,NA,7,2001,0.2,"Phosphorus, Total - 00665",136,Flat River Res.@ Isle of Capri
+WW112,NA,7,2001,0.2,"Phosphorus, Total - 00665",17,Flat River @ Maple Valley
+WW113,NA,7,2001,0.2,"Phosphorus, Total - 00665",15,Georgiaville @ Capron Pond
+WW114,NA,7,2001,0.2,"Phosphorus, Total - 00665",12,Georgiaville @ Harris
+WW115,NA,7,2001,0.2,"Phosphorus, Total - 00665",26,Pasquisett Tributary
+WW116,NA,7,2001,0.2,"Phosphorus, Total - 00665",18,Secret - Oak Hill East
+WW117,NA,7,2001,0.2,"Phosphorus, Total - 00665",17,Secret - Oak Hill West
+WW118,NA,7,2001,0.2,"Phosphorus, Total - 00665",10,Secret - Shore Dr.
+WW119,NA,7,2001,0.2,"Phosphorus, Total - 00665",29,Shickasheen - a @ Rte 2
+WW120,NA,7,2001,0.2,"Phosphorus, Total - 00665",200,Shickasheen - b @ Miskiania
+WW121,NA,7,2001,0.2,"Phosphorus, Total - 00665",35,Shickasheen - c @ Barber Outlet
+WW122,NA,7,2001,0.2,"Phosphorus, Total - 00665",33,Shickasheen - d @ Rte 138
+WW123,NA,7,2001,0.2,"Phosphorus, Total - 00665",64,Slack's Tributary #1
+WW124,NA,7,2001,0.2,"Phosphorus, Total - 00665",19,Slack's Tributary #2
+WW125,NA,7,2001,0.2,"Phosphorus, Total - 00665",16,Slack's Tributary #3
+WW126,NA,7,2001,0.2,"Phosphorus, Total - 00665",14,Slack's Tributary #4
+WW127,NA,7,2001,0.2,"Phosphorus, Total - 00665",10,Smith & Sayles @ Keech
+WW128,NA,7,2001,0.2,"Phosphorus, Total - 00665",22,Smith & Sayles @ Balcom
+WW129,NA,7,2001,0.2,"Phosphorus, Total - 00665",3,Smith & Sayles @ O'Donnel
+WW131,NA,7,2001,0.2,"Phosphorus, Total - 00665",401,Stafford Inlet - Downstream
+WW133,NA,7,2001,0.2,"Phosphorus, Total - 00665",39,Watchaug - Perry Healy Brk
+WW46,NA,8,2001,1,"Phosphorus, Total - 00665",19,Slack's Reservoir
+WW68,NA,8,2001,1,"Phosphorus, Total - 00665",44,Yawgoo Pond
+WW68,NA,8,2001,7,"Phosphorus, Total - 00665",89,Yawgoo Pond
+WW69,NA,8,2001,0.2,"Phosphorus, Total - 00665",24,Beaver River #1 (Old Mt)
+WW70,NA,8,2001,0.2,"Phosphorus, Total - 00665",18,Beaver River #3 (Rte 138)
+WW71,NA,8,2001,0.2,"Phosphorus, Total - 00665",32,Beaver River #4 (Shannock)
+WW72,NA,8,2001,0.2,"Phosphorus, Total - 00665",35,Falls River A
+WW73,NA,8,2001,0.2,"Phosphorus, Total - 00665",33,Falls River B
+WW74,NA,8,2001,0.2,"Phosphorus, Total - 00665",38,Falls River C
+WW75,NA,8,2001,0.2,"Phosphorus, Total - 00665",53,Falls River D
+WW79,NA,8,2001,0.2,"Phosphorus, Total - 00665",23,Locstv.- Moscow @ Sawmill
+WW77,NA,8,2001,0.2,"Phosphorus, Total - 00665",13,Locstv.- Brushy @ Woody Hill
+WW78,NA,8,2001,0.2,"Phosphorus, Total - 00665",18,Locstv.- Brushy @ Sawmill
+WW76,NA,8,2001,0.2,"Phosphorus, Total - 00665",21,Locstv.- Loghse @ Sandy
+WW80,NA,8,2001,0.2,"Phosphorus, Total - 00665",100,Meadow Brook #1
+WW83,NA,8,2001,0.2,"Phosphorus, Total - 00665",24,Moosup Upstream
+WW84,NA,8,2001,0.2,"Phosphorus, Total - 00665",26,Moosup A
+WW85,NA,8,2001,0.2,"Phosphorus, Total - 00665",22,Moosup B
+WW86,NA,8,2001,0.2,"Phosphorus, Total - 00665",56,NR-01
+WW87,NA,8,2001,0.5,"Phosphorus, Total - 00665",27,NR-02   0.5M
+WW87,NA,8,2001,3,"Phosphorus, Total - 00665",24,NR-02   3.0M
+WW89,NA,8,2001,0.5,"Phosphorus, Total - 00665",18,NR-03   0.5M
+WW89,NA,8,2001,3,"Phosphorus, Total - 00665",37,NR-03   3.0M
+WW91,NA,8,2001,0.5,"Phosphorus, Total - 00665",47,NR-04   0.5M
+WW91,NA,8,2001,3,"Phosphorus, Total - 00665",21,NR-04   3.0M
+WW93,NA,8,2001,0.2,"Phosphorus, Total - 00665",31,NR-05
+WW95,NA,8,2001,0.2,"Phosphorus, Total - 00665",30,NR-07
+WW96,NA,8,2001,0.2,"Phosphorus, Total - 00665",39,NR-08
+WW97,NA,8,2001,0.2,"Phosphorus, Total - 00665",47,NR-09
+WW98,NA,8,2001,0.2,"Phosphorus, Total - 00665",39,NR-10
+WW99,NA,8,2001,0.2,"Phosphorus, Total - 00665",18,NR-11
+WW88,NA,8,2001,0.2,"Phosphorus, Total - 00665",23,NR-12
+WW100,NA,8,2001,0.2,"Phosphorus, Total - 00665",14,Queen River (Sherman Brk)
+WW101,NA,8,2001,0.2,"Phosphorus, Total - 00665",22,Queen River (Brownell's)
+WW102,NA,8,2001,0.2,"Phosphorus, Total - 00665",28,Queen River (Sand Bridge)
+WW103,NA,8,2001,0.2,"Phosphorus, Total - 00665",27,Queen River (Mail Rd.)
+WW104,NA,8,2001,0.2,"Phosphorus, Total - 00665",18,Barber - Mud Brook
+WW119,NA,8,2001,0.2,"Phosphorus, Total - 00665",93,Shickasheen - a @ Rte 2
+WW120,NA,8,2001,0.2,"Phosphorus, Total - 00665",140,Shickasheen - b @ Miskiania
+WW121,NA,8,2001,0.2,"Phosphorus, Total - 00665",30,Shickasheen - c @ Barber Outlet
+WW122,NA,8,2001,0.2,"Phosphorus, Total - 00665",33,Shickasheen - d @ Rte 138
+WW123,NA,8,2001,0.2,"Phosphorus, Total - 00665",15,Slack's Tributary #1
+WW124,NA,8,2001,0.2,"Phosphorus, Total - 00665",26,Slack's Tributary #2
+WW125,NA,8,2001,0.2,"Phosphorus, Total - 00665",27,Slack's Tributary #3
+WW126,NA,8,2001,0.2,"Phosphorus, Total - 00665",24,Slack's Tributary #4
+WW46,NA,9,2001,1,"Phosphorus, Total - 00665",15,Slack's Reservoir
+WW48,NA,9,2001,1,"Phosphorus, Total - 00665",8,Smith and Sayles Reservoir
+WW68,NA,9,2001,1,"Phosphorus, Total - 00665",18,Yawgoo Pond
+WW68,NA,9,2001,7,"Phosphorus, Total - 00665",340,Yawgoo Pond
+WW69,NA,9,2001,0.2,"Phosphorus, Total - 00665",15,Beaver River #1 (Old Mt)
+WW70,NA,9,2001,0.2,"Phosphorus, Total - 00665",26,Beaver River #3 (Rte 138)
+WW71,NA,9,2001,0.2,"Phosphorus, Total - 00665",22,Beaver River #4 (Shannock)
+WW72,NA,9,2001,0.2,"Phosphorus, Total - 00665",15,Falls River A
+WW73,NA,9,2001,0.2,"Phosphorus, Total - 00665",16,Falls River B
+WW74,NA,9,2001,0.2,"Phosphorus, Total - 00665",21,Falls River C
+WW75,NA,9,2001,0.2,"Phosphorus, Total - 00665",54,Falls River D
+WW79,NA,9,2001,0.2,"Phosphorus, Total - 00665",20,Locstv.- Moscow @ Sawmill
+WW77,NA,9,2001,0.2,"Phosphorus, Total - 00665",9,Locstv.- Brushy @ Woody Hill
+WW78,NA,9,2001,0.2,"Phosphorus, Total - 00665",13,Locstv.- Brushy @ Sawmill
+WW76,NA,9,2001,0.2,"Phosphorus, Total - 00665",19,Locstv.- Loghse @ Sandy
+WW80,NA,9,2001,0.2,"Phosphorus, Total - 00665",14,Meadow Brook #1
+WW81,NA,9,2001,0.2,"Phosphorus, Total - 00665",33,Meadow Brook #2
+WW82,NA,9,2001,0.2,"Phosphorus, Total - 00665",37,Meadow Brook #3
+WW83,NA,9,2001,0.2,"Phosphorus, Total - 00665",19,Moosup Upstream
+WW84,NA,9,2001,0.2,"Phosphorus, Total - 00665",18,Moosup A
+WW85,NA,9,2001,0.2,"Phosphorus, Total - 00665",16,Moosup B
+WW86,NA,9,2001,0.2,"Phosphorus, Total - 00665",12,NR-01
+WW87,NA,9,2001,0.5,"Phosphorus, Total - 00665",41,NR-02   0.5M
+WW87,NA,9,2001,3,"Phosphorus, Total - 00665",36,NR-02   3.0M
+WW89,NA,9,2001,0.5,"Phosphorus, Total - 00665",40,NR-03   0.5M
+WW89,NA,9,2001,3,"Phosphorus, Total - 00665",41,NR-03   3.0M
+WW91,NA,9,2001,0.5,"Phosphorus, Total - 00665",45,NR-04   0.5M
+WW91,NA,9,2001,3,"Phosphorus, Total - 00665",48,NR-04   3.0M
+WW94,NA,9,2001,0.2,"Phosphorus, Total - 00665",48,NR-06
+WW95,NA,9,2001,0.2,"Phosphorus, Total - 00665",41,NR-07
+WW96,NA,9,2001,0.2,"Phosphorus, Total - 00665",43,NR-08
+WW97,NA,9,2001,0.2,"Phosphorus, Total - 00665",49,NR-09
+WW98,NA,9,2001,0.2,"Phosphorus, Total - 00665",52,NR-10
+WW99,NA,9,2001,0.2,"Phosphorus, Total - 00665",94,NR-11
+WW88,NA,9,2001,0.2,"Phosphorus, Total - 00665",28,NR-12
+WW100,NA,9,2001,0.2,"Phosphorus, Total - 00665",22,Queen River (Sherman Brk)
+WW101,NA,9,2001,0.2,"Phosphorus, Total - 00665",38,Queen River (Brownell's)
+WW102,NA,9,2001,0.2,"Phosphorus, Total - 00665",15,Queen River (Sand Bridge)
+WW103,NA,9,2001,0.2,"Phosphorus, Total - 00665",60,Queen River (Mail Rd.)
+WW104,NA,9,2001,0.2,"Phosphorus, Total - 00665",25,Barber - Mud Brook
+WW110,NA,9,2001,0.2,"Phosphorus, Total - 00665",8,Flat River Res. @ Zeke's Bridge
+WW111,NA,9,2001,0.2,"Phosphorus, Total - 00665",11,Flat River Res.@ Isle of Capri
+WW112,NA,9,2001,0.2,"Phosphorus, Total - 00665",6,Flat River @ Maple Valley
+WW123,NA,9,2001,0.2,"Phosphorus, Total - 00665",89,Slack's Tributary #1
+WW124,NA,9,2001,0.2,"Phosphorus, Total - 00665",38,Slack's Tributary #2
+WW125,NA,9,2001,0.2,"Phosphorus, Total - 00665",39,Slack's Tributary #3
+WW126,NA,9,2001,0.2,"Phosphorus, Total - 00665",17,Slack's Tributary #4
+WW127,NA,9,2001,0.2,"Phosphorus, Total - 00665",10,Smith & Sayles @ Keech
+WW128,NA,9,2001,0.2,"Phosphorus, Total - 00665",11,Smith & Sayles @ Balcom
+WW129,NA,9,2001,0.2,"Phosphorus, Total - 00665",14,Smith & Sayles @ O'Donnel
+WW01,NA,10,2001,1,"Phosphorus, Total - 00665",13,Alton Pond
+WW02,NA,10,2001,1,"Phosphorus, Total - 00665",20,Barber Pond
+WW03,NA,10,2001,1,"Phosphorus, Total - 00665",14,Belleville Pond - Lower
+WW04,NA,10,2001,1,"Phosphorus, Total - 00665",14,Belleville Pond - Upper
+WW07,NA,10,2001,1,"Phosphorus, Total - 00665",37,Brickyard Pond
+WW08,NA,10,2001,1,"Phosphorus, Total - 00665",15,Carr Pond (NK)
+WW09,NA,10,2001,1,"Phosphorus, Total - 00665",6,Carr Pond (WG)
+WW10,NA,10,2001,1,"Phosphorus, Total - 00665",28,Clark Pond
+WW11,NA,10,2001,1,"Phosphorus, Total - 00665",7,Coomber's Reservoir
+WW12,NA,10,2001,1,"Phosphorus, Total - 00665",40,Deep Pond
+WW13,NA,10,2001,1,"Phosphorus, Total - 00665",13,Echo Lake (Pascoag south)
+WW14,NA,10,2001,1,"Phosphorus, Total - 00665",31,Fenner Pond
+WW15,NA,10,2001,1,"Phosphorus, Total - 00665",11,Flat River Reservoir
+WW16,NA,10,2001,1,"Phosphorus, Total - 00665",11,Georgiaville Pond
+WW17,NA,10,2001,1,"Phosphorus, Total - 00665",16,Hundred Acre Pond
+WW18,NA,10,2001,1,"Phosphorus, Total - 00665",10,Indian Lake
+WW19,NA,10,2001,1,"Phosphorus, Total - 00665",17,Keech Pond
+WW20,NA,10,2001,1,"Phosphorus, Total - 00665",19,Little Pond
+WW21,NA,10,2001,1,"Phosphorus, Total - 00665",10,Locustville Pond
+WW23,NA,10,2001,1,"Phosphorus, Total - 00665",7,Long Pond (SK)
+WW24,NA,10,2001,1,"Phosphorus, Total - 00665",36,Lower Sprague Reservoir
+WW25,NA,10,2001,1,"Phosphorus, Total - 00665",74,Mashapaug Pond
+WW26,NA,10,2001,1,"Phosphorus, Total - 00665",32,Meadowbrook Pond
+WW183,NA,10,2001,1,"Phosphorus, Total - 00665",39,Melville Pond - Upper
+WW27,NA,10,2001,1,"Phosphorus, Total - 00665",8,Mishnock Lake
+WW28,NA,10,2001,1,"Phosphorus, Total - 00665",15,Oak Swamp Reservoir
+WW29,NA,10,2001,1,"Phosphorus, Total - 00665",1.5,Pascoag Reservoir
+WW30,NA,10,2001,1,"Phosphorus, Total - 00665",18,Pasquisett Pond
+WW33,NA,10,2001,1,"Phosphorus, Total - 00665",58,Prince's Pond
+WW34,NA,10,2001,1,"Phosphorus, Total - 00665",34,Queen @ Usq. (Glen Rock)
+WW36,NA,10,2001,1,"Phosphorus, Total - 00665",27,Randall Pond
+WW140,NA,10,2001,1,"Phosphorus, Total - 00665",55,Pleasure Pond
+WW38,NA,10,2001,1,"Phosphorus, Total - 00665",21,Sand Pond
+WW39,NA,10,2001,1,"Phosphorus, Total - 00665",20,Saugatucket Pond
+WW40,NA,10,2001,1,"Phosphorus, Total - 00665",1.5,Schoolhouse Pond - Lower
+WW41,NA,10,2001,1,"Phosphorus, Total - 00665",11,Schoolhouse Pond - Upper
+WW42,NA,10,2001,1,"Phosphorus, Total - 00665",118,Secret Lake
+WW43,NA,10,2001,1,"Phosphorus, Total - 00665",6,Shippee Mill Pond
+WW44,NA,10,2001,1,"Phosphorus, Total - 00665",17,Silver Lake
+WW45,NA,10,2001,1,"Phosphorus, Total - 00665",17,Silver Spring Lake
+WW46,NA,10,2001,1,"Phosphorus, Total - 00665",12,Slack's Reservoir
+WW47,NA,10,2001,1,"Phosphorus, Total - 00665",38,Slater Pond
+WW215,NA,10,2001,1,"Phosphorus, Total - 00665",35,Spalding Pond
+WW49,NA,10,2001,1,"Phosphorus, Total - 00665",45,Spectacle Pond
+WW50,NA,10,2001,1,"Phosphorus, Total - 00665",12,Spring Grove Pond
+WW51,NA,10,2001,1,"Phosphorus, Total - 00665",19,Spring Lake
+WW145,NA,10,2001,1,"Phosphorus, Total - 00665",31,Stafford Pond
+WW52,NA,10,2001,1,"Phosphorus, Total - 00665",11,Stillwater Pond
+WW54,NA,10,2001,1,"Phosphorus, Total - 00665",16,Tarbox Pond
+WW55,NA,10,2001,1,"Phosphorus, Total - 00665",19,Tiogue Lake
+WW56,NA,10,2001,1,"Phosphorus, Total - 00665",21,Tucker Pond
+WW57,NA,10,2001,1,"Phosphorus, Total - 00665",91,Turner Reservior
+WW58,NA,10,2001,1,"Phosphorus, Total - 00665",225,Valley Falls Pond
+WW59,NA,10,2001,1,"Phosphorus, Total - 00665",43,Warwick Pond
+WW60,NA,10,2001,1,"Phosphorus, Total - 00665",11,Watchaug Pond
+WW61,NA,10,2001,1,"Phosphorus, Total - 00665",10,Waterman Lake
+WW62,NA,10,2001,1,"Phosphorus, Total - 00665",18,Wenscott Reservior
+WW192,NA,10,2001,1,"Phosphorus, Total - 00665",34,Wesquage Pond
+WW63,NA,10,2001,1,"Phosphorus, Total - 00665",9,Wilson Reservoir
+WW64,NA,10,2001,1,"Phosphorus, Total - 00665",7,White Pond
+WW65,NA,10,2001,1,"Phosphorus, Total - 00665",16,Woonasquatucket Reservoir
+WW66,NA,10,2001,1,"Phosphorus, Total - 00665",31,Worden Pond
+WW216,NA,10,2001,1,"Phosphorus, Total - 00665",16,Wyassup Lake
+WW67,NA,10,2001,1,"Phosphorus, Total - 00665",21,Wyoming Pond
+WW68,NA,10,2001,1,"Phosphorus, Total - 00665",33,Yawgoo Pond
+WW02,NA,10,2001,5,"Phosphorus, Total - 00665",16,Barber Pond
+WW07,NA,10,2001,5,"Phosphorus, Total - 00665",88,Brickyard Pond
+WW08,NA,10,2001,5,"Phosphorus, Total - 00665",28,Carr Pond (NK)
+WW09,NA,10,2001,10,"Phosphorus, Total - 00665",9,Carr Pond (WG)
+WW12,NA,10,2001,5,"Phosphorus, Total - 00665",52,Deep Pond
+WW15,NA,10,2001,8,"Phosphorus, Total - 00665",7,Flat River Reservoir
+WW16,NA,10,2001,5,"Phosphorus, Total - 00665",12,Georgiaville Pond
+WW17,NA,10,2001,7,"Phosphorus, Total - 00665",5,Hundred Acre Pond
+WW20,NA,10,2001,5,"Phosphorus, Total - 00665",21,Little Pond
+WW23,NA,10,2001,6,"Phosphorus, Total - 00665",8,Long  Pond (SK)
+WW25,NA,10,2001,3,"Phosphorus, Total - 00665",185,Mashapaug Pond
+WW27,NA,10,2001,5,"Phosphorus, Total - 00665",21,Mishnock Lake
+WW29,NA,10,2001,5,"Phosphorus, Total - 00665",13,Pascoag Reservoir
+WW33,NA,10,2001,2.5,"Phosphorus, Total - 00665",142,Princes Pond
+WW40,NA,10,2001,5,"Phosphorus, Total - 00665",13,Schoolhouse Pond - Lower
+WW41,NA,10,2001,5,"Phosphorus, Total - 00665",15,Schoolhouse Pond - Upper
+WW44,NA,10,2001,7,"Phosphorus, Total - 00665",22,Silver Lake
+WW51,NA,10,2001,5,"Phosphorus, Total - 00665",17,Spring Lake
+WW145,NA,10,2001,7,"Phosphorus, Total - 00665",32,Stafford Pond
+WW56,NA,10,2001,3,"Phosphorus, Total - 00665",13,Tucker Pond
+WW59,NA,10,2001,6,"Phosphorus, Total - 00665",38,Warwick Pond
+WW60,NA,10,2001,10,"Phosphorus, Total - 00665",11,Watchaug Pond
+WW64,NA,10,2001,10,"Phosphorus, Total - 00665",151,White Pond
+WW216,NA,10,2001,7,"Phosphorus, Total - 00665",17,Wyassup Lake
+WW71,NA,10,2001,0.2,"Phosphorus, Total - 00665",16,Beaver River #4 (Shannock)
+WW72,NA,10,2001,0.2,"Phosphorus, Total - 00665",32,Falls River A
+WW73,NA,10,2001,0.2,"Phosphorus, Total - 00665",28,Falls River B
+WW74,NA,10,2001,0.2,"Phosphorus, Total - 00665",31,Falls River C
+WW75,NA,10,2001,0.2,"Phosphorus, Total - 00665",71,Falls River D
+WW302,NA,10,2001,0.2,"Phosphorus, Total - 00665",9,Green Falls River #1
+WW303,NA,10,2001,0.2,"Phosphorus, Total - 00665",23,Green Falls River #2
+WW498,NA,10,2001,0.2,"Phosphorus, Total - 00665",11,Green Falls River #3
+WW79,NA,10,2001,0.2,"Phosphorus, Total - 00665",23,Locstv.- Moscow @ Sawmill
+WW77,NA,10,2001,0.2,"Phosphorus, Total - 00665",34,Locstv.- Brushy @ Woody Hill
+WW78,NA,10,2001,0.2,"Phosphorus, Total - 00665",21,Locstv.- Brushy @ Sawmill
+WW76,NA,10,2001,0.2,"Phosphorus, Total - 00665",24,Locstv.- Loghse @ Sandy
+WW81,NA,10,2001,0.2,"Phosphorus, Total - 00665",43,Meadow Brook #2
+WW82,NA,10,2001,0.2,"Phosphorus, Total - 00665",29,Meadow Brook #3
+WW83,NA,10,2001,0.2,"Phosphorus, Total - 00665",25,Moosup Upstream
+WW84,NA,10,2001,0.2,"Phosphorus, Total - 00665",27,Moosup A
+WW85,NA,10,2001,0.2,"Phosphorus, Total - 00665",23,Moosup B
+WW31,NA,10,2001,0.2,"Phosphorus, Total - 00665",136,Pawcatuck River at Bradford
+WW100,NA,10,2001,0.2,"Phosphorus, Total - 00665",7,Queen River (Sherman Brk)
+WW101,NA,10,2001,0.2,"Phosphorus, Total - 00665",11,Queen River (Brownell's)
+WW102,NA,10,2001,0.2,"Phosphorus, Total - 00665",24,Queen River (Sand Bridge)
+WW103,NA,10,2001,0.2,"Phosphorus, Total - 00665",18,Queen River (Mail Rd.)
+WW228,NA,10,2001,0.2,"Phosphorus, Total - 00665",40,Shunock @ Asseconk Swamp
+WW236,NA,10,2001,0.2,"Phosphorus, Total - 00665",26,Shunock @ Babcock
+WW237,NA,10,2001,0.2,"Phosphorus, Total - 00665",24,Shunock @ Hewitt
+WW104,NA,10,2001,0.2,"Phosphorus, Total - 00665",20,Barber - Mud Brook
+WW109,NA,10,2001,0.2,"Phosphorus, Total - 00665",7,Carr Inlet (NK)
+WW110,NA,10,2001,0.2,"Phosphorus, Total - 00665",22,Flat River Res. @ Zeke's Bridge
+WW111,NA,10,2001,0.2,"Phosphorus, Total - 00665",18,Flat River Res.@ Isle of Capri
+WW113,NA,10,2001,0.2,"Phosphorus, Total - 00665",15,Georgiaville @ Capron Pond
+WW114,NA,10,2001,0.2,"Phosphorus, Total - 00665",21,Georgiaville @ Harris
+WW115,NA,10,2001,0.2,"Phosphorus, Total - 00665",18,Pasquisett Tributary
+WW116,NA,10,2001,0.2,"Phosphorus, Total - 00665",19,Secret - Oak Hill East
+WW117,NA,10,2001,0.2,"Phosphorus, Total - 00665",28,Secret - Oak Hill West
+WW118,NA,10,2001,0.2,"Phosphorus, Total - 00665",20,Secret - Shore Dr.
+WW119,NA,10,2001,0.2,"Phosphorus, Total - 00665",121,Shickasheen - a @ Rte 2
+WW120,NA,10,2001,0.2,"Phosphorus, Total - 00665",239,Shickasheen - b @ Miskiania
+WW121,NA,10,2001,0.2,"Phosphorus, Total - 00665",23,Shickasheen - c @ Barber Outlet
+WW122,NA,10,2001,0.2,"Phosphorus, Total - 00665",36,Shickasheen - d @ Rte 138
+WW123,NA,10,2001,0.2,"Phosphorus, Total - 00665",20,Slack's Tributary #1
+WW124,NA,10,2001,0.2,"Phosphorus, Total - 00665",10,Slack's Tributary #2
+WW125,NA,10,2001,0.2,"Phosphorus, Total - 00665",20,Slack's Tributary #3
+WW126,NA,10,2001,0.2,"Phosphorus, Total - 00665",16,Slack's Tributary #4
+WW131,NA,10,2001,0.2,"Phosphorus, Total - 00665",650,Stafford Inlet - Downstream
+WW132,NA,10,2001,0.2,"Phosphorus, Total - 00665",27,Stafford NE cove
+WW133,NA,10,2001,0.2,"Phosphorus, Total - 00665",11,Watchaug - Perry Healy Brk
+WW86,NA,10,2001,0.2,"Phosphorus, Total - 00665",16,Carr Outlet (NK)
+WW01,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.52,Alton Pond
+WW02,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.44,Barber Pond
+WW03,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.78,Belleville Pond - Lower
+WW04,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.8,Belleville Pond - Upper
+WW05,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.46,Blackamore Pond
+WW06,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.36,Boone Lake
+WW07,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.52,Brickyard Pond
+WW08,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.72,Carr Pond (NK)
+WW09,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.59,Carr Pond (WG)
+WW11,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.18,Coomber's Reservoir
+WW12,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.4,Deep Pond
+WW13,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.25,Echo Lake (Pascoag south)
+WW15,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.24,Flat River Reservoir
+WW16,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.36,Georgiaville Pond
+WW17,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.73,Hundred Acre Pond
+WW18,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.49,Indian Lake
+WW19,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.34,Keech Pond
+WW20,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.56,Little Pond
+WW21,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.22,Locustville Pond
+WW22,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.24,Long Pond (Hopkinton)
+WW23,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.28,Long Pond (SK)
+WW24,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.51,Lower Sprague Reservoir
+WW25,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.84,Mashapaug Pond
+WW26,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.46,Meadowbrook Pond
+WW183,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.36,Melville Pond - Upper
+WW27,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.55,Mishnock Lake
+WW28,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.51,Oak Swamp Reservoir
+WW29,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.29,Pascoag Reservoir
+WW30,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.3,Pasquisett Pond
+WW33,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.88,Prince's Pond
+WW34,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.55,Queen @ Usq. (Glen Rock)
+WW35,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.27,Quidnick Reservoir
+WW36,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.35,Randall Pond
+WW38,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.3,Sand Pond
+WW39,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.31,Saugatucket Pond
+WW40,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.41,Schoolhouse Pond - Lower
+WW41,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.5,Schoolhouse Pond - Upper
+WW42,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.18,Secret Lake
+WW43,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.25,Shippee Mill Pond
+WW44,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.37,Silver Lake
+WW45,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.46,Silver Spring Lake
+WW46,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.54,Slack's Reservoir
+WW47,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.35,Slater Pond
+WW48,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.32,Smith and Sayles Reservoir
+WW215,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.47,Spalding Pond
+WW49,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.66,Spectacle Pond
+WW50,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.59,Spring Grove Pond
+WW51,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.23,Spring Lake
+WW145,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.39,Stafford Pond
+WW52,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.23,Stillwater Pond
+WW54,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.39,Tarbox Pond
+WW55,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.7,Tiogue Lake
+WW56,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.56,Tucker Pond
+WW58,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",3.05,Valley Falls Pond
+WW59,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.4,Warwick Pond
+WW60,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.45,Watchaug Pond
+WW61,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.43,Waterman Reservoir
+WW62,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.24,Wenscott Reservior
+WW63,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.31,Wilson Reservoir
+WW64,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.12,White Pond
+WW65,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.27,Woonasquatucket Reservoir
+WW66,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.42,Worden Pond
+WW216,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.23,Wyassup Lake
+WW67,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.31,Wyoming Pond
+WW68,NA,5,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.38,Yawgoo Pond
+WW02,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.23,Barber Pond
+WW06,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.51,Boone Lake
+WW07,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.58,Brickyard Pond
+WW08,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.72,Carr Pond (NK)
+WW09,NA,5,2001,10,"Nitrogen, Total (unfiltered) - 00600",0.77,Carr Pond (WG)
+WW12,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.5,Deep Pond
+WW15,NA,5,2001,8,"Nitrogen, Total (unfiltered) - 00600",0.31,Flat River Reservoir
+WW16,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.5,Georgiaville Pond
+WW17,NA,5,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.67,Hundred Acre Pond
+WW20,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.48,Little Pond
+WW23,NA,5,2001,6,"Nitrogen, Total (unfiltered) - 00600",0.37,Long  Pond (SK)
+WW25,NA,5,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.99,Mashapaug Pond
+WW27,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.61,Mishnock Lake
+WW29,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.27,Pascoag Reservoir
+WW33,NA,5,2001,2.5,"Nitrogen, Total (unfiltered) - 00600",0.83,Princes Pond
+WW36,NA,5,2001,4,"Nitrogen, Total (unfiltered) - 00600",0.28,Randall Pond
+WW35,NA,5,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.32,Quidnick Reservoir
+WW38,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.28,Sand Pond
+WW40,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.52,Schoolhouse Pond - Lower
+WW41,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.98,Schoolhouse Pond - Upper
+WW44,NA,5,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.44,Silver Lake
+WW51,NA,5,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.27,Spring Lake
+WW145,NA,5,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.51,Stafford Pond
+WW56,NA,5,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.75,Tucker Pond
+WW60,NA,5,2001,10,"Nitrogen, Total (unfiltered) - 00600",1.32,Watchaug Pond
+WW64,NA,5,2001,10,"Nitrogen, Total (unfiltered) - 00600",0.21,White Pond
+WW68,NA,5,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.49,Yawgoo Pond
+WW69,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.45,Beaver River #1 (Old Mt)
+WW70,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.33,Beaver River #3 (Rte 138)
+WW71,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.74,Beaver River #4 (Shannock)
+WW72,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.43,Falls River A
+WW73,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.29,Falls River B
+WW74,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.43,Falls River C
+WW75,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.56,Falls River D
+WW76,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.18,Locstv.- Grassy (Sandy P Rd.)
+WW79,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.35,Locstv.- Moscow @ Sawmill
+WW77,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.25,Locstv.- Brushy @ Woody Hill
+WW78,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.39,Locstv.- Brushy @ Sawmill
+WW83,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.79,Moosup Upstream
+WW84,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.51,Moosup A
+WW85,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.51,Moosup B
+WW86,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.62,NR-01
+WW87,NA,5,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.3,NR-02   0.5M
+WW87,NA,5,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.26,NR-02   3.0M
+WW89,NA,5,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.25,NR-03   3.0M
+WW91,NA,5,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.19,NR-04   0.5M
+WW91,NA,5,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.21,NR-04   3.0M
+WW93,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.16,NR-05
+WW94,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.2,NR-06
+WW95,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.19,NR-07
+WW96,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.21,NR-08
+WW97,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.2,NR-09
+WW98,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.09,NR-10
+WW99,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",2.23,NR-11
+WW88,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.2,NR-12
+WW31,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.77,Pawcatuck River at Bradford
+WW189,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.3,Pawcatuck River at Avondale
+WW100,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.3,Queen River (Sherman Brk)
+WW101,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.77,Queen River (Brownell's)
+WW102,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.82,Queen River (Sand Bridge)
+WW103,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.59,Queen River (Mail Rd.)
+WW228,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.63,Shunock @ Asseconk Swamp
+WW236,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.22,Shunock @ Babcock
+WW237,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.66,Shunock @ Hewitt
+WW104,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.43,Barber - Mud Brook
+WW105,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.1,Belleville @ RR Xing
+WW106,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.05,Belleville @ Sluiceway
+WW109,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.09,Carr Inlet (NK)
+WW113,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.28,Georgiaville @ Capron Pond
+WW114,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.59,Georgiaville @ Harris
+WW115,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.43,Pasquisett Tributary
+WW116,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",2.17,Secret - Oak Hill East
+WW117,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.8,Secret - Oak Hill West
+WW118,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.48,Secret - Shore Dr.
+WW119,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.27,Shickasheen - a @ Rte 2
+WW120,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.58,Shickasheen - b @ Miskiania
+WW121,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.27,Shickasheen - c @ Barber Outlet
+WW122,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.38,Shickasheen - d @ Rte 138
+WW123,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.31,Slack's Tributary #1 - A
+WW124,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.97,Slack's Tributary #2 - B
+WW125,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.89,Slack's Tributary #3 - C
+WW126,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.56,Slack's Tributary #4 - D
+WW127,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.34,Smith & Sayles @ Keech
+WW128,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.43,Smith & Sayles @ Balcom
+WW129,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.18,Smith & Sayles @ O'Donnel
+WW131,NA,5,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.54,Stafford Inlet - Downstream
+WW10,NA,6,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.49,Clark Pond
+WW14,NA,6,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.47,Fenner Pond
+WW140,NA,6,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.81,Pleasure Pond
+WW57,NA,6,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.36,Turner Reservior
+WW192,NA,6,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.3,Wesquage Pond
+WW68,NA,6,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.51,Yawgoo Pond
+WW69,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.51,Beaver River #1 (Old Mt)
+WW70,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.48,Beaver River #3 (Rte 138)
+WW71,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.87,Beaver River #4 (Shannock)
+WW72,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.2,Falls River A
+WW73,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.33,Falls River B
+WW74,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.32,Falls River C
+WW75,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.73,Falls River D
+WW76,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.64,Locstv.- Grassy (Sandy P Rd.)
+WW79,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.29,Locstv.- Moscow @ Sawmill
+WW77,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.49,Locstv.- Brushy @ Woody Hill
+WW78,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.54,Locstv.- Brushy @ Sawmill
+WW80,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.76,Meadow Brook #1
+WW81,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.56,Meadow Brook #2
+WW82,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.63,Meadow Brook #3
+WW83,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.47,Moosup Upstream
+WW84,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.5,Moosup A
+WW85,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.63,Moosup B
+WW86,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.66,NR-01
+WW87,NA,6,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.23,NR-02   0.5M
+WW87,NA,6,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.17,NR-02   3.0M
+WW89,NA,6,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.63,NR-03   0.5M
+WW89,NA,6,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.18,NR-03   3.0M
+WW91,NA,6,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.25,NR-04   0.5M
+WW91,NA,6,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.22,NR-04   3.0M
+WW93,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.36,NR-05
+WW95,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.3,NR-07
+WW96,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.37,NR-08
+WW97,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.27,NR-09
+WW98,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.12,NR-10
+WW99,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",2.19,NR-11
+WW88,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.93,NR-12
+WW100,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.36,Queen River (Sherman Brk)
+WW101,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.77,Queen River (Brownell's)
+WW102,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.69,Queen River (Sand Bridge)
+WW103,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.55,Queen River (Mail Rd.)
+WW104,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.4,Barber - Mud Brook
+WW119,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.5,Shickasheen - a @ Rte 2
+WW120,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.58,Shickasheen - b @ Miskiania
+WW121,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.49,Shickasheen - c @ Barber Outlet
+WW122,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.5,Shickasheen - d @ Rte 138
+WW123,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.62,Slack's Tributary #1 - A
+WW124,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.43,Slack's Tributary #2 - B
+WW125,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.67,Slack's Tributary #3 - C
+WW126,NA,6,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.72,Slack's Tributary #4 - D
+WW01,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.55,Alton Pond
+WW02,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.74,Barber Pond
+WW03,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.31,Belleville Pond - Lower
+WW04,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.66,Belleville Pond - Upper
+WW06,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.34,Boone Lake
+WW07,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.3,Brickyard Pond
+WW08,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.78,Carr Pond (NK)
+WW09,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.35,Carr Pond (WG)
+WW10,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.79,Clark Pond
+WW11,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.19,Coomber's Reservoir
+WW12,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.28,Deep Pond
+WW13,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.22,Echo Lake (Pascoag south)
+WW14,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.6,Fenner Pond
+WW15,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.27,Flat River Reservoir
+WW16,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.38,Georgiaville Pond
+WW17,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.59,Hundred Acre Pond
+WW18,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.33,Indian Lake
+WW19,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.32,Keech Pond
+WW20,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.46,Little Pond
+WW21,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.25,Locustville Pond
+WW22,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.32,Long Pond (Hopkinton)
+WW23,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.24,Long Pond (SK)
+WW24,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.47,Lower Sprague Reservoir
+WW25,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.7,Mashapaug Pond
+WW26,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.39,Meadowbrook Pond
+WW183,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.53,Melville Pond - Upper
+WW27,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.33,Mishnock Lake
+WW28,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.28,Oak Swamp Reservoir
+WW29,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.15,Pascoag Reservoir
+WW30,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.21,Pasquisett Pond
+WW33,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.91,Prince's Pond
+WW34,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.47,Queen @ Usq. (Glen Rock)
+WW35,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.19,Quidnick Reservoir
+WW36,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.26,Randall Pond
+WW140,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.86,Pleasure Pond
+WW39,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.06,Saugatucket Pond
+WW40,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.31,Schoolhouse Pond - Lower
+WW41,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.29,Schoolhouse Pond - Upper
+WW42,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.69,Secret Lake
+WW43,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.22,Shippee Mill Pond
+WW44,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.45,Silver Lake
+WW45,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.84,Silver Spring Lake
+WW46,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.25,Slack's Reservoir
+WW47,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.51,Slater Pond
+WW48,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.3,Smith and Sayles Reservoir
+WW215,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.35,Spalding Pond
+WW49,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.63,Spectacle Pond
+WW50,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.3,Spring Grove Pond
+WW51,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.27,Spring Lake
+WW145,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.39,Stafford Pond
+WW52,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.28,Stillwater Pond
+WW54,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.27,Tarbox Pond
+WW55,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.15,Tiogue Lake
+WW56,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.06,Tucker Pond
+WW57,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.31,Turner Reservior
+WW58,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.13,Valley Falls Pond
+WW59,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.1,Warwick Pond
+WW60,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.07,Watchaug Pond
+WW61,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.29,Waterman Reservoir
+WW62,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.29,Wenscott Reservior
+WW192,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.91,Wesquage Pond
+WW63,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.25,Wilson Reservoir
+WW64,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.09,White Pond
+WW65,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.3,Woonasquatucket Reservoir
+WW66,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.41,Worden Pond
+WW216,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.32,Wyassup Lake
+WW67,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.37,Wyoming Pond
+WW68,NA,7,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.44,Yawgoo Pond
+WW02,NA,7,2001,5,"Nitrogen, Total (unfiltered) - 00600",1.06,Barber Pond
+WW06,NA,7,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.72,Boone Lake
+WW08,NA,7,2001,5,"Nitrogen, Total (unfiltered) - 00600",1.22,Carr Pond (NK)
+WW09,NA,7,2001,10,"Nitrogen, Total (unfiltered) - 00600",0.82,Carr Pond (WG)
+WW12,NA,7,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.3,Deep Pond
+WW16,NA,7,2001,5,"Nitrogen, Total (unfiltered) - 00600",1.01,Georgiaville Pond
+WW22,NA,7,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.3,Long  Pond (Hopkinton)
+WW23,NA,7,2001,6,"Nitrogen, Total (unfiltered) - 00600",0.4,Long  Pond (SK)
+WW25,NA,7,2001,3,"Nitrogen, Total (unfiltered) - 00600",1.66,Mashapaug Pond
+WW27,NA,7,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.4,Mishnock Lake
+WW29,NA,7,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.28,Pascoag Reservoir
+WW33,NA,7,2001,2.5,"Nitrogen, Total (unfiltered) - 00600",1,Princes Pond
+WW35,NA,7,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.48,Quidnick Reservoir
+WW44,NA,7,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.48,Silver Lake
+WW51,NA,7,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.45,Spring Lake
+WW145,NA,7,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.58,Stafford Pond
+WW59,NA,7,2001,6,"Nitrogen, Total (unfiltered) - 00600",2.49,Warwick Pond
+WW64,NA,7,2001,10,"Nitrogen, Total (unfiltered) - 00600",0.28,White Pond
+WW216,NA,7,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.19,Wyassup Lake
+WW68,NA,7,2001,7,"Nitrogen, Total (unfiltered) - 00600",1.27,Yawgoo Pond
+WW69,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.37,Beaver River #1 (Old Mt)
+WW70,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.35,Beaver River #3 (Rte 138)
+WW71,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.21,Beaver River #4 (Shannock)
+WW72,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.39,Falls River A
+WW73,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.43,Falls River B
+WW74,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.51,Falls River C
+WW75,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.63,Falls River D
+WW302,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.29,Green Falls River #1
+WW303,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.35,Green Falls River #2
+WW498,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.01,Green Falls River #3
+WW76,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.42,Locstv.- Grassy (Sandy P Rd.)
+WW79,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.37,Locstv.- Moscow @ Sawmill
+WW77,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.37,Locstv.- Brushy @ Woody Hill
+WW78,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.6,Locstv.- Brushy @ Sawmill
+WW80,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.98,Meadow Brook #1
+WW81,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.78,Meadow Brook #2
+WW82,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.79,Meadow Brook #3
+WW83,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.75,Moosup Upstream
+WW84,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.57,Moosup A
+WW85,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.49,Moosup B
+WW87,NA,7,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.15,NR-02   0.5M
+WW87,NA,7,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.32,NR-02   3.0M
+WW91,NA,7,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.15,NR-04   0.5M
+WW93,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.19,NR-05
+WW94,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.39,NR-06
+WW95,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.17,NR-07
+WW96,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.17,NR-08
+WW97,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.4,NR-09
+WW98,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.17,NR-10
+WW99,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.57,NR-11
+WW88,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.71,NR-12
+WW31,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.5,Pawcatuck River at Bradford
+WW100,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.35,Queen River (Sherman Brk)
+WW102,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.58,Queen River (Sand Bridge)
+WW103,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.55,Queen River (Mail Rd.)
+WW228,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.08,Shunock @ Asseconk Swamp
+WW236,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.72,Shunock @ Babcock
+WW237,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.41,Shunock @ Hewitt
+WW104,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.23,Barber - Mud Brook
+WW105,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.6,Belleville @ RR Xing
+WW106,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.7,Belleville @ Sluiceway
+WW107,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.53,Boone Tributary #1
+WW109,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.72,Carr Inlet (NK)
+WW110,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.38,Flat River Res. @ Zeke's Bridge
+WW111,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.46,Flat River Res.@ Isle of Capri
+WW112,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.45,Flat River @ Maple Valley
+WW113,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.34,Georgiaville @ Capron Pond
+WW114,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.38,Georgiaville @ Harris
+WW115,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.77,Pasquisett Tributary
+WW116,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.5,Secret - Oak Hill East
+WW117,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.92,Secret - Oak Hill West
+WW118,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.58,Secret - Shore Dr.
+WW119,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.56,Shickasheen - a @ Rte 2
+WW120,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.68,Shickasheen - b @ Miskiania
+WW121,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.97,Shickasheen - c @ Barber Outlet
+WW122,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.72,Shickasheen - d @ Rte 138
+WW123,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.4,Slack's Tributary #1 - A
+WW124,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.3,Slack's Tributary #2 - B
+WW125,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.28,Slack's Tributary #3 - C
+WW126,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.28,Slack's Tributary #4 - D
+WW127,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.23,Smith & Sayles @ Keech
+WW128,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.29,Smith & Sayles @ Balcom
+WW129,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.18,Smith & Sayles @ O'Donnel
+WW131,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.15,Stafford Inlet - Downstream
+WW133,NA,7,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.52,Watchaug - Perry Healy Brk
+WW46,NA,8,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.42,Slack's Reservoir
+WW68,NA,8,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.83,Yawgoo Pond
+WW68,NA,8,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.75,Yawgoo Pond
+WW69,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.53,Beaver River #1 (Old Mt)
+WW70,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.34,Beaver River #3 (Rte 138)
+WW71,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.93,Beaver River #4 (Shannock)
+WW72,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.56,Falls River A
+WW73,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.41,Falls River B
+WW74,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.38,Falls River C
+WW75,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.41,Falls River D
+WW76,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.38,Locstv.- Grassy (Sandy P Rd.)
+WW79,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.29,Locstv.- Moscow @ Sawmill
+WW77,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.31,Locstv.- Brushy @ Woody Hill
+WW78,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.47,Locstv.- Brushy @ Sawmill
+WW80,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.17,Meadow Brook #1
+WW83,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.39,Moosup Upstream
+WW84,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.38,Moosup A
+WW85,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.37,Moosup B
+WW86,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.83,NR-01
+WW87,NA,8,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.82,NR-02   0.5M
+WW87,NA,8,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.7,NR-02   3.0M
+WW89,NA,8,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.36,NR-03   0.5M
+WW89,NA,8,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.3,NR-03   3.0M
+WW91,NA,8,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.38,NR-04   0.5M
+WW91,NA,8,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.29,NR-04   3.0M
+WW93,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.32,NR-05
+WW95,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.37,NR-07
+WW96,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.3,NR-08
+WW97,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.29,NR-09
+WW98,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.28,NR-10
+WW99,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.67,NR-11
+WW88,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.9,NR-12
+WW100,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.28,Queen River (Sherman Brk)
+WW101,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.96,Queen River (Brownell's)
+WW102,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.65,Queen River (Sand Bridge)
+WW103,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.5,Queen River (Mail Rd.)
+WW104,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.47,Barber - Mud Brook
+WW119,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.56,Shickasheen - a @ Rte 2
+WW120,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.71,Shickasheen - b @ Miskiania
+WW121,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.47,Shickasheen - c @ Barber Outlet
+WW122,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.63,Shickasheen - d @ Rte 138
+WW123,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.76,Slack's Tributary #1 - A
+WW124,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",2.08,Slack's Tributary #2 - B
+WW125,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.92,Slack's Tributary #3 - C
+WW126,NA,8,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.51,Slack's Tributary #4 - D
+WW46,NA,9,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.17,Slack's Reservoir
+WW48,NA,9,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.26,Smith and Sayles Reservoir
+WW68,NA,9,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.54,Yawgoo Pond
+WW68,NA,9,2001,7,"Nitrogen, Total (unfiltered) - 00600",2.23,Yawgoo Pond
+WW69,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.36,Beaver River #1 (Old Mt)
+WW70,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.2,Beaver River #3 (Rte 138)
+WW71,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.33,Beaver River #4 (Shannock)
+WW72,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.09,Falls River A
+WW73,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.09,Falls River B
+WW74,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.13,Falls River C
+WW75,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.17,Falls River D
+WW76,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.13,Locstv.- Grassy (Sandy P Rd.)
+WW79,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.12,Locstv.- Moscow @ Sawmill
+WW77,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.15,Locstv.- Brushy @ Woody Hill
+WW78,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.22,Locstv.- Brushy @ Sawmill
+WW80,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.4,Meadow Brook #1
+WW81,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.24,Meadow Brook #2
+WW82,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.28,Meadow Brook #3
+WW84,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.2,Moosup A
+WW85,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.1,Moosup B
+WW86,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.36,NR-01
+WW87,NA,9,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.52,NR-02   0.5M
+WW87,NA,9,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.49,NR-02   3.0M
+WW89,NA,9,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.48,NR-03   0.5M
+WW89,NA,9,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.55,NR-03   3.0M
+WW91,NA,9,2001,0.5,"Nitrogen, Total (unfiltered) - 00600",0.44,NR-04   0.5M
+WW91,NA,9,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.46,NR-04   3.0M
+WW94,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.39,NR-06
+WW95,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.43,NR-07
+WW96,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.39,NR-08
+WW97,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.32,NR-09
+WW98,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.32,NR-10
+WW99,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.62,NR-11
+WW88,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.46,NR-12
+WW100,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.23,Queen River (Sherman Brk)
+WW101,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.26,Queen River (Brownell's)
+WW102,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.25,Queen River (Sand Bridge)
+WW103,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.23,Queen River (Mail Rd.)
+WW104,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.35,Barber - Mud Brook
+WW110,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.08,Flat River Res. @ Zeke's Bridge
+WW111,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.08,Flat River Res.@ Isle of Capri
+WW112,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.2,Flat River @ Maple Valley
+WW119,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.33,Shickasheen - a @ Rte 2
+WW120,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.42,Shickasheen - b @ Miskiania
+WW121,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.26,Shickasheen - c @ Barber Outlet
+WW122,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.35,Shickasheen - d @ Rte 138
+WW123,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.27,Slack's Tributary #1 - A
+WW124,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.3,Slack's Tributary #2 - B
+WW125,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.26,Slack's Tributary #3 - C
+WW126,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.12,Slack's Tributary #4 - D
+WW127,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.39,Smith & Sayles @ Keech
+WW128,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.2,Smith & Sayles @ Balcom
+WW129,NA,9,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.27,Smith & Sayles @ O'Donnel
+WW01,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.52,Alton Pond
+WW02,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.81,Barber Pond
+WW03,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.39,Belleville Pond - Lower
+WW04,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.29,Belleville Pond - Upper
+WW07,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.67,Brickyard Pond
+WW08,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.6,Carr Pond (NK)
+WW09,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.13,Carr Pond (WG)
+WW10,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.72,Clark Pond
+WW11,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.33,Coomber's Reservoir
+WW12,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.61,Deep Pond
+WW13,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.34,Echo Lake (Pascoag south)
+WW14,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.19,Fenner Pond
+WW15,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.38,Flat River Reservoir
+WW16,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.51,Georgiaville Pond
+WW17,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.46,Hundred Acre Pond
+WW18,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.41,Indian Lake
+WW19,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.49,Keech Pond
+WW20,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.75,Little Pond
+WW21,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.4,Locustville Pond
+WW23,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.34,Long Pond (SK)
+WW24,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.68,Lower Sprague Reservoir
+WW26,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.48,Meadowbrook Pond
+WW183,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.85,Melville Pond - Upper
+WW27,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.46,Mishnock Lake
+WW28,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.38,Oak Swamp Reservoir
+WW29,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.28,Pascoag Reservoir
+WW30,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.54,Pasquisett Pond
+WW33,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.13,Prince's Pond
+WW35,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.41,Quidnick Reservoir
+WW36,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.42,Randall Pond
+WW140,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.1,Pleasure Pond
+WW38,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.5,Sand Pond
+WW39,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.29,Saugatucket Pond
+WW41,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.72,Schoolhouse Pond - Upper
+WW42,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",2.89,Secret Lake
+WW43,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.29,Shippee Mill Pond
+WW44,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.48,Silver Lake
+WW45,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.24,Silver Spring Lake
+WW46,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.6,Slack's Reservoir
+WW47,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.68,Slater Pond
+WW215,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.7,Spalding Pond
+WW49,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.55,Spectacle Pond
+WW50,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.38,Spring Grove Pond
+WW51,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.58,Spring Lake
+WW145,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.6,Stafford Pond
+WW52,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.38,Stillwater Pond
+WW54,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.46,Tarbox Pond
+WW55,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.44,Tiogue Lake
+WW56,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.56,Tucker Pond
+WW57,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",3.3,Turner Reservior
+WW58,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",2.68,Valley Falls Pond
+WW59,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",1.29,Warwick Pond
+WW60,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.46,Watchaug Pond
+WW61,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.34,Waterman Reservoir
+WW62,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.54,Wenscott Reservior
+WW192,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.78,Wesquage Pond
+WW63,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.3,Wilson Reservoir
+WW64,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.09,White Pond
+WW65,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.35,Woonasquatucket Reservoir
+WW66,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.63,Worden Pond
+WW216,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.33,Wyassup Lake
+WW67,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.28,Wyoming Pond
+WW68,NA,10,2001,1,"Nitrogen, Total (unfiltered) - 00600",0.7,Yawgoo Pond
+WW02,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.74,Barber Pond
+WW07,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",1.17,Brickyard Pond
+WW08,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.82,Carr Pond (NK)
+WW09,NA,10,2001,10,"Nitrogen, Total (unfiltered) - 00600",0.88,Carr Pond (WG)
+WW12,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",1.03,Deep Pond
+WW15,NA,10,2001,8,"Nitrogen, Total (unfiltered) - 00600",0.83,Flat River Reservoir
+WW16,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.57,Georgiaville Pond
+WW17,NA,10,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.91,Hundred Acre Pond
+WW20,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",1.01,Little Pond
+WW23,NA,10,2001,6,"Nitrogen, Total (unfiltered) - 00600",0.41,Long  Pond (SK)
+WW27,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.52,Mishnock Lake
+WW29,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.28,Pascoag Reservoir
+WW33,NA,10,2001,2.5,"Nitrogen, Total (unfiltered) - 00600",1.8,Princes Pond
+WW40,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.32,Schoolhouse Pond - Lower
+WW41,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.35,Schoolhouse Pond - Upper
+WW44,NA,10,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.5,Silver Lake
+WW51,NA,10,2001,5,"Nitrogen, Total (unfiltered) - 00600",0.58,Spring Lake
+WW145,NA,10,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.52,Stafford Pond
+WW56,NA,10,2001,3,"Nitrogen, Total (unfiltered) - 00600",0.5,Tucker Pond
+WW59,NA,10,2001,6,"Nitrogen, Total (unfiltered) - 00600",1.15,Warwick Pond
+WW60,NA,10,2001,10,"Nitrogen, Total (unfiltered) - 00600",0.53,Watchaug Pond
+WW64,NA,10,2001,10,"Nitrogen, Total (unfiltered) - 00600",0.16,White Pond
+WW216,NA,10,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.34,Wyassup Lake
+WW68,NA,10,2001,7,"Nitrogen, Total (unfiltered) - 00600",0.9,Yawgoo Pond
+WW69,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.38,Beaver River #1 (Old Mt)
+WW70,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.31,Beaver River #3 (Rte 138)
+WW71,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.96,Beaver River #4 (Shannock)
+WW72,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.33,Falls River A
+WW73,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.29,Falls River B
+WW74,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.37,Falls River C
+WW75,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.54,Falls River D
+WW302,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.37,Green Falls River #1
+WW303,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.53,Green Falls River #2
+WW498,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",2.09,Green Falls River #3
+WW76,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.63,Locstv.- Grassy (Sandy P Rd.)
+WW79,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.4,Locstv.- Moscow @ Sawmill
+WW77,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.31,Locstv.- Brushy @ Woody Hill
+WW78,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.44,Locstv.- Brushy @ Sawmill
+WW81,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.52,Meadow Brook #2
+WW82,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.32,Meadow Brook #3
+WW83,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.43,Moosup Upstream
+WW84,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.42,Moosup A
+WW85,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.37,Moosup B
+WW31,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.85,Pawcatuck River at Bradford
+WW100,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.31,Queen River (Sherman Brk)
+WW101,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.77,Queen River (Brownell's)
+WW102,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.97,Queen River (Sand Bridge)
+WW103,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.58,Queen River (Mail Rd.)
+WW228,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.03,Shunock @ Asseconk Swamp
+WW236,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.71,Shunock @ Babcock
+WW237,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.42,Shunock @ Hewitt
+WW104,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.3,Barber - Mud Brook
+WW109,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.97,Carr Inlet (NK)
+WW110,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.48,Flat River Res. @ Zeke's Bridge
+WW111,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.47,Flat River Res.@ Isle of Capri
+WW113,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.36,Georgiaville @ Capron Pond
+WW114,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.36,Georgiaville @ Harris
+WW115,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.73,Pasquisett Tributary
+WW116,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.57,Secret - Oak Hill East
+WW117,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.72,Secret - Oak Hill West
+WW118,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.64,Secret - Shore Dr.
+WW119,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.77,Shickasheen - a @ Rte 2
+WW120,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.25,Shickasheen - b @ Miskiania
+WW121,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.75,Shickasheen - c @ Barber Outlet
+WW122,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.65,Shickasheen - d @ Rte 138
+WW123,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.46,Slack's Tributary #1 - A
+WW124,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",1.04,Slack's Tributary #2 - B
+WW125,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.32,Slack's Tributary #3 - C
+WW126,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.56,Slack's Tributary #4 - D
+WW131,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",2.07,Stafford Inlet - Downstream
+WW132,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.73,Stafford NE Cove
+WW133,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.59,Watchaug - Perry Healy Brk
+WW86,NA,10,2001,0.2,"Nitrogen, Total (unfiltered) - 00600",0.59,Carr Outlet (NK)

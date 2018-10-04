@@ -26,7 +26,9 @@ missing_nutrients_1 <- read_csv(here("data/WW_96_nutrients_nds.csv")) %>%
   rbind(read_csv(here("data/WW_97_nutrients.csv"))) %>%
   rbind(read_csv(here("data/WW_98_nutrients.csv"))) %>%
   rbind(read_csv(here("data/WW_99_nutrients.csv"))) %>%
-  mutate(Day = 15)
+  rbind(read_csv(here("data/WW_00_nutrients.csv"))) %>%
+  rbind(read_csv(here("data/WW_00_nutrients.csv"))) %>%
+  mutate(Day = 15) # Need this to conform to existing format - none of these had a day so assuming middle of month
 
 missing_nutrients <- missing_nutrients_1 %>%
   transmute(`Station Name` = `Station Name`,
