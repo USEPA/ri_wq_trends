@@ -26,7 +26,7 @@ fig_num <- captioner(prefix = "Figure")
 
 # Introduction
 
-General stuff about long-term trends, monitoring programs and watersehd watch details
+General stuff about long-term trends, monitoring programs and watershed watch details
 
 Given what is known about long term trends in water quality within the broader region of the northeastern United States [@Oliver_2017], we were curious if those trends were also present in water quality trends in Rhode Island lakes and ponds.  Something about spatial and temporal variability of water quality
 
@@ -34,7 +34,13 @@ The goals of this study were to look at 25 years (still 25? need to check) of la
 
 # Methods
 
+For this study we combined a long-term dataset on water quality of lakes in Rhode Island, with a trend analysis similar to what is used to assess long term temperature trends [Need Citation].  Details of both are outlined below.
+
 ## Study Area and Data
+
+The study area for this analyis includes data in lakes and ponds in the state of Rhode Island that were collected by the University of Rhode Island's Watershed Watch (RIWW) program (Figure X).  MORE DETAILS ON RIWW.
+
+In particular we selected data from the RIWW data that ADD WHAT WE FILTERED.  The final dataset used in our analysis included XXX lakes and ponds which had approximately XXX samples for temperature, XXX samples for chlorophyll *a*, XXX samples for Total Nitrogen (TN), and XXX samples for Total Phosphorus (TP)   
 
 ## Trend Analysis
 
