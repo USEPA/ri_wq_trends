@@ -40,22 +40,34 @@ For this study we combined a long-term dataset on water quality of lakes in Rhod
 
 The study area for this analyis includes data in lakes and ponds in the state of Rhode Island that were collected by the University of Rhode Island's Watershed Watch (RIWW) program (Figure X).  MORE DETAILS ON RIWW.
 
-In particular we selected data from the RIWW data that ADD WHAT WE FILTERED.  The final dataset used in our analysis included XXX lakes and ponds which had approximately XXX samples for temperature, XXX samples for chlorophyll *a*, XXX samples for Total Nitrogen (TN), and XXX samples for Total Phosphorus (TP)   
+In particular we selected data from the RIWW data that ADD WHAT WE FILTERED.  The final dataset used in our analysis included XXX lakes and ponds which had approximately XXX samples for temperature, XXX samples for chlorophyll *a*, XXX samples for Total Nitrogen (TN), and XXX samples for Total Phosphorus (TP).  
+
+Additionally, prior studies have looked at water quality trends across a larger region of the Northeastern United states that included XX, XX, XX, and XX states [@Oliver_2017] and found little change in water quality trends across the region.  We repeated our analysis (see **Trend Analysis** section) with the same dataset used by [@Oliver_2017], the LAGOSNE dataset [@stachelek_lagosne_2017; @soranno_lagosne_2017].  Temperature data were not availble, thus we only examine trends, using our analytical methods, for Total Nitrogren, Total Phosphorus, and Chlorophyll *a*.
 
 ## Trend Analysis
+
+There are many different methods for analyzing time series data for trends.  One of the difficulties that is encountered when you have multiple sampling locations is how to identify a trend when you have variation at the scale of the sampling location as well as variation in when a sampling location might have been addedd to a dataset.  For instance, if you have long-term data on water quality for several ponds, yet the cleaner ponds sampled more frequently in early years then a simple comparison of raw-values over time might show a decrease in water quality.  Thus, it is necessary to account for this type of site-specific variation.  This is very similar to how the long-term temperature trends have been calculated by the XXX [FILL IN GROUP DOING THIS]
 
 ### Z-score
 
 ### Kendall's Tau
 
-## Individual Lakes
+### Comparison of Rhode Island to the Region 
 
 # Results
 
 ## State-wide trends in water quality
 
-## Individual lake trends in water quality
+[TN, TP, CHLA, TEMP Figures]
+
+## Regional trends in water quality
 
 # Discussion and conclusions
+
+## Trends
+
+### Local scale vs Regional/Global scale
+
+## Caveats
 
 # Bibliography
