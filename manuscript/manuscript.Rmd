@@ -38,7 +38,7 @@ For this study we combined a long-term dataset on water quality of lakes in Rhod
 
 ## Study Area and Data
 
-The study area for this analyis includes data in lakes and ponds in the state of Rhode Island that were collected by the University of Rhode Island's Watershed Watch (RIWW) program (Figure X).  MORE DETAILS ON RIWW.
+The study area for this analyis includes data in lakes and ponds in the state of Rhode Island that were collected by the University of Rhode Island's Watershed Watch (URIWW) program (Figure X).  MORE DETAILS ON RIWW.
 
 In particular we selected data from the RIWW data that ADD WHAT WE FILTERED.  The final dataset used in our analysis included XXX lakes and ponds which had approximately XXX samples for temperature, XXX samples for chlorophyll *a*, XXX samples for Total Nitrogen (TN), and XXX samples for Total Phosphorus (TP).  
 
