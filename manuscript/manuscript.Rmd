@@ -9,7 +9,7 @@ author:
 - "^*2*^ University of Rhode Island, Department of Natural Resources Science, Kingston, RI 02881"
 - "^*3*^ ORISE, Narragansett, RI 02882"
 - "^\\*^  *corresponding author: hollister.jeff@epa.gov*"
-bibliography: crossref.bib
+bibliography: manuscript.bib
 csl: plos.csl
 abstract: The University of Rhode Island’s Watershed Watch Volunteer Monitoring Program has been collecting water quality data on dozens of Rhode Island lakes and ponds for over 25 years, allowing us to explore long-term trends in common water quality parameters.  Not all lakes and ponds in the study area were sampled across the full time period and lakes were often added in geographic clusters (e.g. in urbanized northern Rhode Island).  Not unlike how long-term temperature records are analyzed, we centered and scaled (i.e., the z-score) water quality measurements on a per-station basis. This provides a robust and commonly scaled measurement to explore this data for long-term trends.  State-wide aggregation shows increasing temperature, chlorophyll *a*, and total nitrogen. Interestingly, total phosphorus is showing a decline, perhaps reflecting the management focus on phosphorus reductions.  While yearly trends are useful, they do mask month-to-month variability differences across sites.  Additionally, while most sites track the yearly trend in decreasing water quality, there are bright spots with some sites improving over the 25 years. Contrary to previously reported analyses that show relatively stable water quality at the regional scale, our analysis shows that long-term water quality trends within Rhode Island show some parameters improving while others are in decline.  Importantly, this analysis also points out the incredible value and importance of data from long-term monitoring programs, like Watershed Watch, for identifying trends in environmental condition. 
 ---
@@ -30,11 +30,11 @@ General stuff about long-term trends, monitoring programs and watershed watch de
 
 Given what is known about long term trends in water quality within the broader region of the northeastern United States [@Oliver_2017], we were curious if those trends were also present in water quality trends in Rhode Island lakes and ponds.  Something about spatial and temporal variability of water quality
 
-The goals of this study were to look at 25 years (still 25? need to check) of lakes and ponds data in Rhode Island.  The particular questions we were hoping to answer are: 1.) What are the state-wide trends in total nitrogen, total phosphorus, chlorophyll *a*, and temperature; 2.) are water quality trends in Rhode Island similar to regional trends in the northeastern United states; 3.) Given trends at the state level, are there individual lakes and ponds that have water quality that deviate from the state-wide trends.  In addition to these goals, this analysis has also been done using open data from the URI Watershed Watch program and the analysis in its entirety is available for independent reproduction at <https://github.com/usepa/green_murky_warm>.       
+The goals of this study were to look at approximately 25 years of lakes and ponds data in Rhode Island.  We will answer two particular questions.  First, what are the state-wide trends in total nitrogen, total phosphorus, chlorophyll *a*, and lake temperature and second, are water quality trends in Rhode Island similar to regional trends in the northeastern United states.   In addition to these goals, this analysis has also been done using open data from the URI Watershed Watch program and the analysis in its entirety is available for independent reproduction at <https://github.com/usepa/ri_wq_trends>.       
 
 # Methods
 
-For this study we combined a long-term dataset on water quality of lakes in Rhode Island, with a trend analysis similar to what is used to assess long term temperature trends [Need Citation].  Details of both are outlined below.
+For this study we combined a long-term dataset on water quality of lakes in Rhode Island, with a trend analysis based on centered and scaled water quality values (i.e. z-scores) to find increasing or decreasing annual water quality trends.  Details of both are outlined below.
 
 ## Study Area and Data
 
@@ -42,19 +42,25 @@ The study area for this analyis includes data in lakes and ponds in the state of
 
 In particular we selected data from the RIWW data that ADD WHAT WE FILTERED.  The final dataset used in our analysis included XXX lakes and ponds which had approximately XXX samples for temperature, XXX samples for chlorophyll *a*, XXX samples for Total Nitrogen (TN), and XXX samples for Total Phosphorus (TP).  
 
-Additionally, prior studies have looked at water quality trends across a larger region of the Northeastern United states that included XX, XX, XX, and XX states [@Oliver_2017] and found little change in water quality trends across the region.  We repeated our analysis (see **Trend Analysis** section) with the same dataset used by [@Oliver_2017], the LAGOSNE dataset [@stachelek_lagosne_2017; @soranno_lagosne_2017].  Temperature data were not availble, thus we only examine trends, using our analytical methods, for Total Nitrogren, Total Phosphorus, and Chlorophyll *a*.
+Additionally, prior studies have looked at water quality trends across a larger region of the Northeastern United states that included XX, XX, XX, and XX states [@Oliver_2017] and found little change in water quality trends across the region.  We repeated our analysis (see **Trend Analysis** section) with the same dataset used by [@Oliver_2017], the LAGOSNE dataset [@stacheleklagosne2017; @sorannolagosne2017].  Temperature data were not availble, thus we only examine trends, using our analytical methods, for Total Nitrogren, Total Phosphorus, and Chlorophyll *a*.
 
 ## Trend Analysis
 
-There are many different methods for analyzing time series data for trends.  One of the difficulties that is encountered when you have multiple sampling locations is how to identify a trend when you have variation at the scale of the sampling location as well as variation in when a sampling location might have been addedd to a dataset.  For instance, if you have long-term data on water quality for several ponds, yet the cleaner ponds sampled more frequently in early years then a simple comparison of raw-values over time might show a decrease in water quality.  Thus, it is necessary to account for this type of site-specific variation.  This is very similar to how the long-term temperature trends have been calculated by the XXX [FILL IN GROUP DOING THIS].  The general approach is to calculate site-specific deviations from a pre-determined reference period.  This allows all sites to be shifted to a common base line and the deviations, or anomalies, show change relative to the referenc period.
+There are many different methods for analyzing time series data for trends.  One of the difficulties that is encountered when you have multiple sampling locations is how to identify a trend when you have variation at the scale of the sampling location as well as variation in when a sampling location might have been addedd to a dataset.  For instance, if you have long-term data on water quality for several ponds, yet the cleaner ponds wer sampled more frequently in early years then a simple comparison of raw-values over time might show a decrease in water quality.  Thus, it is necessary to account for this type of site-specific variation.  This is similar to how the long-term temperature trends are analyzed using temperature anomolies [FILL IN GROUP DOING THIS].  The general approach is to calculate site-specific deviations from a long-term mean over pre-determined reference period.  This allows all sites to be shifted to a common base line and the deviations, or anomalies, show change relative to the reference period.
 
 ### Z-score
 
 The anomaly approach is very useful and is the approach we chose to follow.  However, using anomalies works best with a single measure (e.g temperature) or with mulitple measurements that are on the same scale.  The water quality parameters that we explored have different scales and thus the anomaly alone is difficult to interpret across metrics.  For instance, temperature anomalies will like range +/- 2 to 3 degrees, whereas phosphorus anomalies, might range +/- XX to XX ug/l.  To standardize these values we used the common approach of dividing each anomlaly by the standard deviation for the reference period.  This value is commonly referred to as a Z-score.  We use these z-scores to examine each water quality variable for a trend over the time period of 1990 to 2016. 
 
+Furthermore, since we are interest in water quality trends over time, we wanted to explore how each site was responding.  Thus, our z-scores were calculate over the reference period, 1990-2016, for each site.  In other words the long-term mean and standard deviation were calculated on a site-by-site basis.    
+
 ### Kendall's Tau
 
-### Comparison of Rhode Island to the Region 
+Kendall's Tau and the Mann-Kendall test are commonly used to test for monotonic trends water quality data [@mann1945nonparametric; @helsel2002statistical; @hipel1994time].  We followed these standard procedures to test for postive or negative trends in lake temperature, chlorophyll *a*, total nitrogen, and total phosphorus.
+
+### Comparison of Rhode Island to the Region
+
+Prior studies have shown relatively stable water quality in the lakes of the Northeastern United Sates [@Oliver_2017].  The data we used in our analysis, the University of Rhode Island's Watershed Watch data, was inlcuded in that, but we were curious if regional trends were masking local scale trends in Rhode Island.  In addition to the analysis condcuted by Oliver et al. [-@Oliver_2017], we analyzed the same dataset but using the approach outlined here.
 
 # Results
 

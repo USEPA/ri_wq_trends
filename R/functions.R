@@ -8,6 +8,7 @@ library(tidyr)
 library(here)
 library(ggplot2)
 library(hrbrthemes)
+library(Kendall)
 if(!require(LAGOSNE)){devtools::install_github("cont-limno/LAGOSNE")}
 library(LAGOSNE)
 
@@ -48,15 +49,14 @@ wq_trend_gg <- function(df, wqparam,
     write_csv(df2, write, append = FALSE)
   }
   
-  kt <- with(df2, cor(year, mn_value,use = "pairwise.complete.obs"))
-  ktp <- with(df2, cor.test(year, mn_value)$p.value)
+  kt <- with(df2, Kendall(year, mn_value))
 
   gg <- ggplot(df2,aes(x = year, y = mn_value)) + 
     geom_point(aes(color = col_group), size=2.5) +
     geom_smooth(method = "lm", se=FALSE, color = "black") +
     theme_ipsum() +
-    labs(..., title = paste0("Kendall's Tau: ", round(kt,3),
-                             " p-value: ", round(ktp, 3))) +
+    labs(..., title = paste0("Kendall's Tau: ", round(kt$tau,3),
+                             " p-value: ", round(kt$sl, 4))) +
     scale_color_manual(values = c("red3","darkblue")) + 
     theme(legend.position="none", plot.title = element_text(size=10, face="plain")) + 
     #geom_label(aes(x = 2006, y = min(mn_value)*0.88), 
