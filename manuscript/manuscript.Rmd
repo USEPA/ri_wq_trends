@@ -11,17 +11,26 @@ author:
 - "^\\*^  *corresponding author: hollister.jeff@epa.gov*"
 bibliography: manuscript.bib
 csl: plos.csl
-abstract: The University of Rhode Island’s Watershed Watch Volunteer Monitoring Program has been collecting water quality data on dozens of Rhode Island lakes and ponds for over 25 years, allowing us to explore long-term trends in common water quality parameters.  Not all lakes and ponds in the study area were sampled across the full time period and lakes were often added in geographic clusters (e.g. in urbanized northern Rhode Island).  Not unlike how long-term temperature records are analyzed, we centered and scaled (i.e., the z-score) water quality measurements on a per-station basis. This provides a robust and commonly scaled measurement to explore this data for long-term trends.  State-wide aggregation shows increasing temperature, chlorophyll *a*, and total nitrogen. Interestingly, total phosphorus is showing a decline, perhaps reflecting the management focus on phosphorus reductions.  While yearly trends are useful, they do mask month-to-month variability differences across sites.  Additionally, while most sites track the yearly trend in decreasing water quality, there are bright spots with some sites improving over the 25 years. Contrary to previously reported analyses that show relatively stable water quality at the regional scale, our analysis shows that long-term water quality trends within Rhode Island show some parameters improving while others are in decline.  Importantly, this analysis also points out the incredible value and importance of data from long-term monitoring programs, like Watershed Watch, for identifying trends in environmental condition. 
+abstract: The University of Rhode Island’s Watershed Watch Volunteer Monitoring Program has been collecting water quality data on dozens of Rhode Island lakes and ponds for over 25 years, allowing us to explore long-term trends in common water quality parameters.  Not all lakes and ponds in the study area were sampled across the full time period and lakes were often added in geographic clusters (e.g. in urbanized northern Rhode Island).  Not unlike how long-term temperature records are analyzed, we centered and scaled (i.e., the z-score) water quality measurements on a per-station basis. This provides a robust and commonly scaled measurement to explore this data for long-term trends.  State-wide aggregation shows increasing temperature, chlorophyll *a*, and total nitrogen. Interestingly, total phosphorus is showing a decline, perhaps reflecting the management focus on phosphorus reductions.  While yearly trends are useful, they do mask month-to-month variability differences across sites.  Additionally, while most sites track the yearly trend in decreasing water quality, there are bright spots with some sites improving over the 25 years. Contrary to previously reported analyses that show relatively stable water quality at the regional scale, our analysis shows that long-term water quality trends within Rhode Island show some parameters improving while others are in decline.  Importantly, this analysis also points out the incredible value and importance of data from long-term monitoring programs, like the Univeristy of Rhode Island's Watershed Watch, for identifying trends in environmental condition. 
+editor_options: 
+  chunk_output_type: console
 ---
 
 
 ```{r setup, include=FALSE}
 library(knitr)
 library(captioner)
+source(here::here("R/functions.R"))
 opts_chunk$set(echo = TRUE, fig.width=6, fig.height=5)
 tab_num <- captioner(prefix = "Table")
 fig_num <- captioner(prefix = "Figure")
+```
 
+```{r add_analysis, include=FALSE}
+#got to figure out path stuff before render.
+source("../R/data_available.R")
+source("../R/summary_stats.R")  
+source("../R/figures.R")
 ```
 
 # Introduction
@@ -34,15 +43,15 @@ The goals of this study were to look at approximately 25 years of lakes and pond
 
 # Methods
 
-For this study we combined a long-term dataset on water quality of lakes in Rhode Island, with a trend analysis based on centered and scaled water quality values (i.e. z-scores) to find increasing or decreasing annual water quality trends.  Details of both are outlined below.
+For this study we combined a long-term dataset on water quality of lakes in Rhode Island, with a trend analysis based on centered and scaled water quality values (i.e. z-scores) to find increasing or decreasing annual water quality trends.  Details are outlined below.
 
 ## Study Area and Data
 
 The study area for this analyis includes data in lakes and ponds in the state of Rhode Island that were collected by the University of Rhode Island's Watershed Watch (URIWW) program (Figure X).  MORE DETAILS ON RIWW.
 
-In particular we selected data from the RIWW data that ADD WHAT WE FILTERED.  The final dataset used in our analysis included XXX lakes and ponds which had approximately XXX samples for temperature, XXX samples for chlorophyll *a*, XXX samples for Total Nitrogen (TN), and XXX samples for Total Phosphorus (TP).  
+In particular we selected data from the RIWW data that matched the following criteria: 1) were sampled between 1990 and 2016, 2) were sampled in May to October, 3) and were sampled at a depth of 2 meters or less. For this analysis we were interested in trends in lake temperature, total nitorgen, total phosphorus, and chlorophyll *a* and for each of these parameters we further filtered the data to select sites that had at least 10 years of data.  The final dataset used in our analysis included `r nrows(ww_avail_data_locations)` lakes and ponds which had approximately `r length(temp_10yr_sites)` samples for temperature, `r length(chla_10yr_sites)` samples for chlorophyll *a*, `r length(total_n_10yr_sites)` samples for Total Nitrogen (TN), and `r length(total_p_10yr_sites)` samples for Total Phosphorus (TP).  
 
-Additionally, prior studies have looked at water quality trends across a larger region of the Northeastern United states that included XX, XX, XX, and XX states [@Oliver_2017] and found little change in water quality trends across the region.  We repeated our analysis (see **Trend Analysis** section) with the same dataset used by [@Oliver_2017], the LAGOSNE dataset [@stacheleklagosne2017; @sorannolagosne2017].  Temperature data were not availble, thus we only examine trends, using our analytical methods, for Total Nitrogren, Total Phosphorus, and Chlorophyll *a*.
+Additionally, prior studies have looked at water quality trends across a larger region of the Northeastern United states that included 17 states including Minnesota, Wisconsin, Iowa, Missouri, Illinois, Indiana, Michigan, Ohio, Pennsylvania, New York, New Jersey, Connecticut, Massachusetts, Rhode Island, Vermont, New Hampshire, and Maine [@soranno2015building; @Oliver_2017].  The authors found little change in water quality trends across this region [@Oliver_2017] .  We repeated our analysis (see **Trend Analysis** section) with the same dataset used by [@Oliver_2017], the LAGOSNE dataset [@soranno2015building; @stacheleklagosne2017; @sorannolagosne2017].  Temperature data were not availble, thus we only examine trends, using our analytical methods, for Total Nitrogren, Total Phosphorus, and Chlorophyll *a* from the LAGOSNE database.
 
 ## Trend Analysis
 
@@ -50,9 +59,9 @@ There are many different methods for analyzing time series data for trends.  One
 
 ### Z-score
 
-The anomaly approach is very useful and is the approach we chose to follow.  However, using anomalies works best with a single measure (e.g temperature) or with mulitple measurements that are on the same scale.  The water quality parameters that we explored have different scales and thus the anomaly alone is difficult to interpret across metrics.  For instance, temperature anomalies will like range +/- 2 to 3 degrees, whereas phosphorus anomalies, might range +/- XX to XX ug/l.  To standardize these values we used the common approach of dividing each anomlaly by the standard deviation for the reference period.  This value is commonly referred to as a Z-score.  We use these z-scores to examine each water quality variable for a trend over the time period of 1990 to 2016. 
+The anomaly approach is very useful and is the approach we chose to follow.  However, using anomalies works best with a single measure (e.g temperature) or with mulitple measurements that are on the same scale.  The water quality parameters that we explored have different scales and thus the anomaly alone is difficult to interpret across metrics.  For instance, temperature in Rhode Island lakes during the growing season will range from approximately 15 degrees celsius to a high of 30 degrees celsius, whereas phosphorus might range from near zero ug/l to ~900 ug/l.  To standardize these values we used the common approach of dividing each anomlaly by the standard deviation for the reference period.  This value is commonly referred to as a Z-score.  We use these z-scores to examine each water quality variable for a trend over the time period of 1990 to 2016. 
 
-Furthermore, since we are interest in water quality trends over time, we wanted to explore how each site was responding.  Thus, our z-scores were calculate over the reference period, 1990-2016, for each site.  In other words the long-term mean and standard deviation were calculated on a site-by-site basis.    
+Furthermore, since we are interest in water quality trends over time, we wanted to explore how each site was responding.  Thus, our z-scores were calculated over the reference period, 1990-2016, for each site.  In other words the long-term mean and standard deviation were calculated on a site-by-site basis.    
 
 ### Kendall's Tau
 
@@ -63,6 +72,7 @@ Kendall's Tau and the Mann-Kendall test are commonly used to test for monotonic 
 Prior studies have shown relatively stable water quality in the lakes of the Northeastern United Sates [@Oliver_2017].  The data we used in our analysis, the University of Rhode Island's Watershed Watch data, was inlcuded in that, but we were curious if regional trends were masking local scale trends in Rhode Island.  In addition to the analysis condcuted by Oliver et al. [-@Oliver_2017], we analyzed the same dataset but using the approach outlined here.
 
 # Results
+
 
 ## State-wide trends in water quality
 
