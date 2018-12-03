@@ -39,8 +39,7 @@ ggsave(here("figures/ww_temp_trends.jpg"), temp_gg, width = 5, height = 3.75,
 lagos_data <- read_csv(here("data/lagos_lake_trend_data.csv"))
 
 lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_scale", 
-                             y = "Average Yearly Scaled Chlorophyll", x = "Year",
-                             write = "temporary.csv")
+                             y = "Average Yearly Scaled Chlorophyll", x = "Year")
 ggsave(here("figures/lagos_chla_trends.jpg"), lagos_chla_gg, width = 5, height = 3.75, 
        units = "in", dpi = 600)
 
