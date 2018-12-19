@@ -75,6 +75,13 @@ Prior studies have shown relatively stable water quality in the lakes of the Nor
 
 # Results
 
+During the selected sampling period of 1990 to 2016 average lake temperature was `r ww_param_ranges%>%filter(param == "temp")%>%pull(mean)`, average total nitrogen was `r ww_param_ranges%>%filter(param == "total_n")%>%pull(mean)`, average total phosphorus was `r ww_param_ranges%>%filter(param == "total_p")%>%pull(mean)`, and average chlorophyll was `r ww_param_ranges%>%filter(param == "chla")%>%pull(mean)` (`r tab_num("ww_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1990 to 2016.")`) 
+
+```{r ww_params, echo=FALSE, results="asis"}
+knitr::kable(ww_param_ranges, format = "markdown")
+tab_num("ww_params")
+```
+
 ## State-wide trends in water quality
 
 ![`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.")`](../figures/ww_temp_trends.jpg)
