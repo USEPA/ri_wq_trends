@@ -11,6 +11,9 @@ library(hrbrthemes)
 library(Kendall)
 if(!require(LAGOSNE)){devtools::install_github("cont-limno/LAGOSNE")}
 library(LAGOSNE)
+library(sf)
+library(USAboundaries)
+library(USAboundariesData)
 
 
 #' Function to filter on number of years sampled per site
@@ -65,7 +68,8 @@ wq_trend_gg <- function(df, wqparam,
     #         hjust = "left", label.size = NA, size = 2.5) +
     scale_x_continuous(labels = c(1990,1995,2000,2005,2010,2015),
                        breaks = c(1990,1995,2000,2005,2010,2015),
-                       minor_breaks = NULL)
+                       minor_breaks = NULL) +
+    scale_y_continuous(limits = c(-0.5, 0.75))
   
   gg
 

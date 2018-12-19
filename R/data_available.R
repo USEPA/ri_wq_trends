@@ -47,5 +47,5 @@ ww_avail_data_locations <- ww_data %>%
   select(station_name, lon_dd, lat_dd) %>%
   unique() %>%
   right_join(data_avail) %>%
-  select(station_name, lon_dd, lat_dd, params_avail) #%>%
-  #write_csv("data/ww_avail_data_locations.csv")
+  select(station_name, params_avail) %>%
+  write_csv(here("data/ww_avail_data_stations.csv"))

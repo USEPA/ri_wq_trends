@@ -47,9 +47,11 @@ For this study we combined a long-term dataset on water quality of lakes in Rhod
 
 ## Study Area and Data
 
-The study area for this analyis includes data in lakes and ponds in the state of Rhode Island that were collected by the University of Rhode Island's Watershed Watch (URIWW) program (Figure X).  MORE DETAILS ON RIWW.
+The study area for this analyis includes data in lakes and ponds in the state of Rhode Island that were collected by the University of Rhode Island's Watershed Watch (URIWW) program (`r fig_num("ww_map", display = "cite", caption = "Map of URI Watershed Watch lake and pond sampling sites")`).  MORE DETAILS ON RIWW.
 
-In particular we selected data from the RIWW data that matched the following criteria: 1) were sampled between 1990 and 2016, 2) were sampled in May to October, 3) and were sampled at a depth of 2 meters or less. For this analysis we were interested in trends in lake temperature, total nitorgen, total phosphorus, and chlorophyll *a* and for each of these parameters we further filtered the data to select sites that had at least 10 years of data.  The final dataset used in our analysis included `r nrow(ww_avail_data_locations)` lakes and ponds which had approximately `r length(temp_10yr_sites)` samples for temperature, `r length(chla_10yr_sites)` samples for chlorophyll *a*, `r length(total_n_10yr_sites)` samples for Total Nitrogen (TN), and `r length(total_p_10yr_sites)` samples for Total Phosphorus (TP).  
+![`r fig_num("ww_map", caption = "Map of URI Watershed Watch lake and pond sampling sites")`](../figures/ww_map.jpg)
+
+In particular we selected data from the RIWW data that matched the following criteria: 1) were sampled between 1990 and 2016, 2) were sampled in May to October, 3) and were sampled at a depth of 2 meters or less. For this analysis we were interested in trends in lake temperature, total nitorgen, total phosphorus, and chlorophyll *a* and for each of these parameters we further filtered the data to select sites that had at least 10 years of data for a given parameter.  The final dataset used in our analysis included `r nrow(ww_avail_data_locations)` lakes and ponds which had approximately `r length(temp_10yr_sites)` samples for temperature, `r length(chla_10yr_sites)` samples for chlorophyll *a*, `r length(total_n_10yr_sites)` samples for Total Nitrogen (TN), and `r length(total_p_10yr_sites)` samples for Total Phosphorus (TP).  Of the `r nrow(ww_avail_data_locations)` sampling sites, `r sum(avail_data$params_avail == "chla, total_p, total_n, temp")` had data for all 4 parameters.  
 
 Additionally, prior studies have looked at water quality trends across a larger region of the Northeastern United states that included 17 states including Minnesota, Wisconsin, Iowa, Missouri, Illinois, Indiana, Michigan, Ohio, Pennsylvania, New York, New Jersey, Connecticut, Massachusetts, Rhode Island, Vermont, New Hampshire, and Maine [@soranno2015building; @Oliver_2017].  The authors found little change in water quality trends across this region [@Oliver_2017] .  We repeated our analysis (see **Trend Analysis** section) with the same dataset used by [@Oliver_2017], the LAGOSNE dataset [@soranno2015building; @stacheleklagosne2017; @sorannolagosne2017].  Temperature data were not availble, thus we only examine trends, using our analytical methods, for Total Nitrogren, Total Phosphorus, and Chlorophyll *a* from the LAGOSNE database.
 
@@ -73,12 +75,23 @@ Prior studies have shown relatively stable water quality in the lakes of the Nor
 
 # Results
 
-
 ## State-wide trends in water quality
 
-[TN, TP, CHLA, TEMP Figures]
+![`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.")`](../figures/ww_temp_trends.jpg)
+
+![`r fig_num(name = "tn_ri", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in Rhode Island lakes and ponds.")`](../figures/ww_tn_trends.jpg)
+
+![`r fig_num(name = "tp_ri", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in Rhode Island lakes and ponds.")`](../figures/ww_tp_trends.jpg)
+
+![`r fig_num(name = "chla_ri", caption = "Yearly trend over 20+ years of Chlorphyll *a* (average z-score) in Rhode Island lakes and ponds.")`](../figures/ww_chla_trends.jpg)
 
 ## Regional trends in water quality
+
+![`r fig_num(name = "tn_lagos", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in the LAGOSNE states.")`](../figures/lagos_tn_trends.jpg)
+
+![`r fig_num(name = "tp_lagos", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in the LAGOSNE states.")`](../figures/lagos_tp_trends.jpg)
+
+![`r fig_num(name = "chla_lagos", caption = "Yearly trend over 20+ years of Chlorophyll *a* (average z-score) in the LAGOSNE states.")`](../figures/lagos_chla_trends.jpg)
 
 # Discussion and conclusions
 
