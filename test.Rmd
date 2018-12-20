@@ -1,0 +1,47 @@
+---
+title: "Untitled"
+output:
+  word_document: 
+    reference_docx: "manuscript/manuscript_template.docx"
+---
+
+# Plain Data Frame
+
+```{r plain}
+x<-data.frame(unit = "µg/l", stringsAsFactors = FALSE)
+knitr::kable(x)
+```
+
+# Tibble
+```{r tibble}
+x<-dplyr::tbl_df(data.frame(unit = "µg/l", stringsAsFactors = FALSE))
+knitr::kable(x, format = "markdown")
+```
+
+# My stuff
+```{r culprit}
+source(here::here("R/functions.R"))
+ww_all<-read_csv(here("data/ww_lake_trend_data.csv"))
+ww_param_ranges <- ww_all %>%
+  filter(param == "chla" |
+           param == "temp" |
+           param == "total_n" |
+           param == "total_p") %>%
+  mutate(param = factor(param,levels = c("temp", "total_n", "total_p", "chla"))) %>%
+  group_by(param) %>%
+  summarize(min = round(min(mn_measurement, na.rm = T), 2),
+            percentile_25 = round(quantile(mn_measurement, probs = 0.25, na.rm = T), 2),
+            mean = round(mean(mn_measurement, na.rm = T), 2),
+            median = round(median(mn_measurement, na.rm = T), 2),
+            percentile_75 = round(quantile(mn_measurement, probs = 0.75, na.rm = T), 2),
+            max = round(max(mn_measurement, na.rm = T), 2),
+            sd = round(sd(mn_measurement, na.rm = T), 2)) %>%
+  ungroup() %>%
+  mutate(units = c("celsius", "µg/l", "µg/l","µg/l")) %>%
+  select(Parameter = param, Units = units, 
+         "25th Percentile" = percentile_25,
+         Mean = mean, Median = median, 
+         "75th Percentile" = percentile_75,
+         Max = max, "Std. Dev" = sd )
+knitr::kable(ww_param_ranges, format = "markdown")
+```

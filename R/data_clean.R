@@ -98,24 +98,6 @@ ww_lake_trend_data <- ww_all %>%
   mutate(measurement_scale = scale(mn_measurement),
          measurement_anmly = mn_measurement - mean(mn_measurement),
          lt_mean = mean(mn_measurement))
-
-# Few known issues to remove
-# Site ww 536, not really a pond.  sampled only at shallow outflow
-ww_lake_trend_data <- ww_lake_trend_data %>% 
-  filter(station_name != "WW536")
-
-# Almy Pond sample from 2016-07-23 likely had sediment contamination
-# Keeps just temp from this sample.
-# Per discussion with Elizabeth Herron
-idx <- !with(ww_lake_trend_data, station_name == "WW199" &
-              year == 2016 &
-              month == 7 &
-              day == 23 & 
-              param != "temp" &
-              param != "secchi" &
-              param != "ph" &
-              param != "enterococci")
-ww_lake_trend_data <- ww_lake_trend_data[idx,]
   
 
 write_csv(ww_lake_trend_data, here("data/ww_lake_trend_data.csv"))

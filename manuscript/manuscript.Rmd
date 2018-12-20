@@ -4,7 +4,7 @@ output:
   word_document:
     reference_docx: manuscript_template.docx   
 author:
-- "Hollister. J. W. ^\\*^ ^*1*^, Kellogg, D. Q. ^*2*^, Kreakie, B. J. ^*1*^, Shivers, S. ^*3*^, Herron, E. ^*2*^, Green, L. ^*2*^, Gold, A ^*2*^"
+- "Hollister. J. W. ^\\*^ ^*1*^, Kellogg, D. Q. ^*2*^, Kreakie, B. J. ^*1*^, Shivers, S. ^*3*^, Milstead, W. Bryan. ^*1*^, Herron, E. ^*2*^, Green, L. ^*2*^, Gold, A ^*2*^"
 - "^*1*^ US Environmental Protection Agency, Office Of Research and Development, Atlantic Ecology Division, Narragansett, RI 02882"
 - "^*2*^ University of Rhode Island, Department of Natural Resources Science, Kingston, RI 02881"
 - "^*3*^ ORISE, Narragansett, RI 02882"
@@ -15,6 +15,33 @@ abstract: The University of Rhode Island’s Watershed Watch Volunteer Monitorin
 editor_options: 
   chunk_output_type: console
 ---
+
+```{r ww_params2, echo=FALSE}
+source(here::here("R/functions.R"))
+ww_all<-read_csv(here("data/ww_lake_trend_data.csv"))
+ww_param_ranges <- ww_all %>%
+  filter(param == "chla" |
+           param == "temp" |
+           param == "total_n" |
+           param == "total_p") %>%
+  mutate(param = factor(param,levels = c("temp", "total_n", "total_p", "chla"))) %>%
+  group_by(param) %>%
+  summarize(min = round(min(mn_measurement, na.rm = T), 2),
+            percentile_25 = round(quantile(mn_measurement, probs = 0.25, na.rm = T), 2),
+            mean = round(mean(mn_measurement, na.rm = T), 2),
+            median = round(median(mn_measurement, na.rm = T), 2),
+            percentile_75 = round(quantile(mn_measurement, probs = 0.75, na.rm = T), 2),
+            max = round(max(mn_measurement, na.rm = T), 2),
+            sd = round(sd(mn_measurement, na.rm = T), 2)) %>%
+  ungroup() %>%
+  mutate(units = c("celsius", "µg/l", "µg/l","µg/l")) %>%
+  select(Parameter = param, Units = units, 
+         "25th Percentile" = percentile_25,
+         Mean = mean, Median = median, 
+         "75th Percentile" = percentile_75,
+         Max = max, "Std. Dev" = sd )
+knitr::kable(ww_param_ranges)
+```
 
 
 ```{r setup, include=FALSE}
@@ -28,10 +55,14 @@ fig_num <- captioner(prefix = "Figure")
 
 ```{r analysis, include=FALSE}
 #got to figure out path stuff before render.
-source(here::here("R/data_available.R"))
+source(here::here("R/data_available.R")) 
 source(here::here("R/summary_stats.R"))  
 source(here::here("R/figures.R"))
 ```
+
+
+*`r tab_num("ww_params")`*
+
 
 # Introduction
 
@@ -49,9 +80,10 @@ For this study we combined a long-term dataset on water quality of lakes in Rhod
 
 The study area for this analyis includes data in lakes and ponds in the state of Rhode Island that were collected by the University of Rhode Island's Watershed Watch (URIWW) program (`r fig_num("ww_map", display = "cite", caption = "Map of URI Watershed Watch lake and pond sampling sites")`).  MORE DETAILS ON RIWW.
 
-![`r fig_num("ww_map", caption = "Map of URI Watershed Watch lake and pond sampling sites")`](../figures/ww_map.jpg)
+*`r fig_num("ww_map", caption = "Map of URI Watershed Watch lake and pond sampling sites")`*
+![](../figures/ww_map.jpg)
 
-In particular we selected data from the RIWW data that matched the following criteria: 1) were sampled between 1990 and 2016, 2) were sampled in May to October, 3) and were sampled at a depth of 2 meters or less. For this analysis we were interested in trends in lake temperature, total nitorgen, total phosphorus, and chlorophyll *a* and for each of these parameters we further filtered the data to select sites that had at least 10 years of data for a given parameter.  The final dataset used in our analysis included `r nrow(ww_avail_data_locations)` lakes and ponds which had approximately `r length(temp_10yr_sites)` samples for temperature, `r length(chla_10yr_sites)` samples for chlorophyll *a*, `r length(total_n_10yr_sites)` samples for Total Nitrogen (TN), and `r length(total_p_10yr_sites)` samples for Total Phosphorus (TP).  Of the `r nrow(ww_avail_data_locations)` sampling sites, `r sum(avail_data$params_avail == "chla, total_p, total_n, temp")` had data for all 4 parameters.  
+In particular we selected data from the RIWW data that matched the following criteria: 1) were sampled between 1990 and 2016, 2) were sampled in May to October, 3) and were sampled at a depth of 2 meters or less. For this analysis we were interested in trends in lake temperature, total nitorgen, total phosphorus, and chlorophyll *a* and for each of these parameters we further filtered the data to select sites that had at least 10 years of data for a given parameter.  The final dataset used in our analysis included `r nrow(ww_avail_data_locations)` lakes and ponds which had approximately `r length(temp_10yr_sites)` samples for temperature, `r length(chla_10yr_sites)` samples for chlorophyll *a*, `r length(total_n_10yr_sites)` samples for Total Nitrogen (TN), and `r length(total_p_10yr_sites)` samples for Total Phosphorus (TP).  Of the `r nrow(ww_avail_data_locations)` sampling sites, `r sum(ww_avail_data_locations$params_avail == "chla, total_p, total_n, temp")` had data for all 4 parameters.  
 
 Additionally, prior studies have looked at water quality trends across a larger region of the Northeastern United states that included 17 states including Minnesota, Wisconsin, Iowa, Missouri, Illinois, Indiana, Michigan, Ohio, Pennsylvania, New York, New Jersey, Connecticut, Massachusetts, Rhode Island, Vermont, New Hampshire, and Maine [@soranno2015building; @Oliver_2017].  The authors found little change in water quality trends across this region [@Oliver_2017] .  We repeated our analysis (see **Trend Analysis** section) with the same dataset used by [@Oliver_2017], the LAGOSNE dataset [@soranno2015building; @stacheleklagosne2017; @sorannolagosne2017].  Temperature data were not availble, thus we only examine trends, using our analytical methods, for Total Nitrogren, Total Phosphorus, and Chlorophyll *a* from the LAGOSNE database.
 
@@ -75,36 +107,45 @@ Prior studies have shown relatively stable water quality in the lakes of the Nor
 
 # Results
 
-During the selected sampling period of 1990 to 2016 average lake temperature was `r ww_param_ranges%>%filter(param == "temp")%>%pull(mean)`, average total nitrogen was `r ww_param_ranges%>%filter(param == "total_n")%>%pull(mean)`, average total phosphorus was `r ww_param_ranges%>%filter(param == "total_p")%>%pull(mean)`, and average chlorophyll was `r ww_param_ranges%>%filter(param == "chla")%>%pull(mean)` (`r tab_num("ww_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1990 to 2016.")`) 
+During the selected sampling period of 1990 to 2016 average lake temperature was `r paste(ww_param_ranges%>%filter(Parameter == "temp")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "temp")%>%pull(Units))`, average total nitrogen was `r paste(ww_param_ranges%>%filter(Parameter == "total_n")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "total_n")%>%pull(Units))`, average total phosphorus was `r paste(ww_param_ranges%>%filter(Parameter == "total_p")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "total_p")%>%pull(Units))`, and average chlorophyll was `r paste(ww_param_ranges%>%filter(Parameter == "chla")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "chla")%>%pull(Units))` (`r tab_num("ww_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1990 to 2016.")`).   
 
+*`r tab_num("ww_params")`*
 ```{r ww_params, echo=FALSE, results="asis"}
 knitr::kable(ww_param_ranges, format = "markdown")
-tab_num("ww_params")
 ```
 
 ## State-wide trends in water quality
 
-![`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.")`](../figures/ww_temp_trends.jpg)
+*`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.")`*
+![](../figures/ww_temp_trends.jpg)
 
-![`r fig_num(name = "tn_ri", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in Rhode Island lakes and ponds.")`](../figures/ww_tn_trends.jpg)
+*`r fig_num(name = "tn_ri", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in Rhode Island lakes and ponds.")`*
+![](../figures/ww_tn_trends.jpg)
 
-![`r fig_num(name = "tp_ri", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in Rhode Island lakes and ponds.")`](../figures/ww_tp_trends.jpg)
+*`r fig_num(name = "tp_ri", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in Rhode Island lakes and ponds.")`*
+![](../figures/ww_tp_trends.jpg)
 
-![`r fig_num(name = "chla_ri", caption = "Yearly trend over 20+ years of Chlorphyll *a* (average z-score) in Rhode Island lakes and ponds.")`](../figures/ww_chla_trends.jpg)
+*`r fig_num(name = "chla_ri", caption = "Yearly trend over 20+ years of Chlorphyll *a* (average z-score) in Rhode Island lakes and ponds.")`*
+![](../figures/ww_chla_trends.jpg)
 
 ## Regional trends in water quality
 
-![`r fig_num(name = "tn_lagos", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in the LAGOSNE states.")`](../figures/lagos_tn_trends.jpg)
+*`r fig_num(name = "tn_lagos", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in the LAGOSNE states.")`*
+![](../figures/lagos_tn_trends.jpg)
 
-![`r fig_num(name = "tp_lagos", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in the LAGOSNE states.")`](../figures/lagos_tp_trends.jpg)
+*`r fig_num(name = "tp_lagos", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in the LAGOSNE states.")`*
+![](../figures/lagos_tp_trends.jpg)
 
-![`r fig_num(name = "chla_lagos", caption = "Yearly trend over 20+ years of Chlorophyll *a* (average z-score) in the LAGOSNE states.")`](../figures/lagos_chla_trends.jpg)
+*`r fig_num(name = "chla_lagos", caption = "Yearly trend over 20+ years of Chlorophyll *a* (average z-score) in the LAGOSNE states.")`*
+![](../figures/lagos_chla_trends.jpg)
 
 # Discussion and conclusions
 
 ## Trends
 
 ### Local scale vs Regional/Global scale
+
+### RI is downstream - Bryan will write
 
 ## Caveats
 

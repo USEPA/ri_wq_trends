@@ -14,7 +14,9 @@ library(LAGOSNE)
 library(sf)
 library(USAboundaries)
 library(USAboundariesData)
-
+#if(!require(sass)){devtools::install_github("rstudio/sass")}
+#if(!require(gt)){devtools::install_github("rstudio/gt")}
+#library(gt)
 
 #' Function to filter on number of years sampled per site
 #' @param df data frame to filter
