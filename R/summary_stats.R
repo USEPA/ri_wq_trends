@@ -1,5 +1,6 @@
 source(here::here("R/functions.R"))
-ww_all<-read_csv(here("data/ww_lake_trend_data.csv"))
+
+ww_all<-read.csv(here("data/ww_lake_trend_data.csv"), stringsAsFactors = FALSE)
 ww_param_ranges <- ww_all %>%
   filter(param == "chla" |
            param == "temp" |

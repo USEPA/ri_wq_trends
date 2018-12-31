@@ -40,17 +40,19 @@ lagos_data <- read_csv(here("data/lagos_lake_trend_data.csv"))
 
 lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_scale", 
                              y = "Average Yearly Scaled Chlorophyll", x = "Year",
-                             write = "temporary.csv")
+                             write = here("data/chla_data_lagos.csv"))
 ggsave(here("figures/lagos_chla_trends.jpg"), lagos_chla_gg, width = 5, height = 3.75, 
        units = "in", dpi = 600)
 
 lagos_tn_gg <- wq_trend_gg(lagos_data, "total_n", yvar = "measurement_scale", 
-                             y = "Average Yearly Scaled Total Nitrogen", x = "Year")
+                             y = "Average Yearly Scaled Total Nitrogen", x = "Year",
+                           write = here("data/total_n_data_lagos.csv"))
 ggsave(here("figures/lagos_tn_trends.jpg"), lagos_tn_gg, width = 5, height = 3.75, 
        units = "in", dpi = 600)
 
 lagos_tp_gg <- wq_trend_gg(lagos_data, "total_p", yvar = "measurement_scale", 
-                             y = "Average Yearly Scaled Total Phosphorus", x = "Year")
+                             y = "Average Yearly Scaled Total Phosphorus", x = "Year",
+                           write = here("data/total_n_data_lagos.csv"))
 ggsave(here("figures/lagos_tp_trends.jpg"), lagos_tp_gg, width = 5, height = 3.75, 
        units = "in", dpi = 600)
 
