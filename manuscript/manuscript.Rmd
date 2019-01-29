@@ -94,11 +94,15 @@ knitr::kable(lagos_param_ranges, format = "markdown")
 
 ## State-wide trends in water quality
 
-*`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.")`*
+(`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.", display = "cite")`).
+
+*`r fig_num(name = "temp_ri")`*
 
 ![](../figures/ww_temp_trends.jpg)
 
-*`r fig_num(name = "tn_ri", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in Rhode Island lakes and ponds.")`*
+(`r fig_num(name = "tn_ri", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in Rhode Island lakes and ponds.", display = "cite")`).
+
+*`r fig_num(name = "tn_ri")`*
 
 ![](../figures/ww_tn_trends.jpg)
 
