@@ -78,7 +78,7 @@ Prior studies have shown relatively stable water quality in the lakes of the Nor
 
 # Results
 
-During the sampling period of 1990 to 2016 Rhode Island lakes and ponds average lake temperature was `r paste(ww_param_ranges%>%filter(Parameter == "temp")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "temp")%>%pull(Units))`, average total nitrogen was `r paste(ww_param_ranges%>%filter(Parameter == "total_n")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "total_n")%>%pull(Units))`, average total phosphorus was `r paste(ww_param_ranges%>%filter(Parameter == "total_p")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "total_p")%>%pull(Units))`, and average chlorophyll was `r paste(ww_param_ranges%>%filter(Parameter == "chla")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "chla")%>%pull(Units))` (`r tab_num("ww_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1990 to 2016.")`).  For lakes in ponds in the larger region represented by the LAGOSNE States,  average total nitrogen was `r paste(lagosne_param_ranges%>%filter(Parameter == "total_n")%>%pull(Mean), lagosne_param_ranges%>%filter(Parameter == "total_n")%>%pull(Units))`, average total phosphorus was `r paste(lagosne_param_ranges%>%filter(Parameter == "total_p")%>%pull(Mean), lagosne_param_ranges%>%filter(Parameter == "total_p")%>%pull(Units))`, and average chlorophyll was `r paste(lagosne_param_ranges%>%filter(Parameter == "chla")%>%pull(Mean), lagosne_param_ranges%>%filter(Parameter == "chla")%>%pull(Units))` (`r tab_num("lagosne_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1990 to 2016.")`).    
+During the sampling period of 1990 to 2016 Rhode Island lakes and ponds average lake temperature was `r paste(ww_param_ranges%>%filter(Parameter == "temp")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "temp")%>%pull(Units))`, average total nitrogen was `r paste(ww_param_ranges%>%filter(Parameter == "total_n")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "total_n")%>%pull(Units))`, average total phosphorus was `r paste(ww_param_ranges%>%filter(Parameter == "total_p")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "total_p")%>%pull(Units))`, and average chlorophyll was `r paste(ww_param_ranges%>%filter(Parameter == "chla")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "chla")%>%pull(Units))` (`r tab_num("ww_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1990 to 2016.")`).  For lakes in ponds in the larger region represented by the LAGOSNE States,  average total nitrogen was `r paste(lagos_param_ranges%>%filter(Parameter == "total_n")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "total_n")%>%pull(Units))`, average total phosphorus was `r paste(lagos_param_ranges%>%filter(Parameter == "total_p")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "total_p")%>%pull(Units))`, and average chlorophyll was `r paste(lagos_param_ranges%>%filter(Parameter == "chla")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "chla")%>%pull(Units))` (`r tab_num("lagos_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1990 to 2016.")`).    
 
 *`r tab_num("ww_params")`*
 
@@ -86,10 +86,10 @@ During the sampling period of 1990 to 2016 Rhode Island lakes and ponds average 
 knitr::kable(ww_param_ranges, format = "markdown")
 ```
 
-*`r tab_num("lagosne_params")`*
+*`r tab_num("lagos_params")`*
 
-```{r ww_params, echo=FALSE, results="asis"}
-knitr::kable(lagosne_param_ranges, format = "markdown")
+```{r lagos_params, echo=FALSE, results="asis"}
+knitr::kable(lagos_param_ranges, format = "markdown")
 ```
 
 ## State-wide trends in water quality
