@@ -1,5 +1,5 @@
 ---
-title: "25 Years of Water Quality Change in Rhode Island Lakes and Ponds"
+title: "26 Years of Water Quality Change in Rhode Island Lakes and Ponds"
 output: 
   word_document:
     reference_docx: manuscript_template.docx   
@@ -11,7 +11,7 @@ author:
 - "^\\*^  *corresponding author: hollister.jeff@epa.gov*"
 bibliography: manuscript.bib
 csl: plos.csl
-abstract: The University of Rhode Island’s Watershed Watch Volunteer Monitoring Program has been collecting water quality data on dozens of Rhode Island lakes and ponds for over 25 years, allowing us to explore long-term trends in common water quality parameters.  Not all lakes and ponds in the study area were sampled across the full time period and lakes were often added in geographic clusters (e.g. in urbanized northern Rhode Island).  Not unlike how long-term temperature records are analyzed, we centered and scaled (i.e., the z-score) water quality measurements on a per-station basis. This provides a robust and commonly scaled measurement to explore this data for long-term trends.  State-wide aggregation shows increasing temperature, chlorophyll *a*, and total nitrogen. Interestingly, total phosphorus is showing a decline, perhaps reflecting the management focus on phosphorus reductions.  While yearly trends are useful, they do mask month-to-month variability differences across sites.  Additionally, while most sites track the yearly trend in decreasing water quality, there are bright spots with some sites improving over the 25 years. Contrary to previously reported analyses that show relatively stable water quality at the regional scale, our analysis shows that long-term water quality trends within Rhode Island show some parameters improving while others are in decline.  Importantly, this analysis also points out the incredible value and importance of data from long-term monitoring programs, like the Univeristy of Rhode Island's Watershed Watch, for identifying trends in environmental condition. 
+abstract: The University of Rhode Island’s Watershed Watch Volunteer Monitoring Program has been collecting water quality data on Rhode Island lakes and ponds for close to three decades, allowing us to explore long-term trends in common water quality parameters.  Not all lakes and ponds in the study area were sampled across the full time period and lakes were often added in geographic clusters (e.g. in urbanized northern Rhode Island).  Not unlike how long-term temperature records are analyzed, we centered and scaled (i.e., the z-score) water quality measurements on a per-station basis. This provides a robust and commonly scaled measurement to explore this data for long-term trends.  State-wide aggregation shows increasing temperature, chlorophyll *a*, and total nitrogen. Interestingly, total phosphorus is showing a decline, perhaps reflecting the management focus on phosphorus reductions.  While yearly trends are useful, they do mask month-to-month variability differences across sites.  Additionally, while most sites track the yearly trend in decreasing water quality, there are bright spots with some sites improving over the 25 years. Contrary to previously reported analyses that show relatively stable water quality at the regional scale, our analysis shows that long-term water quality trends within Rhode Island show some parameters improving while others are in decline.  Importantly, this analysis also points out the incredible value and importance of data from long-term monitoring programs, like the Univeristy of Rhode Island's Watershed Watch, for identifying trends in environmental condition. 
 editor_options: 
   chunk_output_type: console
 ---
@@ -78,7 +78,7 @@ Prior studies have shown relatively stable water quality in the lakes of the Nor
 
 # Results
 
-During the selected sampling period of 1990 to 2016 average lake temperature was `r paste(ww_param_ranges%>%filter(Parameter == "temp")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "temp")%>%pull(Units))`, average total nitrogen was `r paste(ww_param_ranges%>%filter(Parameter == "total_n")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "total_n")%>%pull(Units))`, average total phosphorus was `r paste(ww_param_ranges%>%filter(Parameter == "total_p")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "total_p")%>%pull(Units))`, and average chlorophyll was `r paste(ww_param_ranges%>%filter(Parameter == "chla")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "chla")%>%pull(Units))` (`r tab_num("ww_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1990 to 2016.")`).   
+During the sampling period of 1990 to 2016 Rhode Island lakes and ponds average lake temperature was `r paste(ww_param_ranges%>%filter(Parameter == "temp")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "temp")%>%pull(Units))`, average total nitrogen was `r paste(ww_param_ranges%>%filter(Parameter == "total_n")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "total_n")%>%pull(Units))`, average total phosphorus was `r paste(ww_param_ranges%>%filter(Parameter == "total_p")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "total_p")%>%pull(Units))`, and average chlorophyll was `r paste(ww_param_ranges%>%filter(Parameter == "chla")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "chla")%>%pull(Units))` (`r tab_num("ww_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1990 to 2016.")`).  For lakes in ponds in the larger region represented by the LAGOSNE States,  average total nitrogen was `r paste(lagosne_param_ranges%>%filter(Parameter == "total_n")%>%pull(Mean), lagosne_param_ranges%>%filter(Parameter == "total_n")%>%pull(Units))`, average total phosphorus was `r paste(lagosne_param_ranges%>%filter(Parameter == "total_p")%>%pull(Mean), lagosne_param_ranges%>%filter(Parameter == "total_p")%>%pull(Units))`, and average chlorophyll was `r paste(lagosne_param_ranges%>%filter(Parameter == "chla")%>%pull(Mean), lagosne_param_ranges%>%filter(Parameter == "chla")%>%pull(Units))` (`r tab_num("lagosne_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1990 to 2016.")`).    
 
 *`r tab_num("ww_params")`*
 
@@ -86,6 +86,11 @@ During the selected sampling period of 1990 to 2016 average lake temperature was
 knitr::kable(ww_param_ranges, format = "markdown")
 ```
 
+*`r tab_num("lagosne_params")`*
+
+```{r ww_params, echo=FALSE, results="asis"}
+knitr::kable(lagosne_param_ranges, format = "markdown")
+```
 
 ## State-wide trends in water quality
 
