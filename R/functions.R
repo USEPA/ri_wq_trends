@@ -73,7 +73,6 @@ wq_trend_gg <- function(df, wqparam,
                        minor_breaks = NULL) +
     scale_y_continuous(limits = c(-0.5, 0.75))
   
-  gg
-
+  list(gg, kt)
 }
  

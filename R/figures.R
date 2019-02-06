@@ -9,50 +9,62 @@ chla_gg <- ww_data %>%
   wq_trend_gg( "chla", yvar = "measurement_scale", 
                        y = "Average Yearly Scaled Chlorophyll", x = "Year",
                write = here("data/chla_data.csv"))
-ggsave(here("figures/ww_chla_trends.jpg"), chla_gg, width = 5, height = 3.75, 
+ggsave(here("figures/ww_chla_trends.jpg"), chla_gg[[1]], width = 5, height = 3.75, 
        units = "in", dpi = 600)
+
+ww_chla_kt <- chla_gg[[2]]
 
 tn_gg <-  ww_data %>%
   filter(state == "RI") %>%
   wq_trend_gg("total_n", yvar = "measurement_scale", 
                       y = "Average Yearly Scaled Total Nitrogen", x = "Year",
               write = here("data/total_n_data.csv"))
-ggsave(here("figures/ww_tn_trends.jpg"), tn_gg, width = 5, height = 3.75, 
+ggsave(here("figures/ww_tn_trends.jpg"), tn_gg[[1]], width = 5, height = 3.75, 
        units = "in", dpi = 600)
+
+ww_tn_kt <- tn_gg[[2]]
 
 tp_gg <-  ww_data %>%
   filter(state == "RI") %>%
   wq_trend_gg("total_p", yvar = "measurement_scale", 
                       y = "Average Yearly Scaled Total Phosphorus", x = "Year",
                       write = here("data/total_p_data.csv"))
-ggsave(here("figures/ww_tp_trends.jpg"), tp_gg, width = 5, height = 3.75, 
+ggsave(here("figures/ww_tp_trends.jpg"), tp_gg[[1]], width = 5, height = 3.75, 
        units = "in", dpi = 600)
+
+ww_tp_kt <- tp_gg[[2]]
 
 temp_gg <- ww_data %>%
   filter(state == "RI") %>%
   wq_trend_gg("temp", yvar = "measurement_scale", 
                        y = "Average Yearly Scaled Temperature", x = "Year",
               write = here("data/temp_data.csv"))
-ggsave(here("figures/ww_temp_trends.jpg"), temp_gg, width = 5, height = 3.75, 
+ggsave(here("figures/ww_temp_trends.jpg"), temp_gg[[1]], width = 5, height = 3.75, 
        units = "in", dpi = 600)
+
+ww_temp_kt <- temp_gg[[2]]
 
 lagos_data <- read_csv(here("data/lagos_lake_trend_data.csv"))
 
 lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_scale", 
                              y = "Average Yearly Scaled Chlorophyll", x = "Year",
                              write = here("data/chla_data_lagos.csv"))
-ggsave(here("figures/lagos_chla_trends.jpg"), lagos_chla_gg, width = 5, height = 3.75, 
+ggsave(here("figures/lagos_chla_trends.jpg"), lagos_chla_gg[[1]], width = 5, height = 3.75, 
        units = "in", dpi = 600)
+lagos_chla_kt <- lagos_chla_gg[[2]]
 
 lagos_tn_gg <- wq_trend_gg(lagos_data, "total_n", yvar = "measurement_scale", 
                              y = "Average Yearly Scaled Total Nitrogen", x = "Year",
                            write = here("data/total_n_data_lagos.csv"))
-ggsave(here("figures/lagos_tn_trends.jpg"), lagos_tn_gg, width = 5, height = 3.75, 
+ggsave(here("figures/lagos_tn_trends.jpg"), lagos_tn_gg[[1]], width = 5, height = 3.75, 
        units = "in", dpi = 600)
+lagos_tn_kt <- lagos_tn_gg[[2]]
+
 
 lagos_tp_gg <- wq_trend_gg(lagos_data, "total_p", yvar = "measurement_scale", 
                              y = "Average Yearly Scaled Total Phosphorus", x = "Year",
                            write = here("data/total_n_data_lagos.csv"))
-ggsave(here("figures/lagos_tp_trends.jpg"), lagos_tp_gg, width = 5, height = 3.75, 
+ggsave(here("figures/lagos_tp_trends.jpg"), lagos_tp_gg[[1]], width = 5, height = 3.75, 
        units = "in", dpi = 600)
 
+lagos_tp_kt <- lagos_tp_gg[[2]]

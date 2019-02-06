@@ -96,7 +96,7 @@ knitr::kable(lagos_param_ranges, format = "markdown")
 
 ## State-wide trends in water quality
 
-Across the years of this study, average yearly scaled temperature in lakes and ponds appear to be increasing (Kendall's Tau: `r` , p-value: `r`) with the large majority of years with average temperature greater than the long term average occuring in the years since 2000 (`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.", display = "cite")`).
+Across the years of this study, average yearly scaled temperature in lakes and ponds appear to be increasing (Kendall's Tau: `r round(ww_temp_kt$tau,3)` , p-value: `r round(ww_temp_kt$sl, 4)`) with the large majority of years with average temperature greater than the long term average occuring in the years since 2000 (`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.", display = "cite")`).
 
 *`r fig_num(name = "temp_ri")`*
 
