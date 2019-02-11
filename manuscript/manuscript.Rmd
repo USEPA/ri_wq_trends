@@ -35,13 +35,25 @@ source(here::here("R/figures.R"), encoding = "UTF-8")
 
 # Introduction
 
-General stuff about long-term trends, monitoring programs and watershed watch details
+1. Water quality in last several decades (Why Water Quality Paragraph(s))
+  - Why of interest
+    - cyanos stuff
+    - CWA stuff
+  - Understand long-term trends from local, to regional, to national
+  - What variables are of interest and why
+    - productivity
+    - climate change
+    - Nutrient enrichment stuff
+    
+2. Temporal and Spatial scaling of water quality trends Paragraph
 
+3. Work has been done in the larger Northeastern Region of US (Northeastern Paragraph)
+  - Shown to be stable in LAGOS (Maybe other studies in NE)
+  - "Given what is known about long term trends in water quality within the broader region of the northeastern United States [@Oliver_2017], we were curious if those trends were also present in water quality trends in Rhode Island lakes and ponds."  
+  
+4. Rhode Island Paragraph (May be combined with #3)
 
-
-Given what is known about long term trends in water quality within the broader region of the northeastern United States [@Oliver_2017], we were curious if those trends were also present in water quality trends in Rhode Island lakes and ponds.  Something about spatial and temporal variability of water quality
-
-The goals of this study were to look at approximately 25 years of lakes and ponds data in Rhode Island and answer two particular questions.  First, what are the state-wide trends in total nitrogen, total phosphorus, chlorophyll *a*, and lake temperature and second, are water quality trends in Rhode Island similar to regional trends in the northeastern United states.   In addition to these goals, this analysis has also been done using open data from the URI Watershed Watch program and the analysis in its entirety is available for independent reproduction at <https://github.com/usepa/ri_wq_trends>.       
+4. Thus, the goals of this study were to look at approximately 25 years of lakes and ponds data in Rhode Island and answer two particular questions.  First, what are the state-wide trends in total nitrogen, total phosphorus, chlorophyll *a*, and lake temperature and second, are water quality trends in Rhode Island similar to regional trends in the northeastern United states.   In addition to these goals, this analysis has also been done using open data from the URI Watershed Watch program and the analysis in its entirety is available for independent reproduction at <https://github.com/usepa/ri_wq_trends>.       
 
 # Methods
 
