@@ -14,9 +14,6 @@ library(LAGOSNE)
 library(sf)
 library(USAboundaries)
 library(USAboundariesData)
-#if(!require(sass)){devtools::install_github("rstudio/sass")}
-#if(!require(gt)){devtools::install_github("rstudio/gt")}
-#library(gt)
 
 #' Function to filter on number of years sampled per site
 #' @param df data frame to filter
@@ -55,9 +52,8 @@ wq_trend_gg <- function(df, wqparam,
   }
   
   kt <- with(df2, Kendall(year, mn_value))
-
   gg <- ggplot(df2,aes(x = year, y = mn_value)) + 
-    geom_point(aes(color = col_group), size=2.5) +
+    geom_point(aes(color = col_group), size=3.5) +
     geom_smooth(method = "lm", se=FALSE, color = "black") +
     theme_ipsum() +
     labs(..., title = paste0("Kendall's Tau: ", round(kt$tau,3),
@@ -71,8 +67,10 @@ wq_trend_gg <- function(df, wqparam,
     scale_x_continuous(labels = c(1990,1995,2000,2005,2010,2015),
                        breaks = c(1990,1995,2000,2005,2010,2015),
                        minor_breaks = NULL) +
-    scale_y_continuous(limits = c(-0.5, 0.75))
+    scale_y_continuous(limits = c(-0.75, 0.75))
   
-  list(gg, kt)
+  list(gg, kt, df2)
 }
+
+
  
