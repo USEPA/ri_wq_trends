@@ -108,7 +108,7 @@ knitr::kable(lagos_param_ranges, format = "markdown")
 
 ## State-wide trends in water quality
 
-Average yearly scaled temperature in lakes and ponds appear to be increasing (Kendall's Tau: `r round(ww_temp_kt$tau,3)` , p-value: `r round(ww_temp_kt$sl, 4)`) with the large majority of years with average temperature greater than the long term average occuring in the years since 2000 (`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.", display = "cite")`).  Chlorophyll *a* is also showing an increasing trend over time (Kendall's Tau: `r round(ww_chla_kt$tau,3)` , p-value: `r round(ww_chla_kt$sl, 4)`) and with the exception of an early high chlorophyll *a* year in 1992 and a slightly above average year in 2003, the above average years have all occurred since 2010 (`r fig_num(name = "chla_ri", caption = "Yearly trend over 20+ years of Chlorphyll a (average z-score) in Rhode Island lakes and ponds.", display = "cite")`). 
+Average yearly scaled temperature in lakes and ponds appear to be increasing (slope: `r round(ww_temp_rl$slope,3)` , p-value: `r round(ww_temp_rl$p.value, 4)`) with the large majority of years with average temperature greater than the long term average occuring in the years since 2000 (`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.", display = "cite")`).  Chlorophyll *a* is also showing an increasing trend over time (slope: `r round(ww_chla_rl$slope,3)` , p-value: `r round(ww_chla_rl$p.value, 4)`) and with the exception of an early high chlorophyll *a* year in 1992 and a slightly above average year in 2003, the above average years have all occurred since 2010 (`r fig_num(name = "chla_ri", caption = "Yearly trend over 20+ years of Chlorphyll a (average z-score) in Rhode Island lakes and ponds.", display = "cite")`). 
 
 *`r fig_num(name = "temp_ri")`*
 
@@ -119,10 +119,13 @@ Average yearly scaled temperature in lakes and ponds appear to be increasing (Ke
 ![](../figures/ww_chla_trends.jpg)
 
 ```{r no_early_tn, echo=FALSE}
-ww_tn_kt_no9394 <- Kendall(ww_tn_df[c(-1,-2),]$year, ww_tn_df[c(-1,-2),]$mn_value)
+ww_tn_rl_no9394 <- lm(mn_value~year, data = ww_tn_df[c(-1,-2),]) %>%
+  tidy() %>%
+  slice(2) %>%
+  select(slope = estimate, p.value)
 ```
 
-Average yearly trends for nutrients showed weaker or no trends over time.  Total nitrogen did have a significant trend (Kendall's Tau: `r round(ww_tn_kt$tau,3)` , p-value: `r round(ww_tn_kt$sl, 4)`); however, that trend is driven by the lower than average total nitrogen values in 1993 and 1994 (`r fig_num(name = "tn_ri", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in Rhode Island lakes and ponds.", display = "cite")`).  Since 1995, the yearly trend is not significant (Kendall's Tau: `r round(ww_tn_kt_no9394$tau,3)` , p-value: `r round(ww_tn_kt_no9394$sl, 4)`).  Total phosphorus does not show a trend over time in the yearly scaled values (Kendall's Tau: `r round(ww_tn_kt$tau,3)` , p-value: `r round(ww_tn_kt$sl, 4)`) and years that are over or under the average are evenly distributed over the years (`r fig_num(name = "tp_ri", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in Rhode Island lakes and ponds.", display = "cite")`). 
+Average yearly trends for nutrients showed weaker or no trends over time.  Total nitrogen did have a significant trend (slope: `r round(ww_tn_rl$slope,3)` , p-value: `r round(ww_tn_rl$p.value, 4)`); however, that trend is driven by the lower than average total nitrogen values in 1993 and 1994 (`r fig_num(name = "tn_ri", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in Rhode Island lakes and ponds.", display = "cite")`).  Since 1995, the yearly trend is not significant (slope: `r round(ww_tn_rl_no9394$slope,3)`, p-value: `r round(ww_tn_rl_no9394$p.value, 4)`).  Total phosphorus does not show a trend over time in the yearly scaled values (slope: `r round(ww_tn_rl$slope,3)` , p-value: `r round(ww_tn_rl$p.value, 4)`) and years that are over or under the average are evenly distributed over the years (`r fig_num(name = "tp_ri", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in Rhode Island lakes and ponds.", display = "cite")`). 
 
 *`r fig_num(name = "tn_ri")`*
 
@@ -134,23 +137,21 @@ Average yearly trends for nutrients showed weaker or no trends over time.  Total
 
 ## Regional trends in water quality
 
-(`r fig_num(name = "tn_lagos", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in the LAGOSNE states.", display = "cite")`).
+In general, broad regional trends were less obvious and in the case of chlorophyll *a* and total phosphorus, the trends were not significant.  In particular, chlorophyll *a* showed a slight, yet non-significant negative trend (slope: `r round(lagos_chla_rl$slope,3)`, p-value: `r round(lagos_chla_rl$p.value, 4)`, `r fig_num(name = "chla_lagos", caption = "Yearly trend over 20+ years of Chlorophyll a (average z-score) in the LAGOSNE states.", display = "cite")`).
 
-*`r fig_num(name = "tn_lagos")`*
+*`r fig_num(name = "chla_lagos")`*
 
-![](../figures/lagos_tn_trends.jpg)
+![](../figures/lagos_chla_trends.jpg)
 
-(`r fig_num(name = "tp_lagos", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in the LAGOSNE states.",display = "cite")`).
+Total phosphorus shows a slight and non-significant increasing trend (slope: `r round(lagos_tp_rl$slope, 3)`, p-value: `r round(lagos_tp_rl$p.value,4)`, `r fig_num(name = "tp_lagos", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in the LAGOSNE states.",display = "cite")`) and total nitrogen shows a slight negative non-significant trend (slope: `r round(lagos_tn_rl$slope, 3)`, p-value: `r round(lagos_tn_rl$p.value, 4)`, `r fig_num(name = "tn_lagos", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in the LAGOSNE states.", display = "cite")`).
 
 *`r fig_num(name = "tp_lagos")`*
 
 ![](../figures/lagos_tp_trends.jpg)
 
-(`r fig_num(name = "chla_lagos", caption = "Yearly trend over 20+ years of Chlorophyll a (average z-score) in the LAGOSNE states.", display = "cite")`).
+*`r fig_num(name = "tn_lagos")`*
 
-*`r fig_num(name = "chla_lagos")`*
-
-![](../figures/lagos_chla_trends.jpg)
+![](../figures/lagos_tn_trends.jpg)
 
 # Discussion and conclusions
 

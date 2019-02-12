@@ -14,6 +14,7 @@ ggsave(here("figures/ww_chla_trends.jpg"), chla_gg[[1]], width = 7.5, height = 5
 
 ww_chla_kt <- chla_gg[[2]]
 ww_chla_df <- chla_gg[[3]]
+ww_chla_rl <- chla_gg[[4]]
 
 tn_gg <-  ww_data %>%
   filter(state == "RI") %>%
@@ -25,6 +26,7 @@ ggsave(here("figures/ww_tn_trends.jpg"), tn_gg[[1]], width = 7.5, height = 5.625
 
 ww_tn_kt <- tn_gg[[2]]
 ww_tn_df <- tn_gg[[3]]
+ww_tn_rl <- tn_gg[[4]]
 
 tp_gg <-  ww_data %>%
   filter(state == "RI") %>%
@@ -36,6 +38,7 @@ ggsave(here("figures/ww_tp_trends.jpg"), tp_gg[[1]], width = 7.5, height = 5.625
 
 ww_tp_kt <- tp_gg[[2]]
 ww_tp_df <- tp_gg[[3]]
+ww_tp_rl <- tp_gg[[4]]
 
 temp_gg <- ww_data %>%
   filter(state == "RI") %>%
@@ -47,6 +50,7 @@ ggsave(here("figures/ww_temp_trends.jpg"), temp_gg[[1]], width = 7.5, height = 5
 
 ww_temp_kt <- temp_gg[[2]]
 ww_temp_df <- temp_gg[[3]]
+ww_temp_rl <- temp_gg[[4]]
 
 lagos_data <- read_csv(here("data/lagos_lake_trend_data.csv"))
 
@@ -57,6 +61,7 @@ ggsave(here("figures/lagos_chla_trends.jpg"), lagos_chla_gg[[1]], width = 7.5, h
        units = "in", dpi = 600)
 lagos_chla_kt <- lagos_chla_gg[[2]]
 lagos_chla_df <- lagos_chla_gg[[3]]
+lagos_chla_rl <- lagos_chla_gg[[4]]
 
 lagos_tn_gg <- wq_trend_gg(lagos_data, "total_n", yvar = "measurement_scale", 
                              y = "Average Yearly Scaled Total Nitrogen", x = "Year",
@@ -65,6 +70,7 @@ ggsave(here("figures/lagos_tn_trends.jpg"), lagos_tn_gg[[1]], width = 7.5, heigh
        units = "in", dpi = 600)
 lagos_tn_kt <- lagos_tn_gg[[2]]
 lagos_tn_df <- lagos_tn_gg[[3]]
+lagos_tn_rl <- lagos_tn_gg[[4]]
 
 
 lagos_tp_gg <- wq_trend_gg(lagos_data, "total_p", yvar = "measurement_scale", 
@@ -75,6 +81,7 @@ ggsave(here("figures/lagos_tp_trends.jpg"), lagos_tp_gg[[1]], width = 7.5, heigh
 
 lagos_tp_kt <- lagos_tp_gg[[2]]
 lagos_tp_df <- lagos_tp_gg[[3]]
+lagos_tp_rl <- lagos_tp_gg[[4]]
 
 avail_data <- read_csv(here("data/ww_avail_data_stations.csv"))
 ri <- us_states(resolution = "high", states = "Rhode Island")
