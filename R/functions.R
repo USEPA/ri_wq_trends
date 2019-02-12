@@ -1,5 +1,6 @@
 # Library
 library(lubridate)
+library(broom)
 library(stringr)
 library(dplyr)
 library(readr)
@@ -52,12 +53,16 @@ wq_trend_gg <- function(df, wqparam,
   }
   
   kt <- with(df2, Kendall(year, mn_value))
+  regress <- lm(mn_value ~ year, data = df2) %>% 
+    tidy() %>%
+    slice(2) %>%
+    select(slope = estimate, p.value) 
   gg <- ggplot(df2,aes(x = year, y = mn_value)) + 
     geom_point(aes(color = col_group), size=3.5) +
     geom_smooth(method = "lm", se=FALSE, color = "black") +
     theme_ipsum() +
-    labs(..., title = paste0("Kendall's Tau: ", round(kt$tau,3),
-                             " p-value: ", round(kt$sl, 4))) +
+    labs(..., title = paste0("slope: ", round(regress$slope,3),
+                             " p-value: ", round(regress$p.value, 4))) +
     scale_color_manual(values = c("red3","darkblue")) + 
     theme(legend.position="none", plot.title = element_text(size=10, face="plain")) + 
     #geom_label(aes(x = 2006, y = min(mn_value)*0.88), 
@@ -69,7 +74,7 @@ wq_trend_gg <- function(df, wqparam,
                        minor_breaks = NULL) +
     scale_y_continuous(limits = c(-0.75, 0.75))
   
-  list(gg, kt, df2)
+  list(gg, kt, df2, regress)
 }
 
 
