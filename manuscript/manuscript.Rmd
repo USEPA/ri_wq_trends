@@ -80,9 +80,9 @@ The anomaly approach is very useful and is the approach we chose to follow.  How
 
 Furthermore, since we are interest in water quality trends over time, we wanted to explore how each site was responding.  Thus, our z-scores were calculated over the reference period, 1990-2016, for each site.  In other words the long-term mean and standard deviation were calculated on a site-by-site basis.    
 
-### Kendall's Tau
+### Linear regression
 
-Kendall's Tau and the Mann-Kendall test are commonly used to test for monotonic trends water quality data [@mann1945nonparametric; @helsel2002statistical; @hipel1994time].  We followed these standard procedures to test for postive or negative trends in lake temperature, chlorophyll *a*, total nitrogen, and total phosphorus.
+Testing for a regression slope being different than zero can be used to test for monotonic trends in water quality data [@helsel2002statistical].  We used these standard procedures to test for postive or negative trends in lake temperature, chlorophyll *a*, total nitrogen, and total phosphorus.  For each parameter we fit a regression line to the z scores as a function of year and tested the null hypothesis that no trend existed (e.g. $\beta$~1~ = 0).
 
 ### Comparison of Rhode Island to the Region
 
