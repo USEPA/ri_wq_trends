@@ -37,7 +37,7 @@ source(here::here("R/figures.R"), encoding = "UTF-8")
 
 1. Water quality in last several decades (Why Water Quality Paragraph(s))
   - Why of interest
-    - cyanos stuff
+    - cyanos stuff (toxins, increasing problems)
     - CWA stuff
   - Understand long-term trends from local, to regional, to national
   - What variables are of interest and why
@@ -45,6 +45,9 @@ source(here::here("R/figures.R"), encoding = "UTF-8")
     - climate change
     - Nutrient enrichment stuff
     
+  Aquatic ecosystems have been altered as the result of human activities modifying nutrient cycling on a global scale [@vitousek1997human; @finlay2013human; @filippelli2008global]. Because of their position in the landscape, lakes can function as integrators and sentinels for these anthropogenic effects [@williamson2008lakes; @schindler2009lakes]. Increasing nutrient inputs, particularly of N and P, derived from intensive agriculture and densely populated urban areas have contributed to the eutrophication of many lakes [@carpenter1998nonpoint; @smith2003eutrophication]. Eutrophication has caused the frequency and severity of algal blooms to increase, and these blooms are predicted to worsen under a warming climate [@michalak2013record; @kosten2012warmer; @taranu2015acceleration]. Increasing HABs will cause further declines in water quality, greater risks for human and animal health, and will be economically costly [@brooks2016harmful; @dodds2008eutrophication ;@paerl2009climate]. Management strategies have historically focused on reducing P inputs to lakes, but research also suggests that concurrently reducing N inputs may be more effective in certain situations [@paerl2016takes; @schindler2008eutrophication]. These contrasting studies indicate that spatial differences of HABs exist and that long-term studies are needed to identify trends at local, regional, and national scales.
+  
+
 2. Temporal and Spatial scaling of water quality trends Paragraph
 
 3. Work has been done in the larger Northeastern Region of US (Northeastern Paragraph)
