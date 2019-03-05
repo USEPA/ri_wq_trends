@@ -1,19 +1,44 @@
 ---
 title: "Long-term Water Quality Change in Rhode Island Lakes and Ponds"
-output: 
-  word_document:
-    reference_docx: manuscript_template.docx   
 author:
-- "Hollister. J. W. ^\\*^ ^*1*^, Kellogg, D. Q. ^*2*^, Kreakie, B. J. ^*1*^, Shivers, S. ^*3*^, Milstead, W. Bryan. ^*1*^, Herron, E. ^*2*^, Green, L. ^*2*^, Gold, A ^*2*^"
-- "^*1*^ US Environmental Protection Agency, Office Of Research and Development, Atlantic Ecology Division, Narragansett, RI 02882"
-- "^*2*^ University of Rhode Island, Department of Natural Resources Science, Kingston, RI 02881"
-- "^*3*^ ORISE, Narragansett, RI 02882"
-- "^\\*^  *corresponding author: hollister.jeff@epa.gov*"
+- Hollister. J. W. ^\*^ ^*1*^, Kellogg, D. Q. ^*2*^, Kreakie, B. J. ^*1*^, Shivers,
+  S. ^*3*^, Milstead, W. Bryan. ^*1*^, Herron, E. ^*2*^, Green, L. ^*2*^, Gold, A
+  ^*2*^
+- ^*1*^ US Environmental Protection Agency, Office Of Research and Development, Atlantic
+  Ecology Division, Narragansett, RI 02882
+- ^*2*^ University of Rhode Island, Department of Natural Resources Science, Kingston,
+  RI 02881
+- ^*3*^ ORISE, Narragansett, RI 02882
+- '^\*^  *corresponding author: hollister.jeff@epa.gov*'
 bibliography: manuscript.bib
-csl: plos.csl
-abstract: The University of Rhode Island’s Watershed Watch Volunteer Monitoring Program has been collecting water quality data on Rhode Island lakes and ponds for close to three decades, allowing us to explore long-term trends in common water quality parameters.  Not all lakes and ponds in the study area were sampled across the full time period and lakes were often added in geographic clusters (e.g. in urbanized northern Rhode Island).  Not unlike how long-term temperature records are analyzed, we centered and scaled (i.e., the z-score) water quality measurements on a per-station basis. This provides a robust and commonly scaled measurement to explore this data for long-term trends.  State-wide aggregation shows increasing temperature, chlorophyll *a*, and total nitrogen. Interestingly, total phosphorus is showing a decline, perhaps reflecting the management focus on phosphorus reductions.  While yearly trends are useful, they do mask month-to-month variability differences across sites.  Additionally, while most sites track the yearly trend in decreasing water quality, there are bright spots with some sites improving over the 25 years. Contrary to previously reported analyses that show relatively stable water quality at the regional scale, our analysis shows that long-term water quality trends within Rhode Island show some parameters improving while others are in decline.  Importantly, this analysis also points out the incredible value and importance of data from long-term monitoring programs, like the Univeristy of Rhode Island's Watershed Watch, for identifying trends in environmental condition. 
-editor_options: 
+output:
+  html_document:
+    df_print: paged
+  word_document:
+    reference_docx: manuscript_template.docx
+editor_options:
   chunk_output_type: console
+csl: plos.csl
+abstract: The University of Rhode Islandâ€™s Watershed Watch Volunteer Monitoring
+  Program has been collecting water quality data on Rhode Island lakes and ponds for
+  close to three decades, allowing us to explore long-term trends in common water
+  quality parameters.  Not all lakes and ponds in the study area were sampled across
+  the full time period and lakes were often added in geographic clusters (e.g. in
+  urbanized northern Rhode Island).  Not unlike how long-term temperature records
+  are analyzed, we centered and scaled (i.e., the z-score) water quality measurements
+  on a per-station basis. This provides a robust and commonly scaled measurement to
+  explore this data for long-term trends.  State-wide aggregation shows increasing
+  temperature, chlorophyll *a*, and total nitrogen. Interestingly, total phosphorus
+  is showing a decline, perhaps reflecting the management focus on phosphorus reductions.  While
+  yearly trends are useful, they do mask month-to-month variability differences across
+  sites.  Additionally, while most sites track the yearly trend in decreasing water
+  quality, there are bright spots with some sites improving over the 25 years. Contrary
+  to previously reported analyses that show relatively stable water quality at the
+  regional scale, our analysis shows that long-term water quality trends within Rhode
+  Island show some parameters improving while others are in decline.  Importantly,
+  this analysis also points out the incredible value and importance of data from long-term
+  monitoring programs, like the Univeristy of Rhode Island's Watershed Watch, for
+  identifying trends in environmental condition.
 ---
 
 
@@ -45,18 +70,19 @@ source(here::here("R/figures.R"), encoding = "UTF-8")
     - climate change
     - Nutrient enrichment stuff
     
-  Aquatic ecosystems have been altered as the result of human activities modifying nutrient cycling on a global scale [@vitousek1997human; @finlay2013human; @filippelli2008global]. Because of their position in the landscape, lakes can function as integrators and sentinels for these anthropogenic effects [@williamson2008lakes; @schindler2009lakes]. Increasing nutrient inputs, particularly of N and P, derived from intensive agriculture and densely populated urban areas have contributed to the eutrophication of many lakes [@carpenter1998nonpoint; @smith2003eutrophication]. Eutrophication has caused the frequency and severity of algal blooms to increase, and these blooms are predicted to worsen under a warming climate [@michalak2013record; @kosten2012warmer; @taranu2015acceleration]. Increasing HABs will cause further declines in water quality, greater risks for human and animal health, and will be economically costly [@brooks2016harmful; @dodds2008eutrophication ;@paerl2009climate]. Management strategies have historically focused on reducing P inputs to lakes, but research also suggests that concurrently reducing N inputs may be more effective in certain situations [@paerl2016takes; @schindler2008eutrophication]. These contrasting studies indicate that spatial differences of HABs exist and that long-term studies are needed to identify trends at local, regional, and national scales.
+  Aquatic ecosystems have been altered as the result of human activities modifying nutrient cycling on a global scale [@vitousek1997human; @finlay2013human; @filippelli2008global]. Because of their position in the landscape, lakes can function as integrators and sentinels for these anthropogenic effects [@williamson2008lakes; @schindler2009lakes]. Increasing nutrient inputs, particularly of N and P, derived from intensive agriculture and densely populated urban areas have contributed to the eutrophication of many lakes [@carpenter1998nonpoint; @smith2003eutrophication]. Eutrophication has caused the frequency and severity of harmful algal blooms (HABs) to increase, and these blooms are predicted to worsen under a warming climate [@michalak2013record; @kosten2012warmer; @taranu2015acceleration]. Increasing HABs will cause further declines in water quality, greater risks for human and animal health, and will be economically costly [@brooks2016harmful; @dodds2008eutrophication ;@paerl2009climate]. Management strategies have historically focused on reducing P inputs to lakes, but research also suggests that concurrently reducing N inputs may be more effective in certain situations [@paerl2016takes; @schindler2008eutrophication]. These contrasting studies indicate that spatial differences and relationships between N, P, chlorophyll *a*, and HABs exist and that long-term studies are needed to identify trends at local, regional, and national scales.
   
 
 2. Temporal and Spatial scaling of water quality trends Paragraph
+ 
+Stoddard 2016
 
-3. Work has been done in the larger Northeastern Region of US (Northeastern Paragraph)
-  - Shown to be stable in LAGOS (Maybe other studies in NE)
-  - "Given what is known about long term trends in water quality within the broader region of the northeastern United States [@Oliver_2017], we were curious if those trends were also present in water quality trends in Rhode Island lakes and ponds."  
+ Despite these challenges, it is important to study at multiple spatial scales because emergent trends on a regional scales may not be evident when studying individual lakes @cheruvelil2013multi; @lottig2014long].
   
-4. Rhode Island Paragraph (May be combined with #3)
+3. Work has been done in the larger Northeastern Region of US (Northeastern Paragraph)
 
-4. Thus, the goals of this study were to look at approximately 25 years of lakes and ponds data in Rhode Island and answer two particular questions.  First, what are the state-wide trends in total nitrogen, total phosphorus, chlorophyll *a*, and lake temperature and second, are water quality trends in Rhode Island similar to regional trends in the northeastern United states.   In addition to these goals, this analysis has also been done using open data from the URI Watershed Watch program and the analysis in its entirety is available for independent reproduction at <https://github.com/usepa/ri_wq_trends>.       
+   Previous studies using regional data from the northeastern and midwestern United States have investigated spatial and temporal water quality trends and have shown differences based on scale. Macroscale (i.e. subcontinental) drivers of water quality trends are complex and may vary temporally [@lottig2017macroscale]. This complexity can cause nutrient (N and P) trends to have different drivers than ratios of the individual nutrients [@collins2017lake]. On a regional scale, trends of N, P, and chlorophyll *a* differ as factors such as land use and climate vary among regions, particularly when comparing the northeastern and midwestern US [@filstrup2014regional; @filstrup2018evidence]. Thus, it was surprising when stasis was reported over a 25 year period for these regions [@Oliver_2017]. Given what is known about long term trends in water quality within the broader region of the northeastern United States , we were curious if those trends were also present in water quality trends in Rhode Island lakes and ponds.  
+ Thus, the goals of this study were to look at approximately 25 years of lakes and ponds data in Rhode Island and answer two particular questions.  First, what are the state-wide trends in total nitrogen, total phosphorus, chlorophyll *a*, and lake temperature and second, are water quality trends in Rhode Island similar to regional trends in the northeastern United states.   In addition to these goals, this analysis has also been done using open data from the URI Watershed Watch program and the analysis in its entirety is available for independent reproduction at <https://github.com/usepa/ri_wq_trends>.       
 
 # Methods
 
