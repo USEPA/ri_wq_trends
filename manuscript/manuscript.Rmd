@@ -12,6 +12,7 @@ author:
 - '^\*^  *corresponding author: hollister.jeff@epa.gov*'
 bibliography: manuscript.bib
 output:
+  pdf_document: default
   html_document:
     df_print: paged
   word_document:
@@ -19,7 +20,7 @@ output:
 editor_options:
   chunk_output_type: console
 csl: plos.csl
-abstract: The University of Rhode Islandâ€™s Watershed Watch Volunteer Monitoring
+abstract: The University of Rhode IslandÃ¢â‚¬â„¢s Watershed Watch Volunteer Monitoring
   Program has been collecting water quality data on Rhode Island lakes and ponds for
   close to three decades, allowing us to explore long-term trends in common water
   quality parameters.  Not all lakes and ponds in the study area were sampled across
@@ -60,28 +61,9 @@ source(here::here("R/figures.R"), encoding = "UTF-8")
 
 # Introduction
 
-1. Water quality in last several decades (Why Water Quality Paragraph(s))
-  - Why of interest
-    - cyanos stuff (toxins, increasing problems)
-    - CWA stuff
-  - Understand long-term trends from local, to regional, to national
-  - What variables are of interest and why
-    - productivity
-    - climate change
-    - Nutrient enrichment stuff
-    
-  Aquatic ecosystems have been altered as the result of human activities modifying nutrient cycling on a global scale [@vitousek1997human; @finlay2013human; @filippelli2008global]. Because of their position in the landscape, lakes can function as integrators and sentinels for these anthropogenic effects [@williamson2008lakes; @schindler2009lakes]. Increasing nutrient inputs, particularly of N and P, derived from intensive agriculture and densely populated urban areas have contributed to the eutrophication of many lakes [@carpenter1998nonpoint; @smith2003eutrophication]. Eutrophication has caused the frequency and severity of harmful algal blooms (HABs) to increase, and these blooms are predicted to worsen under a warming climate [@michalak2013record; @kosten2012warmer; @taranu2015acceleration]. Increasing HABs will cause further declines in water quality, greater risks for human and animal health, and will be economically costly [@brooks2016harmful; @dodds2008eutrophication ;@paerl2009climate]. Management strategies have historically focused on reducing P inputs to lakes, but research also suggests that concurrently reducing N inputs may be more effective in certain situations [@paerl2016takes; @schindler2008eutrophication]. These contrasting studies indicate that spatial differences and relationships between N, P, chlorophyll *a*, and HABs exist and that long-term studies are needed to identify trends at local, regional, and national scales.
-  
-
-2. Temporal and Spatial scaling of water quality trends Paragraph
- 
-Stoddard 2016
-
- Despite these challenges, it is important to study at multiple spatial scales because emergent trends on a regional scales may not be evident when studying individual lakes @cheruvelil2013multi; @lottig2014long].
-  
-3. Work has been done in the larger Northeastern Region of US (Northeastern Paragraph)
-
-   Previous studies using regional data from the northeastern and midwestern United States have investigated spatial and temporal water quality trends and have shown differences based on scale. Macroscale (i.e. subcontinental) drivers of water quality trends are complex and may vary temporally [@lottig2017macroscale]. This complexity can cause nutrient (N and P) trends to have different drivers than ratios of the individual nutrients [@collins2017lake]. On a regional scale, trends of N, P, and chlorophyll *a* differ as factors such as land use and climate vary among regions, particularly when comparing the northeastern and midwestern US [@filstrup2014regional; @filstrup2018evidence]. Thus, it was surprising when stasis was reported over a 25 year period for these regions [@Oliver_2017]. Given what is known about long term trends in water quality within the broader region of the northeastern United States , we were curious if those trends were also present in water quality trends in Rhode Island lakes and ponds.  
+ Aquatic ecosystems have been altered as the result of human activities modifying nutrient cycling on a global scale [@vitousek1997human; @finlay2013human; @filippelli2008global]. Because of their position in the landscape, lakes can function as integrators and sentinels for these anthropogenic effects [@williamson2008lakes; @schindler2009lakes]. Increasing nutrient inputs, particularly of N and P, derived from intensive agriculture and densely populated urban areas have contributed to the eutrophication of many lakes [@carpenter1998nonpoint; @smith2003eutrophication]. Eutrophication has caused the frequency and severity of harmful algal blooms (HABs) to increase, and these blooms are predicted to worsen under a warming climate [@michalak2013record; @kosten2012warmer; @taranu2015acceleration]. Increasing HABs will cause further declines in water quality, greater risks for human and animal health, and will be economically costly [@brooks2016harmful; @dodds2008eutrophication ;@paerl2009climate]. Management strategies have historically focused on reducing P inputs to lakes, but research also suggests that concurrently reducing N inputs may be more effective in certain situations [@paerl2016takes; @schindler2008eutrophication]. These contrasting studies indicate that spatial differences and relationships between N, P, chlorophyll *a*, and HABs exist and that long-term studies are needed to identify trends at local, regional, and national scales.
+    Programs such as USEPA's National Lakes Assessment (NLA) provide data that allows for continental scale water quality analysis. These analyses can be used for managing water resources by developing water quality criteria for N, P, chlorophyll *a*, and microcystin [@herlihy2013using; @yuan2014managing]. Studying trends across large spatial scales can evaluate the effects of eutrophication such as the degradation of oligotrophic systems as P increases[@stoddard2016continental]. Large-scale data can also be used for water quality modeling across broad spatial scales including predicting lake trophic state, which can predict ecosystem condition [@hollister2016modeling; @nojavan2019rethinking]. These trophic state models indicate that landscape variables (i.e. ecoregion, elevation, and latitude) are important and that regional trends exist. Lake-specific drivers are also important for predicting continental-scale water quality which adds an additional layer of complexity [@read2015importance]. Despite these challenges, it is important to study at multiple spatial scales because emergent trends on regional or continental scales may not be evident when studying individual lakes [@cheruvelil2013multi; @lottig2014long].
+  Previous studies using regional data from the northeastern and midwestern United States have investigated spatial and temporal water quality trends and have shown differences based on scale. Macroscale (i.e. subcontinental) drivers of water quality trends are complex and may vary temporally [@lottig2017macroscale]. This complexity can cause nutrient (N and P) trends to have different drivers than ratios of the individual nutrients [@collins2017lake]. On a regional scale, trends of N, P, and chlorophyll *a* differ as factors such as land use and climate vary among regions, particularly when comparing the northeastern and midwestern US [@filstrup2014regional; @filstrup2018evidence]. Thus, it was surprising when stasis was reported over a 25 year period for these regions [@Oliver_2017]. Given what is known about long term trends in water quality within the broader region of the northeastern United States , we were curious if those trends were also present in water quality trends in Rhode Island lakes and ponds.  
  Thus, the goals of this study were to look at approximately 25 years of lakes and ponds data in Rhode Island and answer two particular questions.  First, what are the state-wide trends in total nitrogen, total phosphorus, chlorophyll *a*, and lake temperature and second, are water quality trends in Rhode Island similar to regional trends in the northeastern United states.   In addition to these goals, this analysis has also been done using open data from the URI Watershed Watch program and the analysis in its entirety is available for independent reproduction at <https://github.com/usepa/ri_wq_trends>.       
 
 # Methods
