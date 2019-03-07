@@ -1,0 +1,8 @@
+- Global Change Biology
+- Lake and Reservoir Management
+- Ecosphere
+- PeerJ
+- JAWRA
+- Freshwater Science
+- Frontiers in Environmental Science
+- Frontiers in Ecology and Evolution
