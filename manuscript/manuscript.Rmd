@@ -40,8 +40,6 @@ abstract: The University of Rhode Island's Watershed Watch Volunteer Monitoring
 
 
 ```{r setup, include=FALSE}
-library(knitr)
-library(captioner)
 source(here::here("R/functions.R"), encoding = "UTF-8")
 opts_chunk$set(echo = TRUE, fig.width=6, fig.height=5)
 tab_num <- captioner(prefix = "Table")

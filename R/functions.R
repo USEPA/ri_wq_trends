@@ -1,11 +1,13 @@
 # Installations
 pkgs <- c("lubridate","broom", "stringr", "dplyr", "readr", "readxl","tidyr", 
           "here","ggplot2", "hrbrthemes", "Kendall","sf", "USAboundaries",
-          "USAboundariesData")
+          "USAboundariesData","knitr","captioner")
 
 for(i in pkgs){
-  if(!require(i)){
-    install.packages(i)
+  if(!i %in% installed.packages()){
+    browser()
+    install.packages(i, repos = c("http://packages.ropensci.org", 
+                                  "https://cran.rstudio.com"))
   }
 }
 
@@ -27,6 +29,8 @@ library(LAGOSNE)
 library(sf)
 library(USAboundaries)
 library(USAboundariesData)
+library(knitr)
+library(captioner)
 
 #' Function to filter on number of years sampled per site
 #' @param df data frame to filter
