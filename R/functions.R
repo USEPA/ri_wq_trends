@@ -1,3 +1,16 @@
+# Installations
+pkgs <- c("lubridate","broom", "stringr", "dplyr", "readr", "readxl","tidyr", 
+          "here","ggplot2", "hrbrthemes", "Kendall","sf", "USAboundaries",
+          "USAboundariesData")
+
+for(i in pkgs){
+  if(!require(i)){
+    install.packages(i)
+  }
+}
+
+if(!require(LAGOSNE)){devtools::install_github("cont-limno/LAGOSNE")}
+
 # Library
 library(lubridate)
 library(broom)
@@ -10,7 +23,6 @@ library(here)
 library(ggplot2)
 library(hrbrthemes)
 library(Kendall)
-if(!require(LAGOSNE)){devtools::install_github("cont-limno/LAGOSNE")}
 library(LAGOSNE)
 library(sf)
 library(USAboundaries)
