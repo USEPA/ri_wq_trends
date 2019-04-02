@@ -52,6 +52,19 @@ ww_temp_kt <- temp_gg[[2]]
 ww_temp_df <- temp_gg[[3]]
 ww_temp_rl <- temp_gg[[4]]
 
+np_gg <- ww_data %>%
+  filter(state == "RI") %>%
+  wq_trend_gg("np_ratio", yvar = "measurement_scale", 
+              y = "Average Yearly Scaled N:P", x = "Year",
+              write = here("data/np_data.csv"))
+ggsave(here("figures/ww_np_trends.jpg"), np_gg[[1]], width = 7.5, 
+       height = 5.625, 
+       units = "in", dpi = 600)
+
+ww_np_kt <- np_gg[[2]]
+ww_np_df <- np_gg[[3]]
+ww_np_rl <- np_gg[[4]]
+
 lagos_data <- read_csv(here("data/lagos_lake_trend_data.csv"))
 
 lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_scale", 
@@ -82,6 +95,17 @@ ggsave(here("figures/lagos_tp_trends.jpg"), lagos_tp_gg[[1]], width = 7.5, heigh
 lagos_tp_kt <- lagos_tp_gg[[2]]
 lagos_tp_df <- lagos_tp_gg[[3]]
 lagos_tp_rl <- lagos_tp_gg[[4]]
+
+lagos_np_gg <- wq_trend_gg(lagos_data, "np_ratio", yvar = "measurement_scale", 
+              y = "Average Yearly Scaled N:P", x = "Year",
+              write = here("data/np_data_lagos.csv"))
+ggsave(here("figures/lagos_np_trends.jpg"), lagos_np_gg[[1]], width = 7.5, 
+       height = 5.625, 
+       units = "in", dpi = 600)
+
+lagos_np_kt <- lagos_np_gg[[2]]
+lagos_np_df <- lagos_np_gg[[3]]
+lagos_np_rl <- lagos_np_gg[[4]]
 
 avail_data <- read_csv(here("data/ww_avail_data_stations.csv"))
 ri <- us_states(resolution = "high", states = "Rhode Island")

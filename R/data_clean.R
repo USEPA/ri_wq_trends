@@ -41,7 +41,7 @@ missing_nutrients <- missing_nutrients_1 %>%
             Concentration = Concentration,
             Unit = NA,
             `Qualifier Code` = NA,
-            `Detection Limit` = 0, #In as zero becuase NA results in getting filtered out
+            `Detection Limit` = 0, #zero becuase NA results getting filtered out
             `Detection Limit Unit` = NA,
             `Quantitation Level` = NA,
             `Quantitation Level Unit` = NA,
@@ -78,15 +78,33 @@ ww_lake_trend_data <- ww_all %>%
                                Parameter == params[8] ~ "ph",
                                Parameter == params[9] ~ "chloride")) %>% 
   select(station_name = `Station Name`, year, month, day, depth = Depth, 
-         param = Parameter, measurement = Concentration, location = Location) %>%
+         location = Location, param = Parameter, 
+         measurement = Concentration) %>%
   filter(depth <=2 | is.na(depth)) %>%
   filter(!is.na(measurement)) %>%
+  filter(!is.na(station_name)) %>%
   mutate(measurement = case_when(param == "total_n" ~ measurement * 1000,
                                  T ~ measurement)) %>% # Convert TN to ug/l
   filter(year >= 1990) %>%
   group_by(station_name, year, month,day,param,location) %>%
-  summarize(mn_measurement = mean(measurement))%>%
-  ungroup() %>%
+  summarize(mn_measurement = mean(measurement, na.rm = TRUE))%>%
+  ungroup() 
+
+# Calculate and add n:p
+ww_np <- ww_lake_trend_data %>%
+  filter(param == "total_n" | param == "total_p") %>% 
+  unique() %>% #repeats from somewhere...
+  spread(key = param, value = mn_measurement) %>%
+  mutate(np_ratio = total_n/total_p) %>%
+  filter(!is.na(np_ratio)) %>%
+  filter(!is.infinite(np_ratio)) %>%
+  gather(key = "param", value = "mn_measurement", np_ratio) %>%
+  select(station_name, year, month, day, param, location, mn_measurement)
+
+ww_lake_trend_data <- ww_lake_trend_data %>%
+  rbind(ww_np)
+  
+ww_lake_trend_data <- ww_lake_trend_data %>%
   left_join(ww_sites) %>%
   filter(WB_Type == "Lake or Pond" |
            WB_Type == "Reservoir") %>%
@@ -103,17 +121,18 @@ ww_lake_trend_data <- ww_all %>%
 write_csv(ww_lake_trend_data, here("data/ww_lake_trend_data.csv"))
 
 # Prep LAGOS data
-
+lagosne_get(dest_folder = LAGOSNE:::lagos_path())
 lagos_data <- lagosne_select(table = "epi_nutr", 
-                             vars = c("lagoslakeid", "programname","sampledate", "chla","tp",
-                                      "tn","secchi")) %>%
-  mutate(year = as(year(mdy(sampledate)), "integer"),
-         month = as(month(mdy(sampledate)), "integer"),
-         day = as(day(mdy(sampledate)), "integer"),
-         `Station Name` = lagoslakeid) %>%
-  select(`Station Name`, programname, year, month, day, chla, total_p = tp, total_n = tn) %>%
-  gather(param, measurement, chla:total_n) %>%
-  filter(!is.na(measurement)) %>% 
+                             vars = c("lagoslakeid", "programname","sampledate",
+                                      "chla","tp","tn","secchi")) %>%
+  mutate(year = as(year(ymd(sampledate)), "integer"),
+         month = as(month(ymd(sampledate)), "integer"),
+         day = as(day(ymd(sampledate)), "integer"),
+         `Station Name` = lagoslakeid, np_ratio = tn/tp) %>%
+  select(`Station Name`, programname, year, month, day, chla, total_p = tp, total_n = tn, np_ratio) %>%
+  gather(param, measurement, chla:np_ratio) %>%
+  filter(!is.na(measurement)) %>%
+  filter(!is.infinite(measurement)) %>%
   filter(year >= 1990) %>%
   #filter(`Station Name` %in% filter_year(., 20)) %>% #moved to plots and 10 years is min...
   filter(month >= 5 & month <= 10) %>%

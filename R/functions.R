@@ -53,12 +53,13 @@ wq_trend_gg <- function(df, wqparam,
                         yvar = c("measurement_anmly","measurement_scale"), 
                         num_yrs = 10, write = NULL, ...){
   yvar <- rlang::sym(match.arg(yvar))
-  
   df2 <- df %>%
     filter(param == wqparam) %>%
     filter(station_name %in% filter_year(., num_yrs)) %>%
     group_by(year) %>%
-    summarize(mn_value = mean(!!yvar)) %>%
+    summarize(mn_value = mean(!!yvar),
+              n = n(),
+              se = sd(!!yvar)/sqrt(n())) %>%
     ungroup() %>%
     mutate(col_group = case_when(mn_value <= 0 ~ "Less than long-term site average",
                                  mn_value > 0 ~ "Greater than long-term site average"))
@@ -73,8 +74,10 @@ wq_trend_gg <- function(df, wqparam,
     tidy() %>%
     slice(2) %>%
     select(slope = estimate, p.value) 
+  
   gg <- ggplot(df2,aes(x = year, y = mn_value)) + 
-    geom_point(aes(color = col_group), size=3.5) +
+    geom_pointrange(aes(ymin=mn_value-se, ymax=mn_value+se, color = col_group), size = 1, fatten = 1.75) +
+    #geom_point(aes(color = col_group), size=3.5) +
     geom_smooth(method = "lm", se=FALSE, color = "black") +
     theme_ipsum() +
     labs(..., title = paste0("slope: ", round(regress$slope,3),
@@ -88,7 +91,9 @@ wq_trend_gg <- function(df, wqparam,
     scale_x_continuous(labels = c(1990,1995,2000,2005,2010,2015),
                        breaks = c(1990,1995,2000,2005,2010,2015),
                        minor_breaks = NULL) +
-    scale_y_continuous(limits = c(-0.75, 0.75))
+    scale_y_continuous(labels = c(-0.8, -0.4, 0, 0.4, 0.8),
+                       breaks = c(-0.8, -0.4, 0, 0.4, 0.8),
+                       limits = c(-0.8, 0.8))
   
   list(gg, kt, df2, regress)
 }
