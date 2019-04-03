@@ -64,6 +64,12 @@ wq_trend_gg <- function(df, wqparam,
     mutate(col_group = case_when(mn_value <= 0 ~ "Less than long-term site average",
                                  mn_value > 0 ~ "Greater than long-term site average"))
   
+   num_lakes <- df %>%
+     group_by(year) %>%
+     summarize(n_lakes = length(unique(station_name)))
+  
+   df2 <- df2 %>%
+     left_join(num_lakes)
   
   if(!is.null(write)){
     write_csv(df2, write, append = FALSE)
