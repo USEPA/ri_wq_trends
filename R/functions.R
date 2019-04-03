@@ -53,18 +53,23 @@ wq_trend_gg <- function(df, wqparam,
                         yvar = c("measurement_anmly","measurement_scale"), 
                         num_yrs = 10, write = NULL, ...){
   yvar <- rlang::sym(match.arg(yvar))
-  df2 <- df %>%
+  
+  df1 <- df %>%
     filter(param == wqparam) %>%
-    filter(station_name %in% filter_year(., num_yrs)) %>%
+    filter(station_name %in% filter_year(., num_yrs))
+  
+  df2 <- df1 %>%
     group_by(year) %>%
     summarize(mn_value = mean(!!yvar),
               n = n(),
               se = sd(!!yvar)/sqrt(n())) %>%
     ungroup() %>%
-    mutate(col_group = case_when(mn_value <= 0 ~ "Less than long-term site average",
-                                 mn_value > 0 ~ "Greater than long-term site average"))
+    mutate(col_group = case_when(mn_value <= 0 ~ 
+                                   "Less than long-term site average",
+                                 mn_value > 0 ~ 
+                                   "Greater than long-term site average"))
   
-   num_lakes <- df %>%
+   num_lakes <- df1 %>%
      group_by(year) %>%
      summarize(n_lakes = length(unique(station_name)))
   
@@ -82,18 +87,16 @@ wq_trend_gg <- function(df, wqparam,
     select(slope = estimate, p.value) 
   
   gg <- ggplot(df2,aes(x = year, y = mn_value)) + 
-    geom_pointrange(aes(ymin=mn_value-se, ymax=mn_value+se, color = col_group), size = 1, fatten = 1.75) +
+    geom_pointrange(aes(ymin=mn_value-se, ymax=mn_value+se, 
+                        color = col_group), size = 1, fatten = 1.75) +
     #geom_point(aes(color = col_group), size=3.5) +
     geom_smooth(method = "lm", se=FALSE, color = "black") +
     theme_ipsum() +
-    labs(..., title = paste0("slope: ", round(regress$slope,3),
-                             " p-value: ", round(regress$p.value, 4))) +
+    labs(..., title = paste0("slope: ", signif(regress$slope,2),
+                             " p-value: ", signif(regress$p.value, 2))) +
     scale_color_manual(values = c("red3","darkblue")) + 
-    theme(legend.position="none", plot.title = element_text(size=10, face="plain")) + 
-    #geom_label(aes(x = 2006, y = min(mn_value)*0.88), 
-    #         label = paste0("Kendall's Tau: ", round(kt,3), "\n",
-    #                        "p-value: ", round(ktp, 3)),
-    #         hjust = "left", label.size = NA, size = 2.5) +
+    theme(legend.position="none", plot.title = element_text(size=10, 
+                                                            face="plain")) + 
     scale_x_continuous(labels = c(1990,1995,2000,2005,2010,2015),
                        breaks = c(1990,1995,2000,2005,2010,2015),
                        minor_breaks = NULL) +
