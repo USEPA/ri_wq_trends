@@ -11,7 +11,9 @@ for(i in pkgs){
   }
 }
 
-if(!require(LAGOSNE)){devtools::install_github("cont-limno/LAGOSNE")}
+if(!requireNamespace("LAGOSNE")){
+  devtools::install_github("cont-limno/LAGOSNE")
+}
 
 # Library
 library(lubridate)
@@ -49,9 +51,12 @@ filter_year <- function(df, num_yrs){
 #' @param df data frame with data to plot
 #' @param wqparam the water quality parameter to plot
 #' @param yvar the actual variable to plot, defaults to anomaly
+#' @param num_yrs minimum number of years needed to include a site
+#' @param write write out data used in the plot to a csv file
+#' @param title title for plot
 wq_trend_gg <- function(df, wqparam, 
                         yvar = c("measurement_anmly","measurement_scale"), 
-                        num_yrs = 10, write = NULL, ...){
+                        num_yrs = 10, write = NULL, title = "", ...){
   yvar <- rlang::sym(match.arg(yvar))
   
   df1 <- df %>%
@@ -92,11 +97,12 @@ wq_trend_gg <- function(df, wqparam,
     #geom_point(aes(color = col_group), size=3.5) +
     geom_smooth(method = "lm", se=FALSE, color = "black") +
     theme_ipsum() +
-    labs(..., title = paste0("slope: ", signif(regress$slope,2),
+    labs(..., title = title, subtitle = paste0("slope: ", signif(regress$slope,2),
                              " p-value: ", signif(regress$p.value, 2))) +
     scale_color_manual(values = c("red3","darkblue")) + 
-    theme(legend.position="none", plot.title = element_text(size=10, 
-                                                            face="plain")) + 
+    theme(legend.position="none", 
+          plot.title = element_text(size = 12, face = "bold"),
+          plot.subtitle = element_text(size=10, face="plain")) + 
     scale_x_continuous(labels = c(1990,1995,2000,2005,2010,2015),
                        breaks = c(1990,1995,2000,2005,2010,2015),
                        minor_breaks = NULL) +
