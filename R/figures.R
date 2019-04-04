@@ -8,7 +8,7 @@ chla_gg <- ww_data %>%
   filter(state == "RI") %>%
   wq_trend_gg( "chla", yvar = "measurement_scale", 
                        y = "Average Yearly Scaled Chlorophyll", x = "Year",
-               write = here("data/chla_data.csv"), title = "A.URI Watershed Watch Chlorophyll")
+               write = here("data/chla_data.csv"))
 ggsave(here("figures/ww_chla_trends.jpg"), chla_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
 
@@ -20,7 +20,7 @@ tn_gg <-  ww_data %>%
   filter(state == "RI") %>%
   wq_trend_gg("total_n", yvar = "measurement_scale", 
                       y = "Average Yearly Scaled Total Nitrogen", x = "Year",
-              write = here("data/total_n_data.csv"), , title = "A.URI Watershed Watch Total Nitrogen")
+              write = here("data/total_n_data.csv"))
 ggsave(here("figures/ww_tn_trends.jpg"), tn_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
 
@@ -32,7 +32,7 @@ tp_gg <-  ww_data %>%
   filter(state == "RI") %>%
   wq_trend_gg("total_p", yvar = "measurement_scale", 
                       y = "Average Yearly Scaled Total Phosphorus", x = "Year",
-                      write = here("data/total_p_data.csv"), title = "A.URI Watershed Watch Total Phosphorus")
+                      write = here("data/total_p_data.csv"))
 ggsave(here("figures/ww_tp_trends.jpg"), tp_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
 
@@ -44,7 +44,7 @@ temp_gg <- ww_data %>%
   filter(state == "RI") %>%
   wq_trend_gg("temp", yvar = "measurement_scale", 
                        y = "Average Yearly Scaled Temperature", x = "Year",
-              write = here("data/temp_data.csv"), , title = "A.URI Watershed Watch Temperature")
+              write = here("data/temp_data.csv"))
 ggsave(here("figures/ww_temp_trends.jpg"), temp_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
 
@@ -56,7 +56,7 @@ np_gg <- ww_data %>%
   filter(state == "RI") %>%
   wq_trend_gg("np_ratio", yvar = "measurement_scale", 
               y = "Average Yearly Scaled N:P", x = "Year",
-              write = here("data/np_data.csv"), , title = "A.URI Watershed Watch Nitrogen:Phosphorus")
+              write = here("data/np_data.csv"))
 ggsave(here("figures/ww_np_trends.jpg"), np_gg[[1]], width = 7.5, 
        height = 5.625, 
        units = "in", dpi = 600)
@@ -69,7 +69,7 @@ lagos_data <- read_csv(here("data/lagos_lake_trend_data.csv"))
 
 lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_scale", 
                              y = "Average Yearly Scaled Chlorophyll", x = "Year",
-                             write = here("data/chla_data_lagos.csv"), title = "B. LAGOSNE Chlorophyll")
+                             write = here("data/chla_data_lagos.csv"))
 ggsave(here("figures/lagos_chla_trends.jpg"), lagos_chla_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
 lagos_chla_kt <- lagos_chla_gg[[2]]
@@ -78,7 +78,7 @@ lagos_chla_rl <- lagos_chla_gg[[4]]
 
 lagos_tn_gg <- wq_trend_gg(lagos_data, "total_n", yvar = "measurement_scale", 
                              y = "Average Yearly Scaled Total Nitrogen", x = "Year",
-                           write = here("data/total_n_data_lagos.csv"), title = "B. LAGOSNE Total Nitrogen")
+                           write = here("data/total_n_data_lagos.csv"))
 ggsave(here("figures/lagos_tn_trends.jpg"), lagos_tn_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
 lagos_tn_kt <- lagos_tn_gg[[2]]
@@ -88,7 +88,7 @@ lagos_tn_rl <- lagos_tn_gg[[4]]
 
 lagos_tp_gg <- wq_trend_gg(lagos_data, "total_p", yvar = "measurement_scale", 
                              y = "Average Yearly Scaled Total Phosphorus", x = "Year",
-                           write = here("data/total_n_data_lagos.csv"), title = "B. LAGOSNE Total Phosphorus")
+                           write = here("data/total_n_data_lagos.csv"))
 ggsave(here("figures/lagos_tp_trends.jpg"), lagos_tp_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
 
@@ -98,7 +98,7 @@ lagos_tp_rl <- lagos_tp_gg[[4]]
 
 lagos_np_gg <- wq_trend_gg(lagos_data, "np_ratio", yvar = "measurement_scale", 
               y = "Average Yearly Scaled N:P", x = "Year",
-              write = here("data/np_data_lagos.csv"), title = "B. LAGOSNE Nitrogen:Phosphorus")
+              write = here("data/np_data_lagos.csv"))
 ggsave(here("figures/lagos_np_trends.jpg"), lagos_np_gg[[1]], width = 7.5, 
        height = 5.625, 
        units = "in", dpi = 600)
@@ -108,7 +108,46 @@ lagos_np_df <- lagos_np_gg[[3]]
 lagos_np_rl <- lagos_np_gg[[4]]
 
 # Build Paired Plots
-cowplot::plot_grid(chla_gg[[1]],lagos_chla_gg[[1]],align = "h")
+chla_plot <- cowplot::plot_grid(chla_gg[[1]], lagos_chla_gg[[1]], 
+                                align = "h") + 
+  draw_label("A. URI Watershed Watch Chlorophyll",
+             x = 0.135, y = 0.92) +
+  draw_label("B. LAGOSNE Chlorophyll",
+             x = 0.6, y = 0.92)  
+
+ggsave(here("figures/paired_chla_trends.jpg"), chla_plot, width = 15, 
+       height = 5.625, 
+       units = "in", dpi = 600)
+
+tn_plot <- cowplot::plot_grid(tn_gg[[1]], lagos_tn_gg[[1]], align = "h") + 
+  draw_label("A. URI Watershed Watch Total Nitrogen",
+             x = 0.135, y = 0.92) +
+  draw_label("B. LAGOSNE Total Nitrogen",
+             x = 0.6, y = 0.92)  
+
+ggsave(here("figures/paired_tn_trends.jpg"), tn_plot, width = 15, 
+       height = 5.625, 
+       units = "in", dpi = 600)
+
+tp_plot <- cowplot::plot_grid(tp_gg[[1]], lagos_tp_gg[[1]], align = "h") + 
+  draw_label("A. URI Watershed Watch Total Phosphorus",
+             x = 0.135, y = 0.92) +
+  draw_label("B. LAGOSNE Total Phosphorus",
+             x = 0.6, y = 0.92)  
+ggsave(here("figures/paired_tp_trends.jpg"), tp_plot, width = 15, 
+       height = 5.625, 
+       units = "in", dpi = 600)
+
+np_plot <- cowplot::plot_grid(np_gg[[1]], lagos_np_gg[[1]], align = "h") + 
+  draw_label("A. URI Watershed Watch Nitorgen:Phosphorus",
+             x = 0.135, y = 0.92) +
+  draw_label("B. LAGOSNE Nitrogen:Phosphorus",
+             x = 0.6, y = 0.92)  
+
+ggsave(here("figures/paired_np_trends.jpg"), np_plot, width = 15, 
+       height = 5.625, 
+       units = "in", dpi = 600)
+
 
 avail_data <- read_csv(here("data/ww_avail_data_stations.csv"))
 ri <- us_states(resolution = "high", states = "Rhode Island")

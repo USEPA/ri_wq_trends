@@ -54,13 +54,15 @@ filter_year <- function(df, num_yrs){
 #' @param num_yrs minimum number of years needed to include a site
 #' @param write write out data used in the plot to a csv file
 #' @param title title for plot
+#' @param start_yr only plots years for which we have data for all params
 wq_trend_gg <- function(df, wqparam, 
                         yvar = c("measurement_anmly","measurement_scale"), 
-                        num_yrs = 10, write = NULL, title = "", ...){
+                        num_yrs = 10, write = NULL, title = "",
+                        start_yr = 1893, ...){
   yvar <- rlang::sym(match.arg(yvar))
-  
   df1 <- df %>%
     filter(param == wqparam) %>%
+    filter(year >= start_yr) %>%
     filter(station_name %in% filter_year(., num_yrs))
   
   df2 <- df1 %>%
@@ -101,7 +103,7 @@ wq_trend_gg <- function(df, wqparam,
                              " p-value: ", signif(regress$p.value, 2))) +
     scale_color_manual(values = c("red3","darkblue")) + 
     theme(legend.position="none", 
-          plot.title = element_text(size = 12, face = "bold"),
+          plot.title = element_text(size = 12, face = "bold", hjust = -0.175),
           plot.subtitle = element_text(size=10, face="plain")) + 
     scale_x_continuous(labels = c(1990,1995,2000,2005,2010,2015),
                        breaks = c(1990,1995,2000,2005,2010,2015),
