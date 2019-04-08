@@ -33,6 +33,7 @@ library(USAboundaries)
 library(USAboundariesData)
 library(knitr)
 library(captioner)
+library(cowplot)
 
 #' Function to filter on number of years sampled per site
 #' @param df data frame to filter

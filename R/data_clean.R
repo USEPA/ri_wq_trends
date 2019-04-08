@@ -67,7 +67,7 @@ ww_lake_trend_data <- ww_all %>%
                                     TRUE ~ `Station Name`)) %>% #Fixes 4 digit ids
   #filter(`Station Name` %in% filter_year(., 25)) %>% # Get stations with 20+ years - moved to plots...
   filter(year >= 1993) %>% #only get data for 1993 and beyond as that is earliest TN data for WW.  Make sure all ranges match
-  filter(year <= 2013) %>% #only get data from 2013 and prior to match Oliver
+  #filter(year <= 2013) %>% #only get data from 2013 and prior to match Oliver
   filter(Parameter %in% params) %>% #Filter out subset of parameters
   filter(Concentration != `Detection Limit`) %>% #filters out measurements at detect limit (temporary)
   mutate(Parameter = case_when(Parameter == params[1] ~ "temp", #NAMES!!!!!
@@ -132,7 +132,7 @@ lagos_data <- lagosne_select(table = "epi_nutr",
          day = as(day(ymd(sampledate)), "integer"),
          `Station Name` = lagoslakeid, np_ratio = tn/tp) %>%
   filter(year >= 1993) %>% #only get data for 1993 and beyond as that is earliest TN data for WW.  Make sure all ranges match
-  filter(year <= 2013) %>% #only get data from 2013 and prior to match Oliver
+  #filter(year <= 2013) %>% #only get data from 2013 and prior to match Oliver
   select(`Station Name`, programname, year, month, day, chla, total_p = tp, total_n = tn, np_ratio) %>%
   gather(param, measurement, chla:np_ratio) %>%
   filter(!is.na(measurement)) %>%
