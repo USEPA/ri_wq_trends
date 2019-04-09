@@ -117,7 +117,9 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
   group_by(station_name, param) %>%
   mutate(measurement_scale = scale(mn_measurement),
          measurement_anmly = mn_measurement - mean(mn_measurement),
-         lt_mean = mean(mn_measurement))
+         lt_mean = mean(mn_measurement),
+         lt_sd = sd(mn_measurement),
+         lt_n = n())
   
 
 write_csv(ww_lake_trend_data, here("data/ww_lake_trend_data.csv"))
@@ -144,7 +146,9 @@ lagos_data <- lagosne_select(table = "epi_nutr",
   group_by(station_name, param) %>%
   mutate(measurement_scale = scale(measurement),
          measurement_anmly = measurement - mean(measurement),
-         lt_mean = mean(measurement))
+         lt_mean = mean(measurement),
+         lt_sd = sd(measurement),
+         lt_n = n())
 
 write_csv(lagos_data, here("data/lagos_lake_trend_data.csv"))
   

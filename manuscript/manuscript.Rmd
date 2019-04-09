@@ -65,17 +65,21 @@ In particular we selected data from the URIWW data that matched the following cr
 
 Additionally, prior studies have looked at water quality trends across a larger region of the Northeastern United states that included 17 states including Minnesota, Wisconsin, Iowa, Missouri, Illinois, Indiana, Michigan, Ohio, Pennsylvania, New York, New Jersey, Connecticut, Massachusetts, Rhode Island, Vermont, New Hampshire, and Maine [@soranno2015building; @Oliver_2017].  The authors found little change in water quality trends across this region [@Oliver_2017] .  We repeated our analysis (see **Trend Analysis** section) with the same dataset used by [@Oliver_2017], the LAGOSNE dataset [@soranno2015building; @stacheleklagosne2017; @sorannolagosne2017].  Temperature data were not availble, thus we only examine trends, using our analytical methods, for Total Nitrogren, Total Phosphorus, and Chlorophyll *a* from the LAGOSNE database.
 
-## Trend Analysis
+## Water Quality Trend Analysis
 
 There are many different methods for analyzing time series data for trends.  One of the difficulties that is encountered when you have multiple sampling locations is how to identify a trend when you have variation at the scale of the sampling location as well as variation in when a sampling location might have been addedd to a dataset.  For instance, if you have long-term data on water quality for several ponds, yet the cleaner ponds wer sampled more frequently in early years then a simple comparison of raw-values over time might show a decrease in water quality.  Thus, it is necessary to account for this type of site-specific variation.  This is similar to how the long-term temperature trends are analyzed using temperature anomolies [FILL IN GROUP DOING THIS].  The general approach is to calculate site-specific deviations from a long-term mean over pre-determined reference period.  This allows all sites to be shifted to a common base line and the deviations, or anomalies, show change relative to the reference period.
 
 ### Z-score
 
-The anomaly approach is very useful and is the approach we chose to follow.  However, using anomalies works best with a single measure (e.g temperature) or with mulitple measurements that are on the same scale.  The water quality parameters that we explored have different scales and thus the anomaly alone is difficult to interpret across metrics.  For instance, temperature in Rhode Island lakes during the growing season will range from approximately 15 degrees celsius to a high of 30 degrees celsius, whereas phosphorus might range from near zero ug/l to ~900 ug/l.  To standardize these values we used the common approach of dividing each anomlaly by the standard deviation for the reference period.  This value is commonly referred to as a Z-score.  We use these z-scores to examine each water quality variable for a trend over the time period of 1990 to 2016. 
+The anomaly approach is very useful and is the approach we chose to follow.  However, using anomalies works best with a single measure (e.g temperature) or with mulitple measurements that are on the same scale.  The water quality parameters that we explored have different scales and thus the anomaly alone is difficult to interpret across metrics.  For instance, temperature in Rhode Island lakes during the growing season will range from approximately 15 degrees celsius to a high of 30 degrees celsius, whereas phosphorus might range from near zero ug/l to ~900 ug/l.  To standardize these values we used the common approach of dividing each anomaly by the standard deviation for the reference period.  This value is commonly referred to as a Z-score.  We use these z-scores to examine each water quality variable for a trend over the time period of 1990 to 2016. 
 
-Furthermore, since we are interest in water quality trends over time, we wanted to explore how each site was responding.  Thus, our z-scores were calculated over the reference period, 1990-2016, for each site.  In other words the long-term mean and standard deviation were calculated on a site-by-site basis.    
+Furthermore, since we are interested in water quality trends over time, we wanted to explore how each site was responding.  Thus, our z-scores were calculated over the reference period, 1993-2016, for each site.  In other words the long-term mean and standard deviation were calculated on a site-by-site basis. 
 
-### Linear regression
+### Summarizing z-scores
+
+Add stuff here. Include an example figure with columns as years, rows as lakes showing how to calc z and summarize.
+
+### Linear regression on yearly means
 
 Testing for a regression slope being different than zero can be used to test for monotonic trends in water quality data [@helsel2002statistical].  We used these standard procedures to test for postive or negative trends in lake temperature, chlorophyll *a*, total nitrogen, and total phosphorus.  For each parameter we fit a regression line to the z scores as a function of year and tested the null hypothesis that no trend existed (e.g. $\beta$~1~ = 0).
 
@@ -103,15 +107,15 @@ knitr::kable(lagos_param_ranges, format = "markdown")
 
 ## State-wide trends in water quality
 
-Average yearly scaled temperature in lakes and ponds appear to be increasing (slope: `r round(ww_temp_rl$slope,3)` , p-value: `r round(ww_temp_rl$p.value, 5)`) with the large majority of years with average temperature greater than the long term average occuring in the years since 2000 (`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds.", display = "cite")`).  Chlorophyll *a* is also showing an increasing trend over time (slope: `r round(ww_chla_rl$slope,3)` , p-value: `r round(ww_chla_rl$p.value, 5)`) and with the exception of an early high chlorophyll *a* year in 1992 and a slightly above average year in 2003, the above average years have all occurred since 2010 (`r fig_num(name = "chla_ri", caption = "Yearly trend over 20+ years of Chlorphyll a (average z-score) in Rhode Island lakes and ponds.", display = "cite")`). 
+Average yearly scaled temperature in lakes and ponds appear to be increasing (slope: `r round(ww_temp_rl$slope,3)` , p-value: `r round(ww_temp_rl$p.value, 5)`) with the large majority of years with average temperature greater than the long term average occuring in the years since 2000 (`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature in Rhode Island lakes and ponds. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`).  Chlorophyll *a* is also showing an increasing trend over time (slope: `r round(ww_chla_rl$slope,3)` , p-value: `r round(ww_chla_rl$p.value, 5)`) and with the exception of a slightly above average year in 2003, the above average years have all occurred since 2010 (`r fig_num(name = "chla_trend", caption = "Yearly trend over 20+ years of chlorphyll \\*a\\* (average z-score).  Panel A. shows yearly averaged chlorophyll \\*a\\* z-scores from the URI Watershed Watch data.  Panel B. shows yearly averaged chlorophyll \\*a\\* z-scores from the LAGOSNE dataset. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`A.). 
 
 *`r fig_num(name = "temp_ri")`*
 
 ![](../figures/ww_temp_trends.jpg)
 
-*`r fig_num(name = "chla_ri")`*
+*`r fig_num(name = "chla_trend")`*
 
-![](../figures/ww_chla_trends.jpg)
+![](../figures/paired_chla_trends.jpg)
 
 ```{r no_early_tn, echo=FALSE}
 ww_tn_rl_no9394 <- lm(mn_value~year, data = ww_tn_df[c(-1,-2),]) %>%
@@ -120,33 +124,23 @@ ww_tn_rl_no9394 <- lm(mn_value~year, data = ww_tn_df[c(-1,-2),]) %>%
   select(slope = estimate, p.value)
 ```
 
-Average yearly trends for nutrients showed weaker or no trends over time.  Total nitrogen did have a significant trend (slope: `r round(ww_tn_rl$slope,3)` , p-value: `r round(ww_tn_rl$p.value, 5)`); however, that trend is driven by the lower than average total nitrogen values in 1993 and 1994 (`r fig_num(name = "tn_ri", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in Rhode Island lakes and ponds.", display = "cite")`).  Since 1995, the yearly trend is not significant (slope: `r round(ww_tn_rl_no9394$slope,3)`, p-value: `r round(ww_tn_rl_no9394$p.value, 5)`).  Total phosphorus does not show a trend over time in the yearly scaled values (slope: `r round(ww_tn_rl$slope,3)` , p-value: `r round(ww_tn_rl$p.value, 5)`) and years that are over or under the average are evenly distributed over the years (`r fig_num(name = "tp_ri", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in Rhode Island lakes and ponds.", display = "cite")`). 
+Average yearly trends for nutrients showed weaker or no trends over time.  Total nitrogen did suggest a positive trend (slope: `r round(ww_tn_rl$slope,3)` , p-value: `r round(ww_tn_rl$p.value, 5)`); however, that trend is driven by the lower than average total nitrogen values in 1993 and 1994 (`r fig_num(name = "tn_trend", caption = "Yearly trend over 20+ years of total nitrogen (average z-score). Panel A. shows yearly averaged total nitrogen z-scores from the URI Watershed Watch data.  Panel B. shows yearly averaged total nitrogen z-scores from the LAGOSNE dataset. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`A.).  Since 1995, the yearly trend is shows much lower increase over time (slope: `r round(ww_tn_rl_no9394$slope,3)`, p-value: `r round(ww_tn_rl_no9394$p.value, 5)`).  Total phosphorus does not show a trend over time in the yearly scaled values (slope: `r round(ww_tn_rl$slope,3)` , p-value: `r round(ww_tn_rl$p.value, 5)`) and years that are over or under the average are evenly distributed over the years (`r fig_num(name = "tp_trend", caption = "Yearly trend over 20+ years of total phosphorus (average z-score).  Panel A. shows yearly averaged total phosphorus z-scores from the URI Watershed Watch data.  Panel B. shows yearly averaged total phosphorus z-scores from the LAGOSNE dataset. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`A.). The pattern is the same for the total nitrogren to total phosphorus ratio (slope: `r round(ww_np_rl$slope,3)`, p-value: `r round(ww_np_rl$p.value,3)`) with little evidence suggesting a change in the concentrations of total nitrogen relative to the concentration of total phosphorus (`r fig_num(name = "np_trend", caption = "Yearly trend over 20+ years of the total nitrogen:total phosphorus ratio (average z-score).  Panel A. shows yearly averaged total nitrogen:total phosphorus ratio z-scores from the URI Watershed Watch data.  Panel B. shows yearly averaged total nitrogen:total phosphorus ratio z-scores from the LAGOSNE dataset. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`A)
 
-*`r fig_num(name = "tn_ri")`*
+*`r fig_num(name = "tn_trend")`*
 
-![](../figures/ww_tn_trends.jpg)
+![](../figures/paired_tn_trends.jpg)
 
-*`r fig_num(name = "tp_ri")`*
+*`r fig_num(name = "tp_trend")`*
 
-![](../figures/ww_tp_trends.jpg)
+![](../figures/paired_tp_trends.jpg)
+
+*`r fig_num(name = "np_trend")`*
+
+![](../figures/paired_np_trends.jpg)
 
 ## Regional trends in water quality
 
-In general, broad regional trends were less obvious and in the case of chlorophyll *a* and total phosphorus, the trends were not significant.  In particular, chlorophyll *a* showed a slight, yet non-significant negative trend (slope: `r round(lagos_chla_rl$slope,3)`, p-value: `r round(lagos_chla_rl$p.value, 5)`, `r fig_num(name = "chla_lagos", caption = "Yearly trend over 20+ years of Chlorophyll a (average z-score) in the LAGOSNE states.", display = "cite")`).
-
-*`r fig_num(name = "chla_lagos")`*
-
-![](../figures/lagos_chla_trends.jpg)
-
-Total phosphorus shows a slight and non-significant increasing trend (slope: `r round(lagos_tp_rl$slope, 3)`, p-value: `r round(lagos_tp_rl$p.value,4)`, `r fig_num(name = "tp_lagos", caption = "Yearly trend over 20+ years of Total Phosphorus (average z-score) in the LAGOSNE states.",display = "cite")`) and total nitrogen shows a slight negative non-significant trend (slope: `r round(lagos_tn_rl$slope, 3)`, p-value: `r round(lagos_tn_rl$p.value, 5)`, `r fig_num(name = "tn_lagos", caption = "Yearly trend over 20+ years of Total Nitrogen (average z-score) in the LAGOSNE states.", display = "cite")`).
-
-*`r fig_num(name = "tp_lagos")`*
-
-![](../figures/lagos_tp_trends.jpg)
-
-*`r fig_num(name = "tn_lagos")`*
-
-![](../figures/lagos_tn_trends.jpg)
+In general, there was little to suggest broad regional trends. Chlorophyll *a* showed a very weak negative trend (slope: `r round(lagos_chla_rl$slope,3)`, p-value: `r round(lagos_chla_rl$p.value, 5)`, `r fig_num(name = "chla_trend", display = "cite")`B.), total phosphorus shows a slight increasing trend (slope: `r round(lagos_tp_rl$slope, 3)`, p-value: `r round(lagos_tp_rl$p.value,4)`, `r fig_num(name = "tp_trend", display = "cite")`B.), total nitrogen shows a slight negative trend (slope: `r round(lagos_tn_rl$slope, 3)`, p-value: `r round(lagos_tn_rl$p.value, 5)`, `r fig_num(name = "tn_trend", display = "cite")`B.) and the total nitrogen:total phosphorus ratio was also flat (slope: `r round(lagos_np_rl$slope, 3)`, p-value: `r round(lagos_np_rl$p.value, 5)`, `r fig_num(name = "np_trend", display = "cite")`B.)
 
 # Discussion and conclusions
 

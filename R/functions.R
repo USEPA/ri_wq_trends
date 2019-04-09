@@ -59,30 +59,31 @@ filter_year <- function(df, num_yrs){
 wq_trend_gg <- function(df, wqparam, 
                         yvar = c("measurement_anmly","measurement_scale"), 
                         num_yrs = 10, write = NULL, title = "",
-                        start_yr = 1893, ...){
+                        start_yr = 1993, error_bar = c("se", "sd"), ...){
   yvar <- rlang::sym(match.arg(yvar))
+  error_bar <- rlang::sym(match.arg(error_bar))
   df1 <- df %>%
     filter(param == wqparam) %>%
     filter(year >= start_yr) %>%
     filter(station_name %in% filter_year(., num_yrs))
   
+  
   df2 <- df1 %>%
-    group_by(year) %>%
-    summarize(mn_value = mean(!!yvar),
-              n = n(),
-              se = sd(!!yvar)/sqrt(n())) %>%
+    #This should take care of pseudoreplication by using the per site/year means
+    #results in n for years being equal to number of sites per year
+    group_by(station_name,year) %>%
+    summarize(mn_value_station = mean(!!yvar)) %>%
     ungroup() %>%
-    mutate(col_group = case_when(mn_value <= 0 ~ 
+    group_by(year) %>%
+    summarize(mn_value = mean(mn_value_station),
+              sd = sd(mn_value_station),
+              n = n(),
+              se = sd/sqrt(n())) %>%
+    mutate(col_group = case_when(mn_value < 0 ~ 
                                    "Less than long-term site average",
                                  mn_value > 0 ~ 
-                                   "Greater than long-term site average"))
-  
-   num_lakes <- df1 %>%
-     group_by(year) %>%
-     summarize(n_lakes = length(unique(station_name)))
-  
-   df2 <- df2 %>%
-     left_join(num_lakes)
+                                   "Greater than long-term site average",
+                                 TRUE ~ "Equal to long-term site average"))
   
   if(!is.null(write)){
     write_csv(df2, write, append = FALSE)
@@ -95,7 +96,7 @@ wq_trend_gg <- function(df, wqparam,
     select(slope = estimate, p.value) 
   
   gg <- ggplot(df2,aes(x = year, y = mn_value)) + 
-    geom_pointrange(aes(ymin=mn_value-se, ymax=mn_value+se, 
+    geom_pointrange(aes(ymin=mn_value-!!error_bar, ymax=mn_value+!!error_bar, 
                         color = col_group), size = 1, fatten = 1.75) +
     #geom_point(aes(color = col_group), size=3.5) +
     geom_smooth(method = "lm", se=FALSE, color = "black") +
@@ -104,14 +105,15 @@ wq_trend_gg <- function(df, wqparam,
                              " p-value: ", signif(regress$p.value, 2))) +
     scale_color_manual(values = c("red3","darkblue")) + 
     theme(legend.position="none", 
-          plot.title = element_text(size = 12, face = "bold", hjust = -0.175),
+          plot.title = element_text(size = 12, face = "bold"),
           plot.subtitle = element_text(size=10, face="plain")) + 
     scale_x_continuous(labels = c(1990,1995,2000,2005,2010,2015),
                        breaks = c(1990,1995,2000,2005,2010,2015),
-                       minor_breaks = NULL) +
-    scale_y_continuous(labels = c(-0.8, -0.4, 0, 0.4, 0.8),
-                       breaks = c(-0.8, -0.4, 0, 0.4, 0.8),
-                       limits = c(-0.8, 0.8))
+                       minor_breaks = NULL,
+                       limits = c(1993,2016)) +
+    scale_y_continuous(labels = c(-2, -1, 0, 1, 2),
+                       breaks = c(-2, -1, 0, 1, 2),
+                       limits = c(-2.25, 2.25))
   
   list(gg, kt, df2, regress)
 }
