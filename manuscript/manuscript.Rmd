@@ -144,10 +144,6 @@ In general, there was little to suggest broad regional trends. Chlorophyll *a* s
 
 # Discussion and conclusions
 
-## Volunteer Monitoring Data
-
-### Why this is possible - Fantastic WW data
-
 ## Trends
 
 ### Parameter by parameter discussion of trends
@@ -161,6 +157,10 @@ In general, there was little to suggest broad regional trends. Chlorophyll *a* s
 ## Management/Implications
 
 ### Season Length Changes
+
+## Volunteer Monitoring Data
+
+### Why this is possible - Fantastic WW data
 
 ## Caveats
 
