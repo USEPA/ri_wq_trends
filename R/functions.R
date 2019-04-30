@@ -5,7 +5,6 @@ pkgs <- c("lubridate","broom", "stringr", "dplyr", "readr", "readxl","tidyr",
 
 for(i in pkgs){
   if(!i %in% installed.packages()){
-    browser()
     install.packages(i, repos = c("http://packages.ropensci.org", 
                                   "https://cran.rstudio.com"))
   }

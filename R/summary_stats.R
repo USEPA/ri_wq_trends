@@ -5,8 +5,9 @@ ww_param_ranges <- ww_all %>%
   filter(param == "chla" |
            param == "temp" |
            param == "total_n" |
-           param == "total_p") %>%
-  mutate(param = factor(param,levels = c("temp", "total_n", "total_p", "chla"))) %>%
+           param == "total_p" |
+           param == "np_ratio") %>%
+  mutate(param = factor(param,levels = c("temp", "total_n", "total_p", "np_ratio","chla"))) %>%
   group_by(param) %>%
   summarize(min = round(min(mn_measurement, na.rm = T), 2),
             percentile_25 = round(quantile(mn_measurement, probs = 0.25, na.rm = T), 2),
@@ -16,7 +17,7 @@ ww_param_ranges <- ww_all %>%
             max = round(max(mn_measurement, na.rm = T), 2),
             sd = round(sd(mn_measurement, na.rm = T), 2)) %>%
   ungroup() %>%
-  mutate(units = c("celsius", "µg/l", "µg/l","µg/l")) %>%
+  mutate(units = c("celsius", "µg/l", "µg/l", "", "µg/l")) %>%
   select(Parameter = param, Units = units, 
          "25th Percentile" = percentile_25,
          Mean = mean, Median = median, 
@@ -27,8 +28,9 @@ ww_param_anomaly_ranges <- ww_all %>%
   filter(param == "chla" |
            param == "temp" |
            param == "total_n" |
-           param == "total_p") %>%
-  mutate(param = factor(param,levels = c("temp", "total_n", "total_p", "chla"))) %>%
+           param == "total_p"|
+           param == "np_ratio") %>%
+  mutate(param = factor(param,levels = c("temp", "total_n", "total_p", "np_ratio", "chla"))) %>%
   group_by(param) %>%
   summarize(min = round(min(measurement_anmly, na.rm = T), 2),
             percentile_25 = round(quantile(measurement_anmly, probs = 0.25, na.rm = T), 2),
@@ -38,7 +40,7 @@ ww_param_anomaly_ranges <- ww_all %>%
             max = round(max(measurement_anmly, na.rm = T), 2),
             sd = round(sd(measurement_anmly, na.rm = T), 2)) %>%
   ungroup() %>%
-  mutate(units = c("celsius", "µg/l", "µg/l","µg/l")) %>%
+  mutate(units = c("celsius", "µg/l", "µg/l", "", "µg/l")) %>%
   select(Parameter = param, Units = units, 
          "25th Percentile" = percentile_25,
          Mean = mean, Median = median, 
@@ -50,8 +52,9 @@ lagos_all <- read_csv(here("data/lagos_lake_trend_data.csv"))
 lagos_param_ranges <- lagos_all %>%
   filter(param == "chla" |
            param == "total_n" |
-           param == "total_p") %>%
-  mutate(param = factor(param,levels = c("total_n", "total_p", "chla"))) %>%
+           param == "total_p" |
+           param == "np_ratio") %>%
+  mutate(param = factor(param,levels = c("total_n", "total_p", "np_ratio","chla"))) %>%
   group_by(param) %>%
   summarize(min = round(min(measurement, na.rm = T), 2),
             percentile_25 = round(quantile(measurement, probs = 0.25, na.rm = T), 2),
@@ -61,7 +64,7 @@ lagos_param_ranges <- lagos_all %>%
             max = round(max(measurement, na.rm = T), 2),
             sd = round(sd(measurement, na.rm = T), 2)) %>%
   ungroup() %>%
-  mutate(units = c("µg/l", "µg/l","µg/l")) %>%
+  mutate(units = c("µg/l", "µg/l", "", "µg/l")) %>%
   select(Parameter = param, Units = units, 
          "25th Percentile" = percentile_25,
          Mean = mean, Median = median, 
@@ -71,8 +74,9 @@ lagos_param_ranges <- lagos_all %>%
 lagos_param_anomaly_ranges <- lagos_all %>%
   filter(param == "chla" |
            param == "total_n" |
-           param == "total_p") %>%
-  mutate(param = factor(param,levels = c("total_n", "total_p", "chla"))) %>%
+           param == "total_p" |
+           param == "np_ratio") %>%
+  mutate(param = factor(param,levels = c("total_n", "total_p", "np_ratio", "chla"))) %>%
   group_by(param) %>%
   summarize(min = round(min(measurement_anmly, na.rm = T), 2),
             percentile_25 = round(quantile(measurement_anmly, probs = 0.25, na.rm = T), 2),
@@ -82,7 +86,7 @@ lagos_param_anomaly_ranges <- lagos_all %>%
             max = round(max(measurement_anmly, na.rm = T), 2),
             sd = round(sd(measurement_anmly, na.rm = T), 2)) %>%
   ungroup() %>%
-  mutate(units = c("µg/l", "µg/l","µg/l")) %>%
+  mutate(units = c("µg/l", "µg/l", "", "µg/l")) %>%
   select(Parameter = param, Units = units, 
          "25th Percentile" = percentile_25,
          Mean = mean, Median = median, 
