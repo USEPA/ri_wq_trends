@@ -5,7 +5,7 @@ source(here::here("R/functions.R"))
 ww_data <- read_csv(here("data/ww_lake_trend_data.csv"))
 
 chla_gg <- ww_data %>%
-  filter(state == "RI") %>%
+  #filter(state == "RI") %>%
   wq_trend_gg( "chla", yvar = "measurement_scale", 
                y = "Average Yearly Scaled Chlorophyll", x = "Year",
                write = here("data/chla_data.csv"), error_bar = "sd",
@@ -18,7 +18,7 @@ ww_chla_df <- chla_gg[[3]]
 ww_chla_rl <- chla_gg[[4]]
 
 tn_gg <-  ww_data %>%
-  filter(state == "RI") %>%
+  #filter(state == "RI") %>%
   wq_trend_gg("total_n", yvar = "measurement_scale", 
               y = "Average Yearly Scaled Total Nitrogen", x = "Year",
               write = here("data/total_n_data.csv"), error_bar = "sd",
@@ -31,7 +31,7 @@ ww_tn_df <- tn_gg[[3]]
 ww_tn_rl <- tn_gg[[4]]
 
 tp_gg <-  ww_data %>%
-  filter(state == "RI") %>%
+  #filter(state == "RI") %>%
   wq_trend_gg("total_p", yvar = "measurement_scale", 
               y = "Average Yearly Scaled Total Phosphorus", x = "Year",
               write = here("data/total_p_data.csv"), error_bar = "sd",
@@ -44,7 +44,7 @@ ww_tp_df <- tp_gg[[3]]
 ww_tp_rl <- tp_gg[[4]]
 
 temp_gg <- ww_data %>%
-  filter(state == "RI") %>%
+  #filter(state == "RI") %>%
   wq_trend_gg("temp", yvar = "measurement_scale", 
               y = "Average Yearly Scaled Temperature", x = "Year",
               write = here("data/temp_data.csv"), error_bar = "sd",
@@ -57,7 +57,7 @@ ww_temp_df <- temp_gg[[3]]
 ww_temp_rl <- temp_gg[[4]]
 
 np_gg <- ww_data %>%
-  filter(state == "RI") %>%
+  #filter(state == "RI") %>%
   wq_trend_gg("np_ratio", yvar = "measurement_scale", 
               y = "Average Yearly Scaled N:P", x = "Year",
               write = here("data/np_data.csv"), error_bar = "sd",
@@ -152,7 +152,7 @@ ggsave(here("figures/paired_np_trends.jpg"), np_plot, width = 7.5,
 avail_data <- read_csv(here("data/ww_avail_data_stations.csv"))
 ri <- us_states(resolution = "high", states = "Rhode Island")
 ww_pts <- ww_data %>%
-  filter(state == "RI") %>%
+  #filter(state == "RI") %>%
   filter(!is.na(lon_dd)) %>%
   select(station_name, lat_dd, lon_dd) %>%
   unique() %>%
@@ -161,7 +161,7 @@ ww_pts <- ww_data %>%
   left_join(avail_data) %>%
   #yanks out all sites with less than 10 years data.
   filter(!is.na(params_avail)) %>%
-  mutate(what_params = case_when(params_avail != "chla, total_p, total_n, temp" ~
+  mutate(what_params = case_when(params_avail != "chla, total_p, total_n, np, temp" ~
                                    "Subset of parameters",
                                  TRUE ~ "All Parameters"))
 

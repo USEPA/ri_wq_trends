@@ -105,21 +105,25 @@ ww_np <- ww_lake_trend_data %>%
 
 ww_lake_trend_data <- ww_lake_trend_data %>%
   rbind(ww_np)
+
   
 ww_lake_trend_data <- ww_lake_trend_data %>%
-  left_join(ww_sites) %>%
-  filter(WB_Type == "Lake or Pond" |
-           WB_Type == "Reservoir") %>%
-  select(station_name:location, site_descr = Site_DESCR, mn_measurement, town = Town, county = COUNTY, state = State, 
-         lon_dd = LON_DD, lat_dd = LAT_DD, huc_12 = HUC_12, 
-         huc_10_name = HUC_10_NAME, huc_12_name = HUC_12_NAME) %>%
   filter(month >= 5 & month <= 10) %>%
+  group_by(station_name, year, param) %>%
+  summarize(station_year_mean = mean(mn_measurement)) %>%
+  ungroup() %>%
   group_by(station_name, param) %>%
-  mutate(measurement_scale = scale(mn_measurement),
-         measurement_anmly = mn_measurement - mean(mn_measurement),
-         lt_mean = mean(mn_measurement),
-         lt_sd = sd(mn_measurement),
-         lt_n = n())
+  mutate(measurement_scale = scale(station_year_mean),
+         measurement_anmly = station_year_mean - mean(station_year_mean),
+         lt_mean = mean(station_year_mean),
+         lt_sd = sd(station_year_mean),
+         lt_n = n()) %>%
+  left_join(ww_sites) %>%
+  filter(WB_Type == "Lake or Pond" | WB_Type == "Reservoir") %>%
+  select(station_name:lt_n, site_descr = Site_DESCR, 
+         town = Town, county = COUNTY, state = State, lon_dd = LON_DD, 
+         lat_dd = LAT_DD, huc_12 = HUC_12, huc_10_name = HUC_10_NAME, 
+         huc_12_name = HUC_12_NAME)
   
 
 write_csv(ww_lake_trend_data, here("data/ww_lake_trend_data.csv"))
@@ -143,11 +147,16 @@ lagos_data <- lagosne_select(table = "epi_nutr",
   #filter(`Station Name` %in% filter_year(., 20)) %>% #moved to plots and 10 years is min...
   filter(month >= 5 & month <= 10) %>%
   select(station_name = `Station Name`,year, month, day, param, measurement) %>%
+  #This should take care of pseudoreplication by using the per site/year means
+  #results in n for years being equal to number of sites per year
+  group_by(station_name, year, param) %>%
+  summarize(station_year_mean = mean(measurement)) %>%
+  ungroup() %>%
   group_by(station_name, param) %>%
-  mutate(measurement_scale = scale(measurement),
-         measurement_anmly = measurement - mean(measurement),
-         lt_mean = mean(measurement),
-         lt_sd = sd(measurement),
+  mutate(measurement_scale = scale(station_year_mean),
+         measurement_anmly = station_year_mean - mean(station_year_mean),
+         lt_mean = mean(station_year_mean),
+         lt_sd = sd(station_year_mean),
          lt_n = n())
 
 write_csv(lagos_data, here("data/lagos_lake_trend_data.csv"))

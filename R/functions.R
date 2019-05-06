@@ -61,6 +61,7 @@ wq_trend_gg <- function(df, wqparam,
                         start_yr = 1993, error_bar = c("se", "sd"), ...){
   yvar <- rlang::sym(match.arg(yvar))
   error_bar <- rlang::sym(match.arg(error_bar))
+  
   df1 <- df %>%
     filter(param == wqparam) %>%
     filter(year >= start_yr) %>%
@@ -68,14 +69,9 @@ wq_trend_gg <- function(df, wqparam,
   
   
   df2 <- df1 %>%
-    #This should take care of pseudoreplication by using the per site/year means
-    #results in n for years being equal to number of sites per year
-    group_by(station_name,year) %>%
-    summarize(mn_value_station = mean(!!yvar)) %>%
-    ungroup() %>%
     group_by(year) %>%
-    summarize(mn_value = mean(mn_value_station),
-              sd = sd(mn_value_station),
+    summarize(mn_value = mean(!!yvar),
+              sd = sd(!!yvar),
               n = n(),
               se = sd/sqrt(n())) %>%
     mutate(col_group = case_when(mn_value < 0 ~ 
@@ -112,7 +108,7 @@ wq_trend_gg <- function(df, wqparam,
                        limits = c(1993,2016)) +
     scale_y_continuous(labels = c(-2, -1, 0, 1, 2),
                        breaks = c(-2, -1, 0, 1, 2),
-                       limits = c(-2.25, 2.25))
+                       limits = c(-2.75, 2.75))
   
   list(gg, kt, df2, regress)
 }
