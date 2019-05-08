@@ -31,7 +31,7 @@ temp_10yr_sites <- ww_data %>%
 
 possible_sites <- unique(c(chla_10yr_sites,total_p_10yr_sites, 
                            total_n_10yr_sites, temp_10yr_sites, np_10yr_sites))
-data_avail <- data_frame(station_name = possible_sites, 
+data_avail <- tibble(station_name = possible_sites, 
                          chla_avail = possible_sites %in% chla_10yr_sites,
                          total_n_avail = possible_sites %in% total_n_10yr_sites, 
                          total_p_avail = possible_sites %in% total_p_10yr_sites,
@@ -52,7 +52,8 @@ data_avail <- data_frame(station_name = possible_sites,
                                     "total_p, total_n",
                                   chla_avail == TRUE & total_n_avail == FALSE &
                                     total_p_avail == TRUE & temp_avail == TRUE ~
-                                    "chla, total_p, temp"))
+                                    "chla, total_p, temp",
+                                  TRUE ~ "other"))
 ww_avail_data_locations <- ww_data %>%
   select(station_name, lon_dd, lat_dd) %>%
   unique() %>%

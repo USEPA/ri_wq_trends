@@ -9,13 +9,13 @@ ww_param_ranges <- ww_all %>%
            param == "np_ratio") %>%
   mutate(param = factor(param,levels = c("temp", "total_n", "total_p", "np_ratio","chla"))) %>%
   group_by(param) %>%
-  summarize(min = round(min(mn_measurement, na.rm = T), 2),
-            percentile_25 = round(quantile(mn_measurement, probs = 0.25, na.rm = T), 2),
-            mean = round(mean(mn_measurement, na.rm = T), 2),
-            median = round(median(mn_measurement, na.rm = T), 2),
-            percentile_75 = round(quantile(mn_measurement, probs = 0.75, na.rm = T), 2),
-            max = round(max(mn_measurement, na.rm = T), 2),
-            sd = round(sd(mn_measurement, na.rm = T), 2)) %>%
+  summarize(min = round(min(station_year_mean, na.rm = T), 2),
+            percentile_25 = round(quantile(station_year_mean, probs = 0.25, na.rm = T), 2),
+            mean = round(mean(station_year_mean, na.rm = T), 2),
+            median = round(median(station_year_mean, na.rm = T), 2),
+            percentile_75 = round(quantile(station_year_mean, probs = 0.75, na.rm = T), 2),
+            max = round(max(station_year_mean, na.rm = T), 2),
+            sd = round(sd(station_year_mean, na.rm = T), 2)) %>%
   ungroup() %>%
   mutate(units = c("celsius", "µg/l", "µg/l", "", "µg/l")) %>%
   select(Parameter = param, Units = units, 
@@ -56,13 +56,13 @@ lagos_param_ranges <- lagos_all %>%
            param == "np_ratio") %>%
   mutate(param = factor(param,levels = c("total_n", "total_p", "np_ratio","chla"))) %>%
   group_by(param) %>%
-  summarize(min = round(min(measurement, na.rm = T), 2),
-            percentile_25 = round(quantile(measurement, probs = 0.25, na.rm = T), 2),
-            mean = round(mean(measurement, na.rm = T), 2),
-            median = round(median(measurement, na.rm = T), 2),
-            percentile_75 = round(quantile(measurement, probs = 0.75, na.rm = T), 2),
-            max = round(max(measurement, na.rm = T), 2),
-            sd = round(sd(measurement, na.rm = T), 2)) %>%
+  summarize(min = round(min(station_year_mean, na.rm = T), 2),
+            percentile_25 = round(quantile(station_year_mean, probs = 0.25, na.rm = T), 2),
+            mean = round(mean(station_year_mean, na.rm = T), 2),
+            median = round(median(station_year_mean, na.rm = T), 2),
+            percentile_75 = round(quantile(station_year_mean, probs = 0.75, na.rm = T), 2),
+            max = round(max(station_year_mean, na.rm = T), 2),
+            sd = round(sd(station_year_mean, na.rm = T), 2)) %>%
   ungroup() %>%
   mutate(units = c("µg/l", "µg/l", "", "µg/l")) %>%
   select(Parameter = param, Units = units, 

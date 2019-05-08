@@ -1,2 +1,2 @@
-# green_murky_warm
+# ri_wq_trends
 Analysis of WW Lake data for trends
