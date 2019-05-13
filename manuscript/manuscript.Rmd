@@ -73,7 +73,7 @@ Anomalies are very useful and informed the approach we chose to follow.  However
 
 ### Summarizing site-specific z-scores
 
-Details for our approach of calculating the site-specific z-scores and the yearly averages are as follows and are presented graphically in `r fig_num(name = "z_schematic", caption = "Example calculation of the site-specific z-scores and yearly mean z-scores.", display = "cite")`.  Additionally, an example R script, `schematic.R` and example dataset, `schematic.csv` to recreate and demonstrate the calculations in `r fig_num("z_schematic", display = "cite")` is available from <https://github.com/jhollist/ri_wq_trends>.  
+Details for our approach of calculating the site-specific z-scores and the yearly averages are as follows and are presented graphically in `r fig_num(name = "z_schematic", caption = "Example calculation of the site-specific z-scores and yearly mean z-scores.", display = "cite")`.  Additionally, an example R script, `schematic.R` and example dataset, `schematic.csv` to recreate and demonstrate the calculations in `r fig_num("z_schematic", display = "cite")` is available from <fill in with zenodo link> [@zenodo_citation].  
 
 ![`r fig_num("z_schematic")`](../figures/z-score_schematic.jpg)
 
@@ -126,11 +126,10 @@ ww_tn_rl_no9394 <- lm(mn_value~year, data = ww_tn_df[c(-1,-2),]) %>%
   select(slope = estimate, p.value)
 ```
 
-Average yearly trends for nutrients showed weaker or no trends over time.  Total nitrogen did suggest a positive trend (slope: `r round(ww_tn_rl$slope,3)` , p-value: `r round(ww_tn_rl$p.value, 5)`); however, that trend is driven by the lower than average total nitrogen values in 1993 and 1994 (`r fig_num(name = "tn_trend", caption = "Yearly trend over 20+ years of total nitrogen (average z-score). Panel A. shows yearly averaged total nitrogen z-scores from the URI Watershed Watch data.  Panel B. shows yearly averaged total nitrogen z-scores from the LAGOSNE dataset. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`A.).  Since 1995, the yearly trend is shows much lower increase over time (slope: `r round(ww_tn_rl_no9394$slope,3)`, p-value: `r round(ww_tn_rl_no9394$p.value, 5)`).  Total phosphorus does not show a trend over time in the yearly scaled values (slope: `r round(ww_tn_rl$slope,3)` , p-value: `r round(ww_tn_rl$p.value, 5)`) and years that are over or under the average are evenly distributed over the years (`r fig_num(name = "tp_trend", caption = "Yearly trend over 20+ years of total phosphorus (average z-score).  Panel A. shows yearly averaged total phosphorus z-scores from the URI Watershed Watch data.  Panel B. shows yearly averaged total phosphorus z-scores from the LAGOSNE dataset. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`A.). The pattern is the same for the N:P ratio (slope: `r round(ww_np_rl$slope,3)`, p-value: `r round(ww_np_rl$p.value,3)`) with little evidence suggesting a change in the concentrations of total nitrogen relative to the concentration of total phosphorus (`r fig_num(name = "np_trend", caption = "Yearly trend over 20+ years of the total nitrogen:total phosphorus ratio (average z-score).  Panel A. shows yearly averaged total nitrogen:total phosphorus ratio z-scores from the URI Watershed Watch data.  Panel B. shows yearly averaged total nitrogen:total phosphorus ratio z-scores from the LAGOSNE dataset. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`A.).
+Average yearly trends for nutrients showed weaker or no trends over time.  Total nitrogen did suggest a positive trend (slope: `r round(ww_tn_rl$slope,3)` , p-value: `r round(ww_tn_rl$p.value, 5)`); however, that trend is driven by the lower than average total nitrogen values in 1993 and 1994 (`r fig_num(name = "tn_trend", caption = "Yearly trend over 20+ years of total nitrogen (average z-score). Panel A. shows yearly averaged total nitrogen z-scores from the URI Watershed Watch data.  Panel B. shows yearly averaged total nitrogen z-scores from the LAGOSNE dataset. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`A.).  Since 1995, the yearly trend is shows much lower increase over time (slope: `r round(ww_tn_rl_no9394$slope,3)`, p-value: `r round(ww_tn_rl_no9394$p.value, 5)`).  Total phosphorus does not show a trend over time in the yearly scaled values (slope: `r round(ww_tn_rl$slope,3)` , p-value: `r round(ww_tn_rl$p.value, 5)`) and years that are over or under the average are evenly distributed over the years (`r fig_num(name = "tp_trend", caption = "Yearly trend over 20+ years of total phosphorus (average z-score).  Panel A. shows yearly averaged total phosphorus z-scores from the URI Watershed Watch data.  Panel B. shows yearly averaged total phosphorus z-scores from the LAGOSNE dataset. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`A.). The pattern is the same for the N:P ratio (slope: `r round(ww_np_rl$slope,3)`, p-value: `r round(ww_np_rl$p.value,3)`) with little evidence suggesting a change in the concentrations of total nitrogen relative to the concentration of total phosphorus (`r fig_num(name = "np_trend", caption = "Yearly trend over 20+ years of the total nitrogen:total phosphorus ratio (average z-score).  Panel A. shows yearly averaged total nitrogen:total phosphorus ratio z-scores from the URI Watershed Watch data.  Panel B. shows yearly averaged total nitrogen:total phosphorus ratio z-scores from the LAGOSNE dataset. Points are averages and ranges are standard deviations with blue indicating an average below the long term mean and red indicating an average above the long term mean.", display = "cite")`A.).  Data for all figures are available as a comma-separated values file, `yearly_average_z.csv` from <link to zenodo> [@zenodo_citation].
 
 
 ![`r fig_num(name = "tn_trend")`](../figures/paired_tn_trends.jpg)
-
 
 ![`r fig_num(name = "tp_trend")`](../figures/paired_tp_trends.jpg)
 
@@ -142,24 +141,29 @@ In general, there was little to suggest broad regional trends. Chlorophyll *a* s
 
 # Discussion and conclusions
 
+Our analysis indicates that even when nutrient regimes exhibit relative stability (i.e. neither increasing nor decreasing over time), increases in productivity, as measured by chlorophyll *a*, occur.  One possible explanation for this is the long-term warming of Rhode Island lakes and reservoirs as also indicated by our analysis.  Second,  scale does indeed matter when trying to identify long-term water quality trends as our analysis shows little increasing trend in broad scale (e.g. Northeastern and Mid-western United States) patterns of productivity, but do show clear increasing trends for just the state of Rhode Island.  In the discussion that follows, we more closely address these trends, discuss broader implications of these results, and reiterate the value of the data analysis approach we used.
+
 ## Trends
 
-### Parameter by parameter discussion of trends
+- Parameter by parameter discussion of trends
+- How do trends break down by trophic state?
+- Local scale vs Regional/Global scale
+- RI is downstream - Bryan will write
 
-### How do trends break down by trophic state?
+## Broader Implications
 
-### Local scale vs Regional/Global scale
+- Provides feedback on long term changes for managers and stakeholders
+- Season Length Changes
+- How to stabilize trends?  More reductions in nutrients?  Engineered solutions to slow warming? Look to individual lakes that buck the trend for suggestions (e.g. local landcover may provide a buffer)
 
-### RI is downstream - Bryan will write
+## Data Analysis Approach
 
-## Management/Implications
-
-### Season Length Changes
-
-## Volunteer Monitoring Data
-
-### Why this is possible - Fantastic WW data
+- Why this is possible - Fantastic WW data
+- Use of site specific z-scores
+    - Other approaches available, but this one is useful becuase it provided readily interpretable results, robust to variations in sampling stations (i.e. added later in period, removed, etc.), and based off of approach with long history of use in exploring long term trends [@hansen2006global, hansen2010global, @jones1996calculating, @jones1999surface]
 
 ## Caveats
+
+- None yet...
 
 # Bibliography
