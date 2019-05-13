@@ -148,7 +148,10 @@ Our analysis indicates that even when nutrient regimes exhibit relative stabilit
 - Parameter by parameter discussion of trends
 - How do trends break down by trophic state?
 - Local scale vs Regional/Global scale
-- RI is downstream - Bryan will write
+    - Why diffs?  
+        - LULC?
+        - Different trends
+
 
 ## Broader Implications
 

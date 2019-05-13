@@ -7,7 +7,8 @@ ww_data <- read_csv(here("data/ww_lake_trend_data.csv"))
 chla_gg <- ww_data %>%
   #filter(state == "RI") %>%
   wq_trend_gg( "chla", yvar = "measurement_scale", 
-               y = "Average Yearly Scaled Chlorophyll", x = "Year",
+               y = expression(paste("Average Yearly Scaled Chlorophyll  ", 
+                                    italic(" a"))), x = "Year",
                write = here("data/chla_data.csv"), error_bar = "sd",
                title = "A. URI Watershed Watch Chlorophyll")
 ggsave(here("figures/ww_chla_trends.jpg"), chla_gg[[1]], width = 7.5, height = 5.625, 
@@ -73,7 +74,8 @@ ww_np_rl <- np_gg[[4]]
 lagos_data <- read_csv(here("data/lagos_lake_trend_data.csv"))
 
 lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_scale", 
-                             y = "Average Yearly Scaled Chlorophyll", x = "Year",
+                             expression(paste("Average Yearly Scaled Chlorophyll  ", 
+                                              italic(" a"))), x = "Year",
                              write = here("data/chla_data_lagos.csv"), 
                              error_bar = "sd",
                              title = "B. LAGOSNE Chlorophyll")
@@ -178,4 +180,20 @@ ww_map <- ggplot(st_geometry(ri)) +
 ww_map %>%  
   ggsave(here("figures/ww_map.jpg"), ., width = 7.5, height = 9.8,
          units = "in", dpi = 600)
+
+# Create supplemental dataset with data for all figures:
+figure_data <- chla_gg[[3]] %>%
+  mutate(source = "uriww", variable = "chla") %>%
+  rbind(mutate(temp_gg[[3]], source = "uriww", variable = "temp")) %>%
+  rbind(mutate(tn_gg[[3]], source = "uriww", variable = "total_n")) %>%
+  rbind(mutate(tp_gg[[3]], source = "uriww", variable = "total_p")) %>%
+  rbind(mutate(np_gg[[3]], source = "uriww", variable = "np_ratio")) %>%
+  rbind(mutate(lagos_chla_gg[[3]], source = "lagosne", variable = "chla")) %>%
+  rbind(mutate(lagos_tn_gg[[3]], source = "lagosne", variable = "total_n")) %>%
+  rbind(mutate(lagos_tp_gg[[3]], source = "lagosne", variable = "total_p")) %>%
+  rbind(mutate(lagos_np_gg[[3]], source = "lagosne", variable = "np_ratio"))
+
+write_csv(figure_data, here("data/yearly_average_z.csv"))
+  
+
 
