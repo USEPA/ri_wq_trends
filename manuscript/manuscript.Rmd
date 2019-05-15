@@ -145,14 +145,9 @@ Our analysis indicates that even when nutrient regimes exhibit relative stabilit
 
 ## Trends
 
-As previously mentioned, both temperature and chlorophll *a* show increasing trends from 1993 to 2016 in Rhode Island lakes and reservoirs, while total nutrients and the nitrogen:phosphorus ratio are all relatively stable.  These stable nutrient regimes may be partly explained by
+As previously mentioned, both temperature and chlorophll *a* show increasing trends from 1993 to 2016 in Rhode Island lakes and reservoirs, while total nutrients and the nitrogen:phosphorus ratio are all relatively stable.  These stable nutrient regimes may be partly explained by efforts to curb nutrient loadings (e.g., [Need References Here]).  Additionally, these results point to the fact that productivity is driven by processes operating at different scales.  For instance, controlling for nutrients is largely a local to watershed scale effort; whereas, warming lakes are driven by broader, climate patterns.  
 
 
-- Parameter by parameter discussion of trends
-- Local scale vs Regional/Global scale
-    - Why diffs?  
-        - LULC?
-        - Different trends
 - Other trends?
     - monthly/seasonal
     - How do trends break down by trophic state?
