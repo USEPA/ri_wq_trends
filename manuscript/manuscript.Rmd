@@ -147,8 +147,7 @@ Our analysis indicates that even when nutrient regimes exhibit relative stabilit
 
 As previously mentioned, both temperature and chlorophyll *a* show increasing trends from 1993 to 2016 in Rhode Island lakes and reservoirs, while total nutrients and the nitrogen:phosphorus ratio are all relatively stable.  These stable nutrient regimes may be partly explained by efforts to curb nutrient loadings (e.g., [NEED REFERENCES HERE]).  Additionally, these results point to the fact that productivity is driven by processes operating at different scales.  For instance, controlling for nutrients is largely a local to watershed scale effort, but may also be regional as atmospheric nitrogen deposition can be a significant source of nitrogen [NEED REFERENCES HERE].  Similarly, warming lakes are driven by broader, climate patterns, yet waterbody specific factors such as percent impervious in the watershed and lake morphology can also impact temperature [NEED REFERENCES HERE].  So, when examining differences in regional and state level trends those trends are the results of complex interacting drivers.  
 
-In addition to the annualized trends we address with this study, there are other trends that may be of interest.  First, what are the trends for water quality at finer temporal scales such as monthly or seasonal trends?  Anecdotal evidence in Rhode Island [SHOULD REFERENCE THIS SOMEHOW] points to greater increases in temperature earlier and later in the growing season and suggests a lengthening of the growing season.  Second, are trends influenced by the current state of a given waterbody?  For instance, are oligotrophic lakes showing stronger trends than eutorphic lakes or are all lakes showing similar trends regardless of current trohpic status?  These questions all warrant further investigation.
-
+In addition to the annualized trends we address with this study, there are other trends that may be of interest.  First, what are the trends for water quality at finer temporal scales such as monthly or seasonal trends?  Anecdotal evidence in Rhode Island [SHOULD REFERENCE THIS SOMEHOW] points to greater increases in temperature earlier and later in the growing season and suggests a lengthening of the growing season. Furthermore, preliminary analysis of the URIWW data back this up with mean temperature for May 1993 to May 1995 cooler by nearly a degree than mean temperature for May 2014 through May 2016.  Second, are trends influenced by the current state of a given waterbody?  For instance, are oligotrophic lakes showing stronger trends than eutorphic lakes or are all lakes showing similar trends regardless of current trohpic status?  These questions all warrant further, careful investigation.
 
 ## Broader Implications
 
@@ -157,7 +156,7 @@ In addition to the annualized trends we address with this study, there are other
 - How to stabilize trends?  
     - More reductions in nutrients?  
     - Engineered solutions to slow warming? 
-    - Look to individual lakes that buck the trend for suggestions (e.g. local landcover may provide a buffer)
+    - Look to individual lakes that buck the trend for suggestions (e.g. local land cover may provide a buffer)
     - stable nutrients doesn't mean they are low, just not getting worse
     - interventions to reduce nutrients could offset the suggested increase caused by temperature
         - e.g. freshwater mussels restoration
