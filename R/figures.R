@@ -73,8 +73,7 @@ ww_np_rl <- np_gg[[4]]
 
 lagos_data <- read_csv(here("data/lagos_lake_trend_data.csv"))
 
-lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_scale", 
-                             expression(paste("Average Yearly Scaled Chlorophyll  ", 
+lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_scale", y = expression(paste("Average Yearly Scaled Chlorophyll  ", 
                                               italic(" a"))), x = "Year",
                              write = here("data/chla_data_lagos.csv"), 
                              error_bar = "sd",
