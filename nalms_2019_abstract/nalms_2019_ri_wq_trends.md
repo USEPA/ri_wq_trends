@@ -1,6 +1,6 @@
 ---
 title: "Increasing Productivity Amid Stable Nutrient Regimes in Rhode Island Lakes and Reservoirs"
-author: "Hollister. J. W., Kellogg, D. Q., Kreakie, B. J., Shivers, S., Herron, E., Green, L., Milstead, W. Bryan., Gold, A."
+author: "Hollister, J. W., Kellogg, D. Q., Kreakie, B. J., Shivers, S. D., Herron, E., Green, L., Milstead, W. B., and Gold, A."
 output:
   word_document:
     reference_docx: abstract_template.docx
