@@ -49,7 +49,7 @@ temp_gg <- ww_data %>%
   wq_trend_gg("temp", yvar = "measurement_scale", 
               y = "Average Yearly Scaled Temperature", x = "Year",
               write = here("data/temp_data.csv"), error_bar = "sd",
-              title = "")
+              title = "URI Watershed Watch Temperature")
 ggsave(here("figures/ww_temp_trends.jpg"), temp_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
 
