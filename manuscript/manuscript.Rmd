@@ -84,9 +84,9 @@ The general steps, outlined in `r fig_num("z_schematic", display = "cite")` and 
 3. Calculate the z-score for each annual mean at each site by subtracting the annual and reference means and dividing by the reference standard deviation.
 4. Summarize by calculating the mean z-score per year for the entire group of sites.  The resultant values are analyzed for a trend over time.
 
-### Linear regression on annual means
+### Linear regression on annual mean z-scores
 
-Testing for a regression slope being different than zero can be used to test for monotonic trends in water quality data [@helsel2002statistical].  We used these standard procedures to test for positive or negative trends in lake temperature, chlorophyll *a*, TN, TP and TN:TP.  For each parameter, we fit a regression line to the z-scores as a function of year and tested the null hypothesis that no trend existed (e.g. $\beta$~1~ = 0).
+Testing for a regression slope being different than zero can be used to test for monotonic trends in water quality data [@helsel2002statistical].  We used these standard procedures to test for positive or negative trends in lake temperature, chlorophyll *a*, TN, TP and TN:TP.  For each parameter, we fit a regression line to the z-scores as a function of year and tested the null hypothesis that no trend existed (e.g. $\beta$~1~ = 0). Traditionally, trends would be determined by assessing "significance" but recent guidelines suggest not using arbitrary p-value cut-offs to assesses significance [@wasserstein2016asa].  Our interpretation of the trends attempts to follow this advice and we assess trends with the information provided by the magnitude of the slopes, the p-values, and our understanding of the processes involved.
 
 ### Comparison of Rhode Island to the Region
 
