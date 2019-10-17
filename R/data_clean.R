@@ -92,7 +92,22 @@ ww_lake_trend_data <- ww_all %>%
   summarize(mn_measurement = mean(measurement, na.rm = TRUE))%>%
   ungroup() 
 
-# Calculate and add n:p
+# Enforce sig digits
+
+ww_lake_trend_data <- ww_lake_trend_data %>%
+  mutate(mn_measurement = case_when(param == "temp"  ~ 
+                                      round(mn_measurement, 1),
+                                    param == "chla" ~
+                                      round(mn_measurement, 1),
+                                    param == "total_p" ~
+                                      round(mn_measurement, 0),
+                                    param == "total_n" ~
+                                      round(mn_measurement/5, 0)*5,
+                                    TRUE ~ mn_measurement))
+  
+
+# Calculate and add n:p 
+# Need to make molar conversions here...
 ww_np <- ww_lake_trend_data %>%
   filter(param == "total_n" | param == "total_p") %>% 
   unique() %>% #repeats from somewhere...
@@ -118,13 +133,53 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
          lt_mean = mean(station_year_mean),
          lt_sd = sd(station_year_mean),
          lt_n = n()) %>%
+  ungroup() %>%
   left_join(ww_sites) %>%
   filter(WB_Type == "Lake or Pond" | WB_Type == "Reservoir") %>%
   select(station_name:lt_n, site_descr = Site_DESCR, 
          town = Town, county = COUNTY, state = State, lon_dd = LON_DD, 
          lat_dd = LAT_DD, huc_12 = HUC_12, huc_10_name = HUC_10_NAME, 
          huc_12_name = HUC_12_NAME)
-  
+
+# Enforcing sig digits again for station_year_mean, measurment_anmly, lt_mean, 
+# and lt_sd
+ww_lake_trend_data <- ww_lake_trend_data %>%
+  mutate(station_year_mean = case_when(param == "temp"  ~ 
+                                       round(station_year_mean, 1),
+                                     param == "chla" ~
+                                       round(station_year_mean, 1),
+                                     param == "total_p" ~
+                                       round(station_year_mean, 0),
+                                     param == "total_n" ~
+                                       round(station_year_mean/5, 0)*5,
+                                     TRUE ~ station_year_mean),
+         measurement_anmly = case_when(param == "temp"  ~ 
+                                         round(measurement_anmly, 1),
+                                       param == "chla" ~
+                                         round(measurement_anmly, 1),
+                                       param == "total_p" ~
+                                         round(measurement_anmly, 0),
+                                       param == "total_n" ~
+                                         round(measurement_anmly/5, 0)*5,
+                                       TRUE ~ measurement_anmly),
+         lt_mean = case_when(param == "temp"  ~ 
+                               round(lt_mean, 1),
+                             param == "chla" ~
+                               round(lt_mean, 1),
+                             param == "total_p" ~
+                               round(lt_mean, 0),
+                             param == "total_n" ~
+                               round(lt_mean/5, 0)*5,
+                             TRUE ~ lt_mean),
+         lt_sd = case_when(param == "temp"  ~ 
+                             round(lt_sd, 1),
+                           param == "chla" ~
+                             round(lt_sd, 1),
+                          param == "total_p" ~
+                             round(lt_sd, 0),
+                          param == "total_n" ~
+                             round(lt_sd/5, 0)*5,
+                          TRUE ~ lt_sd))
 
 write_csv(ww_lake_trend_data, here("data/ww_lake_trend_data.csv"))
 
@@ -159,6 +214,45 @@ lagos_data <- lagosne_select(table = "epi_nutr",
          lt_sd = sd(station_year_mean),
          lt_n = n())
 
+# Enforcing WW sig digits here as well
+lagos_data <- lagos_data %>%
+  mutate(station_year_mean = case_when(param == "temp"  ~ 
+                                         round(station_year_mean, 1),
+                                       param == "chla" ~
+                                         round(station_year_mean, 1),
+                                       param == "total_p" ~
+                                         round(station_year_mean, 0),
+                                       param == "total_n" ~
+                                         round(station_year_mean/5, 0)*5,
+                                       TRUE ~ station_year_mean),
+         measurement_anmly = case_when(param == "temp"  ~ 
+                                         round(measurement_anmly, 1),
+                                       param == "chla" ~
+                                         round(measurement_anmly, 1),
+                                       param == "total_p" ~
+                                         round(measurement_anmly, 0),
+                                       param == "total_n" ~
+                                         round(measurement_anmly/5, 0)*5,
+                                       TRUE ~ measurement_anmly),
+         lt_mean = case_when(param == "temp"  ~ 
+                               round(lt_mean, 1),
+                             param == "chla" ~
+                               round(lt_mean, 1),
+                             param == "total_p" ~
+                               round(lt_mean, 0),
+                             param == "total_n" ~
+                               round(lt_mean/5, 0)*5,
+                             TRUE ~ lt_mean),
+         lt_sd = case_when(param == "temp"  ~ 
+                             round(lt_sd, 1),
+                           param == "chla" ~
+                             round(lt_sd, 1),
+                           param == "total_p" ~
+                             round(lt_sd, 0),
+                           param == "total_n" ~
+                             round(lt_sd/5, 0)*5,
+                           TRUE ~ lt_sd))
+  
 write_csv(lagos_data, here("data/lagos_lake_trend_data.csv"))
   
 

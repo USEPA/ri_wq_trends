@@ -24,6 +24,25 @@ ww_param_ranges <- ww_all %>%
          "75th Percentile" = percentile_75,
          Max = max, "Std. Dev" = sd )
 
+# All about the base...Enforce ww sig digits
+ww_param_ranges[ww_param_ranges$Parameter == "temp",][,3:8] <- 
+  round(ww_param_ranges[ww_param_ranges$Parameter == "temp",][,3:8], 1)
+
+ww_param_ranges[ww_param_ranges$Parameter == "total_n",][,3:8] <- 
+  round(ww_param_ranges[ww_param_ranges$Parameter == "total_n",][,3:8]/5)*5
+
+ww_param_ranges[ww_param_ranges$Parameter == "total_p",][,3:8] <- 
+  round(ww_param_ranges[ww_param_ranges$Parameter == "total_p",][,3:8], 0)
+
+ww_param_ranges[ww_param_ranges$Parameter == "np_ratio",][,3:8] <- 
+  round(ww_param_ranges[ww_param_ranges$Parameter == "np_ratio",][,3:8], 2)
+
+ww_param_ranges[ww_param_ranges$Parameter == "chla",][,3:8] <- 
+  round(ww_param_ranges[ww_param_ranges$Parameter == "chla",][,3:8], 1)
+
+ww_param_ranges <- ww_param_ranges %>%
+  mutate(Parameter = c("Temperature", "Total Nitrogen", "Total Phosphorus", "N:P", "Chlorophyll"))
+
 ww_param_anomaly_ranges <- ww_all %>%
   filter(param == "chla" |
            param == "temp" |
@@ -70,6 +89,25 @@ lagos_param_ranges <- lagos_all %>%
          Mean = mean, Median = median, 
          "75th Percentile" = percentile_75,
          Max = max, "Std. Dev" = sd )
+
+# All about the base...Enforce ww sig digits
+lagos_param_ranges[lagos_param_ranges$Parameter == "temp",][,3:8] <- 
+  round(lagos_param_ranges[lagos_param_ranges$Parameter == "temp",][,3:8], 1)
+
+lagos_param_ranges[lagos_param_ranges$Parameter == "total_n",][,3:8] <- 
+  round(lagos_param_ranges[lagos_param_ranges$Parameter == "total_n",][,3:8]/5)*5
+
+lagos_param_ranges[lagos_param_ranges$Parameter == "total_p",][,3:8] <- 
+  round(lagos_param_ranges[lagos_param_ranges$Parameter == "total_p",][,3:8], 0)
+
+lagos_param_ranges[lagos_param_ranges$Parameter == "np_ratio",][,3:8] <- 
+  round(lagos_param_ranges[lagos_param_ranges$Parameter == "np_ratio",][,3:8], 2)
+
+lagos_param_ranges[lagos_param_ranges$Parameter == "chla",][,3:8] <- 
+  round(lagos_param_ranges[lagos_param_ranges$Parameter == "chla",][,3:8], 1)
+
+lagos_param_ranges <- lagos_param_ranges %>%
+  mutate(Parameter = c("Total Nitrogen", "Total Phosphorus", "N:P", "Chlorophyll"))
 
 lagos_param_anomaly_ranges <- lagos_all %>%
   filter(param == "chla" |

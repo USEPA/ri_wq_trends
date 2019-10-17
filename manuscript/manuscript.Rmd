@@ -53,7 +53,7 @@ For this study, we combined a long-term dataset on water quality of lakes in Rho
 
 ## Study Area and Data
 
-The study area for this analysis includes lakes and reservoirs in the state of Rhode Island where data were collected by the University of Rhode Island's Watershed Watch program (`r fig_num("ww_map", display = "cite", caption = "Map of URI Watershed Watch lake and reservoir sampling sites")`).  The URIWW program began in 1988, monitoring 14 lakes and has now grown to include over 250 monitoring sites on over 120 waterbodies, including rivers/streams, and estuaries, with more than 400 trained volunteers. URIWW now provides more than 90% of Rhode Island's lake baseline data and is an integral part of the state's environmental data collection strategy. Data QA/QC is treated with paramount importance; volunteers are trained both in the classroom and the field, and are provided with all the necessary equipment and supplies, along with scheduled collection dates. For freshwater lakes and reservoirs, weekly secchi depth and water temperature are recorded, along with bi-weekly chlorophyll *a* and dissolved oxygen. Water samples are collected three times per season (May through October) to be analyzed for nutrients.  
+The study area for this analysis includes lakes and reservoirs in the state of Rhode Island where data were collected by the University of Rhode Island's Watershed Watch program (`r fig_num("ww_map", display = "cite", caption = "Map of URI Watershed Watch lake and reservoir sampling sites")`).  The URIWW program began in 1988, monitoring 14 lakes and has now grown to include over 250 monitoring sites on over 120 waterbodies, including rivers/streams, and estuaries, with more than 400 trained volunteers. URIWW now provides more than 90% of Rhode Island's lake baseline data and is an integral part of the state's environmental data collection strategy. Data QA/QC is treated with paramount importance; volunteers are trained both in the classroom and the field, and are provided with all the necessary equipment and supplies, along with scheduled collection dates. For freshwater lakes and reservoirs, weekly secchi depth and water temperature are recorded, along with bi-weekly chlorophyll *a* and in deep lakes (greater than 5 meters) dissolved oxygen. Water samples are collected three times per season (May through October) to be analyzed for nutrients.  
 
 
 ![`r fig_num("ww_map", caption = "Map of URI Watershed Watch lake and reservoir sampling sites")`](../figures/ww_map.jpg)
@@ -98,7 +98,7 @@ During the period of 1993 to 2016, Rhode Island lakes and reservoirs in our data
 
 
 ```{r ww_params, echo=FALSE, results="asis"}
-knitr::kable(ww_param_ranges, format = "markdown")
+pander::pander(ww_param_ranges[,c(-3,-6)], style = "rmarkdown")
 ```
 *`r tab_num("ww_params")`*
 
@@ -106,7 +106,7 @@ knitr::kable(ww_param_ranges, format = "markdown")
 For lakes and reservoirs in the larger region represented by the LAGOSNE States,  mean TN was `r paste(lagos_param_ranges%>%filter(Parameter == "total_n")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "total_n")%>%pull(Units))`, mean TP was `r paste(lagos_param_ranges%>%filter(Parameter == "total_p")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "total_p")%>%pull(Units))`, mean TN:TP ratio was `r paste(lagos_param_ranges%>%filter(Parameter == "np_ratio")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "np_ratio")%>%pull(Units))`, and mean chlorophyll *a* was `r paste(lagos_param_ranges%>%filter(Parameter == "chla")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "chla")%>%pull(Units))` (`r tab_num("lagos_params", display = "cite", caption = "Summary statistics for LAGOSNE data from 1993 to 2016.")`).    
 
 ```{r lagos_params, echo=FALSE, results="asis"}
-knitr::kable(lagos_param_ranges, format = "markdown")
+pander::pander(lagos_param_ranges[,c(-3,-6)], style = "rmarkdown")
 ```
 *`r tab_num("lagos_params")`*
 
