@@ -112,7 +112,7 @@ ww_np <- ww_lake_trend_data %>%
   filter(param == "total_n" | param == "total_p") %>% 
   unique() %>% #repeats from somewhere...
   spread(key = param, value = mn_measurement) %>%
-  mutate(np_ratio = total_n/total_p) %>%
+  mutate(np_ratio = (total_n/total_p)*2.21) %>% #calc ratio and convert to molar
   filter(!is.na(np_ratio)) %>%
   filter(!is.infinite(np_ratio)) %>%
   gather(key = "param", value = "mn_measurement", np_ratio) %>%
@@ -191,7 +191,7 @@ lagos_data <- lagosne_select(table = "epi_nutr",
   mutate(year = as(year(ymd(sampledate)), "integer"),
          month = as(month(ymd(sampledate)), "integer"),
          day = as(day(ymd(sampledate)), "integer"),
-         `Station Name` = lagoslakeid, np_ratio = tn/tp) %>%
+         `Station Name` = lagoslakeid, np_ratio = (tn/tp)*2.21) %>%
   filter(year >= 1993) %>% #only get data for 1993 and beyond as that is earliest TN data for WW.  Make sure all ranges match
   #filter(year <= 2013) %>% #only get data from 2013 and prior to match Oliver
   select(`Station Name`, programname, year, month, day, chla, total_p = tp, total_n = tn, np_ratio) %>%

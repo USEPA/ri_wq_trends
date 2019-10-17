@@ -17,7 +17,7 @@ ww_param_ranges <- ww_all %>%
             max = round(max(station_year_mean, na.rm = T), 2),
             sd = round(sd(station_year_mean, na.rm = T), 2)) %>%
   ungroup() %>%
-  mutate(units = c("celsius", "µg/l", "µg/l", "", "µg/l")) %>%
+  mutate(units = c("celsius", "µg/l", "µg/l", "molar", "µg/l")) %>%
   select(Parameter = param, Units = units, 
          "25th Percentile" = percentile_25,
          Mean = mean, Median = median, 
@@ -59,7 +59,7 @@ ww_param_anomaly_ranges <- ww_all %>%
             max = round(max(measurement_anmly, na.rm = T), 2),
             sd = round(sd(measurement_anmly, na.rm = T), 2)) %>%
   ungroup() %>%
-  mutate(units = c("celsius", "µg/l", "µg/l", "", "µg/l")) %>%
+  mutate(units = c("celsius", "µg/l", "µg/l", "molar", "µg/l")) %>%
   select(Parameter = param, Units = units, 
          "25th Percentile" = percentile_25,
          Mean = mean, Median = median, 
@@ -83,7 +83,7 @@ lagos_param_ranges <- lagos_all %>%
             max = round(max(station_year_mean, na.rm = T), 2),
             sd = round(sd(station_year_mean, na.rm = T), 2)) %>%
   ungroup() %>%
-  mutate(units = c("µg/l", "µg/l", "", "µg/l")) %>%
+  mutate(units = c("µg/l", "µg/l", "molar", "µg/l")) %>%
   select(Parameter = param, Units = units, 
          "25th Percentile" = percentile_25,
          Mean = mean, Median = median, 
@@ -124,7 +124,7 @@ lagos_param_anomaly_ranges <- lagos_all %>%
             max = round(max(measurement_anmly, na.rm = T), 2),
             sd = round(sd(measurement_anmly, na.rm = T), 2)) %>%
   ungroup() %>%
-  mutate(units = c("µg/l", "µg/l", "", "µg/l")) %>%
+  mutate(units = c("µg/l", "µg/l", "molar", "µg/l")) %>%
   select(Parameter = param, Units = units, 
          "25th Percentile" = percentile_25,
          Mean = mean, Median = median, 
