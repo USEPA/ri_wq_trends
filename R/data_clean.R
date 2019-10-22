@@ -27,7 +27,7 @@ missing_nutrients_1 <- read_csv(here("data/WW_96_nutrients_nds.csv")) %>%
   rbind(read_csv(here("data/WW_98_nutrients.csv"))) %>%
   rbind(read_csv(here("data/WW_99_nutrients.csv"))) %>%
   rbind(read_csv(here("data/WW_00_nutrients.csv"))) %>%
-  rbind(read_csv(here("data/WW_00_nutrients.csv"))) %>%
+  rbind(read_csv(here("data/WW_01_nutrients.csv"))) %>%
   mutate(Day = 15) # Need this to conform to existing format - none of these had a day so assuming middle of month
 
 missing_nutrients <- missing_nutrients_1 %>%
@@ -35,7 +35,7 @@ missing_nutrients <- missing_nutrients_1 %>%
             Date = ymd(paste(Year, Month, Day, sep="-")),
             Time = NA,
             `Sample Type` = NA,
-            `Sample Media` = NA,
+            `Sample Media` = "Water",
             Depth = Depth,
             Parameter = Parameter,
             Concentration = Concentration,
@@ -69,28 +69,59 @@ ww_lake_trend_data <- ww_all %>%
   filter(year >= 1993) %>% #only get data for 1993 and beyond as that is earliest TN data for WW.  Make sure all ranges match
   #filter(year <= 2013) %>% #only get data from 2013 and prior to match Oliver
   filter(Parameter %in% params) %>% #Filter out subset of parameters
-  filter(Concentration != `Detection Limit`) %>% #filters out measurements at detect limit (temporary)
+  #filter(Concentration != `Detection Limit`) %>% #filters out measurements at detect limit (temporary)
   mutate(Parameter = case_when(Parameter == params[1] ~ "temp", #NAMES!!!!!
                                Parameter == params[2] ~ "secchi",
                                Parameter == params[3] ~ "total_p",
                                Parameter == params[4] ~ "total_n",
                                Parameter == params[5] ~ "enterococci",
                                Parameter == params[6] ~ "do",
-                               Parameter == params[7] ~ "chla",
                                Parameter == params[8] ~ "ph",
-                               Parameter == params[9] ~ "chloride")) %>% 
+                               Parameter == params[9] ~ "chloride",
+                               Parameter == params[7] ~ "chla",
+                               TRUE ~ Parameter)) %>%
+  filter(Parameter %in% c("temp","total_p", "total_n","chla")) %>%
+  filter(`Sample Media` == "Water")
+                               
+
+# Look at Detction Limit
+det_limit <- ww_lake_trend_data %>% 
+  mutate(year = lubridate::year(Date)) %>% 
+  select(station_name = `Station Name`, year, param = Parameter, 
+         det_limit = `Detection Limit`)
+
+# Several typos in detection limits.  This assumes that the most common limit
+# Listed per year and parameter is what is should have been.
+det_limits <- det_limit %>%
+  group_by(year,param, det_limit) %>%
+  summarize(count = n()) %>%
+  ungroup() %>%
+  group_by(year, param) %>%
+  mutate(max_count = max(count)) %>%
+  ungroup() %>%
+  filter(count == max_count) %>%
+  mutate(det_limit = case_when(param == "total_n" ~
+                                 det_limit * 1000,
+                               TRUE ~ det_limit)) %>%
+  select(year, param, det_limit)
+  
+
+# Final Clean
+ww_lake_trend_data <- ww_lake_trend_data %>%
   select(station_name = `Station Name`, year, month, day, depth = Depth, 
          location = Location, param = Parameter, 
          measurement = Concentration) %>%
   filter(depth <=2 | is.na(depth)) %>%
   filter(!is.na(measurement)) %>%
   filter(!is.na(station_name)) %>%
-  mutate(measurement = case_when(param == "total_n" ~ measurement * 1000,
+  mutate(measurement = case_when(param == "total_n" ~ 
+                                   measurement * 1000,
                                  T ~ measurement)) %>% # Convert TN to ug/l
   #filter(year >= 1990) %>%
   group_by(station_name, year, month,day,param,location) %>%
   summarize(mn_measurement = mean(measurement, na.rm = TRUE))%>%
   ungroup() 
+
 
 # Enforce sig digits
 
@@ -180,6 +211,9 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
                           param == "total_n" ~
                              round(lt_sd/5, 0)*5,
                           TRUE ~ lt_sd))
+
+ww_lake_trend_data <- ww_lake_trend_data %>%
+  left_join(det_limits)
 
 write_csv(ww_lake_trend_data, here("data/ww_lake_trend_data.csv"))
 
