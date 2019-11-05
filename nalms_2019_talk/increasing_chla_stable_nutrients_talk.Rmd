@@ -12,12 +12,12 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## Nutrients and Productivity
+## What drives lake productivity
 ::::::::::::::{.columns}
 :::{.column}
-- Nutrients drive growth
-- One goal is to reduce increased phyto
-- Long-term data needed
+- Nutrients
+- Temperature
+- Other things
 :::
 :::{.column}
 
@@ -29,9 +29,10 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Nutrient Management
 
+- One goal is to reduce increased phyto
 - What has happened with P and N reductions?
-- What 
 - Did it work?
+  - Long-term data needed
 
 ## Stasis in Northeast
 
