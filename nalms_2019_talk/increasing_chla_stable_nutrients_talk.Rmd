@@ -11,17 +11,27 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-## Background
+
+## Nutrients and Productivity
 ::::::::::::::{.columns}
 :::{.column}
-- Nutrient managment over the years
+- Nutrients drive growth
 - One goal is to reduce increased phyto
 - Long-term data needed
 :::
 :::{.column}
-content
+
+![](figures/es-2016-02575v_0006.jpeg)
+
+![](figures/tn_tp_chla_plot.jpg)
 :::
 ::::::::::::::
+
+## Nutrient Management
+
+- What has happened with P and N reductions?
+- What 
+- Did it work?
 
 ## Stasis in Northeast
 
