@@ -1,0 +1,67 @@
+---
+title: "Increasing productivity amid stable nutrient regmines in Rhode Island Lakes and Reservoirs"
+subtitle: "NALMS 2019, Burlington VT"
+author: "Jeff Hollister, Q Kellogg, Betty Kreakie, Stephen Shivers, Elizabeth Herron, Linda Green, Bryan Milstead, and Art Gold"
+date: "2019-11-14"
+output:  
+  powerpoint_presentation:
+    reference_doc: increasing_chla_stable_nutrients_template.pptx
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+## Background
+::::::::::::::{.columns}
+:::{.column}
+- Nutrient managment over the years
+- One goal is to reduce increased phyto
+- Long-term data needed
+:::
+:::{.column}
+content
+:::
+::::::::::::::
+
+## Stasis in Northeast
+
+content
+
+## But change at other scales
+
+- VT example
+- Other examples?
+- What about RI?
+
+## Watershed Watch
+
+- Details on WW program and data collected
+
+## Watershed Watch: filtered for trend analysis
+
+- What we filtered
+- resultant datasets details
+
+## LAGOSNE
+
+## Analysis: Site-specific z-scores
+
+## Analysis: Yearly trends
+
+## Results: Nutrient trends
+
+## Results: Chlorophyll trends
+
+## Results: Temperature trends
+
+## Conclusions
+
+### In Rhode Island
+- More chlorophyll
+- More heat
+- Nutrients not changing much
+
+### Within the Northeast
+- Stasis (our analysis concurs)
+
+## Thank you and Questions
