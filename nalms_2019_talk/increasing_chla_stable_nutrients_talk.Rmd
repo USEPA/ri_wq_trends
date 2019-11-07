@@ -93,13 +93,37 @@ chlorophyll trends since 1990. Global Change Biology. DOI: 10.1111/gcb.13810
 
 ## Analysis: Site-specific z-scores
 
+![](figures/z-score_schematic.jpg)
+
 ## Analysis: Yearly trends
 
-## Results: Nutrient trends
+## Results: Nitrogen trends
+
+![](figures/ww_tn_trends.jpg)
+
+![](figures/lagos_tn_trends.jpg)
+
+## Results: Phosphorus trends
+
+![](figures/ww_tp_trends.jpg)
+
+![](figures/lagos_tp_trends.jpg)
+
+## Results: N:P trends
+
+![](figures/ww_np_trends.jpg)
+
+![](figures/lagos_np_trends.jpg)
 
 ## Results: Chlorophyll trends
 
+![](figures/ww_chla_trends.jpg)
+
+![](figures/lagos_chla_trends.jpg)
+
 ## Results: Temperature trends
+
+![](figures/ww_temp_trends.jpg)
 
 ## Conclusions
 
