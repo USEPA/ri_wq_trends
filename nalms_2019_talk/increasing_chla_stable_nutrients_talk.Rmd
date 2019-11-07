@@ -12,7 +12,8 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## What drives lake productivity
+
+## What drives changes in lake productivity?
 ::::::::::::::{.columns}
 :::{.column}
 - Nutrients
@@ -24,34 +25,69 @@ knitr::opts_chunk$set(echo = FALSE)
 ![](figures/es-2016-02575v_0006.jpeg)
 
 ![](figures/tn_tp_chla_plot.jpg)
+
+![](figures/temp_chla_plot.jpg)
 :::
 ::::::::::::::
 
-## Nutrient Management
+## The management problem
 
-- One goal is to reduce increased phyto
-- What has happened with P and N reductions?
-- Did it work?
-  - Long-term data needed
+- Desire to reduce and manage nutrient pollution
+- Phosphorus Bans
+- Nutrient Criteria
+- Enacted piecemeal over last ~20 years
+- Do the data show any change?
 
 ## Stasis in Northeast
 
-content
+- Oliver et al (2017) Unexpected stasis in a changing world: Lake nutrient and
+chlorophyll trends since 1990. Global Change Biology. DOI: 10.1111/gcb.13810
+
+![](figures/10.1111-gcb.13810Figure138100001.jpg)
 
 ## But change at other scales
 
-- VT example
-- Other examples?
-- What about RI?
+- Mathews et al (2018) Is Vermont losing its oligotrophic lakes?. LakeLine. 38-2.
+- Rhode Island?
 
-## Watershed Watch
+![](figures/mathews_vt_olgio_lakeline_fig2.jpg)
 
-- Details on WW program and data collected
+## URI Watershed Watch
 
-## Watershed Watch: filtered for trend analysis
+- Volunteer monitoring program
+  - ~400 volunteers
+- Started in 1988 with 14 lakes
+- Now
+  - 250+ sites
+  - 120+ waterbodies
+- Rigorous QA/QC
+- Data used by RI DEM and US EPA
 
-- What we filtered
-- resultant datasets details
+## URI Watersehd Watch: Lake Sampling
+
+- May to October
+- Weekly
+  - Water Clarity
+  - Temperature
+- Every Other Week
+  - Chlorophyll
+  - Dissolved Oxygen
+- 3 Times per Season
+  - Nutrients
+  - Alakalinity
+  - pH
+  - Bacteria
+  
+## URI Watershed Watch: Filtered for Trend Analysis
+
+- Parameters: Total Nitrogen, Total Phosphorus, N:P, Temperature, Chlorophyll
+- Years: 1993 to 2016
+- Months: May through October
+- Depths: <= 2 meters
+- Sites: At least 10 years of data
+- Total of 69 Sites
+
+![](figures/ww_map.jpg)
 
 ## LAGOSNE
 
