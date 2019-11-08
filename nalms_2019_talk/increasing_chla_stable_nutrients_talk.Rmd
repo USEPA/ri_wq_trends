@@ -86,10 +86,38 @@ chlorophyll trends since 1990. Global Change Biology. DOI: 10.1111/gcb.13810
 - Depths: <= 2 meters
 - Sites: At least 10 years of data
 - Total of 69 Sites
+  - 66 with all parameters
+  - 1 without N:P
+  - 2 without chlorophyll and temperature
 
 ![](figures/ww_map.jpg)
 
-## LAGOSNE
+## LAke mult-scaled GeOSpatial and temoporal database for the Northeastern US (LAGOS-NE)
+
+- Soranno et al (2017). LAGOS-NE: a multi-scaled geospatial and temporal database of lake ecological context and water quality for thousands of US lakes. Gigascience, 6(12)
+- Stachelek and Oliver (2017). LAGOSNE: Interface to the lake multi-scaled geospatial and temporal database. R package version 1.1.0. https://cran.r-project.org/package=LAGOSNE
+- <https://lagoslakes.org/>
+- 17 States: CT, IL, IN, IA, ME, MA, MI, MN, MO, NH, NJ, NY, OH, PA, RI, VT, WI
+- ~ 50,000 Lakes
+
+![](figures/gix101fig1.jpeg)
+
+## LAke mult-scaled GeOSpatial and temoporal database for the Northeastern US (LAGOS-NE): Filtered for Trend Analysis
+
+- Parameters: Total Nitrogen, Total Phosphorus, N:P, Chlorophyll
+  - Temperature data not currently available
+- Years: 1993 to 2016
+- Months: May through October
+- Depths: <= 2 meters
+- Sites: At least 10 years of data
+- Total of 1482 Sites
+  - 637 with chlorophyll and phosphorus
+  - 377 with only chlorophyll
+  - 275 with only phosphorus
+  - 161 with all variables (except temperature)
+  - 25 with chlorophyll and nitrogen
+  - 7 with other combination of nutrients
+
 
 ## Analysis: Site-specific z-scores
 

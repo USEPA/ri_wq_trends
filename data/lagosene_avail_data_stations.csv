@@ -1,0 +1,1483 @@
+station_name,params_avail
+62,chla
+72,chla
+75,chla
+131,chla
+134,chla
+173,chla
+177,chla
+203,chla
+211,"chla, total_p"
+249,"chla, total_p"
+283,chla
+305,chla
+307,chla
+317,chla
+334,chla
+335,chla
+375,chla
+386,chla
+413,chla
+418,"chla, total_p"
+429,chla
+436,chla
+447,other
+452,chla
+454,chla
+474,chla
+482,chla
+490,"chla, total_p"
+493,chla
+523,"chla, total_p"
+531,chla
+533,chla
+537,chla
+542,chla
+552,chla
+564,"chla, total_p"
+567,chla
+584,chla
+602,"chla, total_p"
+610,chla
+612,"chla, total_p"
+617,chla
+618,"chla, total_p"
+620,"chla, total_p"
+628,"chla, total_p"
+640,"chla, total_p, total_n, np"
+641,"chla, total_p"
+644,"chla, total_p, total_n, np"
+648,"chla, total_p"
+676,"chla, total_p"
+678,other
+685,chla
+700,chla
+704,chla
+734,chla
+738,chla
+741,chla
+745,"chla, total_p"
+749,chla
+750,"chla, total_p"
+765,other
+766,chla
+770,chla
+781,chla
+785,"chla, total_p"
+802,"chla, total_p"
+803,"chla, total_p"
+811,"chla, total_p"
+824,"chla, total_p"
+834,"chla, total_p"
+838,"chla, total_p"
+843,other
+847,"chla, total_p"
+857,chla
+858,"chla, total_p"
+876,chla
+906,"chla, total_p, total_n, np"
+924,chla
+931,chla
+946,"chla, total_p"
+954,"chla, total_p"
+955,chla
+960,chla
+964,"chla, total_p"
+966,"chla, total_p"
+969,"chla, total_p"
+971,chla
+972,chla
+973,chla
+974,"chla, total_p"
+976,"chla, total_p"
+1023,"chla, total_p, total_n, np"
+1025,"chla, total_p"
+1030,"chla, total_p"
+1041,"chla, total_p"
+1043,"chla, total_p"
+1048,other
+1054,"chla, total_p"
+1060,chla
+1080,chla
+1089,chla
+1091,"chla, total_p"
+1096,"chla, total_p"
+1102,"chla, total_p"
+1109,chla
+1123,chla
+1141,"chla, total_p"
+1143,chla
+1147,chla
+1150,"chla, total_p"
+1154,chla
+1165,"chla, total_p"
+1180,chla
+1212,chla
+1223,"chla, total_p"
+1235,chla
+1243,"chla, total_p"
+1244,"chla, total_p"
+1253,chla
+1286,"chla, total_p"
+1291,"chla, total_p"
+1295,chla
+1321,chla
+1332,chla
+1335,chla
+1336,"chla, total_p"
+1361,chla
+1404,chla
+1408,"chla, total_p"
+1423,chla
+1435,chla
+1436,"chla, total_p"
+1441,chla
+1448,chla
+1451,chla
+1482,"chla, total_p"
+1499,"chla, total_p"
+1505,chla
+1513,"chla, total_p"
+1514,"chla, total_p"
+1525,"chla, total_p"
+1545,"chla, total_p, total_n, np"
+1570,"chla, total_p"
+1572,chla
+1590,other
+1591,chla
+1610,chla
+1618,chla
+1620,"chla, total_p"
+1627,"chla, total_p"
+1636,chla
+1641,"chla, total_p"
+1647,"chla, total_p"
+1661,chla
+1667,"chla, total_p"
+1672,"chla, total_p, total_n, np"
+1675,chla
+1678,"chla, total_p"
+1696,other
+1703,chla
+1746,chla
+1762,chla
+1764,other
+1768,"chla, total_p"
+1772,"chla, total_p"
+1777,"chla, total_p"
+1787,"chla, total_p"
+1806,"chla, total_p"
+1812,"chla, total_p"
+1816,chla
+1818,"chla, total_p"
+1823,"chla, total_p"
+1826,chla
+1842,other
+1867,"chla, total_p"
+1873,"chla, total_p"
+1887,"chla, total_p"
+1901,"chla, total_p"
+1909,chla
+1917,"chla, total_p"
+1927,chla
+1932,chla
+1934,chla
+1938,chla
+1978,"chla, total_p"
+1986,"chla, total_p"
+2000,chla
+2002,chla
+2015,chla
+2017,chla
+2029,chla
+2048,"chla, total_p"
+2057,chla
+2062,chla
+2065,chla
+2067,chla
+2075,"chla, total_p"
+2086,chla
+2088,"chla, total_p"
+2095,"chla, total_p"
+2111,chla
+2116,"chla, total_p"
+2118,chla
+2145,chla
+2155,"chla, total_p"
+2164,chla
+2165,chla
+2184,"chla, total_p"
+2190,chla
+2193,other
+2196,chla
+2203,chla
+2234,"chla, total_p"
+2237,chla
+2255,chla
+2256,"chla, total_p"
+2270,chla
+2286,chla
+2289,"chla, total_p"
+2292,chla
+2319,chla
+2329,chla
+2338,"chla, total_p"
+2339,"chla, total_p"
+2347,chla
+2351,chla
+2359,"chla, total_p"
+2376,chla
+2378,"chla, total_p"
+2405,chla
+2421,"chla, total_p"
+2424,other
+2469,chla
+2471,"chla, total_p"
+2483,chla
+2529,"chla, total_p"
+2532,chla
+2537,"chla, total_p"
+2542,"chla, total_p"
+2545,chla
+2572,chla
+2573,"chla, total_p"
+2576,chla
+2584,chla
+2589,chla
+2604,chla
+2606,chla
+2610,chla
+2617,"chla, total_p"
+2648,chla
+2651,"chla, total_p"
+2656,chla
+2657,"chla, total_p"
+2667,chla
+2670,chla
+2680,chla
+2691,chla
+2703,"chla, total_p"
+2709,chla
+2713,chla
+2714,chla
+2718,chla
+2720,"chla, total_p"
+2723,"chla, total_p"
+2736,"chla, total_p"
+2738,chla
+2743,chla
+2752,"chla, total_p"
+2755,chla
+2772,chla
+2780,chla
+2785,chla
+2786,"chla, total_p"
+2787,chla
+2789,"chla, total_p"
+2829,"chla, total_p"
+2846,chla
+2848,"chla, total_p"
+2851,"chla, total_p"
+2855,"chla, total_p"
+2869,"chla, total_p"
+2876,chla
+2935,chla
+2936,chla
+2939,chla
+2952,other
+2961,chla
+2978,chla
+2994,"chla, total_p"
+2995,chla
+3006,chla
+3013,chla
+3015,chla
+3017,chla
+3019,"chla, total_p"
+3024,chla
+3026,"chla, total_p"
+3044,chla
+3053,chla
+3080,"chla, total_p"
+3092,chla
+3108,"chla, total_p"
+3110,chla
+3113,chla
+3114,"chla, total_p"
+3122,chla
+3140,chla
+3150,chla
+3152,"chla, total_p"
+3160,chla
+3169,"chla, total_p"
+3173,chla
+3177,chla
+3186,chla
+3196,chla
+3197,chla
+3205,chla
+3208,chla
+3209,chla
+3214,chla
+3216,chla
+3238,chla
+3244,chla
+3270,"chla, total_p"
+3280,"chla, total_p"
+3307,other
+3316,chla
+3331,chla
+3333,"chla, total_p"
+3343,chla
+3370,"chla, total_p"
+3384,chla
+3386,other
+3387,chla
+3426,"chla, total_p"
+3427,"chla, total_p"
+3431,"chla, total_p"
+3434,chla
+3453,"chla, total_p"
+3482,chla
+3493,"chla, total_p"
+3495,chla
+3497,chla
+3512,"chla, total_p"
+3523,chla
+3524,"chla, total_p"
+3528,chla
+3542,other
+3548,chla
+3561,chla
+3573,chla
+3583,chla
+3636,"chla, total_p"
+3637,other
+3643,other
+3660,"chla, total_p"
+3677,"chla, total_p"
+3686,chla
+3697,chla
+3711,chla
+3753,chla
+3758,chla
+3773,chla
+3777,chla
+3782,chla
+3792,chla
+3801,chla
+3804,"chla, total_p"
+3810,chla
+3834,"chla, total_p"
+3835,chla
+3859,chla
+3860,"chla, total_p"
+3863,chla
+3866,other
+3875,"chla, total_p"
+3880,"chla, total_p"
+3884,"chla, total_p"
+3892,chla
+3924,chla
+3931,"chla, total_p"
+3942,chla
+3943,chla
+3950,chla
+3960,chla
+3964,"chla, total_p"
+3973,chla
+3993,chla
+4002,"chla, total_p"
+4011,chla
+4025,chla
+4052,chla
+4055,chla
+4067,chla
+4098,chla
+4099,chla
+4115,chla
+4131,"chla, total_p"
+4155,chla
+4176,chla
+4178,chla
+4195,chla
+4200,other
+4211,chla
+4240,"chla, total_p"
+4241,"chla, total_p"
+4243,"chla, total_p"
+4244,"chla, total_p"
+4247,"chla, total_p"
+4248,"chla, total_p"
+4251,"chla, total_p"
+4253,"chla, total_p"
+4257,"chla, total_p"
+4259,"chla, total_p"
+4271,"chla, total_p"
+4276,"chla, total_p"
+4280,"chla, total_p"
+4284,"chla, total_p"
+4286,"chla, total_p"
+4292,"chla, total_p"
+4294,"chla, total_p"
+4300,"chla, total_p"
+4302,"chla, total_p"
+4314,"chla, total_p"
+4326,"chla, total_p"
+4335,"chla, total_p"
+4338,"chla, total_p"
+4339,"chla, total_p"
+4340,"chla, total_p"
+4346,"chla, total_p"
+4349,"chla, total_p"
+4351,"chla, total_p"
+4352,"chla, total_p"
+4353,"chla, total_p"
+4355,"chla, total_p"
+4356,"chla, total_p"
+4363,"chla, total_p"
+4369,"chla, total_p"
+4377,"chla, total_p"
+4378,"chla, total_p"
+4385,"chla, total_p"
+4386,"chla, total_p"
+4387,"chla, total_p"
+4389,"chla, total_p"
+4392,"chla, total_p"
+4393,"chla, total_p"
+4394,"chla, total_p"
+4405,"chla, total_p"
+4408,"chla, total_p"
+4414,"chla, total_p"
+4416,"chla, total_p"
+4420,"chla, total_p"
+4422,"chla, total_p"
+4427,"chla, total_p"
+4428,"chla, total_p"
+4432,"chla, total_p"
+4434,"chla, total_p"
+4440,"chla, total_p"
+4441,"chla, total_p"
+4448,"chla, total_p"
+4449,"chla, total_p"
+4458,"chla, total_p"
+4460,"chla, total_p"
+4468,"chla, total_p"
+4471,"chla, total_p"
+4473,"chla, total_p"
+4476,"chla, total_p"
+4478,"chla, total_p"
+4482,"chla, total_p"
+4484,"chla, total_p"
+4485,"chla, total_p"
+4489,"chla, total_p"
+4490,"chla, total_p"
+4494,"chla, total_p"
+4501,"chla, total_p"
+4504,"chla, total_p"
+4510,"chla, total_p"
+4515,"chla, total_p"
+4518,"chla, total_p"
+4521,"chla, total_p"
+4522,"chla, total_p"
+4530,"chla, total_p"
+4532,"chla, total_p"
+4533,"chla, total_p"
+4534,"chla, total_p"
+4538,"chla, total_p"
+4546,"chla, total_p"
+4554,"chla, total_p"
+4560,"chla, total_p"
+4566,"chla, total_p"
+4576,"chla, total_p"
+4584,"chla, total_p"
+4588,"chla, total_p"
+4594,"chla, total_p"
+4608,"chla, total_p"
+4611,"chla, total_p"
+4619,"chla, total_p"
+4621,"chla, total_p"
+4625,"chla, total_p, total_n, np"
+4626,"chla, total_p"
+4627,"chla, total_p"
+4628,"chla, total_p"
+4631,"chla, total_p"
+4632,"chla, total_p"
+4635,"chla, total_p"
+4637,"chla, total_p"
+4642,"chla, total_p"
+4644,"chla, total_p"
+4646,"chla, total_p"
+4648,"chla, total_p"
+4649,"chla, total_p"
+4655,"chla, total_p"
+4664,"chla, total_p, total_n, np"
+4666,"chla, total_p"
+4682,"chla, total_p"
+4686,"chla, total_p"
+4688,"chla, total_p"
+4690,"chla, total_p"
+4691,"chla, total_p"
+4692,"chla, total_p"
+4696,"chla, total_p"
+4709,"chla, total_p"
+4713,"chla, total_p"
+4714,"chla, total_p"
+4715,"chla, total_p"
+4717,"chla, total_p"
+4718,"chla, total_p"
+4722,"chla, total_p, total_n, np"
+4733,"chla, total_p"
+4734,"chla, total_p"
+4735,"chla, total_p"
+4742,"chla, total_p"
+4758,"chla, total_p"
+4771,"chla, total_p"
+4774,"chla, total_p"
+4775,"chla, total_p"
+4780,"chla, total_p"
+4797,"chla, total_p"
+4805,"chla, total_p"
+4815,"chla, total_p"
+4816,"chla, total_p"
+4818,"chla, total_p"
+4819,"chla, total_p"
+4828,"chla, total_p"
+4831,"chla, total_p"
+4836,"chla, total_p"
+4845,"chla, total_p"
+4847,"chla, total_p"
+4848,"chla, total_p"
+4850,"chla, total_p"
+4861,"chla, total_p"
+4862,"chla, total_p"
+4863,"chla, total_p"
+4865,"chla, total_p"
+4867,"chla, total_p"
+4870,"chla, total_p"
+4874,"chla, total_p"
+4881,"chla, total_p"
+4882,"chla, total_p"
+4884,"chla, total_p"
+4886,"chla, total_p"
+4887,"chla, total_p"
+4892,"chla, total_p"
+4895,"chla, total_p"
+4897,"chla, total_p"
+4900,"chla, total_p"
+4902,"chla, total_p"
+4906,"chla, total_p"
+4909,"chla, total_p"
+4922,"chla, total_p"
+4923,"chla, total_p"
+4934,"chla, total_p"
+4935,"chla, total_p"
+4940,"chla, total_p"
+4945,"chla, total_p"
+4946,"chla, total_p"
+4947,"chla, total_p"
+4951,"chla, total_p"
+4952,"chla, total_p"
+4955,"chla, total_p"
+4960,"chla, total_p"
+4962,"chla, total_p"
+4969,"chla, total_p"
+4972,"chla, total_p"
+4978,"chla, total_p"
+4979,chla
+4985,"chla, total_p"
+4989,"chla, total_p"
+4994,"chla, total_p"
+4995,"chla, total_p"
+5002,"chla, total_p"
+5014,"chla, total_p"
+5015,"chla, total_p"
+5017,"chla, total_p"
+5018,"chla, total_p"
+5027,"chla, total_p"
+5032,"chla, total_p"
+5033,"chla, total_p"
+5035,"chla, total_p"
+5036,"chla, total_p"
+5037,"chla, total_p"
+5040,"chla, total_p"
+5041,"chla, total_p"
+5058,"chla, total_p"
+5067,"chla, total_p"
+5072,chla
+5076,"chla, total_p"
+5078,"chla, total_p"
+5085,"chla, total_p"
+5091,"chla, total_p"
+5093,"chla, total_p"
+5104,"chla, total_p"
+5108,"chla, total_p"
+5110,"chla, total_p"
+5111,"chla, total_p"
+5112,"chla, total_p"
+5113,"chla, total_p"
+5114,"chla, total_p"
+5118,"chla, total_p"
+5119,"chla, total_p"
+5120,"chla, total_p"
+5126,"chla, total_p"
+5135,"chla, total_p"
+5136,"chla, total_p"
+5141,"chla, total_p"
+5143,"chla, total_p"
+5145,"chla, total_p"
+5150,"chla, total_p"
+5152,"chla, total_p"
+5159,"chla, total_p"
+5162,"chla, total_p"
+5167,"chla, total_p"
+5168,"chla, total_p"
+5169,"chla, total_p"
+5171,"chla, total_p"
+5175,"chla, total_p"
+5176,"chla, total_p"
+5183,"chla, total_p"
+5187,"chla, total_p"
+5195,"chla, total_p"
+5202,"chla, total_p"
+5205,"chla, total_p"
+5207,"chla, total_p"
+5210,"chla, total_p"
+5211,"chla, total_p"
+5214,"chla, total_p"
+5215,"chla, total_p"
+5224,"chla, total_p"
+5230,"chla, total_p"
+5233,"chla, total_p"
+5236,"chla, total_p"
+5238,"chla, total_p"
+5241,"chla, total_p"
+5247,"chla, total_p"
+5248,"chla, total_p, total_n, np"
+5252,"chla, total_p"
+5261,"chla, total_p"
+5265,"chla, total_p"
+5274,"chla, total_p"
+5275,"chla, total_p"
+5276,"chla, total_p"
+5282,"chla, total_p"
+5286,"chla, total_p"
+5287,"chla, total_p"
+5288,"chla, total_p"
+5290,"chla, total_p"
+5293,"chla, total_p"
+5294,"chla, total_p"
+5295,"chla, total_p"
+5312,"chla, total_p"
+5319,"chla, total_p"
+5320,"chla, total_p"
+5325,"chla, total_p"
+5328,"chla, total_p"
+5329,"chla, total_p"
+5332,"chla, total_p"
+5336,"chla, total_p"
+5337,"chla, total_p"
+5342,"chla, total_p"
+5345,"chla, total_p"
+5367,"chla, total_p"
+5370,"chla, total_p"
+5373,"chla, total_p"
+5374,"chla, total_p"
+5380,"chla, total_p"
+5382,"chla, total_p"
+5383,"chla, total_p"
+5385,"chla, total_p"
+5394,"chla, total_p"
+5397,"chla, total_p"
+5400,"chla, total_p"
+5404,"chla, total_p"
+5405,"chla, total_p"
+5407,"chla, total_p"
+5421,"chla, total_p"
+5424,"chla, total_p"
+5426,"chla, total_p"
+5428,"chla, total_p"
+5429,"chla, total_p"
+5431,"chla, total_p"
+5432,"chla, total_p"
+5435,"chla, total_p"
+5442,"chla, total_p"
+5450,"chla, total_p"
+5453,"chla, total_p"
+5454,"chla, total_p"
+5458,"chla, total_p"
+5463,"chla, total_p"
+5464,"chla, total_p"
+5465,"chla, total_p"
+5467,"chla, total_p"
+5473,"chla, total_p"
+5481,"chla, total_p"
+5490,"chla, total_p"
+5491,"chla, total_p"
+5506,"chla, total_p"
+5509,"chla, total_p"
+5510,"chla, total_p"
+5511,"chla, total_p"
+5512,"chla, total_p"
+5514,"chla, total_p"
+5516,"chla, total_p"
+5523,"chla, total_p"
+5528,"chla, total_p"
+5531,"chla, total_p"
+5536,"chla, total_p"
+5548,"chla, total_p"
+5549,"chla, total_p"
+5550,"chla, total_p"
+5558,"chla, total_p"
+5567,"chla, total_p"
+5572,"chla, total_p"
+5573,"chla, total_p"
+5574,"chla, total_p"
+5575,"chla, total_p"
+5581,"chla, total_p"
+5583,"chla, total_p"
+5723,"chla, total_p, total_n, np"
+5733,"chla, total_p, total_n, np"
+5895,"chla, total_p"
+6058,"chla, total_p, total_n, np"
+6059,"chla, total_p, total_n, np"
+6063,"chla, total_p, total_n, np"
+6065,"chla, total_p, total_n, np"
+6066,"chla, total_p, total_n, np"
+6067,"chla, total_p, total_n, np"
+6068,"chla, total_p, total_n, np"
+6069,"chla, total_p, total_n, np"
+6075,"chla, total_p, total_n, np"
+6076,"chla, total_p, total_n, np"
+6176,"chla, total_p, total_n, np"
+6181,"chla, total_p, total_n, np"
+6190,"chla, total_p, total_n, np"
+6191,"chla, total_p, total_n, np"
+6192,"chla, total_p, total_n, np"
+6196,"chla, total_p, total_n, np"
+6198,"chla, total_p, total_n, np"
+6199,"chla, total_p, total_n, np"
+6201,"chla, total_p, total_n, np"
+6202,"chla, total_p, total_n, np"
+6204,"chla, total_p, total_n, np"
+6208,"chla, total_p, total_n, np"
+6213,"chla, total_p, total_n, np"
+6214,"chla, total_p, total_n, np"
+6217,"chla, total_p, total_n, np"
+6218,"chla, total_p, total_n, np"
+6220,"chla, total_p, total_n, np"
+6221,"chla, total_p, total_n, np"
+6223,"chla, total_p, total_n, np"
+6226,"chla, total_p, total_n, np"
+6227,"chla, total_p, total_n, np"
+6299,"chla, total_p, total_n, np"
+6300,"chla, total_p, total_n, np"
+6301,"chla, total_p, total_n, np"
+6302,"chla, total_p, total_n, np"
+6303,"chla, total_p, total_n, np"
+6339,"chla, total_p"
+6340,"chla, total_p"
+6347,chla
+6383,chla
+6397,"chla, total_p"
+6399,"chla, total_p"
+6404,"chla, total_p, total_n, np"
+6405,"chla, total_p, total_n, np"
+6407,"chla, total_p, total_n, np"
+6408,"chla, total_p"
+6410,"chla, total_p, total_n, np"
+6411,"chla, total_p"
+6412,"chla, total_p"
+6413,"chla, total_p, total_n, np"
+6419,"chla, total_p, total_n, np"
+6420,"chla, total_p"
+6423,"chla, total_p"
+6424,"chla, total_p, total_n, np"
+6425,"chla, total_p"
+6426,"chla, total_p"
+6428,"chla, total_p"
+6432,"chla, total_p"
+6433,"chla, total_p, total_n, np"
+6434,"chla, total_p"
+6436,"chla, total_p"
+6439,"chla, total_p"
+6479,"chla, total_p"
+6480,"chla, total_p, total_n, np"
+6488,"chla, total_p"
+6490,"chla, total_p"
+6492,"chla, total_p"
+6493,"chla, total_p"
+6494,"chla, total_p, total_n, np"
+6499,"chla, total_p"
+6502,"chla, total_p"
+6506,"chla, total_p, total_n, np"
+6507,"chla, total_p, total_n, np"
+6509,"chla, total_p"
+6510,"chla, total_p"
+6519,"chla, total_p"
+6521,"chla, total_p"
+6525,"chla, total_p"
+6529,"chla, total_p"
+6530,"chla, total_p"
+6534,"chla, total_p, total_n, np"
+6537,"chla, total_p, total_n, np"
+6541,"chla, total_p"
+6543,"chla, total_p"
+6546,"chla, total_p"
+6547,"chla, total_p, total_n, np"
+6550,"chla, total_p, total_n, np"
+6552,"chla, total_p, total_n, np"
+6560,"chla, total_p, total_n, np"
+6562,"chla, total_p"
+6832,"chla, total_p"
+6921,"chla, total_p"
+6922,"chla, total_p"
+6949,"chla, total_p"
+6953,"chla, total_p, total_n, np"
+6973,"chla, total_p"
+6976,"chla, total_p"
+7040,"chla, total_p"
+7063,"chla, total_p"
+7119,"chla, total_p, total_n, np"
+7124,"chla, total_p"
+7125,"chla, total_p"
+7126,"chla, total_p, total_n, np"
+7127,"chla, total_p, total_n, np"
+7128,"chla, total_p, total_n, np"
+7135,"chla, total_p"
+7149,"chla, total_p"
+7150,"chla, total_p"
+7151,"chla, total_p"
+7156,"chla, total_p"
+7160,"chla, total_p, total_n, np"
+7164,"chla, total_p"
+7168,"chla, total_p, total_n, np"
+7169,"chla, total_p"
+7171,"chla, total_p"
+7173,"chla, total_p, total_n, np"
+7382,"chla, total_p"
+7402,"chla, total_p"
+7461,"chla, total_p, total_n, np"
+7462,"chla, total_p, total_n, np"
+7477,"chla, total_p"
+7489,"chla, total_p"
+7496,"chla, total_p, total_n, np"
+7504,"chla, total_p"
+7519,"chla, total_p"
+7521,"chla, total_p"
+7523,"chla, total_p"
+7527,"chla, total_p"
+7531,"chla, total_p"
+7534,"chla, total_p"
+7539,"chla, total_p"
+7540,"chla, total_p, total_n, np"
+7541,"chla, total_p, total_n, np"
+7544,"chla, total_p, total_n, np"
+7545,"chla, total_p, total_n, np"
+7554,"chla, total_p"
+7565,"chla, total_p"
+7567,"chla, total_p"
+7575,"chla, total_p"
+7592,"chla, total_p, total_n, np"
+7593,"chla, total_p, total_n, np"
+7594,"chla, total_p"
+7595,"chla, total_p, total_n, np"
+7596,"chla, total_p, total_n, np"
+7597,"chla, total_p, total_n, np"
+7598,"chla, total_p, total_n, np"
+7606,"chla, total_p"
+7615,"chla, total_p"
+7637,"chla, total_p"
+7643,"chla, total_p"
+7660,"chla, total_p"
+7664,"chla, total_p"
+7676,"chla, total_p"
+7695,"chla, total_p, total_n, np"
+7726,"chla, total_p"
+7733,"chla, total_p"
+7753,"chla, total_p"
+7773,"chla, total_p"
+7776,"chla, total_p"
+7782,"chla, total_p"
+7785,"chla, total_p, total_n, np"
+7787,"chla, total_p, total_n, np"
+7789,"chla, total_p, total_n, np"
+7790,"chla, total_p, total_n, np"
+7791,"chla, total_p, total_n, np"
+7792,"chla, total_p, total_n, np"
+7801,"chla, total_p"
+7810,"chla, total_p"
+7811,"chla, total_p"
+7816,"chla, total_p"
+7834,"chla, total_p"
+7835,"chla, total_p"
+7856,"chla, total_p"
+7872,"chla, total_p"
+7881,"chla, total_p"
+7886,"chla, total_p"
+7892,"chla, total_p"
+7904,"chla, total_p"
+7905,"chla, total_p"
+7921,"chla, total_p"
+7934,"chla, total_p"
+7964,"chla, total_p, total_n, np"
+7965,"chla, total_p, total_n, np"
+7966,"chla, total_p, total_n, np"
+7969,"chla, total_p, total_n, np"
+7970,"chla, total_p, total_n, np"
+7975,"chla, total_p"
+7979,"chla, total_p"
+8018,"chla, total_p"
+8021,"chla, total_p"
+8037,"chla, total_p"
+8048,"chla, total_p"
+8057,"chla, total_p, total_n, np"
+8065,"chla, total_p, total_n, np"
+8072,"chla, total_p"
+8075,"chla, total_p"
+8116,"chla, total_p"
+8134,"chla, total_p"
+8144,"chla, total_p"
+8158,"chla, total_p"
+8179,"chla, total_p"
+8205,"chla, total_p"
+8206,"chla, total_p"
+8213,"chla, total_p"
+8217,"chla, total_p"
+8223,"chla, total_p"
+8245,"chla, total_p"
+8252,"chla, total_p"
+8271,"chla, total_p, total_n, np"
+8272,"chla, total_p, total_n, np"
+8274,"chla, total_p, total_n, np"
+8275,"chla, total_p, total_n, np"
+8277,"chla, total_p, total_n, np"
+8278,"chla, total_p, total_n, np"
+8280,"chla, total_p"
+8281,"chla, total_p, total_n, np"
+8282,"chla, total_p, total_n, np"
+8286,"chla, total_p, total_n, np"
+8289,"chla, total_p, total_n, np"
+8291,"chla, total_p, total_n, np"
+8292,"chla, total_p, total_n, np"
+8293,"chla, total_p, total_n, np"
+8294,"chla, total_p, total_n, np"
+8304,"chla, total_p, total_n, np"
+8305,"chla, total_p, total_n, np"
+8306,"chla, total_p, total_n, np"
+8308,"chla, total_p, total_n, np"
+8312,"chla, total_p, total_n, np"
+8313,"chla, total_p"
+8320,"chla, total_p, total_n, np"
+8322,"chla, total_p"
+8325,"chla, total_p"
+8326,"chla, total_p"
+8329,"chla, total_p"
+8333,"chla, total_p, total_n, np"
+8339,"chla, total_p"
+8354,"chla, total_p, total_n, np"
+8365,"chla, total_p, total_n, np"
+8366,"chla, total_p"
+8369,"chla, total_p"
+8394,"chla, total_p"
+8396,"chla, total_p"
+8403,"chla, total_p"
+8405,"chla, total_p"
+8410,"chla, total_p"
+8412,"chla, total_p"
+8416,"chla, total_p"
+8423,"chla, total_p"
+8424,"chla, total_p"
+8425,"chla, total_p"
+8427,"chla, total_p"
+8428,"chla, total_p"
+8436,"chla, total_p"
+8444,"chla, total_p"
+8461,"chla, total_p"
+8483,"chla, total_p"
+8503,"chla, total_p"
+8510,"chla, total_p"
+8513,"chla, total_p"
+8601,chla
+8809,chla
+9249,"chla, total_p"
+9883,chla
+9914,chla
+11095,"chla, total_p, total_n, np"
+11789,chla
+13493,"chla, total_p"
+14815,other
+15860,chla
+15979,"chla, total_p, total_n, np"
+18261,"chla, total_p, total_n, np"
+18632,"chla, total_p"
+19013,chla
+19016,chla
+19019,chla
+19307,chla
+20012,chla
+22456,chla
+23286,chla
+25348,chla
+25980,"chla, total_p, total_n, np"
+26412,chla
+27482,chla
+27690,chla
+28836,"chla, total_p, total_n, np"
+30918,"chla, total_p, total_n, np"
+31567,chla
+33602,other
+34974,chla
+35142,"chla, total_p"
+35414,chla
+36121,"chla, total_p, total_n, np"
+36541,"chla, total_p"
+36738,chla
+36762,chla
+38705,"chla, total_p"
+38846,chla
+38853,chla
+39489,"chla, total_p, total_n, np"
+40044,chla
+40062,chla
+40387,"chla, total_p, total_n, np"
+40610,"chla, total_p, total_n, np"
+40741,"chla, total_p"
+41151,chla
+41352,chla
+42204,chla
+42225,chla
+43198,chla
+43282,chla
+43496,chla
+43937,"chla, total_p"
+45308,chla
+46662,"chla, total_p, total_n, np"
+47286,chla
+47359,chla
+49438,chla
+49938,"chla, total_p, total_n, np"
+50464,chla
+51459,chla
+51486,chla
+52808,"chla, total_p, total_n, np"
+53306,"chla, total_p"
+54660,chla
+55007,"chla, total_p, total_n, np"
+55346,"chla, total_p"
+55528,chla
+57638,chla
+57641,chla
+57681,chla
+57855,"chla, total_p, total_n, np"
+58763,chla
+58773,chla
+59708,chla
+59748,chla
+60086,"chla, total_p, total_n, np"
+60740,chla
+60742,chla
+60753,chla
+62864,chla
+63895,chla
+63910,chla
+64981,chla
+65957,chla
+66241,chla
+66962,chla
+67777,"chla, total_p"
+68075,chla
+68332,chla
+68958,chla
+69085,chla
+71100,chla
+72641,"chla, total_p"
+73826,chla
+74438,chla
+74509,"chla, total_p, total_n, np"
+74894,"chla, total_p"
+76191,chla
+76283,chla
+77315,chla
+78447,chla
+78634,"chla, total_p, total_n, np"
+79451,chla
+79457,chla
+79488,chla
+80721,"chla, total_p, total_n, np"
+82971,"chla, total_p, total_n, np"
+85738,chla
+85792,chla
+85795,chla
+86932,"chla, total_p, total_n, np"
+87838,chla
+88095,"chla, total_p, total_n, np"
+88833,chla
+88857,chla
+88924,chla
+88977,chla
+90332,"chla, total_p, total_n, np"
+91948,chla
+91980,chla
+92026,chla
+93982,chla
+93999,chla
+94401,"chla, total_p, total_n, np"
+94414,"chla, total_p, total_n, np"
+94983,chla
+95013,chla
+96015,other
+96122,chla
+96694,"chla, total_p"
+97720,"chla, total_p"
+97872,"chla, total_p"
+98420,chla
+99111,chla
+99307,"chla, total_p, total_n, np"
+99424,chla
+99428,chla
+101148,chla
+101152,chla
+101893,"chla, total_p"
+102115,chla
+102216,chla
+103201,chla
+107309,chla
+107336,chla
+107343,chla
+107503,"chla, total_p, total_n, np"
+110327,other
+110678,chla
+110696,chla
+112486,chla
+112493,chla
+112550,chla
+113483,chla
+113702,"chla, total_p, total_n, np"
+115040,"chla, total_p, total_n, np"
+115878,chla
+117610,chla
+117631,chla
+118786,chla
+118966,chla
+119767,chla
+120792,chla
+121869,chla
+121982,chla
+122517,"chla, total_p, total_n, np"
+122639,"chla, total_p"
+123003,chla
+123972,other
+124012,chla
+124017,chla
+124029,chla
+125428,"chla, total_p, total_n, np"
+126047,chla
+127099,chla
+127344,chla
+128328,chla
+129509,chla
+130135,"chla, total_p, total_n, np"
+130559,chla
+132581,chla
+133500,"chla, total_p, total_n, np"
+133710,chla
+134415,chla
+134511,"chla, total_p, total_n, np"
+134664,other
+134680,chla
+134691,chla
+135373,chla
+135681,chla
+136008,"chla, total_p"
+136311,"chla, total_p, total_n, np"
+136466,"chla, total_p, total_n, np"
+136680,chla
+136690,chla
+137300,"chla, total_p, total_n, np"
+137783,chla
+139707,chla
+139765,chla
+140838,chla
+495,other
+817,other
+823,other
+827,other
+831,other
+865,other
+909,other
+968,other
+1028,other
+1078,other
+1204,other
+1211,other
+1343,other
+1362,other
+1458,other
+1677,other
+1792,other
+1846,other
+1906,other
+1935,other
+2058,other
+2066,other
+2276,other
+2360,other
+2409,other
+2411,other
+2646,other
+2678,other
+2717,other
+2746,"total_p, total_n"
+2878,other
+3191,other
+3206,other
+3231,other
+3409,other
+3445,other
+3508,other
+3628,other
+3840,other
+3928,other
+3963,other
+3982,other
+4070,other
+4077,other
+4202,other
+4249,other
+4274,other
+4283,other
+4295,other
+4307,other
+4309,other
+4320,other
+4376,other
+4390,other
+4444,other
+4463,other
+4467,other
+4469,other
+4539,other
+4541,other
+4556,other
+4559,other
+4589,other
+4590,other
+4650,other
+4671,other
+4711,other
+4720,other
+4846,other
+4868,other
+4878,other
+4904,other
+4931,other
+4957,other
+5063,other
+5092,other
+5106,other
+5138,other
+5164,other
+5170,other
+5199,other
+5257,other
+5284,other
+5311,other
+5323,other
+5359,other
+5371,other
+5417,other
+5434,other
+5501,other
+5502,other
+5520,other
+5527,other
+5589,other
+5590,other
+5591,other
+5592,other
+5593,other
+5596,other
+5598,other
+5599,other
+5600,other
+5602,other
+5608,other
+5610,other
+5620,other
+5625,other
+5639,other
+5645,other
+5649,other
+5653,other
+5660,other
+5661,other
+5665,other
+5669,other
+5674,other
+5687,other
+5688,other
+5690,other
+5691,other
+5692,other
+5698,other
+5708,other
+5710,other
+5712,other
+5713,other
+5715,other
+5720,other
+5729,other
+5735,other
+5736,other
+5741,other
+5750,other
+5754,other
+5760,other
+5763,other
+5766,other
+5767,other
+5768,other
+5769,other
+5774,other
+5775,other
+5779,other
+5782,other
+5784,other
+5785,other
+5786,other
+5790,other
+5805,other
+5806,other
+5812,other
+5845,other
+5847,other
+5848,other
+5849,other
+5854,other
+5857,other
+5872,other
+5873,other
+5874,other
+5880,other
+5882,other
+5889,other
+5899,other
+5901,other
+5909,other
+5921,other
+5938,other
+5946,other
+5949,other
+5950,other
+5951,other
+5959,other
+5961,other
+5965,other
+5969,other
+5980,other
+5984,other
+5987,other
+5990,other
+5991,other
+5992,other
+6000,other
+6004,other
+6008,other
+6012,other
+6017,other
+6021,other
+6026,other
+6030,other
+6035,other
+6036,other
+6038,other
+6040,other
+6051,other
+6052,other
+6054,other
+6079,other
+6090,other
+6092,other
+6093,other
+6094,other
+6107,other
+6110,other
+6112,other
+6133,other
+6136,other
+6138,other
+6143,other
+6147,other
+6162,other
+6169,other
+6172,other
+6173,other
+6234,other
+6236,other
+6248,other
+6254,other
+6258,other
+6260,other
+6267,other
+6279,other
+6284,other
+6287,other
+6293,other
+6307,other
+6314,other
+6315,other
+6322,other
+6324,other
+6329,other
+6332,other
+6334,other
+7467,other
+7491,other
+7495,other
+7506,other
+7516,other
+7602,other
+7809,other
+7843,other
+7845,other
+7860,other
+7865,other
+7879,other
+7910,other
+7916,other
+7947,other
+7973,other
+7992,other
+8023,other
+8042,other
+8145,other
+8247,other
+8300,other
+8332,other
+8395,other
+8397,other
+8408,other
+8413,other
+8475,other
+8481,other
+8506,other
+10987,"total_p, total_n"
+15557,other
+17360,other
+18371,other
+34377,other
+36107,"total_p, total_n"
+38285,"total_p, total_n"
+45986,other
+71790,other
+89690,other
+95774,other
+97845,other
+120948,"total_p, total_n"
+127638,other
+128798,other
+136303,"total_p, total_n"
+138062,other
+139057,other
+466,other
