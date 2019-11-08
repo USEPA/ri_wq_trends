@@ -14,21 +14,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
 
 ## What drives changes in lake productivity?
-::::::::::::::{.columns}
-:::{.column}
+
 - Nutrients
 - Temperature
 - Other things
-:::
-:::{.column}
 
 ![](figures/es-2016-02575v_0006.jpeg)
 
 ![](figures/tn_tp_chla_plot.jpg)
 
 ![](figures/temp_chla_plot.jpg)
-:::
-::::::::::::::
+
 
 ## The management problem
 
@@ -68,6 +64,7 @@ chlorophyll trends since 1990. Global Change Biology. DOI: 10.1111/gcb.13810
 - Data used by RI DEM and US EPA
 
 ![](figures/WW-Logo1.gif)
+
 ## URI Watersehd Watch: Lake Sampling
 
 - May to October
