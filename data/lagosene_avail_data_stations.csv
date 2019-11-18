@@ -21,7 +21,7 @@ station_name,params_avail
 418,"chla, total_p"
 429,chla
 436,chla
-447,other
+447,"chla, total_n"
 452,chla
 454,chla
 474,chla
@@ -49,7 +49,7 @@ station_name,params_avail
 644,"chla, total_p, total_n, np"
 648,"chla, total_p"
 676,"chla, total_p"
-678,other
+678,"chla, total_n"
 685,chla
 700,chla
 704,chla
@@ -59,7 +59,7 @@ station_name,params_avail
 745,"chla, total_p"
 749,chla
 750,"chla, total_p"
-765,other
+765,"chla, total_n"
 766,chla
 770,chla
 781,chla
@@ -70,7 +70,7 @@ station_name,params_avail
 824,"chla, total_p"
 834,"chla, total_p"
 838,"chla, total_p"
-843,other
+843,"chla, total_n"
 847,"chla, total_p"
 857,chla
 858,"chla, total_p"
@@ -95,7 +95,7 @@ station_name,params_avail
 1030,"chla, total_p"
 1041,"chla, total_p"
 1043,"chla, total_p"
-1048,other
+1048,"chla, total_n"
 1054,"chla, total_p"
 1060,chla
 1080,chla
@@ -143,7 +143,7 @@ station_name,params_avail
 1545,"chla, total_p, total_n, np"
 1570,"chla, total_p"
 1572,chla
-1590,other
+1590,"chla, total_n"
 1591,chla
 1610,chla
 1618,chla
@@ -157,11 +157,11 @@ station_name,params_avail
 1672,"chla, total_p, total_n, np"
 1675,chla
 1678,"chla, total_p"
-1696,other
+1696,"chla, total_n"
 1703,chla
 1746,chla
 1762,chla
-1764,other
+1764,"chla, total_n"
 1768,"chla, total_p"
 1772,"chla, total_p"
 1777,"chla, total_p"
@@ -172,7 +172,7 @@ station_name,params_avail
 1818,"chla, total_p"
 1823,"chla, total_p"
 1826,chla
-1842,other
+1842,"chla, total_n"
 1867,"chla, total_p"
 1873,"chla, total_p"
 1887,"chla, total_p"
@@ -208,7 +208,7 @@ station_name,params_avail
 2165,chla
 2184,"chla, total_p"
 2190,chla
-2193,other
+2193,"chla, total_n"
 2196,chla
 2203,chla
 2234,"chla, total_p"
@@ -230,7 +230,7 @@ station_name,params_avail
 2378,"chla, total_p"
 2405,chla
 2421,"chla, total_p"
-2424,other
+2424,"chla, total_n"
 2469,chla
 2471,"chla, total_p"
 2483,chla
@@ -284,7 +284,7 @@ station_name,params_avail
 2935,chla
 2936,chla
 2939,chla
-2952,other
+2952,"chla, total_n"
 2961,chla
 2978,chla
 2994,"chla, total_p"
@@ -324,14 +324,14 @@ station_name,params_avail
 3244,chla
 3270,"chla, total_p"
 3280,"chla, total_p"
-3307,other
+3307,"chla, total_n"
 3316,chla
 3331,chla
 3333,"chla, total_p"
 3343,chla
 3370,"chla, total_p"
 3384,chla
-3386,other
+3386,"chla, total_n"
 3387,chla
 3426,"chla, total_p"
 3427,"chla, total_p"
@@ -346,14 +346,14 @@ station_name,params_avail
 3523,chla
 3524,"chla, total_p"
 3528,chla
-3542,other
+3542,"chla, total_n"
 3548,chla
 3561,chla
 3573,chla
 3583,chla
 3636,"chla, total_p"
-3637,other
-3643,other
+3637,"chla, total_n"
+3643,"chla, total_n"
 3660,"chla, total_p"
 3677,"chla, total_p"
 3686,chla
@@ -373,7 +373,7 @@ station_name,params_avail
 3859,chla
 3860,"chla, total_p"
 3863,chla
-3866,other
+3866,"chla, total_n"
 3875,"chla, total_p"
 3880,"chla, total_p"
 3884,"chla, total_p"
@@ -401,7 +401,7 @@ station_name,params_avail
 4176,chla
 4178,chla
 4195,chla
-4200,other
+4200,"chla, total_n"
 4211,chla
 4240,"chla, total_p"
 4241,"chla, total_p"
@@ -1006,7 +1006,7 @@ station_name,params_avail
 11095,"chla, total_p, total_n, np"
 11789,chla
 13493,"chla, total_p"
-14815,other
+14815,"chla, total_n"
 15860,chla
 15979,"chla, total_p, total_n, np"
 18261,"chla, total_p, total_n, np"
@@ -1026,7 +1026,7 @@ station_name,params_avail
 28836,"chla, total_p, total_n, np"
 30918,"chla, total_p, total_n, np"
 31567,chla
-33602,other
+33602,"chla, total_n"
 34974,chla
 35142,"chla, total_p"
 35414,chla
@@ -1126,7 +1126,7 @@ station_name,params_avail
 94414,"chla, total_p, total_n, np"
 94983,chla
 95013,chla
-96015,other
+96015,"chla, total_n"
 96122,chla
 96694,"chla, total_p"
 97720,"chla, total_p"
@@ -1146,7 +1146,7 @@ station_name,params_avail
 107336,chla
 107343,chla
 107503,"chla, total_p, total_n, np"
-110327,other
+110327,"chla, total_n"
 110678,chla
 110696,chla
 112486,chla
@@ -1167,7 +1167,7 @@ station_name,params_avail
 122517,"chla, total_p, total_n, np"
 122639,"chla, total_p"
 123003,chla
-123972,other
+123972,"chla, total_n"
 124012,chla
 124017,chla
 124029,chla
@@ -1184,7 +1184,7 @@ station_name,params_avail
 133710,chla
 134415,chla
 134511,"chla, total_p, total_n, np"
-134664,other
+134664,"chla, total_n"
 134680,chla
 134691,chla
 135373,chla
@@ -1199,285 +1199,285 @@ station_name,params_avail
 139707,chla
 139765,chla
 140838,chla
-495,other
-817,other
-823,other
-827,other
-831,other
-865,other
-909,other
-968,other
-1028,other
-1078,other
-1204,other
-1211,other
-1343,other
-1362,other
-1458,other
-1677,other
-1792,other
-1846,other
-1906,other
-1935,other
-2058,other
-2066,other
-2276,other
-2360,other
-2409,other
-2411,other
-2646,other
-2678,other
-2717,other
+495,total_p
+817,total_p
+823,total_p
+827,total_p
+831,total_p
+865,total_p
+909,total_p
+968,total_p
+1028,total_p
+1078,total_p
+1204,total_p
+1211,total_p
+1343,total_p
+1362,total_p
+1458,total_p
+1677,total_p
+1792,total_p
+1846,total_p
+1906,total_p
+1935,total_p
+2058,total_p
+2066,total_p
+2276,total_p
+2360,total_p
+2409,total_p
+2411,total_p
+2646,total_p
+2678,total_p
+2717,total_p
 2746,"total_p, total_n"
-2878,other
-3191,other
-3206,other
-3231,other
-3409,other
-3445,other
-3508,other
-3628,other
-3840,other
-3928,other
-3963,other
-3982,other
-4070,other
-4077,other
-4202,other
-4249,other
-4274,other
-4283,other
-4295,other
-4307,other
-4309,other
-4320,other
-4376,other
-4390,other
-4444,other
-4463,other
-4467,other
-4469,other
-4539,other
-4541,other
-4556,other
-4559,other
-4589,other
-4590,other
-4650,other
-4671,other
-4711,other
-4720,other
-4846,other
-4868,other
-4878,other
-4904,other
-4931,other
-4957,other
-5063,other
-5092,other
-5106,other
-5138,other
-5164,other
-5170,other
-5199,other
-5257,other
-5284,other
-5311,other
-5323,other
-5359,other
-5371,other
-5417,other
-5434,other
-5501,other
-5502,other
-5520,other
-5527,other
-5589,other
-5590,other
-5591,other
-5592,other
-5593,other
-5596,other
-5598,other
-5599,other
-5600,other
-5602,other
-5608,other
-5610,other
-5620,other
-5625,other
-5639,other
-5645,other
-5649,other
-5653,other
-5660,other
-5661,other
-5665,other
-5669,other
-5674,other
-5687,other
-5688,other
-5690,other
-5691,other
-5692,other
-5698,other
-5708,other
-5710,other
-5712,other
-5713,other
-5715,other
-5720,other
-5729,other
-5735,other
-5736,other
-5741,other
-5750,other
-5754,other
-5760,other
-5763,other
-5766,other
-5767,other
-5768,other
-5769,other
-5774,other
-5775,other
-5779,other
-5782,other
-5784,other
-5785,other
-5786,other
-5790,other
-5805,other
-5806,other
-5812,other
-5845,other
-5847,other
-5848,other
-5849,other
-5854,other
-5857,other
-5872,other
-5873,other
-5874,other
-5880,other
-5882,other
-5889,other
-5899,other
-5901,other
-5909,other
-5921,other
-5938,other
-5946,other
-5949,other
-5950,other
-5951,other
-5959,other
-5961,other
-5965,other
-5969,other
-5980,other
-5984,other
-5987,other
-5990,other
-5991,other
-5992,other
-6000,other
-6004,other
-6008,other
-6012,other
-6017,other
-6021,other
-6026,other
-6030,other
-6035,other
-6036,other
-6038,other
-6040,other
-6051,other
-6052,other
-6054,other
-6079,other
-6090,other
-6092,other
-6093,other
-6094,other
-6107,other
-6110,other
-6112,other
-6133,other
-6136,other
-6138,other
-6143,other
-6147,other
-6162,other
-6169,other
-6172,other
-6173,other
-6234,other
-6236,other
-6248,other
-6254,other
-6258,other
-6260,other
-6267,other
-6279,other
-6284,other
-6287,other
-6293,other
-6307,other
-6314,other
-6315,other
-6322,other
-6324,other
-6329,other
-6332,other
-6334,other
-7467,other
-7491,other
-7495,other
-7506,other
-7516,other
-7602,other
-7809,other
-7843,other
-7845,other
-7860,other
-7865,other
-7879,other
-7910,other
-7916,other
-7947,other
-7973,other
-7992,other
-8023,other
-8042,other
-8145,other
-8247,other
-8300,other
-8332,other
-8395,other
-8397,other
-8408,other
-8413,other
-8475,other
-8481,other
-8506,other
+2878,total_p
+3191,total_p
+3206,total_p
+3231,total_p
+3409,total_p
+3445,total_p
+3508,total_p
+3628,total_p
+3840,total_p
+3928,total_p
+3963,total_p
+3982,total_p
+4070,total_p
+4077,total_p
+4202,total_p
+4249,total_p
+4274,total_p
+4283,total_p
+4295,total_p
+4307,total_p
+4309,total_p
+4320,total_p
+4376,total_p
+4390,total_p
+4444,total_p
+4463,total_p
+4467,total_p
+4469,total_p
+4539,total_p
+4541,total_p
+4556,total_p
+4559,total_p
+4589,total_p
+4590,total_p
+4650,total_p
+4671,total_p
+4711,total_p
+4720,total_p
+4846,total_p
+4868,total_p
+4878,total_p
+4904,total_p
+4931,total_p
+4957,total_p
+5063,total_p
+5092,total_p
+5106,total_p
+5138,total_p
+5164,total_p
+5170,total_p
+5199,total_p
+5257,total_p
+5284,total_p
+5311,total_p
+5323,total_p
+5359,total_p
+5371,total_p
+5417,total_p
+5434,total_p
+5501,total_p
+5502,total_p
+5520,total_p
+5527,total_p
+5589,total_p
+5590,total_p
+5591,total_p
+5592,total_p
+5593,total_p
+5596,total_p
+5598,total_p
+5599,total_p
+5600,total_p
+5602,total_p
+5608,total_p
+5610,total_p
+5620,total_p
+5625,total_p
+5639,total_p
+5645,total_p
+5649,total_p
+5653,total_p
+5660,total_p
+5661,total_p
+5665,total_p
+5669,total_p
+5674,total_p
+5687,total_p
+5688,total_p
+5690,total_p
+5691,total_p
+5692,total_p
+5698,total_p
+5708,total_p
+5710,total_p
+5712,total_p
+5713,total_p
+5715,total_p
+5720,total_p
+5729,total_p
+5735,total_p
+5736,total_p
+5741,total_p
+5750,total_p
+5754,total_p
+5760,total_p
+5763,total_p
+5766,total_p
+5767,total_p
+5768,total_p
+5769,total_p
+5774,total_p
+5775,total_p
+5779,total_p
+5782,total_p
+5784,total_p
+5785,total_p
+5786,total_p
+5790,total_p
+5805,total_p
+5806,total_p
+5812,total_p
+5845,total_p
+5847,total_p
+5848,total_p
+5849,total_p
+5854,total_p
+5857,total_p
+5872,total_p
+5873,total_p
+5874,total_p
+5880,total_p
+5882,total_p
+5889,total_p
+5899,total_p
+5901,total_p
+5909,total_p
+5921,total_p
+5938,total_p
+5946,total_p
+5949,total_p
+5950,total_p
+5951,total_p
+5959,total_p
+5961,total_p
+5965,total_p
+5969,total_p
+5980,total_p
+5984,total_p
+5987,total_p
+5990,total_p
+5991,total_p
+5992,total_p
+6000,total_p
+6004,total_p
+6008,total_p
+6012,total_p
+6017,total_p
+6021,total_p
+6026,total_p
+6030,total_p
+6035,total_p
+6036,total_p
+6038,total_p
+6040,total_p
+6051,total_p
+6052,total_p
+6054,total_p
+6079,total_p
+6090,total_p
+6092,total_p
+6093,total_p
+6094,total_p
+6107,total_p
+6110,total_p
+6112,total_p
+6133,total_p
+6136,total_p
+6138,total_p
+6143,total_p
+6147,total_p
+6162,total_p
+6169,total_p
+6172,total_p
+6173,total_p
+6234,total_p
+6236,total_p
+6248,total_p
+6254,total_p
+6258,total_p
+6260,total_p
+6267,total_p
+6279,total_p
+6284,total_p
+6287,total_p
+6293,total_p
+6307,total_p
+6314,total_p
+6315,total_p
+6322,total_p
+6324,total_p
+6329,total_p
+6332,total_p
+6334,total_p
+7467,total_p
+7491,total_p
+7495,total_p
+7506,total_p
+7516,total_p
+7602,total_p
+7809,total_p
+7843,total_p
+7845,total_p
+7860,total_p
+7865,total_p
+7879,total_p
+7910,total_p
+7916,total_p
+7947,total_p
+7973,total_p
+7992,total_p
+8023,total_p
+8042,total_p
+8145,total_p
+8247,total_p
+8300,total_p
+8332,total_p
+8395,total_p
+8397,total_p
+8408,total_p
+8413,total_p
+8475,total_p
+8481,total_p
+8506,total_p
 10987,"total_p, total_n"
-15557,other
-17360,other
-18371,other
-34377,other
+15557,total_p
+17360,total_p
+18371,total_p
+34377,total_p
 36107,"total_p, total_n"
 38285,"total_p, total_n"
-45986,other
-71790,other
-89690,other
-95774,other
-97845,other
+45986,total_p
+71790,total_p
+89690,total_p
+95774,total_p
+97845,total_p
 120948,"total_p, total_n"
-127638,other
-128798,other
+127638,total_p
+128798,total_p
 136303,"total_p, total_n"
-138062,other
-139057,other
-466,other
+138062,total_p
+139057,total_p
+466,total_n
