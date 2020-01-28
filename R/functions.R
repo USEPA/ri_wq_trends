@@ -90,14 +90,15 @@ wq_trend_gg <- function(df, wqparam,
     slice(2) %>%
     select(slope = estimate, p.value) 
   
+  
   gg <- ggplot(df2,aes(x = year, y = mn_value)) + 
     geom_pointrange(aes(ymin=mn_value-!!error_bar, ymax=mn_value+!!error_bar, 
                         color = col_group), size = 1, fatten = 1.75) +
     #geom_point(aes(color = col_group), size=3.5) +
     geom_smooth(method = "lm", se=FALSE, color = "black") +
     theme_ipsum() +
-    labs(..., title = title, subtitle = paste0("slope: ", signif(regress$slope,2),
-                             " p-value: ", signif(regress$p.value, 2))) +
+    labs(..., title = title, subtitle = paste0("slope = ", signif(regress$slope,2),
+                             " p = ", signif(regress$p.value, 2))) +
     scale_color_manual(values = c("red3","darkblue")) + 
     theme(legend.position="none", 
           plot.title = element_text(size = 12, face = "bold"),
