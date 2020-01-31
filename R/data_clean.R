@@ -152,6 +152,12 @@ ww_np <- ww_lake_trend_data %>%
 ww_lake_trend_data <- ww_lake_trend_data %>%
   rbind(ww_np)
 
+# Almy Pond, 2016-07-23, Sample likely contaminated with bottom sediment per notes in data
+# Removed from analysis
+idx <- ww_lake_trend_data$year == "2016" & ww_lake_trend_data$month == 7 & ww_lake_trend_data$day == 23 & ww_lake_trend_data$station_name == "WW199"
+idx <- !idx
+ww_lake_trend_data <- ww_lake_trend_data %>% 
+  filter(idx)
   
 ww_lake_trend_data <- ww_lake_trend_data %>%
   filter(month >= 5 & month <= 10) %>%

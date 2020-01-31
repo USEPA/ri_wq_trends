@@ -59,6 +59,7 @@ wq_trend_gg <- function(df, wqparam,
                         yvar = c("measurement_anmly","measurement_scale"), 
                         num_yrs = 10, write = NULL, title = "",
                         start_yr = 1993, error_bar = c("se", "sd"), ...){
+  
   yvar <- rlang::sym(match.arg(yvar))
   error_bar <- rlang::sym(match.arg(error_bar))
   
@@ -90,13 +91,23 @@ wq_trend_gg <- function(df, wqparam,
     slice(2) %>%
     select(slope = estimate, p.value) 
   
+  #Calc y-axis ranges
+  if(yvar == "measurement_scale"){
+    label_break <- c(-2,-1,0,1,2)
+    limits <- c(-2.75, 2.75)
+  } else if(yvar == "measurement_anmly"){
+    limit<-max(abs(c(floor(min(df2$mn_value - df2[[error_bar]])), 
+                     ceiling(max(df2$mn_value + df2[[error_bar]])))))
+    label_break <- c(-limit, -limit/2, 0, limit/2, limit)
+    limits <- c(-limit,limit)
+  }
   
   gg <- ggplot(df2,aes(x = year, y = mn_value)) + 
     geom_pointrange(aes(ymin=mn_value-!!error_bar, ymax=mn_value+!!error_bar, 
                         color = col_group), size = 1, fatten = 1.75) +
     #geom_point(aes(color = col_group), size=3.5) +
     geom_smooth(method = "lm", se=FALSE, color = "black") +
-    theme_ipsum() +
+    theme_ipsum_rc() +
     labs(..., title = title, subtitle = paste0("slope = ", signif(regress$slope,2),
                              " p = ", signif(regress$p.value, 2))) +
     scale_color_manual(values = c("red3","darkblue")) + 
@@ -107,9 +118,9 @@ wq_trend_gg <- function(df, wqparam,
                        breaks = c(1990,1995,2000,2005,2010,2015),
                        minor_breaks = NULL,
                        limits = c(1993,2016)) +
-    scale_y_continuous(labels = c(-2, -1, 0, 1, 2),
-                       breaks = c(-2, -1, 0, 1, 2),
-                       limits = c(-2.75, 2.75))
+    scale_y_continuous(labels = label_break,
+                       breaks = label_break,
+                       limits = limits)
   
   list(gg, kt, df2, regress)
 }
