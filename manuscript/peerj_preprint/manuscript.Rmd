@@ -56,7 +56,7 @@ For this study, we combined a long-term dataset on water quality of lakes in Rho
 The study area for this analysis includes lakes and reservoirs in the state of Rhode Island where data were collected by the University of Rhode Island's Watershed Watch program (`r fig_num("ww_map", display = "cite", caption = "Map of URI Watershed Watch lake and reservoir sampling sites")`).  The URIWW program began in 1988, monitoring 14 lakes and has now grown to include over 250 monitoring sites on over 120 waterbodies, including rivers/streams, and estuaries, with more than 400 trained volunteers. URIWW now provides more than 90% of Rhode Island's lake baseline data and is an integral part of the state's environmental data collection strategy. Data quality assurance and control is treated with paramount importance; volunteers are trained both in the classroom and the field, regular quality checks occur, and volunteers are provided with all the necessary equipment and supplies, along with scheduled collection dates. For freshwater lakes and reservoirs, weekly secchi depth and water temperature are recorded, along with bi-weekly chlorophyll *a* and in deep lakes (greater than 5 meters) dissolved oxygen. Water samples are collected three times per season (May through October) to be analyzed for nutrients and bacteria.  
 
 
-![`r fig_num("ww_map", caption = "Map of URI Watershed Watch lake and reservoir sampling sites")`](../figures/ww_map.jpg)
+![`r fig_num("ww_map", caption = "Map of URI Watershed Watch lake and reservoir sampling sites")`](../../figures/ww_map.jpg)
 
 
 For this analysis, we were interested in trends in lake temperature, TN, TP, TN:TP, and chlorophyll *a*.  In particular, we selected URIWW data that matched the following criteria: 1) were sampled between 1993 and 2016, 2) were sampled in May to October, 3) and were sampled at a depth of 2 meters or less.  As not all sites have data for all selected years, we further filtered the data to select sites that had at least 10 years of data for a given parameter within the 1993 to 2016 time frame.  The final dataset used in our analysis included `r nrow(ww_avail_data_locations)` lakes and reservoirs.  Of these sites, our filtered dataset had approximately `r length(temp_10yr_sites)` sites measured for temperature, `r length(chla_10yr_sites)` sites measured for chlorophyll *a*, `r length(total_n_10yr_sites)` sites measured for TN, and `r length(total_p_10yr_sites)` sites measured for TP.  Of the `r nrow(ww_avail_data_locations)` sampling sites, `r sum(ww_avail_data_locations$params_avail == "chla, total_p, total_n, np, temp")` had data for all 5 parameters.  The N:P ratio was calculated by dividing the mass concentrations of total nitrogen and total phosphorus and then converting to a molar ratio by multiplying by 2.21 (e.g., atomic weight of P 30.974/atomic weight of N 14.007). 
@@ -73,7 +73,7 @@ There are many different methods for analyzing time series data for trends.  Env
 
 Methods for calculating the site-specific anomalies and the yearly means are as follows and are presented graphically in `r fig_num(name = "anomaly_schematic", caption = "Example calculation of the site-specific anomalies and yearly mean anomalies.", display = "cite")`.  Additionally, an example R script, `schematic_anomaly.R` and example dataset, `schematic.csv` to recreate and demonstrate the calculations in `r fig_num("anomaly_schematic", display = "cite")` is available from "fill in with zenodo link" [@zenodo_citation].  
 
-![`r fig_num("anomaly_schematic")`](../figures/anomaly_schematic.jpg)
+![`r fig_num("anomaly_schematic")`](../../figures/anomaly_schematic.jpg)
 
 The general steps, outlined in `r fig_num("anomaly_schematic", display = "cite")` and listed below, are repeated for each of the water quality parameters.
 
@@ -121,15 +121,15 @@ ww_tn_rl_no9394 <- lm(mn_value~year, data = ww_tn_df[c(-1,-2),]) %>%
 
 Mean annual trends for nutrients were weaker or showed no trend over time. The data suggest a positive trend in TN (slope = `r signif(ww_tn_rl$slope,2)` , p = `r signif(ww_tn_rl$p.value, 2)`); however, that perceived trend is driven by the lower than mean TN values in 1993 and 1994 (`r fig_num(name = "tn_trend", caption = "Yearly trend over 20+ years of TN (mean anomaly). Panel A. Yearly mean TN anomalies from the URI Watershed Watch dataset.  Panel B. Yearly mean TN anomalies from the LAGOSNE dataset. Points are means of site-specific anomalies and ranges are standard deviations of site-specific anomalies. Blue indicates yearly site-specific anomalies that were, on average, below the site-specific long-term means. Red indicates yearly site-specific anomalies that were, on average, above the site-specific long-term means.", display = "cite")`A.).  Since 1995, the yearly trend shows a lower increase over time (slope = `r signif(ww_tn_rl_no9394$slope,2)`, p = `r signif(ww_tn_rl_no9394$p.value, 2)`).  TP does not show a trend over time in the yearly anomalies (slope = `r signif(ww_tp_rl$slope,2)` , p = `r signif(ww_tp_rl$p.value, 2)`) and years that are over or under the mean are more evenly distributed over the years (`r fig_num(name = "tp_trend", caption = "Yearly trend over 20+ years of TP (mean anomaly).  Panel A. Yearly mean TP anomalies from the URI Watershed Watch dataset.  Panel B. Yearly mean TP anomalies from the LAGOSNE dataset. Points are means of site-specific anomalies and ranges are standard deviations of site-specific anomalies. Blue indicates yearly site-specific anomalies that were, on average, below the site-specific long-term means. Red indicates yearly site-specific anomalies that were, on average, above the site-specific long-term means.", display = "cite")`A.). The pattern is the same for the TN:TP ratio (slope = `r signif(ww_np_rl$slope,2)`, p = `r signif(ww_np_rl$p.value,2)`) with little evidence suggesting a change in the concentrations of TN relative to the concentrations of TP (`r fig_num(name = "np_trend", caption = "Yearly trend over 20+ years of the TN:TP ratio (mean anomaly).  Panel A. Yearly mean TN:TP ratio anomalies from the URI Watershed Watch dataset.  Panel B. Yearly mean TN:TP ratio anomalies from the LAGOSNE dataset. Points are means of site-specific anomalies and ranges are standard deviations of site-specific anomalies. Blue indicates yearly site-specific anomalies that were, on average, below the site-specific long-term means. Red indicates yearly site-specific anomalies that were, on average, above the site-specific long-term means.", display = "cite")`A.).  Data for all figures are available as a comma-separated values file, `yearly_average_anomaly.csv` from "fill in with zenodo link" [@zenodo_citation].
 
-![`r fig_num(name = "temp_ri")`](../figures/ww_temp_trends_anomaly.jpg)
+![`r fig_num(name = "temp_ri")`](../../figures/ww_temp_trends_anomaly.jpg)
 
-![`r fig_num(name = "chla_trend")`](../figures/paired_chla_trends_anomaly.jpg)
+![`r fig_num(name = "chla_trend")`](../../figures/paired_chla_trends_anomaly.jpg)
 
-![`r fig_num(name = "tn_trend")`](../figures/paired_tn_trends_anomaly.jpg)
+![`r fig_num(name = "tn_trend")`](../../figures/paired_tn_trends_anomaly.jpg)
 
-![`r fig_num(name = "tp_trend")`](../figures/paired_tp_trends_anomaly.jpg)
+![`r fig_num(name = "tp_trend")`](../../figures/paired_tp_trends_anomaly.jpg)
 
-![`r fig_num(name = "np_trend")`](../figures/paired_np_trends_anomaly.jpg)
+![`r fig_num(name = "np_trend")`](../../figures/paired_np_trends_anomaly.jpg)
 
 ## Regional trends in water quality
 
