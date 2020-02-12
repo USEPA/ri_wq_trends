@@ -51,7 +51,7 @@ ww_tp_rl <- tp_gg[[4]]
 temp_gg <- ww_data %>%
   #filter(state == "RI") %>%
   wq_trend_gg("temp", yvar = "measurement_anmly", 
-              y = "Average Yearly Temperature Anomaly", x = "Year",
+              y = "Average Yearly Temperature Anomaly (°C)", x = "Year",
               write = here("data/temp_data_anomaly.csv"), error_bar = "sd",
               title = "URI Watershed Watch Temperature")
 ggsave(here("figures/ww_temp_trends_anomaly.jpg"), temp_gg[[1]], width = 7.5, height = 5.625, 
@@ -132,29 +132,25 @@ lagos_np_rl <- lagos_np_gg[[4]]
 chla_plot <- cowplot::plot_grid(chla_gg[[1]], lagos_chla_gg[[1]], 
                                 align = "h", ncol = 1) 
 
-ggsave(here("figures/paired_chla_trends_anomaly.jpg"), chla_plot, width = 7.5, 
-       height = 9, 
+ggsave(here("figures/paired_chla_trends_anomaly.jpg"), chla_plot, width = 5.7, height = 7.45, 
        units = "in", dpi = 600)
 
 tn_plot <- cowplot::plot_grid(tn_gg[[1]], lagos_tn_gg[[1]], 
                               align = "h", ncol = 1)
 
-ggsave(here("figures/paired_tn_trends_anomaly.jpg"), tn_plot, width = 7.5, 
-       height = 9, 
+ggsave(here("figures/paired_tn_trends_anomaly.jpg"), tn_plot, width = 5.7, height = 7.45, 
        units = "in", dpi = 600)
 
 tp_plot <- cowplot::plot_grid(tp_gg[[1]], lagos_tp_gg[[1]], 
                               align = "h", ncol = 1) 
 
-ggsave(here("figures/paired_tp_trends_anomaly.jpg"), tp_plot, width = 7.5, 
-       height = 9, 
+ggsave(here("figures/paired_tp_trends_anomaly.jpg"), tp_plot, width = 5.7, height = 7.45, 
        units = "in", dpi = 600)
 
 np_plot <- cowplot::plot_grid(np_gg[[1]], lagos_np_gg[[1]], 
                               align = "h", ncol = 1) 
 
-ggsave(here("figures/paired_np_trends_anomaly.jpg"), np_plot, width = 7.5, 
-       height = 9, 
+ggsave(here("figures/paired_np_trends_anomaly.jpg"), np_plot, width = 5.7, height = 7.45, 
        units = "in", dpi = 600)
 
 
@@ -185,7 +181,7 @@ ww_map <- ggplot(st_geometry(ri)) +
   theme_ipsum_rc() +
   theme(legend.position = "bottom", legend.title = element_blank())
 ww_map %>%  
-  ggsave(here("figures/ww_map.jpg"), ., width = 7.5, height = 9.8,
+  ggsave(here("figures/ww_map.jpg"), ., width = 5.7, height = 7.45,
          units = "in", dpi = 600)
 
 # Create supplemental dataset with data for all figures:

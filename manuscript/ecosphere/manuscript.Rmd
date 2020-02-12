@@ -1,0 +1,185 @@
+---
+title: "**Title:** Increasing Chlorophyll *a* Amid Stable Nutrient Concentrations in Rhode Island Lakes and Reservoirs"
+author:
+- '**Authors:** Hollister. J. W. ^\*^ ^*1*^, Kellogg, D. Q. ^*2*^, Kreakie, B. J. ^*1*^, Shivers, S. ^*3*^, Milstead, W. B. ^*1*^, Herron, E. ^*2*^, Green, L. ^*2*^, Gold, A. ^*2*^'
+- ^*1*^ US Environmental Protection Agency, Office Of Research and Development, Atlantic
+  Coastal Environmental Sciences Division, Narragansett, RI 02882
+- ^*2*^ University of Rhode Island, Department of Natural Resources Science, Kingston,
+  RI 02881
+- ^*3*^ ORISE, Narragansett, RI 02882
+- '**Corresponding author: hollister.jeff@epa.gov**'
+keywords: '**keywords: ** This, is, a test'
+bibliography: manuscript.bib
+output:
+  word_document:
+    reference_docx: manuscript_template.docx
+editor_options:
+  chunk_output_type: console
+csl: ecology.csl
+abstract: |
+  | **Abstract:** Addressing anthropogenic impacts on aquatic ecosystems is a focus of lake management. Controlling phosphorus and nitrogen can mitigate these impacts, but determining management effectiveness requires long-term datasets. Recent analysis of the LAke multi-scaled GeOSpatial and temporal database for the Northeast (LAGOSNE) United States found stable water quality in the northeastern and midwestern United States, however, sub-regional trends may be obscured. We analyze a sub-regional (i.e., 3000 km^2^) trend with the University of Rhode Island’s Watershed Watch Volunteer Monitoring Program (URIWW) dataset. URIWW has collected water quality data on Rhode Island lakes and reservoirs for over 25 years. The LAGOSNE and URIWW datasets allow for comparison of water quality trends at regional and sub-regional extents, respectively. We assess regional (LAGOSNE) and state (URIWW) trends with yearly mean anomalies calculated on a per-station basis. Sub-regionally, temperature and chlorophyll *a* increased from 1993 to 2016. Total nitrogen shows a weak increase driven by low years in the early 1990s. Total phosphorus and the nitrogen:phosphorus ratio (N:P) were stable. At the regional scale, the LAGOSNE dataset shows similar trends to prior studies of the LAGOSNE with chlorophyll *a*, total nitrogen, total phosphorus, and N:P all stable over time. In short, algal biomass, as measured by chlorophyll *a* in Rhode Island lakes and reservoirs is increasing, despite stability in total nitrogen, total phosphorus, and the nitrogen to phosphorus ratio. This analysis suggests an association between lake temperature and primary production. Additionally, we demonstrate both the value of long-term monitoring programs, like URIWW, for identifying trends in environmental condition, and the utility of site-specific anomalies for analyzing for long-term water quality trends. 
+  | **Keywords:** Volunteer Monitoring, Citizen Science, Nutrients, Lakes, Trend Analysis, Long Term
+---
+
+
+```{r setup, include=FALSE}
+source(here::here("R/functions.R"), encoding = "UTF-8")
+opts_chunk$set(echo = TRUE, fig.width=6, fig.height=5)
+tab_num <- captioner(prefix = "Table")
+fig_num <- captioner(prefix = "Figure")
+options(scipen=999)
+```
+
+```{r analysis, include=FALSE}
+source(here::here("R/data_available.R"), encoding = "UTF-8") 
+source(here::here("R/summary_stats.R"), encoding = "UTF-8")  
+source(here::here("R/figures_anomaly_only.R"), encoding = "UTF-8")
+```
+
+
+
+# Introduction
+
+Aquatic ecosystems have been altered as the result of human activities modifying nutrient cycling on a global scale [@vitousek1997human; @finlay2013human; @filippelli2008global]. Because of their position in the landscape, lakes can function as integrators and sentinels for these anthropogenic effects [@williamson2008lakes; @schindler2009lakes]. Increasing nutrient inputs, particularly of nitrogen (N) and phosphorus (P), derived from intensive agriculture and densely populated urban areas have contributed to the eutrophication of many lakes [@carpenter1998nonpoint; @smith2003eutrophication].  This eutrophication often leads to an increase in the frequency and severity of harmful algal blooms, greater risks for human and animal health, and potential economic costs associated with eutrophic waters [@michalak2013record; @kosten2012warmer; @taranu2015acceleration; @brooks2016harmful; @dodds2008eutrophication; @paerl2009climate]. To address these problems, management strategies have historically focused on reducing P inputs to lakes, but research also suggests that reducing N inputs may be more effective in certain situations [@paerl2016takes; @schindler2008eutrophication].  These studies indicate that relationships between N, P, and chlorophyll *a* exist and these relationships are spatially and temporally complex.  Thus, long-term data are needed to identify trends at local, regional, and national scales. 
+
+Lake datasets that cover longer time periods and broader spatial scales are now becoming available.  Programs such as the US Environmental Protection Agency's National Lakes Assessment (NLA) provide data that allow for continental-scale water quality analysis. These data allow for analyses that can be useful for managing water resources by developing water quality criteria for N, P, and chlorophyll *a* [@herlihy2013using; @yuan2014managing]. Studying temporal trends across large spatial scales can illustrate the effects of eutrophication such as the degradation of oligotrophic systems as P increases [@stoddard2016continental]. Broad-scale data can also be used for water quality modeling across a range of spatial scales including for predicting lake trophic state, which is indicative of ecosystem condition [@hollister2016modeling; @nojavan2019rethinking]. These trophic state models indicate that landscape variables (e.g., ecoregion, elevation, and latitude) are important and that regional trends exist. Lake-specific drivers have also been shown to be important for predicting continental-scale water quality which adds an additional layer of complexity [@read2015importance]. Despite these challenges, it is important to study lakes at multiple spatial scales because emergent trends on regional or continental scales may or may not be present in individual lakes [@cheruvelil2013multi; @lottig2014long]. 
+
+Previous studies using regional data from the northeastern and midwestern United States (US) have investigated spatial and temporal water quality trends and have shown differences based on scale. Macro-scale (i.e., subcontinental) drivers of water quality trends are complex and may vary temporally [@lottig2017macroscale]. This complexity can cause nutrient (N and P) trends to have different drivers than ratios of the nutrients [@collins2017lake]. On a regional scale, trends of N, P, and chlorophyll *a* differ as factors such as land use and climate vary between regions, particularly when comparing the northeastern and midwestern US [@filstrup2014regional; @filstrup2018evidence]. Thus, it was surprising when little change in nutrients and chlorophyll *a* was reported over a 25 year period for these regions [@Oliver_2017]. Given what is known about long-term trends in water quality within the broader region of the northeastern United States (US), we were curious if the lack of trends was also present in water quality at a sub-regional scale, using data on the 3,000 km^2^ area that encompasses a number of Rhode Island lakes and reservoirs.  
+
+Examining long-term trends in Rhode Island lakes is possible because of the data gathered by University of Rhode Island’s Watershed Watch (URIWW).   URIWW is a scientist-led citizen science program founded in the late 1980s that has built a robust collaboration between URI scientists and a vast network of volunteer monitors.  Volunteer monitors are trained and then collect *in situ* data as well as whole water samples during the growing season (e.g., May through October).  The entire effort follows rigorous quality control/quality assurance protocols.  These types of citizen science efforts allow for the collection of reliable data that in turn lead to crucial and frequently unexpected insights [@dickinson2012current; @kosmala2016assessing; @Oliver_2017].  URIWW data contributed to the larger regional study by Oliver et al. [-@Oliver_2017], and, also allowed us to examine the long-term trends specifically in Rhode Island.
+
+The goals of this study were to examine ~25 years of lake and reservoir data in Rhode Island and answer two questions.  First, are there state-wide trends in total nitrogen (TN), total phosphorus (TP), total nitrogen to total phosphorus ratio (TN:TP), chlorophyll *a*, and lake temperature? Second, are water quality trends in Rhode Island similar to regional trends in the northeastern United states?  Another objective of this paper was to apply existing methods for examining long-term climate records [e.g., @jones1996calculating] to water quality data in order to examine long-term trends. We conducted this analysis using open data from the URI Watershed Watch program and the LAke multi-scaled GeOSpatial and temporal database for the Northeast (LAGOSNE) project and the analysis in its entirety is available for independent reproduction at <https://github.com/usepa/ri_wq_trends> and is archived at <https://doi.org/10.5281/zenodo.3662828> [@sorannolagosne2017; @stacheleklagosne2017; @zenodo_citation].
+
+# Methods
+
+For this study, we combined a long-term dataset on water quality of lakes in Rhode Island with a trend analysis based on water quality anomalies (i.e., measured values with the long term mean subtracted) to find increasing or decreasing annual water quality trends. Details are outlined below.
+
+## Study Area and Data
+
+The study area for this analysis includes lakes and reservoirs in the state of Rhode Island where data were collected by the University of Rhode Island's Watershed Watch program (`r fig_num("ww_map", display = "cite", caption = "Map of URI Watershed Watch lake and reservoir sampling sites")`).  The URIWW program began in 1988, monitoring 14 lakes and has now grown to include over 250 monitoring sites on over 120 waterbodies, including rivers/streams, and estuaries, with more than 400 trained volunteers. URIWW now provides more than 90% of Rhode Island's lake baseline data and is an integral part of the state's environmental data collection strategy. Data quality assurance and control is treated with paramount importance; volunteers are trained both in the classroom and the field, regular quality checks occur, and volunteers are provided with all the necessary equipment and supplies, along with scheduled collection dates. For freshwater lakes and reservoirs, weekly secchi depth and water temperature are recorded, along with bi-weekly chlorophyll *a* and in deep lakes (greater than 5 meters) dissolved oxygen. Water samples are collected three times per season (May through October) to be analyzed for nutrients and bacteria.  
+
+For this analysis, we were interested in trends in lake temperature, TN, TP, TN:TP, and chlorophyll *a*.  In particular, we selected URIWW data that matched the following criteria: 1) were sampled between 1993 and 2016, 2) were sampled in May to October, 3) and were sampled at a depth of 2 meters or less.  As not all sites have data for all selected years, we further filtered the data to select sites that had at least 10 years of data for a given parameter within the 1993 to 2016 time frame.  The final dataset used in our analysis included `r nrow(ww_avail_data_locations)` lakes and reservoirs.  Of these sites, our filtered dataset had approximately `r length(temp_10yr_sites)` sites measured for temperature, `r length(chla_10yr_sites)` sites measured for chlorophyll *a*, `r length(total_n_10yr_sites)` sites measured for TN, and `r length(total_p_10yr_sites)` sites measured for TP.  Of the `r nrow(ww_avail_data_locations)` sampling sites, `r sum(ww_avail_data_locations$params_avail == "chla, total_p, total_n, np, temp")` had data for all 5 parameters.  The N:P ratio was calculated by dividing the mass concentrations of total nitrogen and total phosphorus and then converting to a molar ratio by multiplying by 2.21 (e.g., atomic weight of P 30.974/atomic weight of N 14.007). 
+
+Field and analytical methods are detailed on the URIWW website at <https://web.uri.edu/watershedwatch/uri-watershed-watch-monitoring-manuals/> and <https://web.uri.edu/watershedwatch/uri-watershed-watch-quality-assurance-project-plans-qapps/>, respectively. These methods, approved by both the state of Rhode Island and the US Environmental Protection Agency, have remained fairly consistent, although over the nearly 30 years changes did occur.  When new methods were introduced, comparisons between old and new methods were conducted and in all cases no statistically significant differences were found with the new methods.  Furthermore, the new methods did at times improve the limits of detection; however, this impacted a very small  number (less than 1%) of measurements in this study.  We did run our analyses (see **Water Quality Trend Analysis** section) with all data and with only those data greater than the detection limit.  There was no change in the trend analysis and thus, the results we report are for all data as originally reported in the URIWW dataset.  Given these results, we assume the data to be consistent across the reported time period and appropriate for a long term assessment of trends.
+
+Prior studies have modeled water quality trends across a larger region of the northeastern US that included 17 states including Minnesota, Wisconsin, Iowa, Missouri, Illinois, Indiana, Michigan, Ohio, Pennsylvania, New York, New Jersey, Connecticut, Massachusetts, Rhode Island, Vermont, New Hampshire, and Maine [@soranno2015building; @Oliver_2017]. We repeated our analysis (see **Water Quality Trend Analysis** section) with the same dataset used by Oliver et al. [-@Oliver_2017], the LAGOSNE dataset [@soranno2015building; @stacheleklagosne2017; @sorannolagosne2017].  Temperature data were not available, thus we examined trends, using our analytical methods, for TN, TP, TN:TP, and chlorophyll *a* from the LAGOSNE dataset.  We used the same selction criteria on the LAGOSNE dataset as was applied to the URIWW data.
+
+## Water Quality Trend Analysis
+
+There are many different methods for analyzing time series data for trends.  Environmental data are notoriously "noisy" and one of the difficulties that is encountered with multiple sampling locations is how to identify a trend while there is variation within a sampling site as well as variation introduced by differing start years for sampling among the many sites. For instance, if long-term data on water quality were collected more frequently in early years from more pristine waterbodies, then a simple comparison of raw values over time might show a decrease in water quality, which could be misleading if later sampling occurred on both pristine and more eutrophic water bodies.  Thus, it is necessary to account for this type of within-site and among-site variation, using methods similar to those used to analyze long-term temperature trends using temperature anomalies [e.g., @jones1996calculating].  The general approach we used calculates site-specific deviations from a long-term mean over a pre-determined reference period.  This allowed all sites to be shifted to a common baseline and the deviations, or anomalies, indicate change over the specified reference period.  We refer to this method as "site-specific anomalies".
+
+*Summarizing site-specific anomalies:* Methods for calculating the site-specific anomalies and the yearly means are as follows and are presented graphically in `r fig_num(name = "anomaly_schematic", caption = "Example calculation of the site-specific anomalies and yearly mean anomalies.", display = "cite")`.  Additionally, an example R script, `schematic_anomaly.R` and example dataset, `schematic.csv` to recreate and demonstrate the calculations in `r fig_num("anomaly_schematic", display = "cite")` is available from at <https://github.com/usepa/ri_wq_trends> and is archived at <https://doi.org/10.5281/zenodo.3662828> [@zenodo_citation].  
+
+The general steps, outlined in `r fig_num("anomaly_schematic", display = "cite")` and listed below, are repeated for each of the water quality parameters.
+
+1. For each site, calculate the annual means, producing a single mean value for each site and year. This step prevents bias from pseudoreplication of multiple measurements of the same site in a given year [@hurlbert1984pseudoreplication].  The per site means across years are assumed to be independent.
+2. Calculate the long-term reference mean for each site. This results in a single long-term mean for each of the sites.
+3. Calculate the anomaly for each annual mean at each site by subtracting the annual and reference means.
+4. Summarize by calculating the mean anomaly per year for the entire group of sites.  The resultant values are analyzed for a trend over time.
+
+*Linear regression on annual mean anomalies:* Testing for a regression slope being different than zero can be used to test for monotonic trends in water quality data [@helsel2002statistical].  We used these standard procedures to test for positive or negative trends in lake temperature, chlorophyll *a*, TN, TP and TN:TP.  For each parameter, we fit a regression line to the anomalies as a function of year and tested the null hypothesis that no trend existed (e.g., $\beta$~1~ = 0). The slope of this line provides information on the mean yearly change of that paramter over the time period studied.  Traditionally, trends would be determined by assessing "significance" but recent guidelines suggest not using arbitrary p-value cut-offs to assesses significance [@wasserstein2016asa].  Our interpretation of the trends attempts to follow this advice and we assess trends with the information provided by the magnitude of the slopes, the p-values, and our understanding of the processes involved.
+
+*Comparison of Rhode Island to the region:* Oliver et al. [-@Oliver_2017] used hierarchical linear models and showed relatively stable water quality in the lakes of the northeastern United States.  While the University of Rhode Island's Watershed Watch data were included in this regional study, we hypothesized that in the case of Rhode Island regional trends were masking sub-regional trends.  Therefore, we decided to reanalyze the LAGOSNE data to compare the trends at the regional scale to the trends at the Rhode Island state scale using the site-specific anomaly and trend analysis approach outlined above. 
+
+# Results
+
+During the period of 1993 to 2016, Rhode Island lakes and reservoirs in our dataset had a mean lake temperature of `r paste(ww_param_ranges%>%filter(Parameter == "Temperature")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "Temperature")%>%pull(Units))`, mean TN of `r paste(ww_param_ranges%>%filter(Parameter == "Total Nitrogen")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "Total Nitrogen")%>%pull(Units))`, mean TP of `r paste(ww_param_ranges%>%filter(Parameter == "Total Phosphorus")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "Total Phosphorus")%>%pull(Units))`, mean TN:TP ratio of `r paste(ww_param_ranges%>%filter(Parameter == "N:P")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "N:P")%>%pull(Units))`, and mean chlorophyll *a* of `r paste(ww_param_ranges%>%filter(Parameter == "Chlorophyll")%>%pull(Mean), ww_param_ranges%>%filter(Parameter == "Chlorophyll")%>%pull(Units))` (`r tab_num("ww_params", display = "cite", caption = "Summary statistics for URI Watershed Watch data from 1993 to 2016.")`).  
+
+For lakes and reservoirs in the larger region represented by the LAGOSNE States,  mean TN was `r paste(lagos_param_ranges%>%filter(Parameter == "Total Nitrogen")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "Total Nitrogen")%>%pull(Units))`, mean TP was `r paste(lagos_param_ranges%>%filter(Parameter == "Total Phosphorus")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "Total Phosphorus")%>%pull(Units))`, mean TN:TP ratio was `r paste(lagos_param_ranges%>%filter(Parameter == "N:P")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "N:P")%>%pull(Units))`, and mean chlorophyll *a* was `r paste(lagos_param_ranges%>%filter(Parameter == "Chlorophyll")%>%pull(Mean), lagos_param_ranges%>%filter(Parameter == "Chlorophyll")%>%pull(Units))` (`r tab_num("lagos_params", display = "cite", caption = "Summary statistics for LAGOSNE data from 1993 to 2016.")`).    
+
+## State-wide trends in water quality
+
+Mean annual temperature anomalies in lakes and reservoirs appears to be increasing (slope = `r signif(ww_temp_rl$slope,2)` , p = `r signif(ww_temp_rl$p.value, 2)`) with the majority of years with mean temperature greater than the long-term mean occurring in recent years (`r fig_num(name = "temp_ri", caption = "Yearly trend over 20+ years of lake temperature (mean anomaly) in Rhode Island lakes and reservoirs. Points are means of site-specific anomalies and ranges are standard deviations of site-specific anomalies. Blue indicates yearly site-specific anomalies that were, on average, below the site-specific long-term means. Red indicates yearly site-specific anomalies that were, on average, above the site-specific long-term means.", display = "cite")`).  Chlorophyll *a* is also showing an increasing trend over time (slope = `r signif(ww_chla_rl$slope,2)` , p = `r signif(ww_chla_rl$p.value, 2)`) and with the exception of a slightly above-average year in 2003, the above-average years have all occurred in the most recent years (`r fig_num(name = "chla_trend", caption = "Yearly trend over 20+ years of chlorphyll a (mean anomaly).  Panel A. Yearly mean chlorophyll a anomalies from the URI Watershed Watch data.  Panel B. Yearly mean chlorophyll a anomalies from the LAGOSNE dataset. Points are means of site-specific anomalies and ranges are standard deviations of site-specific anomalies. Blue indicates yearly site-specific anomalies that were, on average, below the site-specific long-term means. Red indicates yearly site-specific anomalies that were, on average, above the site-specific long-term means.", display = "cite")`A.). 
+
+```{r no_early_tn, echo=FALSE}
+ww_tn_rl_no9394 <- lm(mn_value~year, data = ww_tn_df[c(-1,-2),]) %>%
+  tidy() %>%
+  slice(2) %>%
+  select(slope = estimate, p.value)
+```
+
+Mean annual trends for nutrients were weaker or showed no trend over time. The data suggest a positive trend in TN (slope = `r signif(ww_tn_rl$slope,2)` , p = `r signif(ww_tn_rl$p.value, 2)`); however, that perceived trend is driven by the lower than mean TN values in 1993 and 1994 (`r fig_num(name = "tn_trend", caption = "Yearly trend over 20+ years of TN (mean anomaly). Panel A. Yearly mean TN anomalies from the URI Watershed Watch dataset.  Panel B. Yearly mean TN anomalies from the LAGOSNE dataset. Points are means of site-specific anomalies and ranges are standard deviations of site-specific anomalies. Blue indicates yearly site-specific anomalies that were, on average, below the site-specific long-term means. Red indicates yearly site-specific anomalies that were, on average, above the site-specific long-term means.", display = "cite")`A.).  Since 1995, the yearly trend shows a lower increase over time (slope = `r signif(ww_tn_rl_no9394$slope,2)`, p = `r signif(ww_tn_rl_no9394$p.value, 2)`).  TP does not show a trend over time in the yearly anomalies (slope = `r signif(ww_tp_rl$slope,2)` , p = `r signif(ww_tp_rl$p.value, 2)`) and years that are over or under the mean are more evenly distributed over the years (`r fig_num(name = "tp_trend", caption = "Yearly trend over 20+ years of TP (mean anomaly).  Panel A. Yearly mean TP anomalies from the URI Watershed Watch dataset.  Panel B. Yearly mean TP anomalies from the LAGOSNE dataset. Points are means of site-specific anomalies and ranges are standard deviations of site-specific anomalies. Blue indicates yearly site-specific anomalies that were, on average, below the site-specific long-term means. Red indicates yearly site-specific anomalies that were, on average, above the site-specific long-term means.", display = "cite")`A.). The pattern is the same for the TN:TP ratio (slope = `r signif(ww_np_rl$slope,2)`, p = `r signif(ww_np_rl$p.value,2)`) with little evidence suggesting a change in the concentrations of TN relative to the concentrations of TP (`r fig_num(name = "np_trend", caption = "Yearly trend over 20+ years of the TN:TP ratio (mean anomaly).  Panel A. Yearly mean TN:TP ratio anomalies from the URI Watershed Watch dataset.  Panel B. Yearly mean TN:TP ratio anomalies from the LAGOSNE dataset. Points are means of site-specific anomalies and ranges are standard deviations of site-specific anomalies. Blue indicates yearly site-specific anomalies that were, on average, below the site-specific long-term means. Red indicates yearly site-specific anomalies that were, on average, above the site-specific long-term means.", display = "cite")`A.).  Data for all figures are available as a comma-separated values file, `yearly_average_anomaly.csv` from at <https://github.com/usepa/ri_wq_trends> and is archived at <https://doi.org/10.5281/zenodo.3662828> [@zenodo_citation].
+
+## Regional trends in water quality
+
+In general, there was little evidence to suggest broad regional changes. Chlorophyll *a* showed a very weak positive trend (slope = `r signif(lagos_chla_rl$slope,2)`, p = `r signif(lagos_chla_rl$p.value, 2)`, `r fig_num(name = "chla_trend", display = "cite")`B.), TP showed a slight decreasing trend (slope = `r signif(lagos_tp_rl$slope, 2)`, p = `r signif(lagos_tp_rl$p.value,2)`, `r fig_num(name = "tp_trend", display = "cite")`B.), TN showed a slight positive trend (slope = `r signif(lagos_tn_rl$slope, 2)`, p = `r signif(lagos_tn_rl$p.value, 2)`, `r fig_num(name = "tn_trend", display = "cite")`B.) and the TN:TP showed little change (slope = `r signif(lagos_np_rl$slope, 2)`, p = `r signif(lagos_np_rl$p.value, 2)`, `r fig_num(name = "np_trend", display = "cite")`B.)
+
+# Discussion and Conclusions
+
+Our sub-regional analysis indicates that even when nutrient regimes exhibit relative stability (i.e., neither increasing nor decreasing over time), increases in primary production, as measured by chlorophyll *a*, can occur.  Over the same period we also demonstrate long-term warming of Rhode Island lakes and reservoirs. Chlorophyll has increased, on average, `r signif(ww_chla_rl$slope, 2)` μg/L per year over the 23 years of our analysis, while temperature has increased `r signif(ww_temp_rl$slope, 2)` °C per year over the same period.   This suggests that the observed increase in productivity, as measured by chlorophyll *a*, may be a result of warming waters and not a response to changes in nutrient condition.  Also, geographic extent does indeed matter when trying to identify long-term water quality trends. Similar to the results of Oliver et al. [-@Oliver_2017] our analysis shows little increasing trend in chlorophyll *a* at the regional scale (e.g., northeastern and mid-western United States).  However, at the local scale of the state of Rhode Island, there is a clear increasing trend in chlorophyll *a*.
+
+## Trends
+
+As previously mentioned, both temperature and chlorophyll *a* show increasing trends from 1993 to 2016 in Rhode Island lakes and reservoirs; while total nutrients and the TN:TP ratio are all relatively stable.  While TN showed a weak positive trend, that trend was largely driven by the unusually low years for TN in 1993 and 1994.  With those removed the positive trends weakens considerably.  The general picture in Rhode Island appears to be one of little to no change in phosphorus, a very weak positive trend in nitrogen and little to no change in the TN:TP ratio.  Furthermore, it has been shown that productivity in freshwater systems is likely a function of both phosphorus and nitrogen [@paerl2016takes].  Thus, the increasing chlorophyll *a* in the face of stable TN:TP ratio suggests that the increase is being driven by something other than nutrients.  We interpret these results as relative stability in nutrients in Rhode Island lakes and reservoirs.  
+
+Stable nutrient regimes may be partly explained by efforts to curb nutrient loadings, for example through voluntary and state wide mandatory bans on phosphates in laundry detergent which were implemented in Rhode Island in 1995 [@riphosban1995; @litke1999review].  However, in many lakes there are still likely sufficient nutrients present to allow for increases in chlorophyll *a*. Additionally, these results point to the fact that chlorophyll *a* and algal biomass is driven by processes operating at different scales.  For instance, nutrient management is largely a local to watershed scale effort, but may also be regional as atmospheric nitrogen deposition can be a significant source of nitrogen [@boyer2002anthropogenic].  Similarly, warming lakes are driven by broader climate patterns, yet waterbody-specific factors such as the percent of a catchment that is impervious surface and lake morphology can also impact temperature [@nelson2007stream]. In short, differences in regional and state level trends are driven by complex and multi-scale processes.  
+
+In addition to the annualized trends of the five variables we address with this study, there are other trends that may be of interest.  For example, trends for water quality at finer temporal scales such as monthly or seasonal trends may be different than the annual trends we analyzed.  Anecdotal evidence in Rhode Island points to warmer temperature earlier and later in the year and suggests a lengthening of the growing season. Furthermore, preliminary analysis of the URIWW data back this up with mean temperature for May 1993 to May 1995 cooler by nearly a degree than mean temperature for May 2014 through May 2016.  Additionally, it may be possible that the current trophic state of a given waterbody may partly explain the chlorophyll *a* changes in that lake.  For instance, are oligotrophic lakes showing stronger trends than eutrophic lakes or are all lakes showing similar trends regardless of current trophic status? Lastly, changes in rainfall, extreme weather events, or other climate mediated factors can also be playing a role in increasing chlorophyll in Rhode Island lakes and reservoirs. These questions are beyond the scope of this study, but all warrant further, careful investigation.
+
+## Management implications
+
+There are several broader management implications from the results of our analysis and of examining long-term water quality trends in general. In particular, this analysis provides much needed information about the long-term effects of current nutrient control efforts at lake-specific and sub-regional scales and identifies areas where additional information is required or a change in management approaches may be needed.  First, as more long-term datasets become available, it is important for managers and stakeholders to receive feedback on long-term water quality trends at multiple spatial scales.  Specifically for this study, the results provide feedback to long time volunteer monitors, highlighting the importance of volunteer monitoring programs.  Second, with information on long-term trends, it is possible to adapt management approaches to address areas of concern.  Our results show increasing chlorophyll *a* even though the general long-term nutrient trends have been stable.  This suggests the need to further reduce nutrients to compensate for warmer water temperatures and possible longer growing seasons.
+
+There are several possible approaches to further reduce nutrient loads [@yang2018nutrients]. First, nutrient load reductions may be possible through source controls and enhanced entrainment and treatment of ground and surface waters transporting nutrients to receiving waters [@kellogg2010geospatial].  Green infrastructure approaches are one way to possibly achieve both goals [@pennino2016watershed; @reisinger2019changes].  Additionally, there is potential for within-lake approaches such as the restoration of freshwater mussels to waterbodies that historically had those species. Some studies using freshwater mussels have shown reductions in both nutrients and algal biomass [@kreeger2018restoration].
+
+## Data analysis approach
+
+The analysis approach we used here, site-specific anomalies, is not a novel method and does have a long history in the analysis of trends in climate [@hansen2006global; @hansen2010global; @jones1996calculating; @jones1999surface]. However, using it to examine water quality trends is a new application of the technique, as we could find little evidence of using it specifically for water quality trends.  We built on these methods and adapted them for use with long-term water quality trends.  While other methods are valid and robust [e.g., @Oliver_2017], we chose mean site-specific anomalies as they can provide readily interpretable results, especially for communicating to general audiences.  For instance, reporting the changes in anomalies allows us to look at changes in the original units.  With our analysis, the slope of the regression line for temperature suggests a mean yearly increase of `r signif(ww_temp_rl$slope, 2)` °C and the slope of the regression line for chlorophyll *a* shows a mean yearly increase of `r signif(ww_chla_rl$slope, 2)` µg/l.  Additionally, the site-specific anomalies are robust to variations in sampling effort and in the timing of inclusion of given sampling locations (e.g., added later in a time period or removed).  Lastly, this analysis is only possible because of the availability of sound, long-term data on water quality in Rhode Island.  Without the URIWW data and the commitment and participation of more than 2500 volunteers over the years, our analyses would have been impossible.  Going forward, it is important to appreciate the role that volunteer monitoring and citizen science programs can play in capturing and better understanding long term environmental trends. 
+
+# Acknowledgments
+
+We would like to thank Anne Kuhn (US EPA, Atlantic Coastal Environmental Sciences Division), Nate Merrill (US EPA, Atlantic Coastal Environmental Sciences Division), Jim Hagy (US EPA, Gulf Ecosystem Measurement and Modeling Division), Joe LiVolsi (US EPA, Atlantic Coastal Environmental Sciences Division), Tim Gleason (US EPA, Atlantic Coastal Environmental Sciences Division), and Wayne Munns (US EPA, Atlantic Coastal Environmental Sciences Division) for constructive reviews of this paper. The views expressed in this article are those of the authors and do not necessarily represent the views or policies of the U.S. Environmental Protection Agency.  Any mention of trade names, products, or services does not imply an endorsement by the U.S. Government or the U.S. Environmental Protection Agency. The EPA does not endorse any commercial products, services, or enterprises. This contribution is identified by the tracking number ORD-032695 of the Atlantic Coastal Environmental Sciences Division, Office of Research and Development, Center for Environmental Measurement and Modeling, US Environmental Protection Agency.
+
+# Bibliography
+
+<div id="refs"></div>
+######
+# Tables
+
+
+```{r ww_params, echo=FALSE, results="asis"}
+pander::pander(ww_param_ranges[,c(-3,-6)], style = "rmarkdown")
+```
+`r tab_num("ww_params")`
+
+```{r lagos_params, echo=FALSE, results="asis"}
+pander::pander(lagos_param_ranges[,c(-3,-6)], style = "rmarkdown")
+```
+`r tab_num("lagos_params")`
+
+######
+
+# Figures
+
+![](../../figures/ww_map.jpg)
+`r fig_num("ww_map", caption = "Map of URI Watershed Watch lake and reservoir sampling sites")`
+
+######
+
+![](../../figures/anomaly_schematic.jpg)
+`r fig_num("anomaly_schematic")`
+
+######
+
+![](../../figures/ww_temp_trends_anomaly.jpg)
+`r fig_num(name = "temp_ri")`
+
+######
+
+![](../../figures/paired_chla_trends_anomaly.jpg)
+`r fig_num(name = "chla_trend")`
+
+######
+
+![](../../figures/paired_tn_trends_anomaly.jpg)
+`r fig_num(name = "tn_trend")`
+
+######
+
+![](../../figures/paired_tp_trends_anomaly.jpg)
+`r fig_num(name = "tp_trend")`
+
+######
+
+![](../../figures/paired_np_trends_anomaly.jpg)
+`r fig_num(name = "np_trend")`
