@@ -183,3 +183,8 @@ pander::pander(lagos_param_ranges[,c(-3,-6)], style = "rmarkdown")
 
 ![](../../figures/paired_np_trends_anomaly.jpg)
 `r fig_num(name = "np_trend")`
+
+```{r session_info, echo=FALSE}
+#Send session info to a file: 
+capture.output(sessionInfo(),file=here::here("manuscript/ecosphere/sessioninfo.txt"))
+```
