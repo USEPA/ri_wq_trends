@@ -1,7 +1,7 @@
 # Installations
 pkgs <- c("lubridate","broom", "stringr", "dplyr", "readr", "readxl","tidyr", 
           "here","ggplot2", "hrbrthemes", "Kendall","sf", "USAboundaries",
-          "USAboundariesData","knitr","captioner", "pander")
+          "USAboundariesData","knitr","captioner", "pander", "cowplot")
 
 for(i in pkgs){
   if(!i %in% installed.packages()){

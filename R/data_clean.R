@@ -158,7 +158,32 @@ idx <- ww_lake_trend_data$year == "2016" & ww_lake_trend_data$month == 7 & ww_la
 idx <- !idx
 ww_lake_trend_data <- ww_lake_trend_data %>% 
   filter(idx)
-  
+
+write_csv(ww_lake_trend_data, here("data/ww_all_mostly_cleaned.csv"))
+
+# Reviewer 1 comment: To avoid possible seasonal effects due to missed samples, 
+# make sure to include only lake-years with a minimum of one sample in each of
+# May/June, Jul/Aug, Sep/Oct per parameter.
+idx_min_samp <- ww_lake_trend_data %>%
+  mutate(may_jun = case_when(month == 5 | month == 6 ~
+                             1, 
+                           TRUE ~ 0),
+       jul_aug = case_when(month == 7 | month == 8 ~
+                             1,
+                           TRUE ~ 0),
+       sep_oct = case_when(month == 9 | month == 10 ~
+                             1,
+                           TRUE ~ 0)) %>%
+  group_by(station_name, year, param) %>%
+  summarize(min_samp = sum(may_jun, jul_aug, sep_oct)>=3) %>% 
+  right_join(ww_lake_trend_data) %>%
+  pull(min_samp)
+
+ww_lake_trend_data <- ww_lake_trend_data %>%
+  filter(idx_min_samp)
+    
+
+# Calculates station/year/param stats
 ww_lake_trend_data <- ww_lake_trend_data %>%
   filter(month >= 5 & month <= 10) %>%
   group_by(station_name, year, param) %>%
@@ -241,7 +266,31 @@ lagos_data <- lagosne_select(table = "epi_nutr",
   #filter(year >= 1990) %>%
   #filter(`Station Name` %in% filter_year(., 20)) %>% #moved to plots and 10 years is min...
   filter(month >= 5 & month <= 10) %>%
-  select(station_name = `Station Name`,year, month, day, param, measurement) %>%
+  select(station_name = `Station Name`,year, month, day, param, measurement) 
+
+# Reviewer 1 comment: To avoid possible seasonal effects due to missed samples, 
+# make sure to include only lake-years with a minimum of one sample in each of
+# May/June, Jul/Aug, Sep/Oct per parameter.
+idx_min_samp <- lagos_data %>%
+  mutate(may_jun = case_when(month == 5 | month == 6 ~
+                               1, 
+                             TRUE ~ 0),
+         jul_aug = case_when(month == 7 | month == 8 ~
+                               1,
+                             TRUE ~ 0),
+         sep_oct = case_when(month == 9 | month == 10 ~
+                               1,
+                             TRUE ~ 0)) %>%
+  group_by(station_name, year, param) %>%
+  summarize(min_samp = sum(may_jun, jul_aug, sep_oct)>=3) %>% 
+  right_join(lagos_data) %>%
+  pull(min_samp)
+
+lagos_data <- lagos_data %>%
+  filter(idx_min_samp)
+
+
+lagos_data <- lagos_data %>%
   #This should take care of pseudoreplication by using the per site/year means
   #results in n for years being equal to number of sites per year
   group_by(station_name, year, param) %>%
@@ -294,6 +343,3 @@ lagos_data <- lagos_data %>%
                            TRUE ~ lt_sd))
   
 write_csv(lagos_data, here("data/lagos_lake_trend_data.csv"))
-  
-
-         

@@ -10,13 +10,11 @@ station_name,params_avail
 211,"chla, total_p"
 249,"chla, total_p"
 283,chla
-305,chla
 307,chla
 317,chla
 334,chla
 335,chla
 375,chla
-386,chla
 413,chla
 418,"chla, total_p"
 429,chla
@@ -40,13 +38,9 @@ station_name,params_avail
 602,"chla, total_p"
 610,chla
 612,"chla, total_p"
-617,chla
 618,"chla, total_p"
 620,"chla, total_p"
-628,"chla, total_p"
-640,"chla, total_p, total_n, np"
 641,"chla, total_p"
-644,"chla, total_p, total_n, np"
 648,"chla, total_p"
 676,"chla, total_p"
 678,"chla, total_n"
@@ -63,15 +57,12 @@ station_name,params_avail
 766,chla
 770,chla
 781,chla
-785,"chla, total_p"
 802,"chla, total_p"
 803,"chla, total_p"
 811,"chla, total_p"
 824,"chla, total_p"
-834,"chla, total_p"
 838,"chla, total_p"
 843,"chla, total_n"
-847,"chla, total_p"
 857,chla
 858,"chla, total_p"
 876,chla
@@ -79,7 +70,6 @@ station_name,params_avail
 924,chla
 931,chla
 946,"chla, total_p"
-954,"chla, total_p"
 955,chla
 960,chla
 964,"chla, total_p"
@@ -88,22 +78,15 @@ station_name,params_avail
 971,chla
 972,chla
 973,chla
-974,"chla, total_p"
 976,"chla, total_p"
-1023,"chla, total_p, total_n, np"
-1025,"chla, total_p"
-1030,"chla, total_p"
 1041,"chla, total_p"
 1043,"chla, total_p"
 1048,"chla, total_n"
-1054,"chla, total_p"
 1060,chla
 1080,chla
 1089,chla
 1091,"chla, total_p"
-1096,"chla, total_p"
 1102,"chla, total_p"
-1109,chla
 1123,chla
 1141,"chla, total_p"
 1143,chla
@@ -116,9 +99,7 @@ station_name,params_avail
 1223,"chla, total_p"
 1235,chla
 1243,"chla, total_p"
-1244,"chla, total_p"
 1253,chla
-1286,"chla, total_p"
 1291,"chla, total_p"
 1295,chla
 1321,chla
@@ -127,102 +108,74 @@ station_name,params_avail
 1336,"chla, total_p"
 1361,chla
 1404,chla
-1408,"chla, total_p"
 1423,chla
 1435,chla
 1436,"chla, total_p"
 1441,chla
 1448,chla
 1451,chla
-1482,"chla, total_p"
-1499,"chla, total_p"
 1505,chla
-1513,"chla, total_p"
 1514,"chla, total_p"
-1525,"chla, total_p"
-1545,"chla, total_p, total_n, np"
-1570,"chla, total_p"
 1572,chla
 1590,"chla, total_n"
 1591,chla
 1610,chla
 1618,chla
-1620,"chla, total_p"
-1627,"chla, total_p"
 1636,chla
 1641,"chla, total_p"
 1647,"chla, total_p"
 1661,chla
 1667,"chla, total_p"
-1672,"chla, total_p, total_n, np"
-1675,chla
 1678,"chla, total_p"
 1696,"chla, total_n"
 1703,chla
 1746,chla
 1762,chla
 1764,"chla, total_n"
-1768,"chla, total_p"
 1772,"chla, total_p"
 1777,"chla, total_p"
-1787,"chla, total_p"
 1806,"chla, total_p"
 1812,"chla, total_p"
 1816,chla
 1818,"chla, total_p"
-1823,"chla, total_p"
 1826,chla
 1842,"chla, total_n"
-1867,"chla, total_p"
 1873,"chla, total_p"
 1887,"chla, total_p"
 1901,"chla, total_p"
 1909,chla
-1917,"chla, total_p"
 1927,chla
 1932,chla
 1934,chla
 1938,chla
 1978,"chla, total_p"
-1986,"chla, total_p"
 2000,chla
 2002,chla
 2015,chla
 2017,chla
 2029,chla
-2048,"chla, total_p"
 2057,chla
-2062,chla
 2065,chla
 2067,chla
-2075,"chla, total_p"
 2086,chla
 2088,"chla, total_p"
 2095,"chla, total_p"
 2111,chla
-2116,"chla, total_p"
 2118,chla
 2145,chla
-2155,"chla, total_p"
 2164,chla
 2165,chla
 2184,"chla, total_p"
 2190,chla
 2193,"chla, total_n"
-2196,chla
 2203,chla
-2234,"chla, total_p"
 2237,chla
 2255,chla
 2256,"chla, total_p"
 2270,chla
 2286,chla
-2289,"chla, total_p"
-2292,chla
 2319,chla
 2329,chla
-2338,"chla, total_p"
-2339,"chla, total_p"
 2347,chla
 2351,chla
 2359,"chla, total_p"
@@ -250,8 +203,6 @@ station_name,params_avail
 2617,"chla, total_p"
 2648,chla
 2651,"chla, total_p"
-2656,chla
-2657,"chla, total_p"
 2667,chla
 2670,chla
 2680,chla
@@ -259,16 +210,12 @@ station_name,params_avail
 2703,"chla, total_p"
 2709,chla
 2713,chla
-2714,chla
 2718,chla
-2720,"chla, total_p"
-2723,"chla, total_p"
 2736,"chla, total_p"
 2738,chla
 2743,chla
 2752,"chla, total_p"
 2755,chla
-2772,chla
 2780,chla
 2785,chla
 2786,"chla, total_p"
@@ -277,9 +224,6 @@ station_name,params_avail
 2829,"chla, total_p"
 2846,chla
 2848,"chla, total_p"
-2851,"chla, total_p"
-2855,"chla, total_p"
-2869,"chla, total_p"
 2876,chla
 2935,chla
 2936,chla
@@ -307,8 +251,6 @@ station_name,params_avail
 3122,chla
 3140,chla
 3150,chla
-3152,"chla, total_p"
-3160,chla
 3169,"chla, total_p"
 3173,chla
 3177,chla
@@ -321,14 +263,11 @@ station_name,params_avail
 3214,chla
 3216,chla
 3238,chla
-3244,chla
-3270,"chla, total_p"
 3280,"chla, total_p"
 3307,"chla, total_n"
 3316,chla
 3331,chla
 3333,"chla, total_p"
-3343,chla
 3370,"chla, total_p"
 3384,chla
 3386,"chla, total_n"
@@ -342,7 +281,6 @@ station_name,params_avail
 3493,"chla, total_p"
 3495,chla
 3497,chla
-3512,"chla, total_p"
 3523,chla
 3524,"chla, total_p"
 3528,chla
@@ -384,7 +322,6 @@ station_name,params_avail
 3943,chla
 3950,chla
 3960,chla
-3964,"chla, total_p"
 3973,chla
 3993,chla
 4002,"chla, total_p"
@@ -394,7 +331,6 @@ station_name,params_avail
 4055,chla
 4067,chla
 4098,chla
-4099,chla
 4115,chla
 4131,"chla, total_p"
 4155,chla
@@ -415,36 +351,34 @@ station_name,params_avail
 4259,"chla, total_p"
 4271,"chla, total_p"
 4276,"chla, total_p"
-4280,"chla, total_p"
+4280,"chla, total_p, total_n, np"
 4284,"chla, total_p"
 4286,"chla, total_p"
 4292,"chla, total_p"
 4294,"chla, total_p"
 4300,"chla, total_p"
 4302,"chla, total_p"
-4314,"chla, total_p"
+4314,"chla, total_p, total_n, np"
 4326,"chla, total_p"
 4335,"chla, total_p"
 4338,"chla, total_p"
-4339,"chla, total_p"
 4340,"chla, total_p"
 4346,"chla, total_p"
 4349,"chla, total_p"
-4351,"chla, total_p"
+4351,"chla, total_p, total_n, np"
 4352,"chla, total_p"
 4353,"chla, total_p"
 4355,"chla, total_p"
-4356,"chla, total_p"
-4363,"chla, total_p"
+4363,"chla, total_p, total_n, np"
 4369,"chla, total_p"
 4377,"chla, total_p"
 4378,"chla, total_p"
 4385,"chla, total_p"
 4386,"chla, total_p"
 4387,"chla, total_p"
-4389,"chla, total_p"
+4389,"chla, total_p, total_n, np"
 4392,"chla, total_p"
-4393,"chla, total_p"
+4393,"chla, total_p, total_n, np"
 4394,"chla, total_p"
 4405,"chla, total_p"
 4408,"chla, total_p"
@@ -456,26 +390,25 @@ station_name,params_avail
 4428,"chla, total_p"
 4432,"chla, total_p"
 4434,"chla, total_p"
-4440,"chla, total_p"
+4440,"chla, total_p, total_n, np"
 4441,"chla, total_p"
 4448,"chla, total_p"
-4449,"chla, total_p"
 4458,"chla, total_p"
 4460,"chla, total_p"
 4468,"chla, total_p"
 4471,"chla, total_p"
-4473,"chla, total_p"
-4476,"chla, total_p"
-4478,"chla, total_p"
-4482,"chla, total_p"
+4473,"chla, total_p, total_n, np"
+4476,"chla, total_p, total_n, np"
+4478,"chla, total_p, total_n, np"
+4482,"chla, total_p, total_n, np"
 4484,"chla, total_p"
 4485,"chla, total_p"
 4489,"chla, total_p"
 4490,"chla, total_p"
-4494,"chla, total_p"
+4494,"chla, total_p, total_n, np"
 4501,"chla, total_p"
 4504,"chla, total_p"
-4510,"chla, total_p"
+4510,"chla, total_p, total_n, np"
 4515,"chla, total_p"
 4518,"chla, total_p"
 4521,"chla, total_p"
@@ -488,33 +421,30 @@ station_name,params_avail
 4546,"chla, total_p"
 4554,"chla, total_p"
 4560,"chla, total_p"
-4566,"chla, total_p"
+4566,"chla, total_p, total_n, np"
 4576,"chla, total_p"
-4584,"chla, total_p"
 4588,"chla, total_p"
 4594,"chla, total_p"
 4608,"chla, total_p"
 4611,"chla, total_p"
 4619,"chla, total_p"
-4621,"chla, total_p"
+4621,"chla, total_p, total_n, np"
 4625,"chla, total_p, total_n, np"
 4626,"chla, total_p"
 4627,"chla, total_p"
-4628,"chla, total_p"
 4631,"chla, total_p"
 4632,"chla, total_p"
 4635,"chla, total_p"
-4637,"chla, total_p"
+4637,"chla, total_p, total_n, np"
 4642,"chla, total_p"
 4644,"chla, total_p"
 4646,"chla, total_p"
-4648,"chla, total_p"
+4648,"chla, total_p, total_n, np"
 4649,"chla, total_p"
-4655,"chla, total_p"
 4664,"chla, total_p, total_n, np"
 4666,"chla, total_p"
 4682,"chla, total_p"
-4686,"chla, total_p"
+4686,"chla, total_p, total_n, np"
 4688,"chla, total_p"
 4690,"chla, total_p"
 4691,"chla, total_p"
@@ -532,20 +462,19 @@ station_name,params_avail
 4735,"chla, total_p"
 4742,"chla, total_p"
 4758,"chla, total_p"
-4771,"chla, total_p"
+4771,"chla, total_p, total_n, np"
 4774,"chla, total_p"
 4775,"chla, total_p"
 4780,"chla, total_p"
-4797,"chla, total_p"
+4797,"chla, total_p, total_n, np"
 4805,"chla, total_p"
 4815,"chla, total_p"
-4816,"chla, total_p"
+4816,"chla, total_p, total_n, np"
 4818,"chla, total_p"
-4819,"chla, total_p"
+4819,"chla, total_p, total_n, np"
 4828,"chla, total_p"
 4831,"chla, total_p"
 4836,"chla, total_p"
-4845,"chla, total_p"
 4847,"chla, total_p"
 4848,"chla, total_p"
 4850,"chla, total_p"
@@ -557,9 +486,9 @@ station_name,params_avail
 4870,"chla, total_p"
 4874,"chla, total_p"
 4881,"chla, total_p"
-4882,"chla, total_p"
+4882,"chla, total_p, total_n, np"
 4884,"chla, total_p"
-4886,"chla, total_p"
+4886,"chla, total_p, total_n, np"
 4887,"chla, total_p"
 4892,"chla, total_p"
 4895,"chla, total_p"
@@ -578,14 +507,13 @@ station_name,params_avail
 4947,"chla, total_p"
 4951,"chla, total_p"
 4952,"chla, total_p"
-4955,"chla, total_p"
+4955,"chla, total_p, total_n, np"
 4960,"chla, total_p"
 4962,"chla, total_p"
 4969,"chla, total_p"
-4972,"chla, total_p"
 4978,"chla, total_p"
 4979,chla
-4985,"chla, total_p"
+4985,"chla, total_p, total_n, np"
 4989,"chla, total_p"
 4994,"chla, total_p"
 4995,"chla, total_p"
@@ -595,7 +523,7 @@ station_name,params_avail
 5017,"chla, total_p"
 5018,"chla, total_p"
 5027,"chla, total_p"
-5032,"chla, total_p"
+5032,"chla, total_p, total_n, np"
 5033,"chla, total_p"
 5035,"chla, total_p"
 5036,"chla, total_p"
@@ -609,7 +537,6 @@ station_name,params_avail
 5078,"chla, total_p"
 5085,"chla, total_p"
 5091,"chla, total_p"
-5093,"chla, total_p"
 5104,"chla, total_p"
 5108,"chla, total_p"
 5110,"chla, total_p"
@@ -617,26 +544,24 @@ station_name,params_avail
 5112,"chla, total_p"
 5113,"chla, total_p"
 5114,"chla, total_p"
-5118,"chla, total_p"
+5118,"chla, total_p, total_n, np"
 5119,"chla, total_p"
 5120,"chla, total_p"
 5126,"chla, total_p"
-5135,"chla, total_p"
 5136,"chla, total_p"
 5141,"chla, total_p"
-5143,"chla, total_p"
+5143,"chla, total_p, total_n, np"
 5145,"chla, total_p"
 5150,"chla, total_p"
 5152,"chla, total_p"
-5159,"chla, total_p"
-5162,"chla, total_p"
-5167,"chla, total_p"
-5168,"chla, total_p"
+5162,"chla, total_p, total_n, np"
+5167,"chla, total_p, total_n, np"
+5168,"chla, total_p, total_n, np"
 5169,"chla, total_p"
-5171,"chla, total_p"
+5171,"chla, total_p, total_n, np"
 5175,"chla, total_p"
 5176,"chla, total_p"
-5183,"chla, total_p"
+5183,"chla, total_p, total_n, np"
 5187,"chla, total_p"
 5195,"chla, total_p"
 5202,"chla, total_p"
@@ -657,13 +582,12 @@ station_name,params_avail
 5252,"chla, total_p"
 5261,"chla, total_p"
 5265,"chla, total_p"
-5274,"chla, total_p"
+5274,"chla, total_p, total_n, np"
 5275,"chla, total_p"
 5276,"chla, total_p"
 5282,"chla, total_p"
 5286,"chla, total_p"
 5287,"chla, total_p"
-5288,"chla, total_p"
 5290,"chla, total_p"
 5293,"chla, total_p"
 5294,"chla, total_p"
@@ -673,19 +597,19 @@ station_name,params_avail
 5320,"chla, total_p"
 5325,"chla, total_p"
 5328,"chla, total_p"
-5329,"chla, total_p"
+5329,"chla, total_p, total_n, np"
 5332,"chla, total_p"
-5336,"chla, total_p"
+5336,"chla, total_p, total_n, np"
 5337,"chla, total_p"
 5342,"chla, total_p"
 5345,"chla, total_p"
 5367,"chla, total_p"
 5370,"chla, total_p"
 5373,"chla, total_p"
-5374,"chla, total_p"
+5374,"chla, total_p, total_n, np"
 5380,"chla, total_p"
 5382,"chla, total_p"
-5383,"chla, total_p"
+5383,"chla, total_p, total_n, np"
 5385,"chla, total_p"
 5394,"chla, total_p"
 5397,"chla, total_p"
@@ -700,12 +624,11 @@ station_name,params_avail
 5429,"chla, total_p"
 5431,"chla, total_p"
 5432,"chla, total_p"
-5435,"chla, total_p"
 5442,"chla, total_p"
 5450,"chla, total_p"
 5453,"chla, total_p"
 5454,"chla, total_p"
-5458,"chla, total_p"
+5458,"chla, total_p, total_n, np"
 5463,"chla, total_p"
 5464,"chla, total_p"
 5465,"chla, total_p"
@@ -713,7 +636,6 @@ station_name,params_avail
 5473,"chla, total_p"
 5481,"chla, total_p"
 5490,"chla, total_p"
-5491,"chla, total_p"
 5506,"chla, total_p"
 5509,"chla, total_p"
 5510,"chla, total_p"
@@ -729,16 +651,102 @@ station_name,params_avail
 5549,"chla, total_p"
 5550,"chla, total_p"
 5558,"chla, total_p"
-5567,"chla, total_p"
 5572,"chla, total_p"
 5573,"chla, total_p"
 5574,"chla, total_p"
 5575,"chla, total_p"
-5581,"chla, total_p"
+5581,"chla, total_p, total_n, np"
 5583,"chla, total_p"
+5590,"chla, total_p"
+5591,chla
+5592,"chla, total_p"
+5593,"chla, total_p"
+5596,"chla, total_p"
+5597,chla
+5598,"chla, total_p"
+5599,"chla, total_p"
+5600,"chla, total_p"
+5602,chla
+5610,"chla, total_p"
+5620,"chla, total_p"
+5645,chla
+5649,"chla, total_p"
+5652,chla
+5653,"chla, total_p"
+5656,chla
+5660,"chla, total_p"
+5665,"chla, total_p"
+5687,"chla, total_p"
+5688,"chla, total_p"
+5690,chla
+5691,"chla, total_p"
+5692,"chla, total_p"
+5698,"chla, total_p"
+5708,"chla, total_p"
+5710,"chla, total_p"
+5712,"chla, total_p"
+5720,"chla, total_p"
 5723,"chla, total_p, total_n, np"
+5729,"chla, total_p"
 5733,"chla, total_p, total_n, np"
+5735,"chla, total_p"
+5741,"chla, total_p"
+5750,"chla, total_p"
+5754,"chla, total_p"
+5756,chla
+5758,chla
+5760,"chla, total_p"
+5763,"chla, total_p"
+5766,"chla, total_p"
+5768,"chla, total_p"
+5769,"chla, total_p"
+5774,"chla, total_p"
+5775,"chla, total_p"
+5779,chla
+5782,"chla, total_p"
+5784,"chla, total_p"
+5785,chla
+5786,"chla, total_p"
+5790,"chla, total_p"
+5805,chla
+5806,"chla, total_p"
+5812,"chla, total_p"
+5847,"chla, total_p"
+5854,"chla, total_p"
+5857,chla
+5872,chla
+5873,chla
+5874,"chla, total_p"
+5882,"chla, total_p"
+5889,"chla, total_p"
 5895,"chla, total_p"
+5899,"chla, total_p"
+5908,"chla, total_p"
+5909,"chla, total_p"
+5910,chla
+5911,chla
+5921,"chla, total_p"
+5938,"chla, total_p"
+5950,"chla, total_p"
+5959,"chla, total_p"
+5961,chla
+5965,"chla, total_p"
+5969,"chla, total_p"
+5984,chla
+5990,"chla, total_p"
+5992,"chla, total_p"
+6000,"chla, total_p"
+6004,"chla, total_p"
+6008,"chla, total_p"
+6012,"chla, total_p"
+6017,"chla, total_p"
+6021,"chla, total_p"
+6035,"chla, total_p"
+6038,"chla, total_p"
+6040,chla
+6051,"chla, total_p"
+6052,"chla, total_p"
+6054,"chla, total_p"
 6058,"chla, total_p, total_n, np"
 6059,"chla, total_p, total_n, np"
 6063,"chla, total_p, total_n, np"
@@ -749,6 +757,18 @@ station_name,params_avail
 6069,"chla, total_p, total_n, np"
 6075,"chla, total_p, total_n, np"
 6076,"chla, total_p, total_n, np"
+6090,"chla, total_p"
+6092,"chla, total_p"
+6094,"chla, total_p"
+6110,"chla, total_p"
+6112,"chla, total_p"
+6133,"chla, total_p"
+6136,"chla, total_p"
+6138,"chla, total_p"
+6147,"chla, total_p"
+6169,"chla, total_p"
+6172,"chla, total_p"
+6173,"chla, total_p"
 6176,"chla, total_p, total_n, np"
 6181,"chla, total_p, total_n, np"
 6190,"chla, total_p, total_n, np"
@@ -770,15 +790,26 @@ station_name,params_avail
 6223,"chla, total_p, total_n, np"
 6226,"chla, total_p, total_n, np"
 6227,"chla, total_p, total_n, np"
+6234,"chla, total_p"
+6235,chla
+6248,"chla, total_p"
+6254,"chla, total_p"
+6258,"chla, total_p"
+6260,"chla, total_p"
+6267,"chla, total_p"
+6284,"chla, total_p"
+6285,chla
+6287,"chla, total_p"
+6293,"chla, total_p"
 6299,"chla, total_p, total_n, np"
 6300,"chla, total_p, total_n, np"
 6301,"chla, total_p, total_n, np"
 6302,"chla, total_p, total_n, np"
 6303,"chla, total_p, total_n, np"
-6339,"chla, total_p"
-6340,"chla, total_p"
-6347,chla
-6383,chla
+6307,"chla, total_p"
+6322,chla
+6324,"chla, total_p"
+6332,"chla, total_p"
 6397,"chla, total_p"
 6399,"chla, total_p"
 6404,"chla, total_p, total_n, np"
@@ -800,7 +831,6 @@ station_name,params_avail
 6433,"chla, total_p, total_n, np"
 6434,"chla, total_p"
 6436,"chla, total_p"
-6439,"chla, total_p"
 6479,"chla, total_p"
 6480,"chla, total_p, total_n, np"
 6488,"chla, total_p"
@@ -865,10 +895,8 @@ station_name,params_avail
 7504,"chla, total_p"
 7519,"chla, total_p"
 7521,"chla, total_p"
-7523,"chla, total_p"
 7527,"chla, total_p"
 7531,"chla, total_p"
-7534,"chla, total_p"
 7539,"chla, total_p"
 7540,"chla, total_p, total_n, np"
 7541,"chla, total_p, total_n, np"
@@ -877,7 +905,6 @@ station_name,params_avail
 7554,"chla, total_p"
 7565,"chla, total_p"
 7567,"chla, total_p"
-7575,"chla, total_p"
 7592,"chla, total_p, total_n, np"
 7593,"chla, total_p, total_n, np"
 7594,"chla, total_p"
@@ -887,11 +914,7 @@ station_name,params_avail
 7598,"chla, total_p, total_n, np"
 7606,"chla, total_p"
 7615,"chla, total_p"
-7637,"chla, total_p"
 7643,"chla, total_p"
-7660,"chla, total_p"
-7664,"chla, total_p"
-7676,"chla, total_p"
 7695,"chla, total_p, total_n, np"
 7726,"chla, total_p"
 7733,"chla, total_p"
@@ -906,20 +929,16 @@ station_name,params_avail
 7791,"chla, total_p, total_n, np"
 7792,"chla, total_p, total_n, np"
 7801,"chla, total_p"
-7810,"chla, total_p"
 7811,"chla, total_p"
 7816,"chla, total_p"
-7834,"chla, total_p"
 7835,"chla, total_p"
 7856,"chla, total_p"
 7872,"chla, total_p"
-7881,"chla, total_p"
 7886,"chla, total_p"
 7892,"chla, total_p"
 7904,"chla, total_p"
 7905,"chla, total_p"
 7921,"chla, total_p"
-7934,"chla, total_p"
 7964,"chla, total_p, total_n, np"
 7965,"chla, total_p, total_n, np"
 7966,"chla, total_p, total_n, np"
@@ -927,7 +946,6 @@ station_name,params_avail
 7970,"chla, total_p, total_n, np"
 7975,"chla, total_p"
 7979,"chla, total_p"
-8018,"chla, total_p"
 8021,"chla, total_p"
 8037,"chla, total_p"
 8048,"chla, total_p"
@@ -940,13 +958,9 @@ station_name,params_avail
 8144,"chla, total_p"
 8158,"chla, total_p"
 8179,"chla, total_p"
-8205,"chla, total_p"
-8206,"chla, total_p"
 8213,"chla, total_p"
 8217,"chla, total_p"
 8223,"chla, total_p"
-8245,"chla, total_p"
-8252,"chla, total_p"
 8271,"chla, total_p, total_n, np"
 8272,"chla, total_p, total_n, np"
 8274,"chla, total_p, total_n, np"
@@ -969,22 +983,17 @@ station_name,params_avail
 8312,"chla, total_p, total_n, np"
 8313,"chla, total_p"
 8320,"chla, total_p, total_n, np"
-8322,"chla, total_p"
-8325,"chla, total_p"
 8326,"chla, total_p"
 8329,"chla, total_p"
 8333,"chla, total_p, total_n, np"
-8339,"chla, total_p"
 8354,"chla, total_p, total_n, np"
 8365,"chla, total_p, total_n, np"
 8366,"chla, total_p"
-8369,"chla, total_p"
 8394,"chla, total_p"
 8396,"chla, total_p"
 8403,"chla, total_p"
 8405,"chla, total_p"
 8410,"chla, total_p"
-8412,"chla, total_p"
 8416,"chla, total_p"
 8423,"chla, total_p"
 8424,"chla, total_p"
@@ -994,28 +1003,24 @@ station_name,params_avail
 8436,"chla, total_p"
 8444,"chla, total_p"
 8461,"chla, total_p"
-8483,"chla, total_p"
-8503,"chla, total_p"
 8510,"chla, total_p"
 8513,"chla, total_p"
 8601,chla
 8809,chla
-9249,"chla, total_p"
 9883,chla
 9914,chla
 11095,"chla, total_p, total_n, np"
 11789,chla
-13493,"chla, total_p"
 14815,"chla, total_n"
 15860,chla
 15979,"chla, total_p, total_n, np"
 18261,"chla, total_p, total_n, np"
-18632,"chla, total_p"
 19013,chla
 19016,chla
 19019,chla
 19307,chla
 20012,chla
+21588,chla
 22456,chla
 23286,chla
 25348,chla
@@ -1029,9 +1034,7 @@ station_name,params_avail
 33602,"chla, total_n"
 34974,chla
 35142,"chla, total_p"
-35414,chla
 36121,"chla, total_p, total_n, np"
-36541,"chla, total_p"
 36738,chla
 36762,chla
 38705,"chla, total_p"
@@ -1042,7 +1045,6 @@ station_name,params_avail
 40062,chla
 40387,"chla, total_p, total_n, np"
 40610,"chla, total_p, total_n, np"
-40741,"chla, total_p"
 41151,chla
 41352,chla
 42204,chla
@@ -1050,10 +1052,8 @@ station_name,params_avail
 43198,chla
 43282,chla
 43496,chla
-43937,"chla, total_p"
 45308,chla
 46662,"chla, total_p, total_n, np"
-47286,chla
 47359,chla
 49438,chla
 49938,"chla, total_p, total_n, np"
@@ -1061,10 +1061,8 @@ station_name,params_avail
 51459,chla
 51486,chla
 52808,"chla, total_p, total_n, np"
-53306,"chla, total_p"
 54660,chla
 55007,"chla, total_p, total_n, np"
-55346,"chla, total_p"
 55528,chla
 57638,chla
 57641,chla
@@ -1085,17 +1083,14 @@ station_name,params_avail
 65957,chla
 66241,chla
 66962,chla
-67777,"chla, total_p"
 68075,chla
 68332,chla
 68958,chla
 69085,chla
 71100,chla
-72641,"chla, total_p"
-73826,chla
+72641,"chla, total_p, total_n, np"
 74438,chla
 74509,"chla, total_p, total_n, np"
-74894,"chla, total_p"
 76191,chla
 76283,chla
 77315,chla
@@ -1121,16 +1116,14 @@ station_name,params_avail
 91980,chla
 92026,chla
 93982,chla
-93999,chla
 94401,"chla, total_p, total_n, np"
 94414,"chla, total_p, total_n, np"
 94983,chla
 95013,chla
 96015,"chla, total_n"
 96122,chla
-96694,"chla, total_p"
+96694,"chla, total_p, total_n, np"
 97720,"chla, total_p"
-97872,"chla, total_p"
 98420,chla
 99111,chla
 99307,"chla, total_p, total_n, np"
@@ -1138,7 +1131,6 @@ station_name,params_avail
 99428,chla
 101148,chla
 101152,chla
-101893,"chla, total_p"
 102115,chla
 102216,chla
 103201,chla
@@ -1156,7 +1148,6 @@ station_name,params_avail
 113702,"chla, total_p, total_n, np"
 115040,"chla, total_p, total_n, np"
 115878,chla
-117610,chla
 117631,chla
 118786,chla
 118966,chla
@@ -1165,7 +1156,6 @@ station_name,params_avail
 121869,chla
 121982,chla
 122517,"chla, total_p, total_n, np"
-122639,"chla, total_p"
 123003,chla
 123972,"chla, total_n"
 124012,chla
@@ -1189,7 +1179,6 @@ station_name,params_avail
 134691,chla
 135373,chla
 135681,chla
-136008,"chla, total_p"
 136311,"chla, total_p, total_n, np"
 136466,"chla, total_p, total_n, np"
 136680,chla
@@ -1200,46 +1189,87 @@ station_name,params_avail
 139765,chla
 140838,chla
 495,total_p
-817,total_p
+628,total_p
+785,total_p
 823,total_p
-827,total_p
+827,"total_p, total_n"
 831,total_p
+834,total_p
+847,total_p
 865,total_p
 909,total_p
+954,total_p
 968,total_p
+974,total_p
+1025,total_p
 1028,total_p
+1030,total_p
+1054,total_p
 1078,total_p
+1096,total_p
 1204,total_p
 1211,total_p
+1244,total_p
+1286,total_p
 1343,total_p
 1362,total_p
+1408,total_p
 1458,total_p
+1482,total_p
+1499,total_p
+1513,total_p
+1525,total_p
+1570,total_p
+1620,total_p
+1627,total_p
 1677,total_p
+1768,total_p
+1787,total_p
 1792,total_p
+1823,total_p
 1846,total_p
+1867,total_p
 1906,total_p
 1935,total_p
+1986,total_p
+2048,total_p
 2058,total_p
 2066,total_p
+2075,total_p
+2116,total_p
+2155,total_p
+2234,total_p
 2276,total_p
+2289,total_p
+2338,total_p
 2360,total_p
 2409,total_p
 2411,total_p
 2646,total_p
+2657,total_p
 2678,total_p
 2717,total_p
+2720,total_p
+2723,total_p
 2746,"total_p, total_n"
+2851,total_p
+2855,total_p
+2869,total_p
 2878,total_p
+3152,total_p
 3191,total_p
 3206,total_p
 3231,total_p
+3270,total_p
 3409,total_p
 3445,total_p
 3508,total_p
+3512,total_p
 3628,total_p
 3840,total_p
 3928,total_p
 3963,total_p
+3964,total_p
 3982,total_p
 4070,total_p
 4077,total_p
@@ -1248,9 +1278,9 @@ station_name,params_avail
 4274,total_p
 4283,total_p
 4295,total_p
-4307,total_p
 4309,total_p
 4320,total_p
+4356,total_p
 4376,total_p
 4390,total_p
 4444,total_p
@@ -1263,25 +1293,22 @@ station_name,params_avail
 4559,total_p
 4589,total_p
 4590,total_p
+4628,total_p
 4650,total_p
 4671,total_p
-4711,total_p
 4720,total_p
 4846,total_p
 4868,total_p
 4878,total_p
 4904,total_p
 4931,total_p
-4957,total_p
 5063,total_p
 5092,total_p
 5106,total_p
 5138,total_p
 5164,total_p
-5170,total_p
 5199,total_p
 5257,total_p
-5284,total_p
 5311,total_p
 5323,total_p
 5359,total_p
@@ -1293,191 +1320,88 @@ station_name,params_avail
 5520,total_p
 5527,total_p
 5589,total_p
-5590,total_p
-5591,total_p
-5592,total_p
-5593,total_p
-5596,total_p
-5598,total_p
-5599,total_p
-5600,total_p
-5602,total_p
 5608,total_p
-5610,total_p
-5620,total_p
 5625,total_p
 5639,total_p
-5645,total_p
-5649,total_p
-5653,total_p
-5660,total_p
 5661,total_p
-5665,total_p
-5669,total_p
-5674,total_p
-5687,total_p
-5688,total_p
-5690,total_p
-5691,total_p
-5692,total_p
-5698,total_p
-5708,total_p
-5710,total_p
-5712,total_p
 5713,total_p
 5715,total_p
-5720,total_p
-5729,total_p
-5735,total_p
 5736,total_p
-5741,total_p
-5750,total_p
-5754,total_p
-5760,total_p
-5763,total_p
-5766,total_p
 5767,total_p
-5768,total_p
-5769,total_p
-5774,total_p
-5775,total_p
-5779,total_p
-5782,total_p
-5784,total_p
-5785,total_p
-5786,total_p
-5790,total_p
-5805,total_p
-5806,total_p
-5812,total_p
-5845,total_p
-5847,total_p
 5848,total_p
 5849,total_p
-5854,total_p
-5857,total_p
-5872,total_p
-5873,total_p
-5874,total_p
 5880,total_p
-5882,total_p
-5889,total_p
-5899,total_p
 5901,total_p
-5909,total_p
-5921,total_p
-5938,total_p
 5946,total_p
 5949,total_p
-5950,total_p
 5951,total_p
-5959,total_p
-5961,total_p
-5965,total_p
-5969,total_p
 5980,total_p
-5984,total_p
 5987,total_p
-5990,total_p
 5991,total_p
-5992,total_p
-6000,total_p
-6004,total_p
-6008,total_p
-6012,total_p
-6017,total_p
-6021,total_p
 6026,total_p
 6030,total_p
-6035,total_p
-6036,total_p
-6038,total_p
-6040,total_p
-6051,total_p
-6052,total_p
-6054,total_p
 6079,total_p
-6090,total_p
-6092,total_p
-6093,total_p
-6094,total_p
 6107,total_p
-6110,total_p
-6112,total_p
-6133,total_p
-6136,total_p
-6138,total_p
 6143,total_p
-6147,total_p
-6162,total_p
-6169,total_p
-6172,total_p
-6173,total_p
-6234,total_p
-6236,total_p
-6248,total_p
-6254,total_p
-6258,total_p
-6260,total_p
-6267,total_p
 6279,total_p
-6284,total_p
-6287,total_p
-6293,total_p
-6307,total_p
 6314,total_p
 6315,total_p
-6322,total_p
-6324,total_p
 6329,total_p
-6332,total_p
 6334,total_p
+6339,total_p
+6340,total_p
+6439,total_p
 7467,total_p
-7491,total_p
-7495,total_p
-7506,total_p
-7516,total_p
-7602,total_p
+7523,total_p
+7660,total_p
+7676,total_p
 7809,total_p
-7843,total_p
-7845,total_p
-7860,total_p
-7865,total_p
+7810,total_p
 7879,total_p
 7910,total_p
-7916,total_p
-7947,total_p
-7973,total_p
 7992,total_p
-8023,total_p
-8042,total_p
-8145,total_p
-8247,total_p
-8300,total_p
+8018,total_p
+8205,total_p
+8206,total_p
+8325,total_p
 8332,total_p
+8369,total_p
 8395,total_p
-8397,total_p
-8408,total_p
-8413,total_p
-8475,total_p
 8481,total_p
-8506,total_p
+8483,total_p
+9249,total_p
 10987,"total_p, total_n"
+13493,total_p
 15557,total_p
 17360,total_p
 18371,total_p
+18632,total_p
 34377,total_p
 36107,"total_p, total_n"
+36541,total_p
 38285,"total_p, total_n"
+40741,total_p
+43937,total_p
 45986,total_p
+53306,total_p
+55346,total_p
+67777,total_p
 71790,total_p
+74894,total_p
 89690,total_p
 95774,total_p
 97845,total_p
+97872,total_p
+101893,total_p
 120948,"total_p, total_n"
+122639,total_p
 127638,total_p
 128798,total_p
+136008,total_p
 136303,"total_p, total_n"
 138062,total_p
 139057,total_p
 466,total_n
+644,total_n
+1023,total_n
+1672,total_n
