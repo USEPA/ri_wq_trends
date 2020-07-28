@@ -123,4 +123,4 @@ lagosne_avail_data_locations <- lagosne_data %>%
   unique() %>%
   right_join(lagosne_data_avail) %>%
   select(station_name, params_avail) %>%
-  write_csv(here("data/lagosene_avail_data_stations.csv"))
+  write_csv(here("data/lagosne_avail_data_stations.csv"))

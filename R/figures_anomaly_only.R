@@ -106,7 +106,7 @@ lagos_tn_rl <- lagos_tn_gg[[4]]
 lagos_tp_gg <- wq_trend_gg(lagos_data, "total_p", yvar = "measurement_anmly", 
                            y = expression(paste("Average Yearly Total Phosphorus Anomaly (", mu, "g/L)")), 
                            x = "Year",
-                           write = here("data/total_n_data_lagos_anomaly.csv"), 
+                           write = here("data/total_p_data_lagos_anomaly.csv"), 
                            error_bar = "sd",
                            title = "B. LAGOSNE Total Phosphorus")
 ggsave(here("figures/lagos_tp_trends_anomaly.jpg"), lagos_tp_gg[[1]], width = 7.5, height = 5.625, 

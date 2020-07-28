@@ -136,22 +136,6 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
                                       round(mn_measurement/5, 0)*5,
                                     TRUE ~ mn_measurement))
   
-
-# Calculate and add n:p 
-# Need to make molar conversions here...
-ww_np <- ww_lake_trend_data %>%
-  filter(param == "total_n" | param == "total_p") %>% 
-  unique() %>% #repeats from somewhere...
-  spread(key = param, value = mn_measurement) %>%
-  mutate(np_ratio = (total_n/total_p)*2.21) %>% #calc ratio and convert to molar
-  filter(!is.na(np_ratio)) %>%
-  filter(!is.infinite(np_ratio)) %>%
-  gather(key = "param", value = "mn_measurement", np_ratio) %>%
-  select(station_name, year, month, day, param, location, mn_measurement)
-
-ww_lake_trend_data <- ww_lake_trend_data %>%
-  rbind(ww_np)
-
 # Almy Pond, 2016-07-23, Sample likely contaminated with bottom sediment per notes in data
 # Removed from analysis
 idx <- ww_lake_trend_data$year == "2016" & ww_lake_trend_data$month == 7 & ww_lake_trend_data$day == 23 & ww_lake_trend_data$station_name == "WW199"
@@ -159,29 +143,25 @@ idx <- !idx
 ww_lake_trend_data <- ww_lake_trend_data %>% 
   filter(idx)
 
-write_csv(ww_lake_trend_data, here("data/ww_all_mostly_cleaned.csv"))
-
-# Reviewer 1 comment: To avoid possible seasonal effects due to missed samples, 
-# make sure to include only lake-years with a minimum of one sample in each of
-# May/June, Jul/Aug, Sep/Oct per parameter.
-idx_min_samp <- ww_lake_trend_data %>%
-  mutate(may_jun = case_when(month == 5 | month == 6 ~
-                             1, 
-                           TRUE ~ 0),
-       jul_aug = case_when(month == 7 | month == 8 ~
-                             1,
-                           TRUE ~ 0),
-       sep_oct = case_when(month == 9 | month == 10 ~
-                             1,
-                           TRUE ~ 0)) %>%
-  group_by(station_name, year, param) %>%
-  summarize(min_samp = sum(may_jun, jul_aug, sep_oct)>=3) %>% 
-  right_join(ww_lake_trend_data) %>%
-  pull(min_samp)
-
+# Reviewer 1 comment re: samples across the season
 ww_lake_trend_data <- ww_lake_trend_data %>%
-  filter(idx_min_samp)
-    
+ filter_months(.)
+
+# Calculate and add n:p 
+# Need to make molar conversions here...
+ww_np <- ww_lake_trend_data %>%
+  filter(param == "total_n" | param == "total_p") %>% 
+  spread(key = param, value = mn_measurement) %>%
+  mutate(np_ratio = (total_n/total_p)*2.21) %>% #calc ratio and convert to molar
+  filter(!is.na(np_ratio)) %>%
+  filter(!is.infinite(np_ratio)) %>%
+  gather(key = "param", value = "mn_measurement", np_ratio) %>%
+  select(station_name, year, month, day, param, location, mn_measurement)
+
+ww_lake_trend_data <- select(ww_lake_trend_data, -may_jun, -jul_aug, -sep_oct) %>%
+  rbind(ww_np)
+
+write_csv(ww_lake_trend_data, here("data/ww_all_mostly_cleaned.csv"))
 
 # Calculates station/year/param stats
 ww_lake_trend_data <- ww_lake_trend_data %>%
@@ -214,6 +194,8 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
                                        round(station_year_mean, 0),
                                      param == "total_n" ~
                                        round(station_year_mean/5, 0)*5,
+                                     param == "np_ratio" ~
+                                       round(station_year_mean, 0),
                                      TRUE ~ station_year_mean),
          measurement_anmly = case_when(param == "temp"  ~ 
                                          round(measurement_anmly, 1),
@@ -223,6 +205,8 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
                                          round(measurement_anmly, 0),
                                        param == "total_n" ~
                                          round(measurement_anmly/5, 0)*5,
+                                       param == "np_ratio" ~
+                                         round(measurement_anmly, 0),
                                        TRUE ~ measurement_anmly),
          lt_mean = case_when(param == "temp"  ~ 
                                round(lt_mean, 1),
@@ -232,6 +216,8 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
                                round(lt_mean, 0),
                              param == "total_n" ~
                                round(lt_mean/5, 0)*5,
+                             param == "np_ratio" ~
+                               round(lt_mean, 0),
                              TRUE ~ lt_mean),
          lt_sd = case_when(param == "temp"  ~ 
                              round(lt_sd, 1),
@@ -241,11 +227,37 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
                              round(lt_sd, 0),
                           param == "total_n" ~
                              round(lt_sd/5, 0)*5,
+                          param == "np_ratio" ~
+                            round(lt_sd, 0),
                           TRUE ~ lt_sd))
 
 ww_lake_trend_data <- ww_lake_trend_data %>%
   left_join(det_limits)
 
+# In response to reviewer comment 1-2: remove sites/param that may have only been 
+# early or late in 1993-2016
+ww_lake_trend_data <- ww_lake_trend_data %>%
+  filter_early_late(2004)
+
+# Add TSIs
+ww_lake_trend_data <- ww_lake_trend_data %>%
+  mutate(tsi = case_when(param == "chla" ~
+                           tsi(station_year_mean, "chla"),
+                         param == "total_p" ~
+                           tsi(station_year_mean, "tp"),
+                         param == "total_n" ~
+                           tsi(station_year_mean, "tn"),
+                         TRUE ~ NA_real_),
+         trophic_state = case_when(tsi <= 40 ~
+                                     "oligotrophic",
+                                   tsi > 40 & tsi <= 50 ~
+                                     "mesotrophic",
+                                   tsi > 50 & tsi <= 60 ~
+                                     "eutrophic",
+                                   tsi > 60 ~
+                                     "hypereutrophic",
+                                   TRUE ~
+                                     NA_character_))
 write_csv(ww_lake_trend_data, here("data/ww_lake_trend_data.csv"))
 
 # Prep LAGOS data
@@ -268,27 +280,9 @@ lagos_data <- lagosne_select(table = "epi_nutr",
   filter(month >= 5 & month <= 10) %>%
   select(station_name = `Station Name`,year, month, day, param, measurement) 
 
-# Reviewer 1 comment: To avoid possible seasonal effects due to missed samples, 
-# make sure to include only lake-years with a minimum of one sample in each of
-# May/June, Jul/Aug, Sep/Oct per parameter.
-idx_min_samp <- lagos_data %>%
-  mutate(may_jun = case_when(month == 5 | month == 6 ~
-                               1, 
-                             TRUE ~ 0),
-         jul_aug = case_when(month == 7 | month == 8 ~
-                               1,
-                             TRUE ~ 0),
-         sep_oct = case_when(month == 9 | month == 10 ~
-                               1,
-                             TRUE ~ 0)) %>%
-  group_by(station_name, year, param) %>%
-  summarize(min_samp = sum(may_jun, jul_aug, sep_oct)>=3) %>% 
-  right_join(lagos_data) %>%
-  pull(min_samp)
-
+# Reviewer 1 comment re: samples across the season
 lagos_data <- lagos_data %>%
-  filter(idx_min_samp)
-
+  filter_months(.)
 
 lagos_data <- lagos_data %>%
   #This should take care of pseudoreplication by using the per site/year means
@@ -313,6 +307,8 @@ lagos_data <- lagos_data %>%
                                          round(station_year_mean, 0),
                                        param == "total_n" ~
                                          round(station_year_mean/5, 0)*5,
+                                       param == "np_ratio" ~
+                                         round(station_year_mean, 0),
                                        TRUE ~ station_year_mean),
          measurement_anmly = case_when(param == "temp"  ~ 
                                          round(measurement_anmly, 1),
@@ -322,6 +318,8 @@ lagos_data <- lagos_data %>%
                                          round(measurement_anmly, 0),
                                        param == "total_n" ~
                                          round(measurement_anmly/5, 0)*5,
+                                       param == "np_ratio" ~
+                                         round(measurement_anmly, 0),
                                        TRUE ~ measurement_anmly),
          lt_mean = case_when(param == "temp"  ~ 
                                round(lt_mean, 1),
@@ -331,6 +329,8 @@ lagos_data <- lagos_data %>%
                                round(lt_mean, 0),
                              param == "total_n" ~
                                round(lt_mean/5, 0)*5,
+                             param == "np_ratio" ~
+                               round(lt_mean, 0),
                              TRUE ~ lt_mean),
          lt_sd = case_when(param == "temp"  ~ 
                              round(lt_sd, 1),
@@ -340,6 +340,32 @@ lagos_data <- lagos_data %>%
                              round(lt_sd, 0),
                            param == "total_n" ~
                              round(lt_sd/5, 0)*5,
+                           param == "np_ratio" ~
+                             round(lt_sd, 0),
                            TRUE ~ lt_sd))
-  
+
+# In response to reviewer comment 1-2: remove sites/param that may have only been 
+# early or late in 1993-2016
+lagos_data <- lagos_data %>%
+  filter_early_late(2002)
+
+lagos_data <- lagos_data %>%
+  mutate(tsi = case_when(param == "chla" ~
+                           tsi(station_year_mean, "chla"),
+                         param == "total_p" ~
+                           tsi(station_year_mean, "tp"),
+                         param == "total_n" ~
+                           tsi(station_year_mean, "tn"),
+                         TRUE ~ NA_real_),
+         trophic_state = case_when(tsi <= 40 ~
+                                     "oligotrophic",
+                                   tsi > 40 & tsi <= 50 ~
+                                     "mesotrophic",
+                                   tsi > 50 & tsi <= 60 ~
+                                     "eutrophic",
+                                   tsi > 60 ~
+                                     "hypereutrophic",
+                                   TRUE ~
+                                     NA_character_))
+
 write_csv(lagos_data, here("data/lagos_lake_trend_data.csv"))

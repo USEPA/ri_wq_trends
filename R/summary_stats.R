@@ -15,7 +15,8 @@ ww_param_ranges <- ww_all %>%
             median = round(median(station_year_mean, na.rm = T), 2),
             percentile_75 = round(quantile(station_year_mean, probs = 0.75, na.rm = T), 2),
             max = round(max(station_year_mean, na.rm = T), 2),
-            sd = round(sd(station_year_mean, na.rm = T), 2)) %>%
+            sd = round(sd(station_year_mean, na.rm = T), 2),
+            n = n()) %>%
   ungroup() %>%
   mutate(units = c("°C", "µg/l", "µg/l", "molar", "µg/l")) %>%
   select(Parameter = param, Units = units, 
@@ -57,7 +58,8 @@ ww_param_anomaly_ranges <- ww_all %>%
             median = round(median(measurement_anmly, na.rm = T), 2),
             percentile_75 = round(quantile(measurement_anmly, probs = 0.75, na.rm = T), 2),
             max = round(max(measurement_anmly, na.rm = T), 2),
-            sd = round(sd(measurement_anmly, na.rm = T), 2)) %>%
+            sd = round(sd(measurement_anmly, na.rm = T), 2),
+            n = n()) %>%
   ungroup() %>%
   mutate(units = c("°C", "µg/l", "µg/l", "molar", "µg/l")) %>%
   select(Parameter = param, Units = units, 
@@ -81,7 +83,8 @@ lagos_param_ranges <- lagos_all %>%
             median = round(median(station_year_mean, na.rm = T), 2),
             percentile_75 = round(quantile(station_year_mean, probs = 0.75, na.rm = T), 2),
             max = round(max(station_year_mean, na.rm = T), 2),
-            sd = round(sd(station_year_mean, na.rm = T), 2)) %>%
+            sd = round(sd(station_year_mean, na.rm = T), 2),
+            n = n()) %>%
   ungroup() %>%
   mutate(units = c("µg/l", "µg/l", "molar", "µg/l")) %>%
   select(Parameter = param, Units = units, 
@@ -122,7 +125,8 @@ lagos_param_anomaly_ranges <- lagos_all %>%
             median = round(median(measurement_anmly, na.rm = T), 2),
             percentile_75 = round(quantile(measurement_anmly, probs = 0.75, na.rm = T), 2),
             max = round(max(measurement_anmly, na.rm = T), 2),
-            sd = round(sd(measurement_anmly, na.rm = T), 2)) %>%
+            sd = round(sd(measurement_anmly, na.rm = T), 2),
+            n = n()) %>%
   ungroup() %>%
   mutate(units = c("µg/l", "µg/l", "molar", "µg/l")) %>%
   select(Parameter = param, Units = units, 
