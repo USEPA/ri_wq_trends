@@ -61,11 +61,104 @@ While we have full seasonal coverage for the majority of lake-years we decided t
 
 *1-4.* It is unclear how the trends in temperature, TP, chl-a, TN, and TN:TP compare to water quality condition and any standards that might be set in Rhode Island. Tables 1 and 2 give the range of values across lakes and there is clearly a large gradient in trophic status. Following from the comment made in point 8, it would be helpful to better understand the trends observed here in context of water quality condition. If chl-a is rising, is it still relatively low, or is it reaching “polluted/degraded” levels? Do you observe a shift in trophic status in individual lakes? Somehow, try to put the trends or lack of trends observed in the context of how water quality condition is changing over time. 
 
-- **Response:** NEEDS A RESPONSE!
+- **Response:** Another good suggestion.  We have addressed in our response to comment *1-5b* and *1-8*.  In particular, we have identified slope values that would indicate a meaningful ecological trend.  We use literature values as well as state water quality criteria (when available) to inform those values.  Additionally, we have added analysis to explore trends across trophic state.  
 
 *1-4a.* Line 312: It is still unclear to me how this analysis of site-specific anomalies is robust to variation in timing of inclusion of given sampling locations.
 
-- **Response:** NEEDS A RESPONSE!
+- **Response:** What we mean by this, is if sites with differing base lines (e.g. low nutrient site vs high nutrient site or cool water site vs warm water site) were included at different times, then site-specific anomalies are more appropriate for examining long-term trends becuase each of the sites will be re-scaled, relative to that sites long term mean.  For instance, comparing measured values from a cool water site that shows no trend which is measured mostly early in a sampling period to a warm water site without a trend measured late in a sampling period would likely show an increasing trend when in fact none existed.  Re-scaling these values relative to the mean sets both sites to a common baseline and would then not show a trend.  To further illustrate this, look at the two figures below.  The first figure shows simulated data from three sites.  All sites have no trend with site one being measured across the time period with values mostly in the middle of a range.  Site 2 has no trend with low values and is only in the first portion of the time period.  Site 3 has no trend with high values and is only in the later portion of the time period.  The second figure shows what the average yearly trend would look like if just looking at the values vs looking at the anomalies.  The measured values show a trend, when none should exist.  The anomalies correctly show no increasing trend.  We have added in these figures and text to the Discussion
+
+```{r echo=TRUE}
+library(dplyr)
+library(tidyr)
+library(lubridate)
+library(stringr)
+library(ggplot2)
+library(hrbrthemes)
+library(broom)
+
+set.seed(0)
+options(scipen=10000)
+
+site1 <- tibble(site=rep("site 1",10),
+                year = 2011:2020,
+                rep_1 = rnorm(10,10,2.5),
+                rep_2 = rep_1*rnorm(10, 1, 0.05),
+                rep_3 = rep_1*rnorm(10, 1, 0.05)) %>%
+  pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
+  mutate(replicate = str_extract(replicate, "[0-9]"))
+
+site2 <- tibble(site=rep("site 2",6),
+                year = 2011:2016,
+                rep_1 = rnorm(6,3,1),
+                rep_2 = rep_1 * rnorm(6, 1, 0.05),
+                rep_3 = rep_1 * rnorm(6, 1, 0.05)) %>%
+  pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
+  mutate(replicate = str_extract(replicate, "[0-9]"))
+
+site3 <- tibble(site=rep("site 3",6),
+                year = 2015:2020,
+                rep_1 = rnorm(6, 17, 1),
+                rep_2 = rep_1*rnorm(6, 1, 0.05),
+                rep_3 = rep_1*rnorm(6, 1, 0.05)) %>%
+  pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
+  mutate(replicate = str_extract(replicate, "[0-9]"))                
+
+examp <- rbind(site1, site2, site3) %>%
+  mutate(year = year(ymd(paste0(year,"01-01"))))
+
+site_gg <- examp %>%
+  ggplot(aes(x = year, y = values)) +
+  geom_point() + 
+  facet_grid(. ~ site) +
+  theme_ipsum_rc()  +
+  scale_x_continuous(labels = c(2012,2014,2016,2018,2020),
+                       breaks = c(2012,2014,2016,2018,2020)) +
+  labs(x = "Year", y = "Simulated Measurements")
+site_gg
+
+
+examp_site_summ <- examp %>% 
+  group_by(site) %>%
+  mutate(lt_mean = mean(values)) %>%
+  ungroup() %>%
+  group_by(site, year) %>%
+  summarize(measured_value = mean(values),
+            anomaly = mean(values-lt_mean)) %>%
+  ungroup() %>%
+  pivot_longer(measured_value:anomaly, "Method")
+
+examp_yr_summ <- examp_site_summ %>%
+  group_by(year, Method) %>%
+  summarize(values = mean(value)) %>%
+  ungroup() 
+
+meas_lm <- lm(values ~ year, 
+              data = examp_yr_summ[examp_yr_summ$Method == "measured_value",]) %>% 
+    tidy() %>%
+    slice(2) %>%
+    select(slope = estimate, p.value)
+anom_lm <- lm(values ~ year, 
+              data = examp_yr_summ[examp_yr_summ$Method == "anomaly",]) %>% 
+    tidy() %>%
+    slice(2) %>%
+    select(slope = estimate, p.value)
+
+
+simulated_trends_gg <- ggplot(examp_yr_summ, 
+                              aes(x = year, y = values, color = Method)) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_color_manual(values = c("darkblue", "darkred"), 
+                     labels = c("Anomaly", "Measured Values")) +
+  labs(y = "Yearly Average Value", x = "Year", subtitle = paste0("Measured Values: slope = ", signif(meas_lm$slope, 2), 
+                                      ", p-value = ", signif(meas_lm$p.value, 2), "\nAnomaly: slope = ", signif(anom_lm$slope, 2), 
+                                      ", p-value = ", signif(anom_lm$p.value, 2))) +
+  theme_ipsum_rc() +
+  scale_x_continuous(labels = c(2012,2014,2016,2018,2020),
+                       breaks = c(2012,2014,2016,2018,2020)) +
+  theme(plot.subtitle = element_text(size=10, face="plain"))
+simulated_trends_gg
+```
 
 *1-5.* My biggest concern is possibly overstating the lack of trends in TP and TN and the positive trends in temperature and chl-a and then suggesting that temperature, not nutrients, are responsible for increasing chl-a. The authors are somewhat cautious when making this conclusion, but do not fully recognize the limitations of this interpretation. I will try to break my concerns into manageable pieces for the authors to respond to.
 

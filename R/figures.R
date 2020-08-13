@@ -194,5 +194,92 @@ figure_data <- chla_gg[[3]] %>%
 
 write_csv(figure_data, here("data/yearly_average_z.csv"))
   
+# Create simulated data and analysis for figure in discussion.
+set.seed(0)
+options(scipen=10000)
+
+site1 <- tibble(site=rep("site 1",10),
+                year = 2011:2020,
+                rep_1 = rnorm(10,10,2.5),
+                rep_2 = rep_1*rnorm(10, 1, 0.05),
+                rep_3 = rep_1*rnorm(10, 1, 0.05)) %>%
+  pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
+  mutate(replicate = str_extract(replicate, "[0-9]"))
+
+site2 <- tibble(site=rep("site 2",6),
+                year = 2011:2016,
+                rep_1 = rnorm(6,3,1),
+                rep_2 = rep_1 * rnorm(6, 1, 0.05),
+                rep_3 = rep_1 * rnorm(6, 1, 0.05)) %>%
+  pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
+  mutate(replicate = str_extract(replicate, "[0-9]"))
+
+site3 <- tibble(site=rep("site 3",6),
+                year = 2015:2020,
+                rep_1 = rnorm(6, 17, 1),
+                rep_2 = rep_1*rnorm(6, 1, 0.05),
+                rep_3 = rep_1*rnorm(6, 1, 0.05)) %>%
+  pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
+  mutate(replicate = str_extract(replicate, "[0-9]"))                
+
+examp <- rbind(site1, site2, site3) %>%
+  mutate(year = year(ymd(paste0(year,"01-01"))))
+
+site_gg <- examp %>%
+  ggplot(aes(x = year, y = values)) +
+  geom_point() + 
+  facet_grid(. ~ site) +
+  theme_ipsum_rc()  +
+  scale_x_continuous(labels = c(2012,2014,2016,2018,2020),
+                     breaks = c(2012,2014,2016,2018,2020)) +
+  labs(x = "Year", y = "Simulated Measurements")
+site_gg %>%  
+  ggsave(here("figures/simulated_data.jpg"), ., width = 7.5, height = 9.8,
+         units = "in", dpi = 600)
+
+
+examp_site_summ <- examp %>% 
+  group_by(site) %>%
+  mutate(lt_mean = mean(values)) %>%
+  ungroup() %>%
+  group_by(site, year) %>%
+  summarize(measured_value = mean(values),
+            anomaly = mean(values-lt_mean)) %>%
+  ungroup() %>%
+  pivot_longer(measured_value:anomaly, "Method")
+
+examp_yr_summ <- examp_site_summ %>%
+  group_by(year, Method) %>%
+  summarize(values = mean(value)) %>%
+  ungroup() 
+
+meas_lm <- lm(values ~ year, 
+              data = examp_yr_summ[examp_yr_summ$Method == "measured_value",]) %>% 
+  tidy() %>%
+  slice(2) %>%
+  select(slope = estimate, p.value)
+anom_lm <- lm(values ~ year, 
+              data = examp_yr_summ[examp_yr_summ$Method == "anomaly",]) %>% 
+  tidy() %>%
+  slice(2) %>%
+  select(slope = estimate, p.value)
+
+
+simulated_trends_gg <- ggplot(examp_yr_summ, 
+                              aes(x = year, y = values, color = Method)) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", se = FALSE) +
+  scale_color_manual(values = c("darkblue", "darkred"), 
+                     labels = c("Anomaly", "Measured Values")) +
+  labs(y = "Yearly Average Value", x = "Year", subtitle = paste0("Measured Values: slope = ", signif(meas_lm$slope, 2), 
+                                                                 ", p-value = ", signif(meas_lm$p.value, 2), "\nAnomaly: slope = ", signif(anom_lm$slope, 2), 
+                                                                 ", p-value = ", signif(anom_lm$p.value, 2))) +
+  theme_ipsum_rc() +
+  scale_x_continuous(labels = c(2012,2014,2016,2018,2020),
+                     breaks = c(2012,2014,2016,2018,2020)) +
+  theme(plot.subtitle = element_text(size=10, face="plain"))
+simulated_trends_gg %>%  
+  ggsave(here("figures/simulated_analysis.jpg"), ., width = 7.5, height = 9.8,
+         units = "in", dpi = 600)
 
 

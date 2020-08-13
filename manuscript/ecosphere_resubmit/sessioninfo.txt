@@ -1,0 +1,40 @@
+R version 4.0.2 (2020-06-22)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 16299)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.1252 
+[2] LC_CTYPE=English_United States.1252   
+[3] LC_MONETARY=English_United States.1252
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.1252    
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+ [1] cowplot_1.0.0           captioner_2.2.3         knitr_1.29             
+ [4] USAboundariesData_0.3.1 USAboundaries_0.3.1     sf_0.9-5               
+ [7] LAGOSNE_2.0.1           Kendall_2.2             hrbrthemes_0.8.0       
+[10] ggplot2_3.3.2           here_0.1                tidyr_1.1.0            
+[13] readxl_1.3.1            readr_1.3.1             dplyr_1.0.0            
+[16] stringr_1.4.0           broom_0.5.6             lubridate_1.7.9        
+
+loaded via a namespace (and not attached):
+ [1] Rcpp_1.0.5         lattice_0.20-41    prettyunits_1.1.1  class_7.3-17      
+ [5] rprojroot_1.3-2    digest_0.6.25      R6_2.4.1           cellranger_1.1.0  
+ [9] backports_1.1.8    evaluate_0.14      e1071_1.7-3        pillar_1.4.6      
+[13] gdtools_0.2.2      rlang_0.4.7        progress_1.2.2     lazyeval_0.2.2    
+[17] curl_4.3           extrafontdb_1.0    Matrix_1.2-18      rmarkdown_2.3     
+[21] labeling_0.3       splines_4.0.2      extrafont_0.17     pander_0.6.3      
+[25] munsell_0.5.0      compiler_4.0.2     xfun_0.15          pkgconfig_2.0.3   
+[29] systemfonts_0.2.3  mgcv_1.8-31        htmltools_0.5.0    tidyselect_1.1.0  
+[33] tibble_3.0.3       crayon_1.3.4       withr_2.2.0        rappdirs_0.3.1    
+[37] grid_4.0.2         nlme_3.1-148       Rttf2pt1_1.3.8     gtable_0.3.0      
+[41] lifecycle_0.2.0    DBI_1.1.0          magrittr_1.5       units_0.6-7       
+[45] scales_1.1.1       KernSmooth_2.23-17 stringi_1.4.6      farver_2.0.3      
+[49] ellipsis_0.3.1     generics_0.0.2     vctrs_0.3.2        boot_1.3-25       
+[53] tools_4.0.2        glue_1.4.1         purrr_0.3.4        hms_0.5.3         
+[57] yaml_2.2.1         colorspace_1.4-1   classInt_0.4-3     memoise_1.1.0     
