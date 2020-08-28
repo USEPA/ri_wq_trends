@@ -65,7 +65,7 @@ While we have full seasonal coverage for the majority of lake-years we decided t
 
 *1-4a.* Line 312: It is still unclear to me how this analysis of site-specific anomalies is robust to variation in timing of inclusion of given sampling locations.
 
-- **Response:** What we mean by this, is if sites with differing base lines (e.g. low nutrient site vs high nutrient site or cool water site vs warm water site) were included at different times, then site-specific anomalies are more appropriate for examining long-term trends becuase each of the sites will be re-scaled, relative to that sites long term mean.  For instance, comparing measured values from a cool water site that shows no trend which is measured mostly early in a sampling period to a warm water site without a trend measured late in a sampling period would likely show an increasing trend when in fact none existed.  Re-scaling these values relative to the mean sets both sites to a common baseline and would then not show a trend.  To further illustrate this, look at the two figures below.  The first figure shows simulated data from three sites.  All sites have no trend with site one being measured across the time period with values mostly in the middle of a range.  Site 2 has no trend with low values and is only in the first portion of the time period.  Site 3 has no trend with high values and is only in the later portion of the time period.  The second figure shows what the average yearly trend would look like if just looking at the values vs looking at the anomalies.  The measured values show a trend, when none should exist.  The anomalies correctly show no increasing trend.  We have added in these figures and text to the Discussion
+- **Response:** What we mean by this, is if sites with differing base lines (e.g. low nutrient site vs high nutrient site or cool water site vs warm water site) were included at different times, then site-specific anomalies are more appropriate for examining long-term trends because each of the sites will be re-scaled, relative to that sites long term mean.  For instance, comparing measured values from a cool water site that shows no trend which is measured mostly early in a sampling period to a warm water site without a trend measured late in a sampling period would likely show an increasing trend when in fact none existed.  Re-scaling these values relative to the mean sets both sites to a common baseline and would then not show a trend.  To further illustrate this, look at the two figures below.  The first figure shows simulated data from three sites.  All sites have no trend with site one being measured across the time period with values mostly in the middle of a range.  Site 2 has no trend with low values and is only in the first portion of the time period.  Site 3 has no trend with high values and is only in the later portion of the time period.  The second figure shows what the average yearly trend would look like if just looking at the values vs looking at the anomalies.  The measured values show a trend, when none should exist.  The anomalies correctly show no increasing trend.  We have added in these figures and text to the Discussion
 
 ```{r echo=TRUE}
 library(dplyr)
@@ -166,7 +166,7 @@ simulated_trends_gg
 
 *1-5a.* I think the title overstates this result. I agree with increasing Chl-a trends, but don’t agree with stable nutrient trends.
 
-- **Response:** NEEDS A RESPONSE!
+- **Response:** Changed title.  It no longer focus on the trends.  New title is: "Analyzing and comparing long-term water quality of lakes and reservoirs in Rhode Island and the Northeastern United States using an anomaly approach"
 
 *1-5b.* I have not read Wasserstein et al. 2016, but agree with the general concept that a specific p-value threshold is not the only weight of evidence for determining whether there is a trend. However, I do not think the authors conclusions about trends for each parameter in the Rhode Island vs. LAGOS datasets are consistent with one another need a more detailed framework laid out ahead of time to understand the more holistic way of interpreting whether there are trends. These are the trends that I interpret differently than do the authors:
 
@@ -174,11 +174,11 @@ simulated_trends_gg
 
 *1-5b-i.* TN in Rhode Island (Fig 5A) – The p-value is very small and the slope seems reasonably large. I also see more positive means later in the record. I do not think that 1993 and 1994 have an overly strong effect on the trend. Even when you take them out of the analysis, the slope is still 2.5 and p-value is small. Although the annual increase in TN is not large compared to the range of total TN anomalies, I interpret the stats as an increase in TN. In line 247, I disagree with the statement that removing data from 1993 and 1994 weakens the positive trend “considerably”.
 
-- **Response:**  The results for TN in Rhode Island have changed somewhat since we added the additional filtering steps suggested by Reviewer 1 (*1-1* and *1-2*).  This weakened the positive trend somewhat as the slope is smaller and the p-value larger.  Additionally two years, 1995 and 1996, now have insufficient data to be included in the figures.  Using the more explicit definition of a trend we not conclude that TN showed a weak statistically positive trend but not an ecologically important trend over the time frame of a century as the slope is less than the amount needed to cause an trophic state change.  This is reflected in the manuscript.
+- **Response:**  The results for TN in Rhode Island have changed somewhat since we added the additional filtering steps suggested by Reviewer 1 (*1-1* and *1-2*).  This weakened the positive trend somewhat as the slope is smaller and the p-value larger.  Additionally two years, 1995 and 1996, now have insufficient data to be included in the figures.  Using the more explicit definition of a trend we now conclude that TN showed a weak statistically positive trend but not an ecologically important trend over the time frame of a century as the slope is less than the amount needed to cause an trophic state change.  This is reflected in the manuscript.
 
 *1-5b-ii.* TN in Lagos data set (Fig 5B) – the text says that “TN showed a slight positive trend”. Here, the slope is smaller and the p-value is large. I would think that the positive slope is driven by the high TN values in 2013. I think there is more evidence for increasing TN in the Rhode Island data set than the LAGOS data set, but the text reads the opposite.
 
-- **Response:** We applied the same within and across year filters to the LAGOSNE and these results have changed as well, largely becuase nutrient data across the full time frame was scarce in LAGOSNE in more recent years.  Given that and our method for interpreting the trends leads to the following:  LAGOSNE is showing weak statistical support for a negative change in nitrogen, more below average years recently.  The slope is less than the 3.5 we identified, albeit close.  Thus we conclude a weak decrease in TN at the scale of the Region.  This is indicated in the manuscript.
+- **Response:** We applied the same within and across year filters to the LAGOSNE and these results have changed as well.  Given that and our method for interpreting the trends leads to the following:  LAGOSNE is showing weak statistical support for a negative change in nitrogen, with more below average years recently.  The slope is less than the 3.5 we identified, albeit close.  Thus we conclude a weak decrease in TN at the scale of the Region.  This is indicated in the manuscript.
 
 *1-5b-iii.* TP in Rhode Island (Fig 6A) – The authors state that TP does not show a trend over time. I see a positive slope with a marginally significant p-value and more positive means later in the record. I wouldn’t oversell this as a major increasing trend in TP, but I see some evidence for a slight increase in TP.
 
@@ -186,11 +186,11 @@ simulated_trends_gg
 
 *1-5b-iv.* TP in LAGOS (Fig 6B) – “TP showed a slight decreasing trend”. I disagree. The slope was negative, but at -0.027, so a much smaller magnitude than the positive slope in the Rhode Island data set. The p-value was 0.32 and the graph itself looks like the slope is a horizontal line centered on 0.
 
-- **Response:** NEEDS A RESPONSE!
+- **Response:** Small changes due to filtering and new criteria for assessing the trend are also seen here.  There is statistical support for a trend, that trend is positive and the magnitude of the slope suggests the possibility of ecological significant change in TP over a century.  This has been added to the manuscript.
 
 *1-5c.* To put the magnitude of each slope in context, you could report the slope as a percent of the full range of slopes observed in the data set. Even those trends that are “significant” have a relatively small slope compared to the variability between lakes.
 
-- **Response:** This is a good suggestion, but we have chosen not to implement it, primarily because of Reveiwer 1's suggestion to have a more holistic approach to addressing the trends.  In developing our approach to assessing the trends we now have ecologically relevant thresholds we can compare to.  Both approaches address the same issue of putting the magnitude of the slopes in context. 
+- **Response:** This is a good suggestion, but we have chosen not to implement it, primarily because of Reveiwer 1's suggestion to have a more holistic approach to addressing the trends.  In developing our approach to assessing the trends we now have ecologically relevant thresholds we can compare to.  Both approaches address the same issue of putting the magnitude of the slopes in context.
 
 *1-6.* This analysis also seems to be saying something about coherence. In some years, there is a wide range of anomalies, meaning that some lakes are much higher than their long-term average at the same time as other lakes are much lower. This seems like an interesting result in and of itself that is not pointed out in the results or discussion. How does the variability in annual anomalies of water quality between lakes compare to that observed in the climate literature, which traditionally uses this approach?
 
@@ -202,24 +202,11 @@ simulated_trends_gg
 
 *1-7a.* This study simply lists the direction of trends of 5 parameters, but does not analyze correlations between them.
 
-- **Response:** NEEDS A RESPONSE!
+- **Response:** Agreed.  Language softened and title changed to hopefully steer readers away from causation.  No changes made.
 
 *1-7b.* Even if it had tested correlations between parameters, it is still difficult to reach for causation.
 
-- **Response:** NEEDS A RESPONSE!
-
-```{r, echo=FALSE}
-x <- ww_data %>% 
-  select(station_name, site_descr, town, year, param, station_year_mean) %>%
-  spread(param, station_year_mean) %>%
-  filter(complete.cases(.))
-xyr <- group_by(x, station_name) %>% 
-  summarize(yrly_mean_chla = mean(chla),
-            yrly_mean_temp = mean(temp),
-            yrly_mean_np = mean(np_ratio),
-            yrl_mean_tn = mean(total_n),
-            yrly_mean_tp = mean(total_p))
-```
+- **Response:** Agreed.  Language softened and title changed to hopefully steer readers away from causation.  No changes made.
 
 *1-7c.* The analysis of mean anomalies over time is interesting, but that simply means that the entire set of lakes in the state shows trends over time. What I’ve learned from reading some of the papers cited by this study and from my own investigations is that lakes near one another can have opposite trends. Processes at the scale of the individual lake and its watershed are important and can have opposite trends in neighboring watersheds. I think this study would benefit by adding an analysis at the individual lake scale to compliment the state scale. I would feel more comfortable with the statement that increasing chl-a may be a result of warming waters, not nutrients, if this was also tested at the lake scale.  One could build a mixed effects model: 
 
@@ -227,11 +214,11 @@ xyr <- group_by(x, station_name) %>%
 
 where lake is a random effect that has a unique id for each lake in the study. Years would be replicates. I think it’s possible that you could see a nutrient effect if you examined the data this way. There is a lot of variability between lakes within a year, so while I find the statistical method used in this study interesting, I don’t think it tests of drivers of change.
 
-- **Response:** NEEDS A RESPONSE!
+- **Response:** We agree with the reviewer that lake scale trends and the drivers behind those trends are both very interesting questions and something our approach could contribute to; however, we feel that it is beyond the scope of this particular paper.  Given the changes we have made to the title and the stated goals of the paper we feel that adding this type of analysis would greatly expand the paper and take away from our primary purposes, looking at long term trends in Rhode Island and the Northeast.  We do feel this is a very good suggestion for next steps and my co-authors and I are in active discussion on how to move forward with such an analysis.   In the Discussion under *Trends* we briefly mention this application and that the anomaly approach could also be used at the individual lake level to assess for trends.
 
 *1-8.* Line 274-275: the authors pose the interesting question about whether lakes of similar trophic state are showing similar trends. I disagree that this test is beyond the scope of the study. I think it is a timely question that would be good to test following the Stoddard et al. paper. It should be relatively easy to test – dividing the lakes into groups of hypereutrophic, eutrophic, mesotrophic, and oligotrophic categories based on their long-term mean TP or chl-a. If there are not enough lakes in each category, with would be interesting to compare a few.
 
-- **Response:** We have added a new analysis to look at the same plots across trophic states.  
+- **Response:** We agree that this is indeed a timely question and fairly easy to test.  Initially we were going to include this analysis in our revisions and did some preliminary analysis.  There were differences in trends across trophic state with many of the water quality variables and to fully address this would require significant additional analysis and discussion.  After looking at these results and with quite a bit of discussion amongst the co-authors we do still feel that this type of analysis is 1) beyond the scope of this paper and 2) worthy of its own paper.   We have added to the Discussion under *Trends* about this and briefly address preliminary results for differences in chlorophyll trends across just oligotrophic and hypereutrophic lakes.  Our internal conversations are ongoing about completing this analysis for a subsequent paper.
 
 ## Editorial Comments
 

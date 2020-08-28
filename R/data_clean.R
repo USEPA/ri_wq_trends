@@ -163,8 +163,18 @@ ww_lake_trend_data <- select(ww_lake_trend_data, -may_jun, -jul_aug, -sep_oct) %
 
 write_csv(ww_lake_trend_data, here("data/ww_all_mostly_cleaned.csv"))
 
+#outliers <- ww_lake_trend_data %>% 
+#  group_by(station_name, param) %>% 
+#  mutate(station_mean = mean(mn_measurement), station_sd = sd(mn_measurement), 
+#         outlier_high = mn_measurement > station_mean + (3.291*station_sd), 
+#         outlier_low = mn_measurement < station_mean - (3.291*station_sd),
+#         outlier = outlier_high | outlier_low) %>%
+#  pull(outlier)
+
+
 # Calculates station/year/param stats
 ww_lake_trend_data <- ww_lake_trend_data %>%
+#  filter(!outliers) %>%
   filter(month >= 5 & month <= 10) %>%
   group_by(station_name, year, param) %>%
   summarize(station_year_mean = mean(mn_measurement)) %>%
@@ -239,15 +249,11 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
 ww_lake_trend_data <- ww_lake_trend_data %>%
   filter_early_late(2004)
 
-# Add TSIs
-ww_lake_trend_data <- ww_lake_trend_data %>%
-  mutate(tsi = case_when(param == "chla" ~
-                           tsi(station_year_mean, "chla"),
-                         param == "total_p" ~
-                           tsi(station_year_mean, "tp"),
-                         param == "total_n" ~
-                           tsi(station_year_mean, "tn"),
-                         TRUE ~ NA_real_),
+# Add long term chla based TSIs
+station_tsi <- ww_lake_trend_data %>%
+  filter(param == "chla") %>%
+  select(station_name, lt_mean) %>%
+  mutate(tsi = tsi(lt_mean, "chla"),
          trophic_state = case_when(tsi <= 40 ~
                                      "oligotrophic",
                                    tsi > 40 & tsi <= 50 ~
@@ -257,7 +263,12 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
                                    tsi > 60 ~
                                      "hypereutrophic",
                                    TRUE ~
-                                     NA_character_))
+                                     NA_character_)) %>%
+  unique()
+
+ww_lake_trend_data <- ww_lake_trend_data %>%
+  left_join(station_tsi, by = "station_name")
+
 write_csv(ww_lake_trend_data, here("data/ww_lake_trend_data.csv"))
 
 # Prep LAGOS data
@@ -279,6 +290,16 @@ lagos_data <- lagosne_select(table = "epi_nutr",
   #filter(`Station Name` %in% filter_year(., 20)) %>% #moved to plots and 10 years is min...
   filter(month >= 5 & month <= 10) %>%
   select(station_name = `Station Name`,year, month, day, param, measurement) 
+
+#outliers <- lagos_data %>% 
+#  group_by(station_name, param) %>% 
+#  mutate(station_mean = mean(measurement), station_sd = sd(measurement), 
+#         outlier_high = measurement > station_mean + (3.291*station_sd), 
+#         outlier_low = measurement < station_mean - (3.291*station_sd),
+#         outlier = outlier_high | outlier_low) %>%
+#  pull(outlier)
+
+#lagos_data <- filter(lagos_data, !outliers)
 
 # Reviewer 1 comment re: samples across the season
 lagos_data <- lagos_data %>%
@@ -349,14 +370,11 @@ lagos_data <- lagos_data %>%
 lagos_data <- lagos_data %>%
   filter_early_late(2002)
 
-lagos_data <- lagos_data %>%
-  mutate(tsi = case_when(param == "chla" ~
-                           tsi(station_year_mean, "chla"),
-                         param == "total_p" ~
-                           tsi(station_year_mean, "tp"),
-                         param == "total_n" ~
-                           tsi(station_year_mean, "tn"),
-                         TRUE ~ NA_real_),
+# Add long term chla based TSIs
+station_tsi_lagos <- lagos_data %>%
+  filter(param == "chla") %>%
+  select(station_name, lt_mean) %>%
+  mutate(tsi = tsi(lt_mean, "chla"),
          trophic_state = case_when(tsi <= 40 ~
                                      "oligotrophic",
                                    tsi > 40 & tsi <= 50 ~
@@ -366,6 +384,10 @@ lagos_data <- lagos_data %>%
                                    tsi > 60 ~
                                      "hypereutrophic",
                                    TRUE ~
-                                     NA_character_))
+                                     NA_character_)) %>%
+  unique()
+
+lagos_data <- lagos_data %>%
+  left_join(station_tsi_lagos, by = "station_name")
 
 write_csv(lagos_data, here("data/lagos_lake_trend_data.csv"))
