@@ -10,11 +10,11 @@ ww_data <- read_csv(here("data/ww_lake_trend_data.csv")) %>%
 
 chla_gg <- ww_data %>%
   #filter(state == "RI") %>%
-  wq_trend_gg( "chla", yvar = "measurement_anmly", 
-               y = expression(paste("Average Yearly Chlorophyll ", 
+  wq_trend_gg( "chla", yvar = "measurement_anmly_mdn", 
+               y = expression(paste("Median Yearly Chlorophyll ", 
                                     italic(" a"), " Anomaly (", mu, "g/L)")), 
                x = "Year",
-               write = here("data/chla_data_anomaly.csv"), error_bar = "sd",
+               write = here("data/chla_data_anomaly.csv"), error_bar = "iqr",
                title = "A. URI Watershed Watch Chlorophyll")
 ggsave(here("figures/ww_chla_trends_anomaly.jpg"), chla_gg[[1]], width = 7.5, 
        height = 5.625, 
@@ -26,10 +26,10 @@ ww_chla_rl <- chla_gg[[4]]
 
 tn_gg <-  ww_data %>%
   #filter(state == "RI") %>%
-  wq_trend_gg("total_n", yvar = "measurement_anmly", 
-              y = expression(paste("Average Yearly Total Nitrogen Anomaly (", mu, "g/L)")), 
+  wq_trend_gg("total_n", yvar = "measurement_anmly_mdn", 
+              y = expression(paste("Median Yearly Total Nitrogen Anomaly (", mu, "g/L)")), 
               x = "Year",
-              write = here("data/total_n_data_anomaly.csv"), error_bar = "sd",
+              write = here("data/total_n_data_anomaly.csv"), error_bar = "iqr",
               title = "A. URI Watershed Watch Total Nitrogen")
 ggsave(here("figures/ww_tn_trends_anomaly.jpg"), tn_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
@@ -40,10 +40,10 @@ ww_tn_rl <- tn_gg[[4]]
 
 tp_gg <-  ww_data %>%
   #filter(state == "RI") %>%
-  wq_trend_gg("total_p", yvar = "measurement_anmly", 
-              y = expression(paste("Average Yearly Total Phosphorus Anomaly (", mu, "g/L)")), 
+  wq_trend_gg("total_p", yvar = "measurement_anmly_mdn", 
+              y = expression(paste("Median Yearly Total Phosphorus Anomaly (", mu, "g/L)")), 
               x = "Year",
-              write = here("data/total_p_data_anomaly.csv"), error_bar = "sd",
+              write = here("data/total_p_data_anomaly.csv"), error_bar = "iqr",
               title = "A. URI Watershed Watch Total Phosphorus")
 ggsave(here("figures/ww_tp_trends_anomaly.jpg"), tp_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
@@ -54,9 +54,9 @@ ww_tp_rl <- tp_gg[[4]]
 
 temp_gg <- ww_data %>%
   #filter(state == "RI") %>%
-  wq_trend_gg("temp", yvar = "measurement_anmly", 
-              y = "Average Yearly Temperature Anomaly (°C)", x = "Year",
-              write = here("data/temp_data_anomaly.csv"), error_bar = "sd",
+  wq_trend_gg("temp", yvar = "measurement_anmly_mdn", 
+              y = "Median Yearly Temperature Anomaly (°C)", x = "Year",
+              write = here("data/temp_data_anomaly.csv"), error_bar = "iqr",
               title = "URI Watershed Watch Temperature")
 ggsave(here("figures/ww_temp_trends_anomaly.jpg"), temp_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
@@ -67,9 +67,9 @@ ww_temp_rl <- temp_gg[[4]]
 
 np_gg <- ww_data %>%
   #filter(state == "RI") %>%
-  wq_trend_gg("np_ratio", yvar = "measurement_anmly", 
-              y = "Average Yearly N:P Anomaly", x = "Year",
-              write = here("data/np_data_anomaly.csv"), error_bar = "sd",
+  wq_trend_gg("np_ratio", yvar = "measurement_anmly_mdn", 
+              y = "Median Yearly N:P Anomaly", x = "Year",
+              write = here("data/np_data_anomaly.csv"), error_bar = "iqr",
               title = "A. URI Watershed Watch Nitrogen:Phosphorus")
 ggsave(here("figures/ww_np_trends_anomaly.jpg"), np_gg[[1]], width = 7.5, 
        height = 5.625, 
@@ -85,12 +85,12 @@ lagos_data <- read_csv(here("data/lagos_lake_trend_data.csv")) %>%
                                            "eutrophic", "hypereutrophic", 
                                            ordered = TRUE)))
 
-lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_anmly", 
-                             y = expression(paste("Average Yearly Chlorophyll  ", 
+lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_anmly_mdn", 
+                             y = expression(paste("Median Yearly Chlorophyll  ", 
                                               italic(" a"), " Anomaly (", mu, "g/L)")), 
                              x = "Year",
                              write = here("data/chla_data_lagos_anomaly.csv"), 
-                             error_bar = "sd",
+                             error_bar = "iqr",
                              title = "B. LAGOSNE Chlorophyll")
 ggsave(here("figures/lagos_chla_trends_anomaly.jpg"), lagos_chla_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
@@ -98,11 +98,11 @@ lagos_chla_kt <- lagos_chla_gg[[2]]
 lagos_chla_df <- lagos_chla_gg[[3]]
 lagos_chla_rl <- lagos_chla_gg[[4]]
 
-lagos_tn_gg <- wq_trend_gg(lagos_data, "total_n", yvar = "measurement_anmly", 
-                           y = expression(paste("Average Yearly Nitrogen Anomaly (", mu, "g/L)")), 
+lagos_tn_gg <- wq_trend_gg(lagos_data, "total_n", yvar = "measurement_anmly_mdn", 
+                           y = expression(paste("Median Yearly Nitrogen Anomaly (", mu, "g/L)")), 
                            x = "Year",
                            write = here("data/total_n_data_lagos_anomaly.csv"), 
-                           error_bar = "sd",
+                           error_bar = "iqr",
                            title = "B. LAGOSNE Total Nitrogen")
 ggsave(here("figures/lagos_tn_trends_anomaly.jpg"), lagos_tn_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
@@ -111,11 +111,11 @@ lagos_tn_df <- lagos_tn_gg[[3]]
 lagos_tn_rl <- lagos_tn_gg[[4]]
 
 
-lagos_tp_gg <- wq_trend_gg(lagos_data, "total_p", yvar = "measurement_anmly", 
-                           y = expression(paste("Average Yearly Total Phosphorus Anomaly (", mu, "g/L)")), 
+lagos_tp_gg <- wq_trend_gg(lagos_data, "total_p", yvar = "measurement_anmly_mdn", 
+                           y = expression(paste("Median Yearly Total Phosphorus Anomaly (", mu, "g/L)")), 
                            x = "Year",
                            write = here("data/total_p_data_lagos_anomaly.csv"), 
-                           error_bar = "sd",
+                           error_bar = "iqr",
                            title = "B. LAGOSNE Total Phosphorus")
 ggsave(here("figures/lagos_tp_trends_anomaly.jpg"), lagos_tp_gg[[1]], width = 7.5, height = 5.625, 
        units = "in", dpi = 600)
@@ -124,9 +124,9 @@ lagos_tp_kt <- lagos_tp_gg[[2]]
 lagos_tp_df <- lagos_tp_gg[[3]]
 lagos_tp_rl <- lagos_tp_gg[[4]]
 
-lagos_np_gg <- wq_trend_gg(lagos_data, "np_ratio", yvar = "measurement_anmly", 
-              y = "Average Yearly N:P Anomaly", x = "Year",
-              write = here("data/np_data_lagos_anomaly.csv"), error_bar = "sd",
+lagos_np_gg <- wq_trend_gg(lagos_data, "np_ratio", yvar = "measurement_anmly_mdn", 
+              y = "Median Yearly N:P Anomaly", x = "Year",
+              write = here("data/np_data_lagos_anomaly.csv"), error_bar = "iqr",
               title = "B. LAGOSNE Nitrogen:Phosphorus")
 ggsave(here("figures/lagos_np_trends_anomaly.jpg"), lagos_np_gg[[1]], width = 7.5, 
        height = 5.625, 
@@ -252,17 +252,17 @@ site_gg %>%
 
 examp_site_summ <- examp %>% 
   group_by(site) %>%
-  mutate(lt_mean = mean(values)) %>%
+  mutate(lt_median = median(values)) %>%
   ungroup() %>%
   group_by(site, year) %>%
-  summarize(measured_value = mean(values),
-            anomaly = mean(values-lt_mean)) %>%
+  summarize(measured_value = median(values),
+            anomaly = median(values-lt_median)) %>%
   ungroup() %>%
   pivot_longer(measured_value:anomaly, "Method")
 
 examp_yr_summ <- examp_site_summ %>%
   group_by(year, Method) %>%
-  summarize(values = mean(value)) %>%
+  summarize(values = median(value)) %>%
   ungroup() 
 
 meas_lm <- lm(values ~ year, 
@@ -283,7 +283,7 @@ simulated_trends_gg <- ggplot(examp_yr_summ,
   geom_smooth(method = "lm", se = FALSE) +
   scale_color_manual(values = c("darkblue", "darkred"), 
                      labels = c("Anomaly", "Measured Values")) +
-  labs(y = "Yearly Average Value", x = "Year", subtitle = paste0("Measured Values: slope = ", signif(meas_lm$slope, 2), 
+  labs(y = "Yearly Median Value", x = "Year", subtitle = paste0("Measured Values: slope = ", signif(meas_lm$slope, 2), 
                                                                  ", p-value = ", signif(meas_lm$p.value, 2), "\nAnomaly: slope = ", signif(anom_lm$slope, 2), 
                                                                  ", p-value = ", signif(anom_lm$p.value, 2))) +
   theme_ipsum_rc() +
@@ -298,11 +298,11 @@ simulated_trends_gg %>%
 # Trophic State Plots
 chla_gg_ts <- ww_data %>%
   #filter(state == "RI") %>%
-  wq_trophic_trend_gg("chla", yvar = "measurement_anmly", 
-               y = expression(paste("Average Yearly Chlorophyll ", 
+  wq_trophic_trend_gg("chla", yvar = "measurement_anmly_mdn", 
+               y = expression(paste("Median Yearly Chlorophyll ", 
                                     italic(" a"), " Anomaly (", mu, "g/L)")), 
                x = "Year",
-               write = here("data/chla_data_anomaly_ts.csv"), error_bar = "sd",
+               write = here("data/chla_data_anomaly_ts.csv"), error_bar = "iqr",
                title = "A. URI Watershed Watch Chlorophyll")
 ggsave(here("figures/ww_chla_trends_anomaly_ts.jpg"), chla_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
@@ -314,10 +314,10 @@ ww_chla_rl_ts <- chla_gg_ts[[4]]
 
 temp_gg_ts <- ww_data %>%
   #filter(state == "RI") %>%
-  wq_trophic_trend_gg("temp", yvar = "measurement_anmly", 
-                      y = expression(paste("Average Yearly Temperature (°C)")), 
+  wq_trophic_trend_gg("temp", yvar = "measurement_anmly_mdn", 
+                      y = expression(paste("Median Yearly Temperature (°C)")), 
                       x = "Year",
-                      write = here("data/temp_data_anomaly_ts.csv"), error_bar = "sd",
+                      write = here("data/temp_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "B. URI Watershed Watch Temperature")
 ggsave(here("figures/ww_temp_trends_anomaly_ts.jpg"), temp_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
@@ -329,10 +329,10 @@ ww_temp_rl_ts <- temp_gg_ts[[4]]
 
 tp_gg_ts <- ww_data %>%
   #filter(state == "RI") %>%
-  wq_trophic_trend_gg("total_p", yvar = "measurement_anmly", 
-                      y = expression(paste("Average Yearly Total Phosphorus Anomaly (", mu, "g/L)")), 
+  wq_trophic_trend_gg("total_p", yvar = "measurement_anmly_mdn", 
+                      y = expression(paste("Median Yearly Total Phosphorus Anomaly (", mu, "g/L)")), 
                       x = "Year",
-                      write = here("data/tp_data_anomaly_ts.csv"), error_bar = "sd",
+                      write = here("data/tp_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "C. URI Watershed Watch Total Phosphorus")
 ggsave(here("figures/ww_tp_trends_anomaly_ts.jpg"), tp_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
@@ -344,10 +344,10 @@ ww_tp_rl_ts <- tp_gg_ts[[4]]
 
 tn_gg_ts <- ww_data %>%
   #filter(state == "RI") %>%
-  wq_trophic_trend_gg("total_n", yvar = "measurement_anmly", 
-                      y = expression(paste("Average Yearly Total Nitrogen Anomaly (", mu, "g/L)")), 
+  wq_trophic_trend_gg("total_n", yvar = "measurement_anmly_mdn", 
+                      y = expression(paste("Median Yearly Total Nitrogen Anomaly (", mu, "g/L)")), 
                       x = "Year",
-                      write = here("data/tn_data_anomaly_ts.csv"), error_bar = "sd",
+                      write = here("data/tn_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "D. URI Watershed Watch Total Nitrogen")
 ggsave(here("figures/ww_tn_trends_anomaly_ts.jpg"), tn_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
@@ -359,10 +359,10 @@ ww_tn_rl_ts <- tn_gg_ts[[4]]
 
 np_gg_ts <- ww_data %>%
   #filter(state == "RI") %>%
-  wq_trophic_trend_gg("total_n", yvar = "measurement_anmly", 
-                      y = expression(paste("Average Yearly N:P Anomaly (", mu, "g/L)")), 
+  wq_trophic_trend_gg("total_n", yvar = "measurement_anmly_mdn", 
+                      y = expression(paste("Median Yearly N:P Anomaly (", mu, "g/L)")), 
                       x = "Year",
-                      write = here("data/np_data_anomaly_ts.csv"), error_bar = "sd",
+                      write = here("data/np_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "E. URI Watershed Watch Nitrogen:Phosphorus")
 ggsave(here("figures/ww_np_trends_anomaly_ts.jpg"), np_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
@@ -384,11 +384,11 @@ ggsave(here("figures/trophic_state_trends_anomaly.jpg"), chla_plot, width = 5.7,
 # Build LAGOSNE TS Plots
 chla_gg_ts <- lagos_data %>%
   #filter(state == "RI") %>%
-  wq_trophic_trend_gg("chla", yvar = "measurement_anmly", 
-                      y = expression(paste("Average Yearly Chlorophyll ", 
+  wq_trophic_trend_gg("chla", yvar = "measurement_anmly_mdn", 
+                      y = expression(paste("Median Yearly Chlorophyll ", 
                                            italic(" a"), " Anomaly (", mu, "g/L)")), 
                       x = "Year",
-                      write = here("data/lagos_chla_data_anomaly_ts.csv"), error_bar = "sd",
+                      write = here("data/lagos_chla_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "A. LAGOSNE Chlorophyll")
 ggsave(here("figures/lagos_chla_trends_anomaly_ts.jpg"), chla_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
@@ -400,10 +400,10 @@ lagos_chla_rl_ts <- chla_gg_ts[[4]]
 
 tp_gg_ts <- lagos_data %>%
   #filter(state == "RI") %>%
-  wq_trophic_trend_gg("total_p", yvar = "measurement_anmly", 
-                      y = expression(paste("Average Yearly Total Phosphorus Anomaly (", mu, "g/L)")), 
+  wq_trophic_trend_gg("total_p", yvar = "measurement_anmly_mdn", 
+                      y = expression(paste("Median Yearly Total Phosphorus Anomaly (", mu, "g/L)")), 
                       x = "Year",
-                      write = here("data/lagos_tp_data_anomaly_ts.csv"), error_bar = "sd",
+                      write = here("data/lagos_tp_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "B. LAGOSNE Total Phosphorus")
 ggsave(here("figures/lagos_tp_trends_anomaly_ts.jpg"), tp_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
@@ -415,10 +415,10 @@ lagos_tp_rl_ts <- tp_gg_ts[[4]]
 
 tn_gg_ts <- lagos_data %>%
   #filter(state == "RI") %>%
-  wq_trophic_trend_gg("total_n", yvar = "measurement_anmly", 
-                      y = expression(paste("Average Yearly Total Nitrogen Anomaly (", mu, "g/L)")), 
+  wq_trophic_trend_gg("total_n", yvar = "measurement_anmly_mdn", 
+                      y = expression(paste("Median Yearly Total Nitrogen Anomaly (", mu, "g/L)")), 
                       x = "Year",
-                      write = here("data/lagos_tn_data_anomaly_ts.csv"), error_bar = "sd",
+                      write = here("data/lagos_tn_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "C. LAGOSNE Total Nitrogen")
 ggsave(here("figures/lagos_tn_trends_anomaly_ts.jpg"), tn_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
@@ -430,10 +430,10 @@ lagos_tn_rl_ts <- tn_gg_ts[[4]]
 
 np_gg_ts <- lagos_data %>%
   #filter(state == "RI") %>%
-  wq_trophic_trend_gg("total_n", yvar = "measurement_anmly", 
-                      y = expression(paste("Average Yearly N:P Anomaly (", mu, "g/L)")), 
+  wq_trophic_trend_gg("total_n", yvar = "measurement_anmly_mdn", 
+                      y = expression(paste("Median Yearly N:P Anomaly (", mu, "g/L)")), 
                       x = "Year",
-                      write = here("data/lagos_np_data_anomaly_ts.csv"), error_bar = "sd",
+                      write = here("data/lagos_np_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "D. LAGOSNE Nitrogen:Phosphorus")
 ggsave(here("figures/lagos_np_trends_anomaly_ts.jpg"), np_gg_ts[[1]], width = 7.5, 
        height = 5.625, 

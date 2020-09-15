@@ -102,9 +102,9 @@ filter_early_late <- function(df, cutoff){
 #' @param title title for plot
 #' @param start_yr only plots years for which we have data for all params
 wq_trend_gg <- function(df, wqparam, 
-                        yvar = c("measurement_anmly","measurement_scale"), 
+                        yvar = c("measurement_anmly","measurement_scale", "measurement_anmly_mdn"), 
                         num_yrs = 10, write = NULL, title = "",
-                        start_yr = 1993, error_bar = c("se", "sd"), ...){
+                        start_yr = 1993, error_bar = c("se", "sd", "iqr"), ...){
   
   yvar <- rlang::sym(match.arg(yvar))
   error_bar <- rlang::sym(match.arg(error_bar))
@@ -117,20 +117,23 @@ wq_trend_gg <- function(df, wqparam,
   
   df2 <- df1 %>%
     group_by(year) %>%
-    summarize(mn_value = mean(!!yvar),
+    summarize(mdn_value = median(!!yvar),
               sd = sd(!!yvar),
+              iqr = IQR(!!yvar),
+              iqr_low = quantile(!!yvar, 0.25),
+              iqr_high = quantile(!!yvar, 0.75),
               min = min(!!yvar),
               max = max(!!yvar),
               n = n(),
               se = sd/sqrt(n())) %>%
-    mutate(col_group = case_when(mn_value < 0 ~ 
-                                   "Less than long-term site average",
-                                 mn_value > 0 ~ 
-                                   "Greater than long-term site average",
-                                 TRUE ~ "Equal to long-term site average"))
+    mutate(col_group = case_when(mdn_value < 0 ~ 
+                                   "Less than long-term site median",
+                                 mdn_value > 0 ~ 
+                                   "Greater than long-term site median",
+                                 TRUE ~ "Equal to long-term site median"))
   # Nutrient data were scarce in 1995-1998  To include data in plots, had to 
   # have a minimum of three sites.  If only three sites, then data plotted are 
-  # mean and min/max. 
+  # median and min/max. 
   df2 <- df2 %>%
     filter(n >= 3)
   
@@ -138,8 +141,8 @@ wq_trend_gg <- function(df, wqparam,
     write_csv(df2, write, append = FALSE)
   }
   
-  kt <- with(df2, Kendall(year, mn_value))
-  regress <- lm(mn_value ~ year, data = df2) %>% 
+  kt <- with(df2, Kendall(year, mdn_value))
+  regress <- lm(mdn_value ~ year, data = df2) %>% 
     tidy() %>%
     slice(2) %>%
     select(slope = estimate, p.value) 
@@ -149,8 +152,13 @@ wq_trend_gg <- function(df, wqparam,
     label_break <- c(-2,-1,0,1,2)
     limits <- c(-2.75, 2.75)
   } else if(yvar == "measurement_anmly"){
-    limit<-max(abs(c(floor(1.1*min(df2$mn_value - df2[[error_bar]])), 
-                     ceiling(1.1*max(df2$mn_value + df2[[error_bar]])))))
+    limit<-max(abs(c(floor(1.1*min(df2$mdn_value - df2[[error_bar]])), 
+                     ceiling(1.1*max(df2$mdn_value + df2[[error_bar]])))))
+    label_break <- c(-limit, floor(-limit/2), 0, ceiling(limit/2), limit)
+    limits <- c(-limit,limit)
+  } else if(yvar == "measurement_anmly_mdn"){
+    limit<-max(abs(c(floor(1.1*min(df2$iqr_low)), 
+                     ceiling(1.1*max(df2$iqr_high)))))
     label_break <- c(-limit, floor(-limit/2), 0, ceiling(limit/2), limit)
     limits <- c(-limit,limit)
   }
@@ -164,9 +172,19 @@ wq_trend_gg <- function(df, wqparam,
   
   text_offset <- 0.1*max(limits)
   
-  gg <- ggplot(df2,aes(x = year, y = mn_value)) + 
-    geom_pointrange(data = df2[df2$n > 3,], aes(ymin=mn_value-!!error_bar, 
-                                                ymax=mn_value+!!error_bar, 
+  # set min max on range
+  if(error_bar == "se" | error_bar == "sd"){
+    y_min <- df2[df2$n > 3,]$mdn_value - df2[df2$n > 3,][[error_bar]]
+    y_max <- df2[df2$n > 3,]$mdn_value + df2[df2$n > 3,][[error_bar]]
+  } else if(error_bar == "iqr"){
+    y_min <- df2[df2$n > 3,]$iqr_low
+    y_max <- df2[df2$n > 3,]$iqr_high
+  }
+  
+  
+  gg <- ggplot(df2,aes(x = year, y = mdn_value)) + 
+    geom_pointrange(data = df2[df2$n > 3,], aes(ymin=y_min, 
+                                                ymax=y_max, 
                                                 color = col_group), 
                     size = 1, fatten = 1.75) 
   if(nrow(df2[df2$n == 3,]) != 0){ gg <- gg +
@@ -259,9 +277,9 @@ tsi_table <- function(){
 #' @param title title for plot
 #' @param start_yr only plots years for which we have data for all params
 wq_trophic_trend_gg <- function(df, wqparam, 
-                        yvar = c("measurement_anmly","measurement_scale"), 
+                        yvar = c("measurement_anmly","measurement_scale", "measurement_anmly_mdn"), 
                         num_yrs = 10, write = NULL, title = "",
-                        start_yr = 1993, error_bar = c("se", "sd"), ...){
+                        start_yr = 1993, error_bar = c("se", "sd", "iqr"), ...){
   
   yvar <- rlang::sym(match.arg(yvar))
   error_bar <- rlang::sym(match.arg(error_bar))
@@ -275,30 +293,33 @@ wq_trophic_trend_gg <- function(df, wqparam,
   df2 <- df1 %>%
     filter(!is.na(trophic_state)) %>%
     group_by(year, param, trophic_state) %>%
-    summarize(mn_value = mean(!!yvar),
+    summarize(mdn_value = median(!!yvar),
               sd = sd(!!yvar),
+              iqr = IQR(!!yvar),
+              iqr_low = quantile(!!yvar, 0.25),
+              iqr_high = quantile(!!yvar, 0.75),
               min = min(!!yvar),
               max = max(!!yvar),
               n = n(),
               se = sd/sqrt(n())) %>%
-    mutate(col_group = case_when(mn_value < 0 ~ 
-                                   "Less than long-term site average",
-                                 mn_value > 0 ~ 
-                                   "Greater than long-term site average",
-                                 TRUE ~ "Equal to long-term site average"))
+    mutate(col_group = case_when(mdn_value < 0 ~ 
+                                   "Less than long-term site median",
+                                 mdn_value > 0 ~ 
+                                   "Greater than long-term site median",
+                                 TRUE ~ "Equal to long-term site median"))
   # Nutrient data were scarce in 1995-1998  To include data in plots, had to 
   # have a minimum of three sites.  If only three sites, then data plotted are 
-  # mean and min/max. 
+  # median and min/max. 
   df2 <- df2 %>%
     filter(n >= 3)
   
-  browser()
+  
   if(!is.null(write)){
     write_csv(df2, write, append = FALSE)
   }
   
-  kt <- with(df2, Kendall(year, mn_value))
-  regress <- lm(mn_value ~ year, data = df2) %>% 
+  kt <- with(df2, Kendall(year, mdn_value))
+  regress <- lm(mdn_value ~ year, data = df2) %>% 
     tidy() %>%
     slice(2) %>%
     select(slope = estimate, p.value) 
@@ -308,8 +329,13 @@ wq_trophic_trend_gg <- function(df, wqparam,
     label_break <- c(-2,-1,0,1,2)
     limits <- c(-2.75, 2.75)
   } else if(yvar == "measurement_anmly"){
-    limit<-max(abs(c(floor(1.1*min(df2$mn_value - df2[[error_bar]])), 
-                     ceiling(1.1*max(df2$mn_value + df2[[error_bar]])))))
+    limit<-max(abs(c(floor(1.1*min(df2$mdn_value - df2[[error_bar]])), 
+                     ceiling(1.1*max(df2$mdn_value + df2[[error_bar]])))))
+    label_break <- c(-limit, floor(-limit/2), 0, ceiling(limit/2), limit)
+    limits <- c(-limit,limit)
+  } else if(yvar == "measurement_anmly_mdn"){
+    limit<-max(abs(c(floor(1.1*min(df2$iqr_low)), 
+                     ceiling(1.1*max(df2$iqr_high)))))
     label_break <- c(-limit, floor(-limit/2), 0, ceiling(limit/2), limit)
     limits <- c(-limit,limit)
   }
@@ -323,9 +349,18 @@ wq_trophic_trend_gg <- function(df, wqparam,
   
   text_offset <- 0.1#*max(limits)
   
-  gg <- ggplot(df2,aes(x = year, y = mn_value)) + 
-    geom_pointrange(data = df2[df2$n > 3,], aes(ymin=mn_value-!!error_bar, 
-                                                ymax=mn_value+!!error_bar, 
+  # set min max on range
+  if(error_bar == "se" | error_bar == "sd"){
+    y_min <- df2[df2$n > 3,]$mdn_value - df2[df2$n > 3,][[error_bar]]
+    y_max <- df2[df2$n > 3,]$mdn_value + df2[df2$n > 3,][[error_bar]]
+  } else if(error_bar == "iqr"){
+    y_min <- df2[df2$n > 3,]$iqr_low
+    y_max <- df2[df2$n > 3,]$iqr_high
+  }
+  
+  gg <- ggplot(df2,aes(x = year, y = mdn_value)) + 
+    geom_pointrange(data = df2[df2$n > 3,], aes(ymin=y_min, 
+                                                ymax=y_max, 
                                                 color = col_group), 
                     size = 1, fatten = 1.75) +
     facet_grid(param ~ trophic_state, scales = "free")

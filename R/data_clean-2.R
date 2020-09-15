@@ -198,31 +198,44 @@ write_csv(ww_lake_trend_data, here("data/ww_all_mostly_cleaned.csv"))
 # Calculates station/year/param stats
 ww_lake_trend_data <- ww_lake_trend_data %>%
 #  filter(!outliers) %>%
-  filter(month >= 5 & month <= 10) %>%
+  #filter(month >= 5 & month <= 10) %>%
+  #group_by(station_name, year, param) %>%
+  #summarize(station_year_mean = mean(mn_measurement),
+  #          station_year_median = median(mdn_measurement)) %>%
+  #ungroup() %>%
+  #group_by(station_name, param) %>%
+  #mutate(measurement_scale = scale(station_year_mean),
+  #       measurement_anmly = station_year_mean - mean(station_year_mean),
+  #       measurement_anmly_mdn = station_year_median - median(station_year_median),
+  #       lt_mean = mean(station_year_mean),
+  #       lt_sd = sd(station_year_mean),
+  #       lt_median = median(station_year_median),
+  #       lt_iqr_low = quantile(station_year_median, 0.25),
+  #       lt_iqr_high = quantile(station_year_median, 0.75),
+  #       lt_n = n()) %>%
+  group_by(station_name, param) %>%
+  mutate(measurement_scale = scale(mn_measurement),
+         measurement_anmly = mn_measurement - mean(mn_measurement),
+         measurement_anmly_mdn = mn_measurement - median(mn_measurement),
+         lt_mean = mean(mn_measurement),
+         lt_sd = sd(mn_measurement),
+         lt_median = median(mn_measurement),
+         lt_iqr_low = quantile(mn_measurement, 0.25),
+         lt_iqr_high = quantile(mn_measurement, 0.75),
+         lt_n = n()) %>%
+  ungroup() %>%
   group_by(station_name, year, param) %>%
   summarize(station_year_mean = mean(mn_measurement),
-            station_year_median = median(mn_measurement)) %>%
-  ungroup() %>%
-  group_by(station_name, param) %>%
-  mutate(measurement_scale = scale(station_year_mean),
-         measurement_anmly = station_year_mean - mean(station_year_mean),
-         measurement_anmly_mdn = station_year_median - median(station_year_median),
-         lt_mean = mean(station_year_mean),
-         lt_sd = sd(station_year_mean),
-         lt_median = median(station_year_median),
-         lt_iqr_low = quantile(station_year_median, 0.25),
-         lt_iqr_high = quantile(station_year_median, 0.75),
-         lt_n = n()) %>%
-  #group_by(station_name, param) %>%
-  #mutate(measurement_scale = scale(mn_measurement),
-  #       measurement_anmly = mn_measurement - mean(mn_measurement),
-  #       measurement_anmly_mdn = mn_measurement - median(mn_measurement),
-  #       lt_mean = mean(mn_measurement),
-  #       lt_sd = sd(mn_measurement),
-  #       lt_median = median(mn_measurement),
-  #      lt_iqr_low = quantile(mn_measurement, 0.25),
-  #       lt_iqr_high = quantile(mn_measurement, 0.75),
-  #       lt_n = n()) %>%
+            station_year_median = median(mn_measurement),
+            measurement_scale = mean(measurement_scale), # Calc yearly average
+            measurement_anmly = mean(measurement_anmly),
+            measurement_anmly_mdn = median(measurement_anmly_mdn), #Calc yearly mean
+            lt_mean = mean(lt_mean), #doesn't do anything as lt_mean same for all station/year/param
+            lt_sd = mean(lt_sd),
+            lt_median = median(lt_median),
+            lt_iqr_low = median(lt_iqr_low, 0.25),
+            lt_iqr_high = median(lt_iqr_high, 0.75),
+            lt_n = n()) %>%
   ungroup() %>%
   left_join(ww_sites) %>%
   filter(WB_Type == "Lake or Pond" | WB_Type == "Reservoir") %>%
@@ -399,21 +412,29 @@ lagos_data <- lagos_data %>%
   filter_months(.)
 
 lagos_data <- lagos_data %>%
+  group_by(station_name, param) %>%
+  mutate(measurement_scale = scale(measurement),
+         measurement_anmly = measurement - mean(measurement),
+         measurement_anmly_mdn = measurement - median(measurement),
+         lt_mean = mean(measurement),
+         lt_sd = sd(measurement),
+         lt_median = median(measurement),
+         lt_iqr_low = quantile(measurement, 0.25),
+         lt_iqr_high = quantile(measurement, 0.75),
+         lt_n = n()) %>%
+  ungroup() %>%
   group_by(station_name, year, param) %>%
   summarize(station_year_mean = mean(measurement),
-            station_year_median = median(measurement)) %>%
-  ungroup() %>%
-  group_by(station_name, param) %>%
-  mutate(measurement_scale = scale(station_year_mean),
-         measurement_anmly = station_year_mean - mean(station_year_mean),
-         measurement_anmly_mdn = station_year_median - median(station_year_median),
-         lt_mean = mean(station_year_mean),
-         lt_sd = sd(station_year_mean),
-         lt_median = median(station_year_median),
-         lt_iqr_low = quantile(station_year_median, 0.25),
-         lt_iqr_high = quantile(station_year_median, 0.75),
-         lt_n = n()) %>%
-  ungroup() 
+            station_year_median = median(measurement),
+            measurement_scale = mean(measurement_scale), # Calc yearly average
+            measurement_anmly = mean(measurement_anmly),
+            measurement_anmly_mdn = median(measurement_anmly_mdn), #Calc yearly mean
+            lt_mean = mean(lt_mean), #doesn't do anything as lt_mean same for all station/year/param
+            lt_sd = mean(lt_sd),
+            lt_median = median(lt_median),
+            lt_iqr_low = median(lt_iqr_low, 0.25),
+            lt_iqr_high = median(lt_iqr_high, 0.75),
+            lt_n = n())
 
 # Enforcing WW sig digits here as well
 lagos_data <- lagos_data %>%
