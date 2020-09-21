@@ -210,27 +210,27 @@ write_csv(figure_data, here("data/yearly_average_anomaly.csv"))
 set.seed(0)
 options(scipen=10000)
 
-site1 <- tibble(site=rep("site 1",10),
-                year = 2011:2020,
-                rep_1 = rnorm(10,10,2.5),
-                rep_2 = rep_1*rnorm(10, 1, 0.05),
-                rep_3 = rep_1*rnorm(10, 1, 0.05)) %>%
+site1 <- tibble(site=rep("site 1",24),
+                year = 1993:2016,
+                rep_1 = rnorm(24,10,2.5),
+                rep_2 = rep_1*rnorm(24, 1, 0.05),
+                rep_3 = rep_1*rnorm(24, 1, 0.05)) %>%
   pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
   mutate(replicate = str_extract(replicate, "[0-9]"))
 
-site2 <- tibble(site=rep("site 2",6),
-                year = 2011:2016,
-                rep_1 = rnorm(6,3,1),
-                rep_2 = rep_1 * rnorm(6, 1, 0.05),
-                rep_3 = rep_1 * rnorm(6, 1, 0.05)) %>%
+site2 <- tibble(site=rep("site 2",12),
+                year = 1993:2004,
+                rep_1 = rnorm(12,3,1),
+                rep_2 = rep_1 * rnorm(12, 1, 0.05),
+                rep_3 = rep_1 * rnorm(12, 1, 0.05)) %>%
   pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
   mutate(replicate = str_extract(replicate, "[0-9]"))
 
-site3 <- tibble(site=rep("site 3",6),
-                year = 2015:2020,
-                rep_1 = rnorm(6, 17, 1),
-                rep_2 = rep_1*rnorm(6, 1, 0.05),
-                rep_3 = rep_1*rnorm(6, 1, 0.05)) %>%
+site3 <- tibble(site=rep("site 3",13),
+                year = 2004:2016,
+                rep_1 = rnorm(13, 17, 1),
+                rep_2 = rep_1*rnorm(13, 1, 0.05),
+                rep_3 = rep_1*rnorm(13, 1, 0.05)) %>%
   pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
   mutate(replicate = str_extract(replicate, "[0-9]"))                
 
@@ -242,8 +242,8 @@ site_gg <- examp %>%
   geom_point() + 
   facet_grid(. ~ site) +
   theme_ipsum_rc()  +
-  scale_x_continuous(labels = c(2012,2014,2016,2018,2020),
-                     breaks = c(2012,2014,2016,2018,2020)) +
+  scale_x_continuous(labels = c(1995,2000,2005,2010,2015),
+                     breaks = c(1995,2000,2005,2010,2015)) +
   labs(x = "Year", y = "Simulated Measurements")
 site_gg %>%  
   ggsave(here("figures/simulated_data.jpg"), ., width = 7.5, height = 5.625,

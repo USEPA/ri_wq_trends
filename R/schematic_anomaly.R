@@ -22,6 +22,8 @@ median_anomaly <- station_year_anomaly %>%
   group_by(year) %>%
   summarize(median_anomaly = median(station_year_anomaly),
             iqr_anomaly = IQR(station_year_anomaly),
+            percentile_25 = quantile(station_year_anomaly, 0.25),
+            percentile_75 = quantile(station_year_anomaly, 0.75),
             n = n()) %>%
   round(2) %>%
   ungroup()

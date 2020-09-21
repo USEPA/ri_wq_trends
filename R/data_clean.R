@@ -106,7 +106,7 @@ det_limits <- det_limit %>%
   select(year, param, det_limit)
   
 
-# Final Clean
+# First Clean
 ww_lake_trend_data <- ww_lake_trend_data %>%
   select(station_name = `Station Name`, year, month, day, depth = Depth, 
          location = Location, param = Parameter, 
@@ -119,7 +119,7 @@ ww_lake_trend_data <- ww_lake_trend_data %>%
                                  T ~ measurement)) %>% # Convert TN to ug/l
   #filter(year >= 1990) %>%
   group_by(station_name, year, month,day,param,location) %>%
-  summarize(mn_measurement = mean(measurement, na.rm = TRUE), #some sampling events had multiple measurements - standardizes to one pre site/date/param
+  summarize(mn_measurement = mean(measurement, na.rm = TRUE), #some sampling events had multiple measurements - standardizes to one per site/date/param
             mdn_measurement = median(measurement, na.rm = TRUE))%>%
   ungroup() 
 

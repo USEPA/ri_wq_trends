@@ -196,7 +196,7 @@ all_context_summ <- all_lakes_context %>%
   summarize(min = min(value),
             `25th percentile` = quantile(value, 0.25),
             med = median(value),
-            avg = mean(value),
+            avg = round(mean(value),1),
             `75th percentile` = quantile(value, 0.75),
             max = max(value)) %>%
   filter(param %in% c("Agriculture", "Forest", "Developed", "lake_area_ha", 
@@ -206,11 +206,11 @@ all_context_summ <- all_lakes_context %>%
                            param == "maxdepth" ~
                              "Maximum Depth (m)",
                            param == "Agriculture" ~
-                             "Agriculture (%)",
+                             "Percent Agriculture",
                            param == "Forest" ~
-                             "Forest (%)",
+                             "Percent Forest",
                            param == "Developed" ~
-                             "Developed (%)",
+                             "Percent Developed",
                            TRUE ~ param),
          units = c("%", "%", "%", "ha", "m")) %>%
   mutate(Source = "LAGOSNE") %>%
@@ -224,7 +224,7 @@ ww_context_summ <- all_lakes_context %>%
   summarize(min = min(value),
             `25th percentile` = quantile(value, 0.25),
             med = median(value),
-            avg = mean(value),
+            avg = round(mean(value), 1),
             `75th percentile` = quantile(value, 0.75),
             max = max(value)) %>%
   filter(param %in% c("Agriculture", "Forest", "Developed", "lake_area_ha", 
@@ -234,11 +234,11 @@ ww_context_summ <- all_lakes_context %>%
                            param == "maxdepth" ~
                              "Maximum Depth (m)",
                            param == "Agriculture" ~
-                             "Agriculture (%)",
+                             "Percent Agriculture",
                            param == "Forest" ~
-                             "Forest (%)",
+                             "Percent Forest",
                            param == "Developed" ~
-                             "Developed (%)",
+                             "Percent Developed",
                            TRUE ~ param),
          units = c("%", "%", "%", "ha", "m")) %>%
   mutate(Source = "URIWW") %>%
