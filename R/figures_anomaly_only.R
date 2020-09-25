@@ -287,8 +287,8 @@ simulated_trends_gg <- ggplot(examp_yr_summ,
                                                                  ", p-value = ", signif(meas_lm$p.value, 2), "\nAnomaly: slope = ", signif(anom_lm$slope, 2), 
                                                                  ", p-value = ", signif(anom_lm$p.value, 2))) +
   theme_ipsum_rc() +
-  scale_x_continuous(labels = c(2012,2014,2016,2018,2020),
-                     breaks = c(2012,2014,2016,2018,2020)) +
+  scale_x_continuous(labels = c(1995,2000,2005,2010,2015),
+                     breaks = c(1995,2000,2005,2010,2015)) +
   theme(plot.subtitle = element_text(size=10, face="plain"))
 simulated_trends_gg %>%  
   ggsave(here("figures/simulated_analysis.jpg"), ., width = 7.5, height = 5.625,
