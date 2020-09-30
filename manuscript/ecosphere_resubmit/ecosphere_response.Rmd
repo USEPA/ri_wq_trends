@@ -168,7 +168,7 @@ simulated_trends_gg
 
 ***1-5a.*** I think the title overstates this result. I agree with increasing Chl-a trends, but don’t agree with stable nutrient trends.
 
-- **Response:** Changed title.  It no longer focus on the trends.  New title is: "Analyzing and comparing long-term water quality of lakes and reservoirs in Rhode Island and the Northeastern United States using an anomaly approach"
+- **Response:** Changed title.  It no longer focus on the trends.  New title is: "Analyzing long-term water quality of lakes in Rhode Island and the Northeastern United States with an anomaly approach"
 
 ***1-5b.*** I have not read Wasserstein et al. 2016, but agree with the general concept that a specific p-value threshold is not the only weight of evidence for determining whether there is a trend. However, I do not think the authors conclusions about trends for each parameter in the Rhode Island vs. LAGOS datasets are consistent with one another need a more detailed framework laid out ahead of time to understand the more holistic way of interpreting whether there are trends. These are the trends that I interpret differently than do the authors:
 
