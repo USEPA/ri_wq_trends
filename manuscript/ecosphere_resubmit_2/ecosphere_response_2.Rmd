@@ -1,0 +1,128 @@
+---
+output: 
+  word_document:
+    reference_docx: response_template.docx
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r include = FALSE}
+library(knitr)
+library(readr)
+library(dplyr)
+library(tidyr)
+library(lubridate)
+opts_chunk$set(message = FALSE, warning = FALSE)
+```
+
+General comments and thanks
+
+**Subject-matter Editor Comments:**
+
+1.) Line 15-16 - This sentence is a bit hard to read, consider rewriting and adding "water quality trends" somewhere in there.
+
+*Response:* Changed to: "We use the University of Rhode Island's Watershed Watch Volunteer Monitoring Program (URIWW) dataset to determine if there are sub-regional (i.e. 3000km^2^) water quality trends."
+
+2.) Line 75 - consider changing "we were curious" to "we investigated"
+
+*Response:* Changed as suggested.
+
+3.) Line 82 - not sure what in situ data as well as whole water samples means. It seems that whole water samples are in situ data, so I'm not sure what you're distinguishing here.
+
+*Response:* Distinction was meant to be field data (e.g. sonde or secchi) vs samples for lab analysis. Changed to: "Volunteer monitors are trained and then collect field data (e.g., sonde measurements or secchi depth) as well as whole water samples during the growing season (e.g., May through October) for later analysis in the lab. "
+
+4.) Line ~77 - One thing I think that is missing from this general area of the introduction is some context for RI lakes. You talk a lot about broad spatial scales and the types of landscape-scale changes that could influence water quality, but say little about RI specifically. I think a few sentences about what kinds of human pressures RI lakes are facing would be helpful context.
+
+*Response:* NEEDS RESPONSE
+
+5.) Line 78 - I appreciate the shout-out to to the watershed watch program. You could consider combining this info with the WW info that's in the first paragraph of the methods, and keeping all of that information in the methods. Especially if you decide to add more context about RI lakes in the introduction, this could be a way of keeping the introduction short and snappy.
+
+*Response:* Moved this section from the Introduction to Methods.  Good suggestion.  Both Intro and Methods read better now, we think.
+
+6.) Line 84 and throughout the manuscript - please consider a more inclusive term than "citizen science". One example I like is "community science" - here's an example of an org using it: <https://monarchjointventure.org/blog/were-changing-the-language-we-use-to-talk-about-public-participation-in-scientific-research>
+
+*Response:* We like the new term!  Have replaced "citizen science" with "community science"
+
+7.) Line 117-118 - do you mean had one sampling event in each month combination, in each year?
+
+*Response:* Exactly.  Edited this to hopefully be more clear.  Now reads: "had at least one sampling event per year in May through June, at least one sampling event per year in July through August, and at least one sampling event per year in September through October"
+
+8.) Line 175 - missing an s on "variable"
+
+*Response:* Fixed
+
+9.) Line 213-214 - consider changing "we are defining a trend with the following criteria" to "we evaluated trends based on the following criteria"
+
+*Response:* Changed
+
+10.) Line 225 - I think there should be an "or" after the comma
+
+*Response:* Cleaned that sentence up.
+
+11.) Line 237-239 - I'm slightly confused by these rate change calculations. Doesn't this rate of change assume you are starting from 0, which is not the case?
+
+*Response:* NEEDS RESPONSE
+
+12.) Line 257 - I think saying "we hypothesized regional trends were masking sub-regional trends" is good justification for including more RI-specific context in the introduction.
+
+*Response:* Agreed.  Have included that in the Introduction.
+
+13.) Line 262 - include a comma after "on average"
+
+*Response:* Fixed.
+
+14.) Tables 1 and 2 -- There is a lot of info here, and it's difficult to either look for trends through time or across sources in data availability. To be more concise plus enhance interpretability, I suggest a two panel plot, with panel A being URIWW and panel B being LAGOS, x axis is year and y axis is number of sites. Lines could be colored by constituent, and I think NA values should actually be zeros? If this turns out to be not as interpretable/useful than I thought, then I recommend putting these into a supplement.
+
+*Response:* NEEDS RESPONSE
+
+15.) Lines 266 -- might be a good place to remind readers they're dealing with surface/epi values here.
+
+*Response:* Added in: "of surface and epilimnion measurements".
+
+16.) Figure 2 -- really helpful figure!
+
+*Response:* Thanks!  After about 100 failed attempts at trying to describe this approach, we finally decided to put this together.  Actually caught some initial errors in code with this! 
+
+17.) Trend plots -- describe what the line is in the caption, increase axis title text size
+
+*Response:* NEEDS RESPONSE
+
+18.) Multi-panel trend plots -- for publication, I suggest reducing the vertical space between panels.
+
+*Response:* NEEDS RESPONSE
+
+19.) Figure 8 and 9 -- Because these are based on hypothetical systems with generated data, and are a relatively small part of your overall story, I suggest trying to reduce to a single figure.
+
+*Response:* NEEDS RESPONSE
+
+20.) Figure 8 and elsewhere (like the paragraph that begins on line 432) -- be very careful with the language used here. I was confused at first with this caption, because you use site twice: "...example of sites with a low site early in a time...". Instead, I suggest using something like the language as follows: "...example of a hypothetical lake with data from three difference sites; one sampling location that was monitored throughout the record, one sampling location with low reported values early in the record, and another sampling location with high reported values late in the record."
+
+*Response:* NEEDS RESPONSE
+
+21.) Table 7 -- misspelled LAGOSNE
+
+*Response:*  Oops!  Fixed.
+
+22.) Lines 321-324 -- The data availability statement is a bit awkward in its current location. I suggest moving it to somewhere in the methods.
+
+*Response:* Moved this from Results to Methods.
+
+23.) Line 357-358 -- This is confusing -- enough nutrients to cause increasing chlorophyll? Do you mean, enough of an increase in nutrients?
+
+*Response:* Was trying to make the case the nutrient reductions may not result in nutrient limitation.  Have changed this to state that more directly.  It now reads: "However, these nutrient reductions may not result in nutrient limitation and when when faced with other changes (e.g. temperature increases) increasing chlorophyll *a* may still occur."
+
+24.) Line 377 -- suggest changing to "However, we conducted a preliminary"
+
+*Response:* Changed this.
+
+25.) Paragraph beginning on line 366 -- I find this paragraph to be a bit all over the place, and could use some direction/cleaning up. For example, I think you could provide more context: why do we care about temp trends in May, or chlorophyll changes in certain types of lakes? I think the Stoddard paper showing changes in oligotrophic systems is relevant here, and I think it's worth mentioning that a 3.5 ug/L per year change in an oligotrophic lake could be very different than the same change in a eutrophic lake. Also, the paragraph ends with a switch to suggesting individual lake trends, which seemingly comes out of nowhere -- please provide more context in what situations that would be useful.
+
+*Response:* NEEDS RESPONSE
+
+26.) Paragraph beginning on line 408 -- the language here confuses me; the hypothesis about what observation? I think you could drop that language all together, and start the paragraph with "Broad scale warming is difficult...". I think this paragraph should be cleaned up, and clearly convey 2-3 points: 1) it's difficult to manage for warming, which 2) emphasizes the need for nutrient control measures, and possibly 3) managing blooms will be an uphill battle against warming waters
+
+*Response:* NEEDS RESPONSE
+
+27.) Data analysis approach section -- are there any downsides to the anomaly approach?
+
+*Response:* Added in a new paragraph before the last paragaph of the discussion mentioning a few caveats.
