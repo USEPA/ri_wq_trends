@@ -61,7 +61,7 @@ General comments and thanks
 
 11.) Line 237-239 - I'm slightly confused by these rate change calculations. Doesn't this rate of change assume you are starting from 0, which is not the case?
 
-*Response:* NEEDS RESPONSE
+*Response:* You are correct.  This does assume that a change of the magnitude defined by the Nürnberg oligotrophic-mesotrophic cut-off would result in a change even for a lake starting with 0 chla, tn, or tp.  To clarify, we made a slight change to the wording on this and it now reads "... an ecologically meaningful trend as one that would result in any oligotrophic lake changing to a mesotrophic state over the course of a century."   The main change being "any oligotrophic lake" and added the following at the end: "A slope at or above these values would result in a oligotrophic-mesotrophic transition for all oligotrophic lakes, even lakes with the impossible situation of chlorophyll, total nitrogen, or total phosphorus concentrations of zero."
 
 12.) Line 257 - I think saying "we hypothesized regional trends were masking sub-regional trends" is good justification for including more RI-specific context in the introduction.
 
@@ -117,12 +117,12 @@ General comments and thanks
 
 25.) Paragraph beginning on line 366 -- I find this paragraph to be a bit all over the place, and could use some direction/cleaning up. For example, I think you could provide more context: why do we care about temp trends in May, or chlorophyll changes in certain types of lakes? I think the Stoddard paper showing changes in oligotrophic systems is relevant here, and I think it's worth mentioning that a 3.5 ug/L per year change in an oligotrophic lake could be very different than the same change in a eutrophic lake. Also, the paragraph ends with a switch to suggesting individual lake trends, which seemingly comes out of nowhere -- please provide more context in what situations that would be useful.
 
-*Response:* NEEDS RESPONSE
+*Response:* We agree that this paragraph was not focused and was also quite long.  We have split the paragraph apart.  It currently now has two paragraphs, with the first paragraph focusing on lengthening of the growing season and the second paragraph focusing on trophic state.  We also include your suggestions in this second paragraph.  The last part of our original paragraph that included other drivers and individual lakes was an admittedly ham-handed effort at covering our bases as well as dealing with reviewer comments.  Given that this last section of the paragraph does not add much to the discussion we have removed it.  
 
 26.) Paragraph beginning on line 408 -- the language here confuses me; the hypothesis about what observation? I think you could drop that language all together, and start the paragraph with "Broad scale warming is difficult...". I think this paragraph should be cleaned up, and clearly convey 2-3 points: 1) it's difficult to manage for warming, which 2) emphasizes the need for nutrient control measures, and possibly 3) managing blooms will be an uphill battle against warming waters
 
-*Response:* NEEDS RESPONSE
+*Response:* Re-wrote this paragraph with a focus on these three main points.
 
 27.) Data analysis approach section -- are there any downsides to the anomaly approach?
 
-*Response:* Added in a new paragraph before the last paragaph of the discussion mentioning a few caveats.
+*Response:* Added in a new paragraph before the last paragraph of the discussion mentioning a few caveats.
