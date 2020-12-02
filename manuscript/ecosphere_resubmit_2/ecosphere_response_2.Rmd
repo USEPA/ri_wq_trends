@@ -33,7 +33,7 @@ General comments and thanks
 
 4.) Line ~77 - One thing I think that is missing from this general area of the introduction is some context for RI lakes. You talk a lot about broad spatial scales and the types of landscape-scale changes that could influence water quality, but say little about RI specifically. I think a few sentences about what kinds of human pressures RI lakes are facing would be helpful context.
 
-*Response:* NEEDS RESPONSE
+*Response:* Good point.  We added an additional paragraph to the Introduction addressing RI LULC and pressures.
 
 5.) Line 78 - I appreciate the shout-out to to the watershed watch program. You could consider combining this info with the WW info that's in the first paragraph of the methods, and keeping all of that information in the methods. Especially if you decide to add more context about RI lakes in the introduction, this could be a way of keeping the introduction short and snappy.
 
