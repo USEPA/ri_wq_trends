@@ -65,7 +65,7 @@ Prior studies have modeled water quality trends across a larger region of the no
 
 We use data, also from LAGOSNE, on landscape composition, maximum lake depth, and lake area [@sorannolagosne2017].  We use the 500 meter buffer landscape composition for three classes from the 2011 National Land Cover Dataset: Agriculture, Forest, and Developed.  The maximum lake depth is from various sources and lake area is calculated from the National Hydropgraphy Dataset waterbody polygons.  Additional details are available in Soranno et al. [-@sorannolagosne2017].
 
-Lastly, data and code for the entire analysis is available from <https://github.com/USEPA/ri_wq_trends/> and is archived at <https://doi.org/10.5281/zenodo.4050275 > [@zenodo_citation].  Values included in each of the figures have also been separately saved as a comma-separated values file, `yearly_average_anomaly.csv`, and may be retrieved via <https://github.com/USEPA/ri_wq_trends/raw/master/data/yearly_average_anomaly.csv>.
+Lastly, data and code for the entire analysis is available from <https://github.com/USEPA/ri_wq_trends/> and is archived at <https://doi.org/10.5281/zenodo.4050275 > [@zenodo_citation].  All analyses were conducted with R version 4.0.3 and details on R packages and operating system used for this analysis are included in a file, `sessioninfo.txt` at <>[].  Values included in each of the figures have also been separately saved as a comma-separated values file, `yearly_average_anomaly.csv`, and may be retrieved via <https://github.com/USEPA/ri_wq_trends/raw/master/data/yearly_average_anomaly.csv>.  
 
 ## Water Quality Trend Analysis
 
@@ -310,5 +310,5 @@ knitr::kable(trend_summ_df, format = "pipe")
 
 ```{r session_info, echo=FALSE}
 #Send session info to a file: 
-capture.output(sessionInfo(),file=here::here("manuscript/ecosphere_resubmit/sessioninfo.txt"))
+capture.output(sessionInfo(),file=here::here("sessioninfo.txt"))
 ```

@@ -1,17 +1,22 @@
 # Installations
 pkgs <- c("lubridate","broom", "stringr", "dplyr", "readr", "readxl","tidyr", 
           "here","ggplot2", "hrbrthemes", "Kendall","sf", "USAboundaries",
-          "USAboundariesData","knitr","captioner", "pander", "cowplot")
+          "USAboundariesData","knitr","captioner", "pander", "cowplot", 
+          "tidycensus", "FedData", "nsink", "units")
+
+if(!requireNamespace("LAGOSNE")){
+  devtools::install_github("cont-limno/LAGOSNE")
+} else if(!requireNamespace("FedData")){
+  devtools::install_github("ropensci/FedData")
+} else if(!requireNamespace("nsink")){
+  devtools::install_github("jhollist/nsink")
+}
 
 for(i in pkgs){
   if(!i %in% installed.packages()){
     install.packages(i, repos = c("http://packages.ropensci.org", 
                                   "https://cran.rstudio.com"))
   }
-}
-
-if(!requireNamespace("LAGOSNE")){
-  devtools::install_github("cont-limno/LAGOSNE")
 }
 
 # Library
@@ -33,6 +38,10 @@ library(USAboundariesData)
 library(knitr)
 library(captioner)
 library(cowplot)
+library(tidycensus)
+library(FedData)
+library(nsink)
+library(units)
 
 #' Function to filter on number of years sampled per site
 #' @param df data frame to filter

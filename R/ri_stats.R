@@ -1,9 +1,3 @@
-library(dplyr)
-library(sf)
-library(tidycensus)
-library(FedData)
-library(nsink)
-
 us_pop <- state_laea %>%
   left_join(get_acs("state", "B01003_001")) %>%
   mutate(area = set_units(st_area(.), "mi^2"),
