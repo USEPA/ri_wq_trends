@@ -73,7 +73,7 @@ General comments and thanks
 
 14.) Tables 1 and 2 -- There is a lot of info here, and it's difficult to either look for trends through time or across sources in data availability. To be more concise plus enhance interpretability, I suggest a two panel plot, with panel A being URIWW and panel B being LAGOS, x axis is year and y axis is number of sites. Lines could be colored by constituent, and I think NA values should actually be zeros? If this turns out to be not as interpretable/useful than I thought, then I recommend putting these into a supplement.
 
-*Response:* NEEDS RESPONSE
+*Response:* Good suggestion.  I never liked these tables, but figured readers would want details on variation (or lack thereof) in sampling effort. Created a faceted plot for each lagosne and uriww to replace the tables.
 
 15.) Lines 266 -- might be a good place to remind readers they're dealing with surface/epi values here.
 
@@ -81,23 +81,23 @@ General comments and thanks
 
 16.) Figure 2 -- really helpful figure!
 
-*Response:* Thanks!  After about 100 failed attempts at trying to describe this approach, we finally decided to put this together.  Actually caught some initial errors in code with this! 
+*Response:* Thanks!  After about 100 failed attempts at trying to describe this approach to colleagues, we finally decided to put this together.  Actually caught some initial errors in code with this! 
 
 17.) Trend plots -- describe what the line is in the caption, increase axis title text size
 
-*Response:* NEEDS RESPONSE
+*Response:* Added description of regression line to caoptions and increased title text size.
 
 18.) Multi-panel trend plots -- for publication, I suggest reducing the vertical space between panels.
 
-*Response:* NEEDS RESPONSE
+*Response:* Have moved plots closer together
 
 19.) Figure 8 and 9 -- Because these are based on hypothetical systems with generated data, and are a relatively small part of your overall story, I suggest trying to reduce to a single figure.
 
-*Response:* NEEDS RESPONSE
+*Response:* Done.
 
 20.) Figure 8 and elsewhere (like the paragraph that begins on line 432) -- be very careful with the language used here. I was confused at first with this caption, because you use site twice: "...example of sites with a low site early in a time...". Instead, I suggest using something like the language as follows: "...example of a hypothetical lake with data from three difference sites; one sampling location that was monitored throughout the record, one sampling location with low reported values early in the record, and another sampling location with high reported values late in the record."
 
-*Response:* NEEDS RESPONSE
+*Response:* Good catch.  The original language was confusing.  Caption now reads: "Panel A. Simulated, random data showing example of three hypothetical lakes; one lake was monitored throughout the record, one lake with low reported values monitored early in the record, and another lake with high reported values monitored late in the record.  Panel B. Analysis of simulated, random data with one lake monitored throughout the record, one lake with low reported values monitored early in the record, and another lake with high reported values monitored late in the record. Yearly average of the actual values is shown in red and yearly average of the site-specific anomalies is shown in blue."  Plus, have indicated in the methods (third paragaraph of Study Area and Data) that "lakes and reservoirs" are referred to as "sites" throughout the paper.    
 
 21.) Table 7 -- misspelled LAGOSNE
 

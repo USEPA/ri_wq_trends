@@ -124,7 +124,7 @@ lagos_np_rl <- lagos_np_gg[[4]]
 chla_plot <- cowplot::plot_grid(chla_gg[[1]], lagos_chla_gg[[1]], 
                                 align = "h", ncol = 1) 
 
-ggsave(here("figures/paired_chla_trends.jpg"), chla_plot, width = 7.5, 
+ggsave(here("figures/paired_chla_trendsx.jpg"), chla_plot, width = 7.5, 
        height = 9, 
        units = "in", dpi = 600)
 

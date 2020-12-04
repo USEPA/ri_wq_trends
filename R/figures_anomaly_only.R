@@ -58,7 +58,7 @@ temp_gg <- ww_data %>%
               y = "Median Yearly Temperature Anomaly (°C)", x = "Year",
               write = here("data/temp_data_anomaly.csv"), error_bar = "iqr",
               title = "URI Watershed Watch Temperature")
-ggsave(here("figures/ww_temp_trends_anomaly.jpg"), temp_gg[[1]], width = 7.5, height = 5.625, 
+ggsave(here("figures/ww_temp_trends_anomaly.jpg"), temp_gg[[1]], width = 8.5, height = 5.5, 
        units = "in", dpi = 600)
 
 ww_temp_kt <- temp_gg[[2]]
@@ -140,25 +140,25 @@ lagos_np_rl <- lagos_np_gg[[4]]
 chla_plot <- cowplot::plot_grid(chla_gg[[1]], lagos_chla_gg[[1]], 
                                 align = "h", ncol = 1) 
 
-ggsave(here("figures/paired_chla_trends_anomaly.jpg"), chla_plot, width = 5.7, height = 7.45, 
+ggsave(here("figures/paired_chla_trends_anomaly.jpg"), chla_plot, width = 8.5, height = 11, 
        units = "in", dpi = 600)
 
 tn_plot <- cowplot::plot_grid(tn_gg[[1]], lagos_tn_gg[[1]], 
                               align = "h", ncol = 1)
 
-ggsave(here("figures/paired_tn_trends_anomaly.jpg"), tn_plot, width = 5.7, height = 7.45, 
+ggsave(here("figures/paired_tn_trends_anomaly.jpg"), tn_plot, width = 8.5, height = 11, 
        units = "in", dpi = 600)
 
 tp_plot <- cowplot::plot_grid(tp_gg[[1]], lagos_tp_gg[[1]], 
                               align = "h", ncol = 1) 
 
-ggsave(here("figures/paired_tp_trends_anomaly.jpg"), tp_plot, width = 5.7, height = 7.45, 
+ggsave(here("figures/paired_tp_trends_anomaly.jpg"), tp_plot, width = 8.5, height = 11, 
        units = "in", dpi = 600)
 
 np_plot <- cowplot::plot_grid(np_gg[[1]], lagos_np_gg[[1]], 
                               align = "h", ncol = 1) 
 
-ggsave(here("figures/paired_np_trends_anomaly.jpg"), np_plot, width = 5.7, height = 7.45, 
+ggsave(here("figures/paired_np_trends_anomaly.jpg"), np_plot, width = 8.5, height = 11, 
        units = "in", dpi = 600)
 
 
@@ -189,7 +189,7 @@ ww_map <- ggplot(st_geometry(ri)) +
   theme_ipsum_rc() +
   theme(legend.position = "bottom", legend.title = element_blank())
 ww_map %>%  
-  ggsave(here("figures/ww_map.jpg"), ., width = 5.7, height = 7.45,
+  ggsave(here("figures/ww_map.jpg"), ., width = 8.5, height = 11,
          units = "in", dpi = 600)
 
 # Create supplemental dataset with data for all figures:
@@ -210,7 +210,7 @@ write_csv(figure_data, here("data/yearly_average_anomaly.csv"))
 set.seed(0)
 options(scipen=10000)
 
-site1 <- tibble(site=rep("site 1",24),
+site1 <- tibble(site=rep("Lake 1",24),
                 year = 1993:2016,
                 rep_1 = rnorm(24,10,2.5),
                 rep_2 = rep_1*rnorm(24, 1, 0.05),
@@ -218,7 +218,7 @@ site1 <- tibble(site=rep("site 1",24),
   pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
   mutate(replicate = str_extract(replicate, "[0-9]"))
 
-site2 <- tibble(site=rep("site 2",12),
+site2 <- tibble(site=rep("Lake 2",12),
                 year = 1993:2004,
                 rep_1 = rnorm(12,3,1),
                 rep_2 = rep_1 * rnorm(12, 1, 0.05),
@@ -226,7 +226,7 @@ site2 <- tibble(site=rep("site 2",12),
   pivot_longer(rep_1:rep_3, names_to = "replicate", values_to = "values") %>%
   mutate(replicate = str_extract(replicate, "[0-9]"))
 
-site3 <- tibble(site=rep("site 3",13),
+site3 <- tibble(site=rep("Lake 3",13),
                 year = 2004:2016,
                 rep_1 = rnorm(13, 17, 1),
                 rep_2 = rep_1*rnorm(13, 1, 0.05),
@@ -242,11 +242,21 @@ site_gg <- examp %>%
   geom_point() + 
   facet_grid(. ~ site) +
   theme_ipsum_rc()  +
-  scale_x_continuous(labels = c(1995,2000,2005,2010,2015),
-                     breaks = c(1995,2000,2005,2010,2015)) +
-  labs(x = "Year", y = "Simulated Measurements")
+  scale_x_continuous(labels = c(1995,2005,2015),
+                     breaks = c(1995,2005,2015)) +
+  labs(x = "Year", y = "Simulated Measurements", title = "A. Simulated Lakes") + 
+  theme(legend.position="none", 
+        plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size=14, face="plain"),
+        axis.title.x = element_text(size=14, face="plain",
+                                    margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.title.y = element_text(size=14, face="plain",
+                                    margin = margin(t = 0, r = 10, b = 0, l = 0)),
+        axis.text.x = element_text(size=14, face="plain"),
+        axis.text.y = element_text(size=14, face="plain"),
+        plot.margin = margin(t = 10, r = 0, b = 10, l = 0))
 site_gg %>%  
-  ggsave(here("figures/simulated_data.jpg"), ., width = 7.5, height = 5.625,
+  ggsave(here("figures/simulated_data.jpg"), ., width = 8.5, height = 5.5,
          units = "in", dpi = 600)
 
 
@@ -283,16 +293,34 @@ simulated_trends_gg <- ggplot(examp_yr_summ,
   geom_smooth(method = "lm", se = FALSE) +
   scale_color_manual(values = c("darkblue", "darkred"), 
                      labels = c("Anomaly", "Measured Values")) +
-  labs(y = "Yearly Median Value", x = "Year", subtitle = paste0("Measured Values: slope = ", signif(meas_lm$slope, 2), 
-                                                                 ", p-value = ", signif(meas_lm$p.value, 2), "\nAnomaly: slope = ", signif(anom_lm$slope, 2), 
-                                                                 ", p-value = ", signif(anom_lm$p.value, 2))) +
+  labs(y = "Yearly Median Value", x = "Year", 
+       subtitle = paste0("Measured Values: slope = ", signif(meas_lm$slope, 2), 
+                         ", p-value = ", signif(meas_lm$p.value, 2), 
+                         "\nAnomaly: slope = ", signif(anom_lm$slope, 2), 
+                         ", p-value = ", signif(anom_lm$p.value, 2)),
+       title = "B. Simulated Trend Analyses") +
   theme_ipsum_rc() +
   scale_x_continuous(labels = c(1995,2000,2005,2010,2015),
                      breaks = c(1995,2000,2005,2010,2015)) +
-  theme(plot.subtitle = element_text(size=10, face="plain"))
+  theme(legend.position="none", 
+        plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size=14, face="plain"),
+        axis.title.x = element_text(size=14, face="plain",
+                                    margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.title.y = element_text(size=14, face="plain",
+                                    margin = margin(t = 0, r = 10, b = 0, l = 0)),
+        axis.text.x = element_text(size=14, face="plain"),
+        axis.text.y = element_text(size=14, face="plain"),
+        plot.margin = margin(t = 10, r = 0, b = 10, l = 0))
 simulated_trends_gg %>%  
-  ggsave(here("figures/simulated_analysis.jpg"), ., width = 7.5, height = 5.625,
+  ggsave(here("figures/simulated_analysis.jpg"), ., width = 8.5, height = 5.5,
          units = "in", dpi = 600)
+
+simulated_plot <- cowplot::plot_grid(site_gg, simulated_trends_gg, 
+                                align = "h", ncol = 1) 
+
+ggsave(here("figures/simulated_data_analysis.jpg"), simulated_plot, width = 8.5, height = 11, 
+       units = "in", dpi = 600)
 
 
 # Trophic State Plots
@@ -377,7 +405,7 @@ ts_plot <- cowplot::plot_grid(chla_gg_ts[[1]], temp_gg_ts[[1]],
                               tp_gg_ts[[1]], tn_gg_ts[[1]], 
                               np_gg_ts[[1]], align = "h", ncol = 1) 
 
-ggsave(here("figures/trophic_state_trends_anomaly.jpg"), chla_plot, width = 5.7, height = 7.45, 
+ggsave(here("figures/trophic_state_trends_anomaly.jpg"), chla_plot, width = 8.5, height = 11, 
        units = "in", dpi = 600)
 
 
@@ -442,3 +470,88 @@ ggsave(here("figures/lagos_np_trends_anomaly_ts.jpg"), np_gg_ts[[1]], width = 7.
 lagos_np_kt_ts <- np_gg_ts[[2]]
 lagos_np_df_ts <- np_gg_ts[[3]]
 lagos_np_rl_ts <- np_gg_ts[[4]]
+
+# Sample size figure
+year_num_ww <- figure_data %>%
+  filter(source == "uriww") %>%
+  select(year, variable, n) %>%
+  spread(variable, n) %>%
+  rename("Year" = "year", "Chl." = "chla", 
+         "N:P" = "np_ratio", "Temp." = "temp", 
+         "TN" = "total_n", "TP" = "total_p") %>%
+  gather(variable, n, Chl.:TP) %>%
+  mutate(variable = factor(variable,levels = c("Temp.", "Chl.",
+                                               "TN", "TP",
+                                               "N:P"), 
+                           ordered = TRUE))
+
+year_num_lagosne <- figure_data %>%
+  filter(source == "lagosne") %>%
+  select(year, variable, n) %>%
+  spread(variable, n)  %>%
+  rename("Year" = "year", "Chl." = "chla", 
+         "N:P" = "np_ratio", 
+         "TN" = "total_n", "TP" = "total_p") %>%
+  gather(variable, n, Chl.:TP) %>%
+  mutate(variable = factor(variable,levels = c("Chl.",
+                                               "TN", "TP",
+                                               "N:P"), 
+                           ordered = TRUE))
+
+ww_sample_gg <- year_num_ww %>%
+  ggplot(aes(x = Year, y = n)) +
+  geom_line(color = "darkred", size = 1) +
+  geom_point(color = "darkred", size = 1.5) +
+  facet_grid(variable ~ .)  +
+  theme_ipsum_rc() +
+  scale_x_continuous(labels = c(1995,2000,2005,2010,2015),
+                     breaks = c(1995,2000,2005,2010,2015),
+                     limits = c(1993, 2016)) +
+  scale_y_continuous(labels = c(0, 25, 50),
+                     breaks = c(0, 25, 50),
+                     limits = c(0, 55)) +
+  theme(legend.position="none", 
+        plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size=14, face="plain"),
+        axis.title.x = element_text(size=14, face="plain",
+                                    margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.title.y = element_text(size=14, face="plain",
+                                    margin = margin(t = 0, r = 10, b = 0, l = 0)),
+        axis.text.x = element_text(size=14, face="plain"),
+        axis.text.y = element_text(size=14, face="plain"),
+        plot.margin = margin(t = 10, r = 0, b = 10, l = 0),
+        strip.text = element_text(size = 11)) +
+  labs(title = "A. Number of sampled lakes with measurments for each variable 
+       from URI Watershed Watch program", y = "Number of sampled lakes")
+  
+  lagos_sample_gg <- year_num_lagosne %>%
+    ggplot(aes(x = Year, y = n)) +
+    geom_line(color = "darkblue", size = 1) +
+    geom_point(color = "darkblue", size = 1.5) +
+    facet_grid(variable ~ .)  +
+    theme_ipsum_rc() +
+    scale_x_continuous(labels = c(1995,2000,2005,2010,2015),
+                       breaks = c(1995,2000,2005,2010,2015),
+                       limits = c(1993, 2016)) +
+    scale_y_continuous(labels = c(0, 200, 400),
+                       breaks = c(0, 200, 400)) +
+    theme(legend.position="none", 
+        plot.title = element_text(size = 14, face = "bold"),
+        plot.subtitle = element_text(size=14, face="plain"),
+        axis.title.x = element_text(size=14, face="plain",
+                                    margin = margin(t = 10, r = 0, b = 0, l = 0)),
+        axis.title.y = element_text(size=14, face="plain",
+                                    margin = margin(t = 0, r = 10, b = 0, l = 0)),
+        axis.text.x = element_text(size=14, face="plain"),
+        axis.text.y = element_text(size=14, face="plain"),
+        plot.margin = margin(t = 10, r = 0, b = 10, l = 0),
+        strip.text = element_text(size = 11)) +
+    labs(title = "B. Number of sampled lakes with measurments for each variable 
+       from LAGOSNE", y = "Number of sampled lakes")
+
+sample_size_plot <- cowplot::plot_grid(ww_sample_gg, lagos_sample_gg, 
+                                      align = "h", ncol = 1) 
+  
+sample_size_plot
+ggsave(here("figures/sample_sizes.jpg"), sample_size_plot, width = 8.5, height = 11, 
+        units = "in", dpi = 600)

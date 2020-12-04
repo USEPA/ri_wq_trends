@@ -163,12 +163,12 @@ wq_trend_gg <- function(df, wqparam,
   } else if(yvar == "measurement_anmly"){
     limit<-max(abs(c(floor(1.1*min(df2$mdn_value - df2[[error_bar]])), 
                      ceiling(1.1*max(df2$mdn_value + df2[[error_bar]])))))
-    label_break <- c(-limit, floor(-limit/2), 0, ceiling(limit/2), limit)
+    label_break <- c(-limit, round((-limit/2)/5,1)*5, 0, round((limit/2)/5,1)*5, limit)
     limits <- c(-limit,limit)
   } else if(yvar == "measurement_anmly_mdn"){
     limit<-max(abs(c(floor(1.1*min(df2$iqr_low)), 
                      ceiling(1.1*max(df2$iqr_high)))))
-    label_break <- c(-limit, floor(-limit/2), 0, ceiling(limit/2), limit)
+    label_break <- c(-limit, round((-limit/2)/5,1)*5, 0, round((limit/2)/5,1)*5, limit)
     limits <- c(-limit,limit)
   }
   
@@ -204,6 +204,7 @@ wq_trend_gg <- function(df, wqparam,
                                              label = "*"), color = "darkblue")
     }
     #geom_point(aes(color = col_group), size=3.5) +
+  
   gg <- gg + 
     geom_smooth(method = "lm", se=FALSE, color = "black") +
     theme_ipsum_rc() +
@@ -211,8 +212,15 @@ wq_trend_gg <- function(df, wqparam,
                              " p = ", signif(regress$p.value, 2))) +
     scale_color_manual(values = my_colors) + 
     theme(legend.position="none", 
-          plot.title = element_text(size = 12, face = "bold"),
-          plot.subtitle = element_text(size=10, face="plain")) + 
+          plot.title = element_text(size = 14, face = "bold"),
+          plot.subtitle = element_text(size=14, face="plain"),
+          axis.title.x = element_text(size=14, face="plain",
+                                      margin = margin(t = 10, r = 0, b = 0, l = 0)),
+          axis.title.y = element_text(size=14, face="plain",
+                                      margin = margin(t = 0, r = 10, b = 0, l = 0)),
+          axis.text.x = element_text(size=14, face="plain"),
+          axis.text.y = element_text(size=14, face="plain"),
+          plot.margin = margin(t = 10, r = 0, b = 10, l = 0)) + 
     scale_x_continuous(labels = c(1990,1995,2000,2005,2010,2015),
                        breaks = c(1990,1995,2000,2005,2010,2015),
                        minor_breaks = NULL,
