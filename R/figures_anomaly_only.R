@@ -521,7 +521,7 @@ ww_sample_gg <- year_num_ww %>%
         axis.text.y = element_text(size=14, face="plain"),
         plot.margin = margin(t = 10, r = 0, b = 10, l = 0),
         strip.text = element_text(size = 11)) +
-  labs(title = "A. Number of sampled lakes with measurments for each variable 
+  labs(title = "A. Number of sampled lakes for each variable 
        from URI Watershed Watch program", y = "Number of sampled lakes")
   
   lagos_sample_gg <- year_num_lagosne %>%
@@ -546,7 +546,7 @@ ww_sample_gg <- year_num_ww %>%
         axis.text.y = element_text(size=14, face="plain"),
         plot.margin = margin(t = 10, r = 0, b = 10, l = 0),
         strip.text = element_text(size = 11)) +
-    labs(title = "B. Number of sampled lakes with measurments for each variable 
+    labs(title = "B. Number of sampled lakes for each variable 
        from LAGOSNE", y = "Number of sampled lakes")
 
 sample_size_plot <- cowplot::plot_grid(ww_sample_gg, lagos_sample_gg, 

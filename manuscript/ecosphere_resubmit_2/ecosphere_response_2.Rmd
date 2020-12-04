@@ -15,7 +15,7 @@ library(lubridate)
 opts_chunk$set(message = FALSE, warning = FALSE)
 ```
 
-General comments and thanks
+Thank you for the review comments. The end product is significantly better.  We have itemized and responded to each of the comments below.  If there are any questions about what we have done, please do not hesitate to contact us.
 
 **Subject-matter Editor Comments:**
 
@@ -85,7 +85,7 @@ General comments and thanks
 
 17.) Trend plots -- describe what the line is in the caption, increase axis title text size
 
-*Response:* Added description of regression line to caoptions and increased title text size.
+*Response:* Added description of regression line to captions and increased title text size.
 
 18.) Multi-panel trend plots -- for publication, I suggest reducing the vertical space between panels.
 
@@ -97,7 +97,7 @@ General comments and thanks
 
 20.) Figure 8 and elsewhere (like the paragraph that begins on line 432) -- be very careful with the language used here. I was confused at first with this caption, because you use site twice: "...example of sites with a low site early in a time...". Instead, I suggest using something like the language as follows: "...example of a hypothetical lake with data from three difference sites; one sampling location that was monitored throughout the record, one sampling location with low reported values early in the record, and another sampling location with high reported values late in the record."
 
-*Response:* Good catch.  The original language was confusing.  Caption now reads: "Panel A. Simulated, random data showing example of three hypothetical lakes; one lake was monitored throughout the record, one lake with low reported values monitored early in the record, and another lake with high reported values monitored late in the record.  Panel B. Analysis of simulated, random data with one lake monitored throughout the record, one lake with low reported values monitored early in the record, and another lake with high reported values monitored late in the record. Yearly average of the actual values is shown in red and yearly average of the site-specific anomalies is shown in blue."  Plus, have indicated in the methods (third paragaraph of Study Area and Data) that "lakes and reservoirs" are referred to as "sites" throughout the paper.    
+*Response:* Good catch.  The original language was confusing.  Caption now reads: "Panel A. Simulated, random data showing example of three hypothetical lakes; one lake was monitored throughout the record, one lake with low reported values monitored early in the record, and another lake with high reported values monitored late in the record.  Panel B. Analysis of simulated, random data with one lake monitored throughout the record, one lake with low reported values monitored early in the record, and another lake with high reported values monitored late in the record. Yearly average of the actual values is shown in red and yearly average of the site-specific anomalies is shown in blue."  Plus, we have indicated in the methods (third paragaraph of Study Area and Data) that "lakes and reservoirs" are referred to as "sites" throughout the paper.    
 
 21.) Table 7 -- misspelled LAGOSNE
 
