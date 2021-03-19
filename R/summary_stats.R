@@ -204,13 +204,13 @@ all_context_summ <- all_lakes_context %>%
   mutate(param = case_when(param == "lake_area_ha" ~
                              "Lake Area (ha)", 
                            param == "maxdepth" ~
-                             "Maximum Depth (m)",
+                             "Max. Depth (m)",
                            param == "Agriculture" ~
-                             "Percent Agriculture",
+                             "Agriculture (%)",
                            param == "Forest" ~
-                             "Percent Forest",
+                             "Forest (%)",
                            param == "Developed" ~
-                             "Percent Developed",
+                             "Developed (%)",
                            TRUE ~ param),
          units = c("%", "%", "%", "ha", "m")) %>%
   mutate(Source = "LAGOSNE") %>%
@@ -232,13 +232,13 @@ ww_context_summ <- all_lakes_context %>%
   mutate(param = case_when(param == "lake_area_ha" ~
                              "Lake Area (ha)", 
                            param == "maxdepth" ~
-                             "Maximum Depth (m)",
+                             "Max. Depth (m)",
                            param == "Agriculture" ~
-                             "Percent Agriculture",
+                             "Agriculture (%)",
                            param == "Forest" ~
-                             "Percent Forest",
+                             "Forest (%)",
                            param == "Developed" ~
-                             "Percent Developed",
+                             "Developed (%)",
                            TRUE ~ param),
          units = c("%", "%", "%", "ha", "m")) %>%
   mutate(Source = "URIWW") %>%

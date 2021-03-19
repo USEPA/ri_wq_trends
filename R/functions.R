@@ -2,7 +2,7 @@
 pkgs <- c("lubridate","broom", "stringr", "dplyr", "readr", "readxl","tidyr", 
           "here","ggplot2", "hrbrthemes", "Kendall","sf", "USAboundaries",
           "USAboundariesData","knitr","captioner", "pander", "cowplot", 
-          "tidycensus", "FedData", "nsink", "units")
+          "tidycensus", "FedData", "nsink", "units", "magick", "flextable")
 
 if(!requireNamespace("LAGOSNE")){
   devtools::install_github("cont-limno/LAGOSNE")
@@ -42,6 +42,8 @@ library(tidycensus)
 library(FedData)
 library(nsink)
 library(units)
+library(magick)
+library(flextable)
 
 #' Function to filter on number of years sampled per site
 #' @param df data frame to filter
@@ -213,13 +215,13 @@ wq_trend_gg <- function(df, wqparam,
     scale_color_manual(values = my_colors) + 
     theme(legend.position="none", 
           plot.title = element_text(size = 14, face = "bold"),
-          plot.subtitle = element_text(size=14, face="plain"),
-          axis.title.x = element_text(size=14, face="plain",
+          plot.subtitle = element_text(size = 14, face="plain"),
+          axis.title.x = element_text(size = 14, face="plain",
                                       margin = margin(t = 10, r = 0, b = 0, l = 0)),
-          axis.title.y = element_text(size=14, face="plain",
+          axis.title.y = element_text(size = 14, face="plain",
                                       margin = margin(t = 0, r = 10, b = 0, l = 0)),
-          axis.text.x = element_text(size=14, face="plain"),
-          axis.text.y = element_text(size=14, face="plain"),
+          axis.text.x = element_text(size = 14, face="plain"),
+          axis.text.y = element_text(size = 14, face="plain"),
           plot.margin = margin(t = 10, r = 0, b = 10, l = 0)) + 
     scale_x_continuous(labels = c(1990,1995,2000,2005,2010,2015),
                        breaks = c(1990,1995,2000,2005,2010,2015),
@@ -227,7 +229,8 @@ wq_trend_gg <- function(df, wqparam,
                        limits = c(1993,2016)) +
     scale_y_continuous(labels = label_break,
                        breaks = label_break,
-                       limits = limits)
+                       limits = limits) +
+    theme(plot.margin=grid::unit(c(0,0,0,0), "mm"))
   
   list(gg, kt, df2, regress)
 }
@@ -396,8 +399,8 @@ wq_trophic_trend_gg <- function(df, wqparam,
                                 #               " p = ", signif(regress$p.value, 2))) +
     scale_color_manual(values = my_colors) + 
     theme(legend.position="none", 
-          plot.title = element_text(size = 12, face = "bold"),
-          plot.subtitle = element_text(size=10, face="plain")) + 
+          plot.title = element_text(size = 14, face = "bold"),
+          plot.subtitle = element_text(size = 12, face="plain")) + 
     scale_x_continuous(labels = c(1995,2005,2015),
                        breaks = c(1995,2005,2015),
                        minor_breaks = NULL,

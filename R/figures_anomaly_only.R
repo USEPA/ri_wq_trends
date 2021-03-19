@@ -16,9 +16,8 @@ chla_gg <- ww_data %>%
                x = "Year",
                write = here("data/chla_data_anomaly.csv"), error_bar = "iqr",
                title = "A. URI Watershed Watch Chlorophyll")
-ggsave(here("figures/ww_chla_trends_anomaly.jpg"), chla_gg[[1]], width = 7.5, 
-       height = 5.625, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/ww_chla_trends_anomaly.tiff"), chla_gg[[1]], width = 15.6, 
+       height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 
 ww_chla_kt <- chla_gg[[2]]
 ww_chla_df <- chla_gg[[3]]
@@ -31,8 +30,8 @@ tn_gg <-  ww_data %>%
               x = "Year",
               write = here("data/total_n_data_anomaly.csv"), error_bar = "iqr",
               title = "A. URI Watershed Watch Total Nitrogen")
-ggsave(here("figures/ww_tn_trends_anomaly.jpg"), tn_gg[[1]], width = 7.5, height = 5.625, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/ww_tn_trends_anomaly.tiff"), tn_gg[[1]], width = 15.6, 
+       height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 
 ww_tn_kt <- tn_gg[[2]]
 ww_tn_df <- tn_gg[[3]]
@@ -45,8 +44,8 @@ tp_gg <-  ww_data %>%
               x = "Year",
               write = here("data/total_p_data_anomaly.csv"), error_bar = "iqr",
               title = "A. URI Watershed Watch Total Phosphorus")
-ggsave(here("figures/ww_tp_trends_anomaly.jpg"), tp_gg[[1]], width = 7.5, height = 5.625, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/ww_tp_trends_anomaly.tiff"), tp_gg[[1]], width = 15.6, 
+       height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 
 ww_tp_kt <- tp_gg[[2]]
 ww_tp_df <- tp_gg[[3]]
@@ -58,8 +57,10 @@ temp_gg <- ww_data %>%
               y = "Median Yearly Temperature Anomaly (°C)", x = "Year",
               write = here("data/temp_data_anomaly.csv"), error_bar = "iqr",
               title = "URI Watershed Watch Temperature")
-ggsave(here("figures/ww_temp_trends_anomaly.jpg"), temp_gg[[1]], width = 8.5, height = 5.5, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/ww_temp_trends_anomaly.tiff"), temp_gg[[1]], width = 15.6*1.34, 
+       height = 11.7*1.34, units = "cm", dpi = 300, compress = "lzw")
+img <- image_read(here("manuscript/ecosphere_production/figures/ww_temp_trends_anomaly.tiff"))
+image_write(image_resize(img, "1842.52x1381.89"),here("manuscript/ecosphere_production/figures/figure_4_ww_temp_trends_anomaly.tiff"), compression = "lzw")
 
 ww_temp_kt <- temp_gg[[2]]
 ww_temp_df <- temp_gg[[3]]
@@ -71,9 +72,8 @@ np_gg <- ww_data %>%
               y = "Median Yearly N:P Anomaly", x = "Year",
               write = here("data/np_data_anomaly.csv"), error_bar = "iqr",
               title = "A. URI Watershed Watch Nitrogen:Phosphorus")
-ggsave(here("figures/ww_np_trends_anomaly.jpg"), np_gg[[1]], width = 7.5, 
-       height = 5.625, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/ww_np_trends_anomaly.tiff"), np_gg[[1]], width = 15.6, 
+       height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 
 ww_np_kt <- np_gg[[2]]
 ww_np_df <- np_gg[[3]]
@@ -92,8 +92,9 @@ lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_anmly_mdn",
                              write = here("data/chla_data_lagos_anomaly.csv"), 
                              error_bar = "iqr",
                              title = "B. LAGOSNE Chlorophyll")
-ggsave(here("figures/lagos_chla_trends_anomaly.jpg"), lagos_chla_gg[[1]], width = 7.5, height = 5.625, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/lagos_chla_trends_anomaly.tiff"), lagos_chla_gg[[1]], 
+       width = 15.6, 
+       height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 lagos_chla_kt <- lagos_chla_gg[[2]]
 lagos_chla_df <- lagos_chla_gg[[3]]
 lagos_chla_rl <- lagos_chla_gg[[4]]
@@ -104,8 +105,8 @@ lagos_tn_gg <- wq_trend_gg(lagos_data, "total_n", yvar = "measurement_anmly_mdn"
                            write = here("data/total_n_data_lagos_anomaly.csv"), 
                            error_bar = "iqr",
                            title = "B. LAGOSNE Total Nitrogen")
-ggsave(here("figures/lagos_tn_trends_anomaly.jpg"), lagos_tn_gg[[1]], width = 7.5, height = 5.625, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/lagos_tn_trends_anomaly.tiff"), lagos_tn_gg[[1]], width = 15.6, 
+       height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 lagos_tn_kt <- lagos_tn_gg[[2]]
 lagos_tn_df <- lagos_tn_gg[[3]]
 lagos_tn_rl <- lagos_tn_gg[[4]]
@@ -117,8 +118,8 @@ lagos_tp_gg <- wq_trend_gg(lagos_data, "total_p", yvar = "measurement_anmly_mdn"
                            write = here("data/total_p_data_lagos_anomaly.csv"), 
                            error_bar = "iqr",
                            title = "B. LAGOSNE Total Phosphorus")
-ggsave(here("figures/lagos_tp_trends_anomaly.jpg"), lagos_tp_gg[[1]], width = 7.5, height = 5.625, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/lagos_tp_trends_anomaly.tiff"), lagos_tp_gg[[1]], width = 15.6, 
+       height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 
 lagos_tp_kt <- lagos_tp_gg[[2]]
 lagos_tp_df <- lagos_tp_gg[[3]]
@@ -128,9 +129,8 @@ lagos_np_gg <- wq_trend_gg(lagos_data, "np_ratio", yvar = "measurement_anmly_mdn
               y = "Median Yearly N:P Anomaly", x = "Year",
               write = here("data/np_data_lagos_anomaly.csv"), error_bar = "iqr",
               title = "B. LAGOSNE Nitrogen:Phosphorus")
-ggsave(here("figures/lagos_np_trends_anomaly.jpg"), lagos_np_gg[[1]], width = 7.5, 
-       height = 5.625, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/lagos_np_trends_anomaly.tiff"), lagos_np_gg[[1]], width = 15.6, 
+       height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 
 lagos_np_kt <- lagos_np_gg[[2]]
 lagos_np_df <- lagos_np_gg[[3]]
@@ -140,27 +140,37 @@ lagos_np_rl <- lagos_np_gg[[4]]
 chla_plot <- cowplot::plot_grid(chla_gg[[1]], lagos_chla_gg[[1]], 
                                 align = "h", ncol = 1) 
 
-ggsave(here("figures/paired_chla_trends_anomaly.jpg"), chla_plot, width = 8.5, height = 11, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/paired_chla_trends_anomaly.tiff"), chla_plot, width = 15.45*1.34, 
+       height = 20*1.34, units = "cm", dpi = 300, compress = "lzw")
+img <- image_read(here("manuscript/ecosphere_production/figures/paired_chla_trends_anomaly.tiff"))
+image_write(image_resize(img, "1824.803x2362.205"),here("manuscript/ecosphere_production/figures/figure_5_paired_chla_trends_anomaly.tiff"), compression = "lzw")
 
 tn_plot <- cowplot::plot_grid(tn_gg[[1]], lagos_tn_gg[[1]], 
                               align = "h", ncol = 1)
 
-ggsave(here("figures/paired_tn_trends_anomaly.jpg"), tn_plot, width = 8.5, height = 11, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/paired_tn_trends_anomaly.tiff"), tn_plot, width = 15.45*1.34, 
+       height = 20*1.34, units = "cm", dpi = 300, compress = "lzw")
+img <- image_read(here("manuscript/ecosphere_production/figures/paired_tn_trends_anomaly.tiff"))
+image_write(image_resize(img, "1824.803x2362.205"),here("manuscript/ecosphere_production/figures/figure_6_paired_tn_trends_anomaly.tiff"), compression = "lzw")
 
 tp_plot <- cowplot::plot_grid(tp_gg[[1]], lagos_tp_gg[[1]], 
                               align = "h", ncol = 1) 
 
-ggsave(here("figures/paired_tp_trends_anomaly.jpg"), tp_plot, width = 8.5, height = 11, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/paired_tp_trends_anomaly.tiff"), tp_plot, width = 15.45*1.34, 
+       height = 20*1.34, units = "cm", dpi = 300, compress = "lzw")
+
+img <- image_read(here("manuscript/ecosphere_production/figures/paired_tp_trends_anomaly.tiff"))
+image_write(image_resize(img, "1824.803x2362.205"),here("manuscript/ecosphere_production/figures/figure_7_paired_tp_trends_anomaly.tiff"), compression = "lzw")
+
 
 np_plot <- cowplot::plot_grid(np_gg[[1]], lagos_np_gg[[1]], 
                               align = "h", ncol = 1) 
 
-ggsave(here("figures/paired_np_trends_anomaly.jpg"), np_plot, width = 8.5, height = 11, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/paired_np_trends_anomaly.tiff"), np_plot, width = 15.45*1.34, 
+       height = 20*1.34, units = "cm", dpi = 300, compress = "lzw")
 
+img <- image_read(here("manuscript/ecosphere_production/figures/paired_np_trends_anomaly.tiff"))
+image_write(image_resize(img, "1824.803x2362.205"),here("manuscript/ecosphere_production/figures/figure_8_paired_np_trends_anomaly.tiff"), compression = "lzw")
 
 avail_data <- read_csv(here("data/ww_avail_data_stations.csv"))
 ri <- us_states(resolution = "high", states = "Rhode Island")
@@ -187,10 +197,13 @@ ww_map <- ggplot(st_geometry(ri)) +
   scale_x_continuous(breaks = seq(-72.0, -71.0, by  = 0.2)) +
   scale_y_continuous(breaks = seq(41.0, 42.0, by = 0.2)) +
   theme_ipsum_rc() +
-  theme(legend.position = "bottom", legend.title = element_blank())
+  theme(legend.position = "bottom", legend.title = element_blank()) +
+  theme(plot.margin=grid::unit(c(0,0,0,0), "mm"))
 ww_map %>%  
-  ggsave(here("figures/ww_map.jpg"), ., width = 8.5, height = 11,
-         units = "in", dpi = 600)
+  ggsave(here("manuscript/ecosphere_production/figures/ww_map.tiff"), ., width = 15.45*1.34, 
+         height = 20*1.34, units = "cm", dpi = 300, compress = "lzw")
+img <- image_read(here("manuscript/ecosphere_production/figures/ww_map.tiff"))
+image_write(image_resize(img, "1824.803x2362.205"),here("manuscript/ecosphere_production/figures/figure_1_ww_map.tiff"), compression = "lzw")
 
 # Create supplemental dataset with data for all figures:
 figure_data <- chla_gg[[3]] %>%
@@ -256,8 +269,8 @@ site_gg <- examp %>%
         axis.text.y = element_text(size=14, face="plain"),
         plot.margin = margin(t = 10, r = 0, b = 10, l = 0))
 site_gg %>%  
-  ggsave(here("figures/simulated_data.jpg"), ., width = 8.5, height = 5.5,
-         units = "in", dpi = 600)
+  ggsave(here("manuscript/ecosphere_production/figures/simulated_data.tiff"), ., width = 15.6, 
+         height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 
 
 examp_site_summ <- examp %>% 
@@ -313,15 +326,16 @@ simulated_trends_gg <- ggplot(examp_yr_summ,
         axis.text.y = element_text(size=14, face="plain"),
         plot.margin = margin(t = 10, r = 0, b = 10, l = 0))
 simulated_trends_gg %>%  
-  ggsave(here("figures/simulated_analysis.jpg"), ., width = 8.5, height = 5.5,
-         units = "in", dpi = 600)
+  ggsave(here("manuscript/ecosphere_production/figures/simulated_analysis.tiff"), ., width = 8.5, height = 5.5,
+         units = "in", dpi = 300, compress = "lzw")
 
 simulated_plot <- cowplot::plot_grid(site_gg, simulated_trends_gg, 
                                 align = "h", ncol = 1) 
 
-ggsave(here("figures/simulated_data_analysis.jpg"), simulated_plot, width = 8.5, height = 11, 
-       units = "in", dpi = 600)
-
+ggsave(here("manuscript/ecosphere_production/figures/simulated_data_analysis.tiff"), simulated_plot, width = 15.45*1.34, 
+       height = 20*1.34, units = "cm", dpi = 300, compress = "lzw")
+img <- image_read(here("manuscript/ecosphere_production/figures/simulated_data_analysis.tiff"))
+image_write(image_resize(img, "1824.803x2362.205"),here("manuscript/ecosphere_production/figures/figure_9_simulated_data_analysis.tiff"), compression = "lzw")
 
 # Trophic State Plots
 chla_gg_ts <- ww_data %>%
@@ -332,9 +346,9 @@ chla_gg_ts <- ww_data %>%
                x = "Year",
                write = here("data/chla_data_anomaly_ts.csv"), error_bar = "iqr",
                title = "A. URI Watershed Watch Chlorophyll")
-ggsave(here("figures/ww_chla_trends_anomaly_ts.jpg"), chla_gg_ts[[1]], width = 7.5, 
+ggsave(here("manuscript/ecosphere_production/figures/ww_chla_trends_anomaly_ts.tiff"), chla_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
-       units = "in", dpi = 600)
+       units = "in", dpi = 300, compress = "lzw")
 
 ww_chla_kt_ts <- chla_gg_ts[[2]]
 ww_chla_df_ts <- chla_gg_ts[[3]]
@@ -347,9 +361,9 @@ temp_gg_ts <- ww_data %>%
                       x = "Year",
                       write = here("data/temp_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "B. URI Watershed Watch Temperature")
-ggsave(here("figures/ww_temp_trends_anomaly_ts.jpg"), temp_gg_ts[[1]], width = 7.5, 
+ggsave(here("manuscript/ecosphere_production/figures/ww_temp_trends_anomaly_ts.tiff"), temp_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
-       units = "in", dpi = 600)
+       units = "in", dpi = 300, compress = "lzw")
 
 ww_temp_kt_ts <- temp_gg_ts[[2]]
 ww_temp_df_ts <- temp_gg_ts[[3]]
@@ -362,9 +376,9 @@ tp_gg_ts <- ww_data %>%
                       x = "Year",
                       write = here("data/tp_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "C. URI Watershed Watch Total Phosphorus")
-ggsave(here("figures/ww_tp_trends_anomaly_ts.jpg"), tp_gg_ts[[1]], width = 7.5, 
+ggsave(here("manuscript/ecosphere_production/figures/ww_tp_trends_anomaly_ts.tiff"), tp_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
-       units = "in", dpi = 600)
+       units = "in", dpi = 300, compress = "lzw")
 
 ww_tp_kt_ts <- tp_gg_ts[[2]]
 ww_tp_df_ts <- tp_gg_ts[[3]]
@@ -377,9 +391,9 @@ tn_gg_ts <- ww_data %>%
                       x = "Year",
                       write = here("data/tn_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "D. URI Watershed Watch Total Nitrogen")
-ggsave(here("figures/ww_tn_trends_anomaly_ts.jpg"), tn_gg_ts[[1]], width = 7.5, 
+ggsave(here("manuscript/ecosphere_production/figures/ww_tn_trends_anomaly_ts.tiff"), tn_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
-       units = "in", dpi = 600)
+       units = "in", dpi = 300, compress = "lzw")
 
 ww_tn_kt_ts <- tn_gg_ts[[2]]
 ww_tn_df_ts <- tn_gg_ts[[3]]
@@ -392,9 +406,9 @@ np_gg_ts <- ww_data %>%
                       x = "Year",
                       write = here("data/np_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "E. URI Watershed Watch Nitrogen:Phosphorus")
-ggsave(here("figures/ww_np_trends_anomaly_ts.jpg"), np_gg_ts[[1]], width = 7.5, 
+ggsave(here("manuscript/ecosphere_production/figures/ww_np_trends_anomaly_ts.tiff"), np_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
-       units = "in", dpi = 600)
+       units = "in", dpi = 300, compress = "lzw")
 
 ww_np_kt_ts <- np_gg_ts[[2]]
 ww_np_df_ts <- np_gg_ts[[3]]
@@ -405,8 +419,8 @@ ts_plot <- cowplot::plot_grid(chla_gg_ts[[1]], temp_gg_ts[[1]],
                               tp_gg_ts[[1]], tn_gg_ts[[1]], 
                               np_gg_ts[[1]], align = "h", ncol = 1) 
 
-ggsave(here("figures/trophic_state_trends_anomaly.jpg"), chla_plot, width = 8.5, height = 11, 
-       units = "in", dpi = 600)
+ggsave(here("manuscript/ecosphere_production/figures/trophic_state_trends_anomaly.tiff"), chla_plot, width = 15.45*1.34, 
+       height = 20*1.34, units = "cm", dpi = 300, compress = "lzw")
 
 
 # Build LAGOSNE TS Plots
@@ -418,9 +432,9 @@ chla_gg_ts <- lagos_data %>%
                       x = "Year",
                       write = here("data/lagos_chla_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "A. LAGOSNE Chlorophyll")
-ggsave(here("figures/lagos_chla_trends_anomaly_ts.jpg"), chla_gg_ts[[1]], width = 7.5, 
+ggsave(here("manuscript/ecosphere_production/figures/lagos_chla_trends_anomaly_ts.tiff"), chla_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
-       units = "in", dpi = 600)
+       units = "in", dpi = 300, compress = "lzw")
 
 lagos_chla_kt_ts <- chla_gg_ts[[2]]
 lagos_chla_df_ts <- chla_gg_ts[[3]]
@@ -433,9 +447,9 @@ tp_gg_ts <- lagos_data %>%
                       x = "Year",
                       write = here("data/lagos_tp_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "B. LAGOSNE Total Phosphorus")
-ggsave(here("figures/lagos_tp_trends_anomaly_ts.jpg"), tp_gg_ts[[1]], width = 7.5, 
+ggsave(here("manuscript/ecosphere_production/figures/lagos_tp_trends_anomaly_ts.tiff"), tp_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
-       units = "in", dpi = 600)
+       units = "in", dpi = 300, compress = "lzw")
 
 lagos_tp_kt_ts <- tp_gg_ts[[2]]
 lagos_tp_df_ts <- tp_gg_ts[[3]]
@@ -448,9 +462,9 @@ tn_gg_ts <- lagos_data %>%
                       x = "Year",
                       write = here("data/lagos_tn_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "C. LAGOSNE Total Nitrogen")
-ggsave(here("figures/lagos_tn_trends_anomaly_ts.jpg"), tn_gg_ts[[1]], width = 7.5, 
+ggsave(here("manuscript/ecosphere_production/figures/lagos_tn_trends_anomaly_ts.tiff"), tn_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
-       units = "in", dpi = 600)
+       units = "in", dpi = 300, compress = "lzw")
 
 lagos_tn_kt_ts <- tn_gg_ts[[2]]
 lagos_tn_df_ts <- tn_gg_ts[[3]]
@@ -463,9 +477,9 @@ np_gg_ts <- lagos_data %>%
                       x = "Year",
                       write = here("data/lagos_np_data_anomaly_ts.csv"), error_bar = "iqr",
                       title = "D. LAGOSNE Nitrogen:Phosphorus")
-ggsave(here("figures/lagos_np_trends_anomaly_ts.jpg"), np_gg_ts[[1]], width = 7.5, 
+ggsave(here("manuscript/ecosphere_production/figures/lagos_np_trends_anomaly_ts.tiff"), np_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
-       units = "in", dpi = 600)
+       units = "in", dpi = 300, compress = "lzw")
 
 lagos_np_kt_ts <- np_gg_ts[[2]]
 lagos_np_df_ts <- np_gg_ts[[3]]
@@ -552,6 +566,9 @@ ww_sample_gg <- year_num_ww %>%
 sample_size_plot <- cowplot::plot_grid(ww_sample_gg, lagos_sample_gg, 
                                       align = "h", ncol = 1) 
   
-sample_size_plot
-ggsave(here("figures/sample_sizes.jpg"), sample_size_plot, width = 8.5, height = 11, 
-        units = "in", dpi = 600)
+#sample_size_plot
+ggsave(here("manuscript/ecosphere_production/figures/sample_sizes.tiff"), 
+       sample_size_plot, width = 15.45*1.34, 
+       height = 20*1.34, units = "cm", dpi = 300, compress = "lzw")
+img <- image_read(here("manuscript/ecosphere_production/figures/sample_sizes.tiff"))
+image_write(image_resize(img, "1824.803x2362.205"),here("manuscript/ecosphere_production/figures/figure_3_sample_sizes.tiff"), compression = "lzw")
