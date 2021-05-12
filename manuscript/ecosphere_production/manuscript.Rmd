@@ -30,7 +30,7 @@ options(scipen=999)
 ```
 
 ```{r analysis, include=FALSE, cache=TRUE}
- source(here::here("R/data_clean.R"), encoding = "UTF-8")
+source(here::here("R/data_clean.R"), encoding = "UTF-8")
 source(here::here("R/data_available.R"), encoding = "UTF-8") 
 source(here::here("R/summary_stats.R"), encoding = "UTF-8")  
 source(here::here("R/figures_anomaly_only.R"), encoding = "UTF-8")

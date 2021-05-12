@@ -91,7 +91,7 @@ lagos_chla_gg <- wq_trend_gg(lagos_data, "chla", yvar = "measurement_anmly_mdn",
                              x = "Year",
                              write = here("data/chla_data_lagos_anomaly.csv"), 
                              error_bar = "iqr",
-                             title = "B. LAGOSNE Chlorophyll")
+                             title = "B. LAGOS-NE Chlorophyll")
 ggsave(here("manuscript/ecosphere_production/figures/lagos_chla_trends_anomaly.tiff"), lagos_chla_gg[[1]], 
        width = 15.6, 
        height = 11.7, units = "cm", dpi = 300, compress = "lzw")
@@ -104,7 +104,7 @@ lagos_tn_gg <- wq_trend_gg(lagos_data, "total_n", yvar = "measurement_anmly_mdn"
                            x = "Year",
                            write = here("data/total_n_data_lagos_anomaly.csv"), 
                            error_bar = "iqr",
-                           title = "B. LAGOSNE Total Nitrogen")
+                           title = "B. LAGOS-NE Total Nitrogen")
 ggsave(here("manuscript/ecosphere_production/figures/lagos_tn_trends_anomaly.tiff"), lagos_tn_gg[[1]], width = 15.6, 
        height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 lagos_tn_kt <- lagos_tn_gg[[2]]
@@ -117,7 +117,7 @@ lagos_tp_gg <- wq_trend_gg(lagos_data, "total_p", yvar = "measurement_anmly_mdn"
                            x = "Year",
                            write = here("data/total_p_data_lagos_anomaly.csv"), 
                            error_bar = "iqr",
-                           title = "B. LAGOSNE Total Phosphorus")
+                           title = "B. LAGOS-NE Total Phosphorus")
 ggsave(here("manuscript/ecosphere_production/figures/lagos_tp_trends_anomaly.tiff"), lagos_tp_gg[[1]], width = 15.6, 
        height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 
@@ -128,7 +128,7 @@ lagos_tp_rl <- lagos_tp_gg[[4]]
 lagos_np_gg <- wq_trend_gg(lagos_data, "np_ratio", yvar = "measurement_anmly_mdn", 
               y = "Median Yearly N:P Anomaly", x = "Year",
               write = here("data/np_data_lagos_anomaly.csv"), error_bar = "iqr",
-              title = "B. LAGOSNE Nitrogen:Phosphorus")
+              title = "B. LAGOS-NE Nitrogen:Phosphorus")
 ggsave(here("manuscript/ecosphere_production/figures/lagos_np_trends_anomaly.tiff"), lagos_np_gg[[1]], width = 15.6, 
        height = 11.7, units = "cm", dpi = 300, compress = "lzw")
 
@@ -423,7 +423,7 @@ ggsave(here("manuscript/ecosphere_production/figures/trophic_state_trends_anomal
        height = 20*1.34, units = "cm", dpi = 300, compress = "lzw")
 
 
-# Build LAGOSNE TS Plots
+# Build LAGOS-NE TS Plots
 chla_gg_ts <- lagos_data %>%
   #filter(state == "RI") %>%
   wq_trophic_trend_gg("chla", yvar = "measurement_anmly_mdn", 
@@ -431,7 +431,7 @@ chla_gg_ts <- lagos_data %>%
                                            italic(" a"), " Anomaly (", mu, "g/L)")), 
                       x = "Year",
                       write = here("data/lagos_chla_data_anomaly_ts.csv"), error_bar = "iqr",
-                      title = "A. LAGOSNE Chlorophyll")
+                      title = "A. LAGOS-NE Chlorophyll")
 ggsave(here("manuscript/ecosphere_production/figures/lagos_chla_trends_anomaly_ts.tiff"), chla_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
        units = "in", dpi = 300, compress = "lzw")
@@ -446,7 +446,7 @@ tp_gg_ts <- lagos_data %>%
                       y = expression(paste("Median Yearly Total Phosphorus Anomaly (", mu, "g/L)")), 
                       x = "Year",
                       write = here("data/lagos_tp_data_anomaly_ts.csv"), error_bar = "iqr",
-                      title = "B. LAGOSNE Total Phosphorus")
+                      title = "B. LAGOS-NE Total Phosphorus")
 ggsave(here("manuscript/ecosphere_production/figures/lagos_tp_trends_anomaly_ts.tiff"), tp_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
        units = "in", dpi = 300, compress = "lzw")
@@ -461,7 +461,7 @@ tn_gg_ts <- lagos_data %>%
                       y = expression(paste("Median Yearly Total Nitrogen Anomaly (", mu, "g/L)")), 
                       x = "Year",
                       write = here("data/lagos_tn_data_anomaly_ts.csv"), error_bar = "iqr",
-                      title = "C. LAGOSNE Total Nitrogen")
+                      title = "C. LAGOS-NE Total Nitrogen")
 ggsave(here("manuscript/ecosphere_production/figures/lagos_tn_trends_anomaly_ts.tiff"), tn_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
        units = "in", dpi = 300, compress = "lzw")
@@ -476,7 +476,7 @@ np_gg_ts <- lagos_data %>%
                       y = expression(paste("Median Yearly N:P Anomaly (", mu, "g/L)")), 
                       x = "Year",
                       write = here("data/lagos_np_data_anomaly_ts.csv"), error_bar = "iqr",
-                      title = "D. LAGOSNE Nitrogen:Phosphorus")
+                      title = "D. LAGOS-NE Nitrogen:Phosphorus")
 ggsave(here("manuscript/ecosphere_production/figures/lagos_np_trends_anomaly_ts.tiff"), np_gg_ts[[1]], width = 7.5, 
        height = 5.625, 
        units = "in", dpi = 300, compress = "lzw")
@@ -561,7 +561,7 @@ ww_sample_gg <- year_num_ww %>%
         plot.margin = margin(t = 10, r = 0, b = 10, l = 0),
         strip.text = element_text(size = 11)) +
     labs(title = "B. Number of sampled lakes for each variable 
-       from LAGOSNE", y = "Number of sampled lakes")
+       from LAGOS-NE", y = "Number of sampled lakes")
 
 sample_size_plot <- cowplot::plot_grid(ww_sample_gg, lagos_sample_gg, 
                                       align = "h", ncol = 1) 
